@@ -9,22 +9,22 @@ parts:
         title: Syllabus
       - file: course_materials/CMSE202_Calendar.md
         title: Schedule
-      - file: course_materials/CMSE202_HelpRoomCalendar.md
-        title: Office Hours and Help Room
-      - file: course_materials/SoftwareSetupGuide.md
-        title: Software Setup Guide
-      - file: course_materials/CMSE202_GenerativeAI_Policy.md
-        title: Generative AI Policy
-      - url: https://upload.wikimedia.org/wikipedia/commons/7/79/Unix_command_cheatsheet.pdf
-        title: CLI (Unix/Mac/Linux) commands cheat sheet
-      - file: course_materials/BashVsPowershell_CheatSheet.md
-        title: Bash vs PowerShell
-      - url: https://wac-cdn.atlassian.com/dam/jcr:e7e22f25-bba2-4ef1-a197-53f46b6df4a5/SWTM-2088_Atlassian-Git-Cheatsheet.pdf?cdnVersion=525
-        title: Git Cheat Sheet
-      - url: https://raw.githubusercontent.com/msu-cmse-courses/cmse202-supplemental-data/main/documents/How-to-Access-Anaconda-Powershell-Prompt.pdf
-        title: How to Access “Anaconda Powershell Prompt” (for Windows users)
-      - file: course_materials/Pull_Request_Guide.ipynb
-        title: Pull Request Guide
+#       - file: course_materials/CMSE202_HelpRoomCalendar.md
+#         title: Office Hours and Help Room
+#       - file: course_materials/SoftwareSetupGuide.md
+#         title: Software Setup Guide
+#       - file: course_materials/CMSE202_GenerativeAI_Policy.md
+#         title: Generative AI Policy
+#       - url: https://upload.wikimedia.org/wikipedia/commons/7/79/Unix_command_cheatsheet.pdf
+#         title: CLI (Unix/Mac/Linux) commands cheat sheet
+#       - file: course_materials/BashVsPowershell_CheatSheet.md
+#         title: Bash vs PowerShell
+#       - url: https://wac-cdn.atlassian.com/dam/jcr:e7e22f25-bba2-4ef1-a197-53f46b6df4a5/SWTM-2088_Atlassian-Git-Cheatsheet.pdf?cdnVersion=525
+#         title: Git Cheat Sheet
+#       - url: https://raw.githubusercontent.com/msu-cmse-courses/cmse202-supplemental-data/main/documents/How-to-Access-Anaconda-Powershell-Prompt.pdf
+#         title: How to Access “Anaconda Powershell Prompt” (for Windows users)
+#       - file: course_materials/Pull_Request_Guide.ipynb
+#         title: Pull Request Guide
 
   - caption: Semester Project
     chapters:
