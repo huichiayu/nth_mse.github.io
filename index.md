@@ -15,6 +15,10 @@ Here are some quick links to important course content:
 
 Course assignments will be distributed via this page and turned in to the provided respective links to the assignments.
 
+## Class meeting time and location
+
+Class meetings are at B09 Delta Building, Mon (13:20 - 15:10) and Thu (13:20 - 14:10).
+
 ---
 
 ## Instructor Information

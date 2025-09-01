@@ -81,7 +81,7 @@ There are a variety of course activities, with the percentage of the total grade
 | Activity                                        | Grade (% of total)  |
 | ----------------------------------------------- | ------------------- |
 | Participation, attendance                       |  5                  |
-| In-class programming assignments                | 25                  |
+| Class programming assignments                   | 25                  |
 | Homework assignments                            | 20                  |
 | Quizz                                           | 15                  |
 | Semester project (written report)               | 25                  |
@@ -97,7 +97,8 @@ There are a variety of course activities, with the percentage of the total grade
 
 ### Course meeting times and locations
 
-You are expected to attend all scheduled class sessions. If you need to miss class for any reason, you should notify you instructor as soon as you are able. Instructor details and contact information, along with section meeting times, are available on the front page of this website.
+You are expected to attend all scheduled class sessions. The time and locations can be found on the [home page](../index.md) of this course website.
+ If you need to miss class for any reason, you should notify you instructor as soon as you are able. Instructor details and contact information, along with section meeting times, are available on the front page of this website.
 
 ### Other important information
 
@@ -122,7 +123,7 @@ It is important to note that **plagiarism in the context of this course includes
 
 Instructor contact information can be found on the [home page](../index.md) of this course website.
 
-### Instructor office/help room hours and locations
+### Instructor office/help hours and locations
 
 Office hours will start during the second week of the semester. The information can be found on the [home page](../index.md) of this course website.
 
