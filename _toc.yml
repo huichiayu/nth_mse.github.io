@@ -5,7 +5,7 @@ root: index
 parts:
   - caption: Course Materials
     chapters:
-      - file: course_materials/CMSE202_Syllabus.md
+      - file: course_materials/MSE590400_Syllabus.md
         title: Syllabus
       - file: course_materials/CMSE202_Calendar.md
         title: Schedule
