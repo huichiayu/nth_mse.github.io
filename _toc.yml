@@ -13,8 +13,8 @@ parts:
 #         title: Office Hours and Help Room
       - file: course_materials/SoftwareSetupGuide.md
         title: Software Setup Guide
-#       - file: course_materials/CMSE202_GenerativeAI_Policy.md
-#         title: Generative AI Policy
+      - file: course_materials/MSE590400_AI_policy.md
+        title: Generative AI Policy
 #       - url: https://upload.wikimedia.org/wikipedia/commons/7/79/Unix_command_cheatsheet.pdf
 #         title: CLI (Unix/Mac/Linux) commands cheat sheet
 #       - file: course_materials/BashVsPowershell_CheatSheet.md
