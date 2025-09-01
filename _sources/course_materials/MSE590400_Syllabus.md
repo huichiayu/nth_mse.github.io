@@ -74,17 +74,36 @@ Homework assignments that are submitted late will be accepted **for up to two da
 **Semester Project**: This class will have an individual end-of-semester project. An ideal project is to implement the computational modeling and data analysis techniques that you learned over the course of the term to your existing research work, such that students get most out of the class efforts. You will present your project in writing and in an oral presentation. Along the course of the semester, project proposals and updates are required, and the instructor will discuss the progress and provide suggestions to you. 
 
 
+### Grading information
+
+There are a variety of course activities, with the percentage of the total grade listed.  More detailed descriptions of each activity can be found elsewhere in the syllabus.
+
+| Activity                                        | Grade (% of total)  |
+| ----------------------------------------------- | ------------------- |
+| Participation, attendance                       |  5                  |
+| In-class programming assignments                | 25                  |
+| Homework assignments                            | 20                  |
+| Quizz                                           | 15                  |
+| Semester project (written report)               | 25                  |
+| Semester project (oral presentation)            | 10                  |
+
+**_Note_:** 
+
+* Grades are unlikely to be curved - your grade is based on your own effort and progress, not on competition with your classmates.
+
+* Submitting late work (without instructors' prior agreements based-on justifiable reasons) in order to make-up or improve your grade is not allowed.
+
+
+
 ### Course meeting times and locations
 
 You are expected to attend all scheduled class sessions. If you need to miss class for any reason, you should notify you instructor as soon as you are able. Instructor details and contact information, along with section meeting times, are available on the front page of this website.
 
 ### Other important information
 
-**Course Website and Calendar**:  This course has a website where important information regarding the course will be posted (e.g. syllabus, schedule, office hours calendar, etc): [https://huichiayu.github.io/nthu_mse.github.io]( https://huichiayu.github.io/nthu_mse.github.io/index.html)
-
+**Course Website**:  This course has a website where important information regarding the course will be posted (e.g. syllabus, schedule, office hours calendar, etc): [https://huichiayu.github.io/nthu_mse.github.io]( https://huichiayu.github.io/nthu_mse.github.io/index.html)
 
 **Email**: At times, we will send out important course information via email.  This email is sent to your MSU email address (the one that ends in “@msu.edu”).  You are responsible for all information sent out to your University email account, and for checking this account on a regular (daily) basis.
-
 
 **Inclusive classroom behavior**:  Respectful and responsible behavior is expected at all times, which includes not interrupting other students, refraining from non-course-related use of electronic devices or additional software during class sessions, and not using offensive or demeaning language in our discussions. Flagrant or repeated violations of this expectation may result in ejection from the classroom and/or grade-related penalties. In particular, behavior that could be considered discriminatory or harassing, or unwanted sexual attention, will not be tolerated and will be immediately reported to the appropriate NTHU office.
 
@@ -96,18 +115,8 @@ It is important to note that **plagiarism in the context of this course includes
 
 **Generative AI Policy**: [MSE 590400 Generative AI Policy](./MSE590400_AI_policy.md).  Please note that given the rapid evolution of generative AI technologies, this policy may evolve over time to adapt to new developments and challenges.
 
-**Learning accommodations**:  If you have a university-documented learning difficulty or require other accommodations, please provide your instructor with your VISA as soon as possible and speak with them about how they can best assist you in your learning. If you do not have a VISA but have been documented with a learning difficulty or other problems for which you may still require an accommodation, please contact MSU’s Resource Center for People with Disabilities (355-9642) in order to acquire current documentation.
 
-**Confidentiality and Mandatory Reporting**: College students often experience issues that may interfere with academic success such as academic stress, sleep problems, juggling responsibilities, life events, relationship concerns, or feelings of anxiety, hopelessness, or depression. Our goal is to help create a safe learning environment and to support you through these situations and experiences. All instructors also have a mandatory reporting responsibility related to our roles as University employees. We hope that you feel able to share information related to your life experiences in classroom discussions, in written work, and in one-on-one meetings. We will seek to keep the information you share private to the greatest extent possible. However, under Title IX, we are required to share information regarding sexual misconduct, relationship violence, or information about criminal activity on MSU’s campus with the University including the Office of Institutional Equity (OIE).
-
-Students may speak to someone confidentially by contacting MSU Counseling and Psychiatric Service (CAPS) ([caps.msu.edu](https://caps.msu.edu/), 517-355-8270), MSU’s 24-hour Sexual Assault Crisis Line ([endrape.msu.edu](https://endrape.msu.edu/), 517-372-6666), or Olin Health Center ([olin.msu.edu](https://olin.msu.edu/), 517-884-6546).
-
-**COVID-19 policy:** MSU no longer has a mask mandate in place, but any student or instructor should feel welcome to wear a mask. You should expect to follow MSU policies outlined on the [Together-We-Will website](https://msu.edu/together-we-will/). 
-
-If you have to miss class due to illness or self-isolation (as per the CDC recommended guidelines), your instructor will work to provide the necessary accommodations to ensure that your performance in class is not significantly impacted. However, should you find that your overall success in your courses is significantly impacted by any illness, please refer to the University policy on medical leave and withdrawal.
-
-**If you are testing positive for COVID or have symptoms of COVID**, please isolate and do not attend class in-person. **Absences due to COVID will not count towards the allowed absences**, but you are still responsible for the content covered. Please **contact your section instructor** to discuss
-how to make up missed work and/or adjust deadlines.
+**Confidentiality and Mandatory Reporting**: College students often experience issues that may interfere with academic success such as academic stress, sleep problems, juggling responsibilities, life events, relationship concerns, or feelings of anxiety, hopelessness, or depression. Our goal is to help create a safe learning environment and to support you through these situations and experiences. We hope that you feel able to share information related to your life experiences in classroom discussions, in written work, and in one-on-one meetings. We will seek to keep the information you share private to the greatest extent possible. However, we will share information regarding sexual misconduct, relationship violence, or information about criminal activity on campus with the university administrations. Students may speak to someone confidentially by contacting NTHU Counseling and Psychiatric Service.
 
 ### Instructor contact information
 
@@ -115,45 +124,7 @@ Instructor contact information can be found on the [home page](../index.md) of t
 
 ### Instructor office/help room hours and locations
 
-Office/help room hours will start during the second week of the semester. **Office hours may be either in-person or held over Teams help channel (or Zoom) based on instructor preference**. The times and corresponding locations can be found here: [https://cmse.msu.edu/cmse202-office-hours/](https://cmse.msu.edu/cmse202-office-hours/)
+Office hours will start during the second week of the semester. The information can be found on the [home page](../index.md) of this course website.
 
-All sections are synchronized as much as is possible and will teach the same topics at roughly the same time - as a result, you can go to any office/help room hours that fit into your schedule.  Any course personnel can help you with questions pertaining to the course material, including in-class and homework assignments. Technical questions, including issues with Python and/or Jupyter, should be first directed to your professor, but specific issues with JupyterHub ([jupyterhub.egr.msu.edu](https://jupyterhub.egr.msu.edu/)) can be sent to jupyterhub@egr.msu.edu. If you have issues relating to class administration, including missed classes, illness, VISA issues, or school-sponsored activities please contact the instructor for your section.
 
-### Grading information
 
-There are a variety of course activities, with the percentage of the total grade listed.  More detailed descriptions of each activity can be found elsewhere in the syllabus.
-
-| Activity                                        | Grade (% of total)  |
-| ----------------------------------------------- | ------------------- |
-| Participation, attendance, in-class assignments | 15                  |
-| Pre-class assignments                           | 15                  |
-| Exams (midterm and final)                       | 20                  |
-| Homework assignments                            | 25                  |
-| Semester project                                | 25                  |
-
-| Grading scale |
-| ------------- |
-| 4.0	≥ 90%     |  
-| 3.5	≥ 85%     |
-| 3.0	≥ 80%     |
-| 2.5	≥ 75%     |
-| 2.0	≥ 70%     |
-| 1.5	≥ 65%     |
-| 1.0	≥ 60%     |
-| 0.0	< 60%     |
-
-**_Note_:** 
-
-* Grades will not be curved - your grade is based on your own effort and progress, not on competition with your classmates.
-
-* Submitting late work (without instructors' prior agreements based-on justifiable reasons) in order to make-up or improve your grade is not allowed.
-
-**Honors option**: You can complete an honors option for this course. The honors option requires that you complete an additional project on a topic that is different from the group project you are already required to complete. 
-
-You must receive an honors option project grade of 80% or higher and must achieve an overall grade of 3.0 in the course. If you are interested in pursuing the honors option, **you should meet with your course instructor within the first two weeks of the course to indicate your interest and develop a project plan.**
-
-**Honors project proposals must be submitted and approved before the middle of the semester**.
-
-When submitting a Honors Option request form use the following text in the description box: 
-
-> This honors option requires me to complete a data science project in addition to the final semester project. The deliverables for this project are: source files for any relevant code, a jupyter notebook where the data analysis and/or computational modeling is performed, a video presentation in which I present my findings, a PDF of the slides I used in the presentation, a README.MD file containing an abstract, and any other relevant files. The project topic will be discussed with the instructor and finalized after the middle of the semester. I understand than in order to earn the honors option credit, I must receive an overall grade of 3.0 or higher and an honors project grade of 80% or higher.
