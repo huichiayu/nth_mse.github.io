@@ -5,7 +5,7 @@
 
 Here are some quick links to important course content:  
 
-* [Course Syllabus](course_materials/CMSE202_Syllabus)
+* [Course Syllabus](course_materials/MSE590400_Syllabus)
 
 *  [Course Calendar](course_materials/CMSE202_Calendar)
 
