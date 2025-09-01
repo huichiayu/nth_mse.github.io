@@ -4,7 +4,7 @@
 title                       : CMSE 202 Course Website
 author                      : MSU CMSE
 copyright                   : "2025"
-logo                        : logo.png
+logo                        : Spartan_2.png
 only_build_toc_files        : true
 
 # Execution settings
@@ -14,7 +14,7 @@ execute:
 
 # HTML-specific settings
 html:
-  favicon                   : logo.png
+  favicon                   : Spartan_2.png
   use_edit_page_button      : false
   use_repository_button     : false
   use_issues_button         : false
