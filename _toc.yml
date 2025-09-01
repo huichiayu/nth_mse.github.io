@@ -11,8 +11,8 @@ parts:
         title: Schedule
 #       - file: course_materials/CMSE202_HelpRoomCalendar.md
 #         title: Office Hours and Help Room
-#       - file: course_materials/SoftwareSetupGuide.md
-#         title: Software Setup Guide
+      - file: course_materials/SoftwareSetupGuide.md
+        title: Software Setup Guide
 #       - file: course_materials/CMSE202_GenerativeAI_Policy.md
 #         title: Generative AI Policy
 #       - url: https://upload.wikimedia.org/wikipedia/commons/7/79/Unix_command_cheatsheet.pdf
