@@ -5,21 +5,15 @@
 
 Here are some quick links to important course content:  
 
-*  [Course Syllabus](course_materials/CMSE202_Syllabus)
+*  [Course Syllabus](course_materials/MSE590400_Syllabus)
 
 *  [Course Calendar](course_materials/CMSE202_Calendar)
-
-
-<!--
-	* The Zoom room for TA/LA help room hours is [LINK TO BE ADDED SOON]().
-	* Contact your course instructor for their Zoom room for office hours.
--->
 
 * [Software Setup Guide](course_materials/SoftwareSetupGuide)
 
 
 
-Course assignments will be distributed via this page and turned in on [Desire 2 Learn](https://d2l.msu.edu/).
+Course assignments will be distributed via this page and turned in to the provided respective links to the assignments.
 
 ---
 
