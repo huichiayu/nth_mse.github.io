@@ -37,7 +37,7 @@ Please note that **creating models to describe and understand systems** (whether
 
 ### Required reading materials
 
-This class has no required book or course pack. From time to time we will direct you toward outside online resources, but the main materials will be video lectures, instructor course notes, and software.    
+This class has no required book or course pack. From time to time you will be directed toward outside online resources, but the main materials will be instructor course notes and coding assignment files.    
 
 ### Required materials for class
 
