@@ -44,20 +44,14 @@ This class has no required book or course pack. From time to time we will direct
 In this course, the in-class programming assignments are a critical part of the learning process in this course. To that end, you will need to ensure that you have the following when you come to class:  
 
 * A laptop computer, its power cord, and the ability to connect with the campus wifi. If possible, it would be useful to bring whatever adapter is necessary for you to connect with the classroom monitors so that you can share your computer screen with your fellow classmates.
-* In case we are forced to go virtual, or should a situation present itself where participating virtually is the only viable option, you should also ensure that you have the ability to run the Zoom video conferencing software, which you can download here: [https://msu.zoom.us/support/download](https://msu.zoom.us/support/download)
-
-Should it become necessary, if you do not have a sufficiently reliable internet connection to log into Zoom during the designated class times to participate in the class virtually, you should notify your instructor immediately to determine how you can best participate in the course and successfully complete the required activities should this situation arise. Here is the Zoom link [MeetingID: 91871091140](https://msu.zoom.us/j/91871091140) and passcode (cmse202).
+* In case we are forced to go virtual, you should ensure that you have the ability to run the Zoom video conferencing software, which you can download here: [https://zoom.us/zh-tw/download](https://zoom.us/zh-tw/download)
+* Should it become necessary for virtual classes, Here is the Zoom link [MeetingID: 947 2009 0066](https://msu.zoom.us/j/94720090066) and passcode (262506).
 
 <!--
 You are also expected to have a Slack account ([https://slack.com/](https://slack.com/)) and sign up for the CMSE Courses Slack workspace ([https://cmse-courses.slack.com/](https://cmse-courses.slack.com/)).
 -->
 
-You are also expected to have a Spartan Teams account ([https://tech.msu.edu/](https://tech.msu.edu/technology/collaborative-tools/spartan365/)) and sign up for the CMSE Courses Teams workspace ([cmse202-s25-help](https://teams.microsoft.com/l/channel/19%3AdpNvboL7ELik761e4z1c0AD9cmn_FjHIzHEtdjrukI81%40thread.tacv2/cmse202-s25-help?groupId=d0d12e1d-88f3-4b05-8b46-460666ebfbd8&ngc=true&allowXTenantAccess=true)).
- <!-- [https://teams.microsoft.com/l/channel/19%3AdpNvboL7ELik761e4z1c0AD9cmn_FjHIzHEtdjrukI81%40thread.tacv2/cmse202-s25-help?groupId=d0d12e1d-88f3-4b05-8b46-460666ebfbd8&ngc=true&allowXTenantAccess=true)-->).
 
-<!--
-https://teams.microsoft.com/l/channel/19%3AdpNvboL7ELik761e4z1c0AD9cmn_FjHIzHEtdjrukI81%40thread.tacv2/cmse202-s25-help?groupId=d0d12e1d-88f3-4b05-8b46-460666ebfbd8&ngc=true&allowXTenantAccess=true
--->
 
 The details regarding the software needed for this course are provided in the “**[Software Setup Guide](./SoftwareSetupGuide.md)**,” which is linked to on the homepage of the course website.    
 
