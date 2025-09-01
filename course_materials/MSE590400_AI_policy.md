@@ -1,8 +1,8 @@
-# Generative AI Use Policy Statement for CMSE 202
+# Generative AI Use Policy Statement for MSE 590400
 
 Following is adapted from text generated from<sup>[1](#footnote1)
 
-For CMSE 202, the use of generative artificial intelligence (AI) tools (such as ChatGPT, co-pilot, DALL-E, etc.) are both welcomed and encouraged. Generative AI represents a fascinating intersection of computing and creativity, offering students an opportunity to explore cutting-edge technologies while honing their programming skills.  That said, ** do not rely solely on AI tools to complete assignments **;  This will not support the course learning objectives which include the critical appraisal of algorithms and the ability to break scientific problems into solvable components.  AI tools should be used only as a supplement, not a replacement, for your own work. 
+For MSE 590400, the use of generative artificial intelligence (AI) tools (such as ChatGPT, co-pilot, DALL-E, etc.) are both welcomed and encouraged. Generative AI represents a fascinating intersection of computing and creativity, offering students an opportunity to explore cutting-edge technologies while honing their programming skills.  That said, ** do not rely solely on AI tools to complete assignments **;  This will not support the course learning objectives which include the critical appraisal of algorithms and the ability to break scientific problems into solvable components.  AI tools should be used only as a supplement, not a replacement, for your own work. 
 
 Likewise, it is imperative that the utilization of generative AI within this course adheres to ethical guidelines and respects the intellectual property rights of others. As you engage with generative AI technologies, please keep the following principles in mind:
 
@@ -18,7 +18,7 @@ Likewise, it is imperative that the utilization of generative AI within this cou
 
 6. **Collaboration:** Collaborative projects involving generative AI are encouraged, but all contributors should be credited for their individual contributions. Transparent communication about the extent of AI involvement is vital to maintain the integrity of collaborative work.
 
-7. **Data and Privacy:** When using data with generative models, ensure that you have the necessary rights to use the data and are allowed to input data into the generative model.  All data use must follow <a href="https://tech.msu.edu/about/guidelines-policies/generative-ai/">MSU guidelines on Data Uses and Risks of Generative AI</a>. You should not use confidential, private, or any type of custom research data with current generative models.
+7. **Data and Privacy:** When using data with generative models, ensure that you have the necessary rights to use the data and are allowed to input data into the generative model. You should not use confidential, private, or any type of custom research data with current generative models.
 
 8. **Learning Priority:** While generative AI is a valuable supplemental tool, remember that the primary focus of the course is on computational modeling and programming. The use of generative AI should supplement your learning journey rather than overshadow core concepts. 
 
@@ -28,4 +28,4 @@ By adhering to these guidelines, you will not only harness the power of generati
 
 **The policy above applies to daily and homework assignments but not exams. However, do NOT rely solely on AI tools. All the work must be your own. Simply copying questions from the assignments into generative AIs and pasting the answers back into the assignments with non-essential modifications are NOT acceptable and may be considered plagiarism. Generative AI tools are NOT ALLOWED IN EXAMS!**
 
-<a name="footnote1">[1]</a>OpenAI. (2023). ChatGPT-3.5. Accessed from https://chat.openai.com/ on Aug 22, 2023.  Prompt chain:{'write a statement for generative AI use policy appropriate for a college course on computational modeling and python programing'; 'Add additional information on how to cite generative ai if used'; 'Add statement that this policy may evolve since generative ai rapidly evolving'; 'please tighten up list of items'} 
+<a name="footnote1">[1]</a>OpenAI. (2023). ChatGPT-3.5. Accessed from https://chat.openai.com/ on Aug 22, 2023.  Prompt chain:{'write a statement for generative AI use policy appropriate for a college course on computational modeling and python programing'; 'Add additional information on how to cite generative ai if used'; 'Add statement that this policy may evolve since generative ai rapidly evolving'; 'please tighten up list of items'}
