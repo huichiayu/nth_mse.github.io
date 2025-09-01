@@ -36,7 +36,7 @@ launch_buttons:
   colab_url                 : "" #https://colab.research.google.com
 
 repository:
-  url                       : https://github.com/huichiayu/nth_mse.github.io
+  url                       : https://github.com/huichiayu/nthu_mse.github.io
   path_to_book              : .
   branch                    : main
 
