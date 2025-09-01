@@ -184,16 +184,18 @@ parts:
 ### CREATE NEW ONES THAT ASSESS SIMILAR SKILLS/CONTENT
   - caption: Homework
     chapters:
-#       - file: homework/FS24/HW01/HW-01_GitPracticeDebuggingPythonPackagesAndClasses-STUDENT.ipynb
-# #      - file: homework/FS24/HW01/auto_price.csv
-# #      - file: homework/FS24/HW01/logo.png
         - file:  homework/SS25/HW01/HW-01_GitPracticeDebuggingPythonPackagesAndClasses-SS25-STUDENT.ipynb 
-          title: Homework 1        
-        - file: homework/SS25/HW02/HW02_Part1-Orbits-SS25-STUDENT.ipynb
-          title: Homework 2 Part 1
-        - file: homework/SS25/HW02/HW02_Part2-Risk-SS25-STUDENT.ipynb
-          title: Homework 2 Part 2          
-        - file: homework/SS25/HW03/HW-03_Regression-S25-STUDENT.ipynb
-          title: Homework 3
-        - file: homework/SS25/HW04/HW-04_Perceptron_SVM_STUDENT.ipynb
-          title: Homework 4
+          title: Homework 1  
+          
+        - title: "Upload Files"
+          url: https://www.dropbox.com/request/w4urBdsmgnrh09diBHlx
+          nav_order: 99          
+                
+#         - file: homework/SS25/HW02/HW02_Part1-Orbits-SS25-STUDENT.ipynb
+#           title: Homework 2 Part 1
+#         - file: homework/SS25/HW02/HW02_Part2-Risk-SS25-STUDENT.ipynb
+#           title: Homework 2 Part 2          
+#         - file: homework/SS25/HW03/HW-03_Regression-S25-STUDENT.ipynb
+#           title: Homework 3
+#         - file: homework/SS25/HW04/HW-04_Perceptron_SVM_STUDENT.ipynb
+#           title: Homework 4
