@@ -1,8 +1,8 @@
 # Configuration
 
 # Book settings
-title                       : CMSE 202 Course Website
-author                      : MSU CMSE
+title                       : MSE 590400 Course Website
+author                      : Hui-Chia Yu
 copyright                   : "2025"
 logo                        : Spartan_2.png
 only_build_toc_files        : true
@@ -36,7 +36,7 @@ launch_buttons:
   colab_url                 : "" #https://colab.research.google.com
 
 repository:
-  url                       : https://github.com/msu-cmse-courses/cmse202-S25-jb
+  url                       : https://github.com/huichiayu/nth_mse.github.io
   path_to_book              : .
   branch                    : main
 
