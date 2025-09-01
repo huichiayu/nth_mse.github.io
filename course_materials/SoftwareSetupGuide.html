@@ -1,0 +1,1143 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="../" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>CMSE 202 &#8212; MSE 590400 Course Website</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  <!--
+    this give us a css class that will be invisible only if js is disabled
+  -->
+  <noscript>
+    <style>
+      .pst-js-only { display: none !important; }
+
+    </style>
+  </noscript>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../_static/styles/theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
+
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=b76e3c8a" />
+    <link rel="stylesheet" type="text/css" href="../_static/styles/sphinx-book-theme.css?v=a3416100" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css?v=13237357" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css?v=be8a1c11" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css?v=4fa983c6" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-design.min.css?v=95c83b7e" />
+  
+  <!-- So that users can add custom icons -->
+  <script src="../_static/scripts/fontawesome.js?digest=8878045cc6db502f8baf"></script>
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf" />
+<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf" />
+
+    <script src="../_static/documentation_options.js?v=9eb32ce0"></script>
+    <script src="../_static/doctools.js?v=9a2dae69"></script>
+    <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="../_static/copybutton.js?v=f281be69"></script>
+    <script src="../_static/scripts/sphinx-book-theme.js?v=887ef09a"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../_static/togglebutton.js?v=4a39c7ea"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="../_static/design-tabs.js?v=f930bc37"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script async="async" src="../_static/sphinx-thebe.js?v=c100c467"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'course_materials/SoftwareSetupGuide';</script>
+    <link rel="icon" href="../_static/Spartan_2.png"/>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="CMSE 202" href="SemesterProjectDetails.html" />
+    <link rel="prev" title="CMSE 202 Course Schedule" href="CMSE202_Calendar.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  <meta name="docsearch:version" content="" />
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
+  
+  <dialog id="pst-search-dialog">
+    
+<form class="bd-search d-flex align-items-center"
+      action="../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         placeholder="Search..."
+         aria-label="Search..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form>
+  </dialog>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+      <dialog id="pst-primary-sidebar-modal"></dialog>
+      <div id="pst-primary-sidebar" class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="../index.html">
+  
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="../_static/Spartan_2.png" class="logo__image only-light" alt="MSE 590400 Course Website - Home"/>
+    <img src="../_static/Spartan_2.png" class="logo__image only-dark pst-js-only" alt="MSE 590400 Course Website - Home"/>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item">
+
+<button class="btn search-button-field search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+ <i class="fa-solid fa-magnifying-glass"></i>
+ <span class="search-button__default-text">Search</span>
+ <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+</button></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">Course Materials</span></p>
+<ul class="current nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="MSE590400_Syllabus.html">Syllabus</a></li>
+<li class="toctree-l1"><a class="reference internal" href="CMSE202_Calendar.html">Schedule</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">Software Setup Guide</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Semester Project</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="SemesterProjectDetails.html">Semester Project Details</a></li>
+<li class="toctree-l1"><a class="reference internal" href="CMSE202_FinalProjectRequirementsAndGradingRubric.html">Semester Project Requirements and Grading Rubric</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Exams</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="MidtermStudyGuide.html">Midterm Study Guide</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Daily Content</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1 has-children"><a class="reference internal" href="../section_files/day_1.html">Day 1</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../daily/Day-01/Day-01_In-Class_Overview-STUDENT.html">In-class Notebook: Welcome to CMSE202</a></li>
+
+
+
+
+
+
+
+
+
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../section_files/day_2.html">Day 2</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../daily/Day-02/Day-02_Pre-Class_ReflectionAndCommandLineInterface-STUDENT.html">Pre-Class Assignment: Reflection and an introduction to the Command Line Interface (CLI)</a></li>
+
+
+
+<li class="toctree-l2"><a class="reference internal" href="../daily/Day-02/Day-02_In-Class_CommandLineInterface-STUDENT.html">In-class Notebook: Command line interface</a></li>
+
+
+</ul>
+</details></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Homework</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../homework/SS25/HW01/HW-01_GitPracticeDebuggingPythonPackagesAndClasses-SS25-STUDENT.html">Homework 1</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://www.dropbox.com/request/w4urBdsmgnrh09diBHlx">Upload HW01 assignment</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+      <div class="sidebar-primary-item">
+<div id="ethical-ad-placement"
+      class="flat"
+      data-ea-publisher="readthedocs"
+      data-ea-type="readthedocs-sidebar"
+      data-ea-manual="true">
+</div></div>
+  </div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><button class="sidebar-toggle primary-toggle btn btn-sm" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</button></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="../_sources/course_materials/SoftwareSetupGuide.md" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.md</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button pst-js-only" aria-label="Color mode" data-bs-title="Color mode"  data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <i class="theme-switch fa-solid fa-sun                fa-lg" data-mode="light" title="Light"></i>
+  <i class="theme-switch fa-solid fa-moon               fa-lg" data-mode="dark"  title="Dark"></i>
+  <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"  title="System Settings"></i>
+</button>
+
+
+<button class="btn btn-sm pst-navbar-icon search-button search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+</button>
+<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</button>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>CMSE 202</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#software-setup-guide">Software Setup Guide</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#table-of-contents">Table of Contents</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#setting-up-important-accounts"><span class="xref myst">Setting up important accounts</span></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#setting-up-important-software-if-you-want-to-run-your-code-locally"><span class="xref myst">Setting up important software (if you want to run your code locally)</span></a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">Setting up important accounts</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#msu-s-jupyterhub-interface">MSU’s JupyterHub Interface</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#instructions-for-connecting-to-the-engineering-jupyterhub-server">Instructions for connecting to the engineering JupyterHub server:</a><ul class="nav section-nav flex-column">
+<li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#instructions-for-getting-jupyter-notebook-files-onto-jupyterhub">Instructions for getting Jupyter notebook files onto JupyterHub:</a></li>
+<li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#instructions-for-downloading-jupyter-notebooks-from-jupyterhub-and-turning-them-in">Instructions for downloading Jupyter notebooks from JupyterHub and turning them in:</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#course-communication-with-teams">Course Communication with Teams</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#teams-channel-usage-guidelines">Teams channel usage guidelines</a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#setting-up-a-student-github-account">Setting up a student GitHub account</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">Setting up important software <br/> (if you want to run your code locally)</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#installing-python-for-this-course">Installing Python for this course</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#updating-a-previous-installation">Updating a previous installation</a><ul class="nav section-nav flex-column">
+<li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#updating-on-windows-jump-to-mac-directions">Updating on Windows (<span class="xref myst">jump to Mac directions</span>)</a></li>
+<li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#updating-on-a-mac-jump-to-windows-directions">Updating on a Mac <span class="xref myst">(jump to Windows directions</span>)</a></li>
+</ul>
+</li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#checking-that-python-is-available-in-your-command-line-path">Checking that Python is available in your command line path</a><ul class="nav section-nav flex-column">
+<li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#checking-your-path-on-windows-jump-to-mac-directions">Checking your path on Windows (<span class="xref myst">jump to Mac directions</span>)</a></li>
+<li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#checking-your-path-on-a-mac-jump-to-windows-directions">Checking your path on a Mac (<span class="xref myst">jump to Windows directions</span>)</a></li>
+</ul>
+</li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#if-you-don-t-having-a-fully-functioning-up-to-date-installation-of-anaconda-python">If you don’t having a fully functioning up-to-date installation of Anaconda Python</a><ul class="nav section-nav flex-column">
+<li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#installing-anaconda-for-windows">Installing Anaconda for Windows</a></li>
+<li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#installing-anaconda-for-mac">Installing Anaconda for Mac</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#using-git-for-version-control">Using Git for version control</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#installing-git-if-you-have-a-windows-computer">Installing Git if you have a <strong>Windows</strong> computer:</a><ul class="nav section-nav flex-column">
+<li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#adding-anaconda-functionality-to-git-bash">Adding Anaconda functionality to Git-Bash</a></li>
+<li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#changing-startup-location-to-home-directory">Changing startup location to Home directory</a></li>
+</ul>
+</li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#install-git-if-you-have-a-mac-computer">Install Git if you have a <strong>Mac</strong> computer:</a><ul class="nav section-nav flex-column">
+<li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#download-and-install-the-newest-version-of-git-for-mac">Download and install the newest version of Git for Mac</a></li>
+</ul>
+</li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#install-git-if-you-have-a-linux-computer">Install Git if you have a <strong>Linux</strong> computer:</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#that-s-it-we-look-forward-to-seeing-you-in-class">That’s it! We look forward to seeing you in class!</a></li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section class="tex2jax_ignore mathjax_ignore" id="cmse-202">
+<h1>CMSE 202<a class="headerlink" href="#cmse-202" title="Link to this heading">#</a></h1>
+<section id="software-setup-guide">
+<h2>Software Setup Guide<a class="headerlink" href="#software-setup-guide" title="Link to this heading">#</a></h2>
+<p>As this is a course in computational modeling and data science, you will be completing all of your assignments using your computer! However, in order to do so there are a number of things you need to set up before the course starts. If you run into issues during this setup process make sure to document the error you encountered and send an email to your Professor to let them know that you ran into a problem.</p>
+<p><strong>MAKE SURE TO COMPLETE ALL THE SECTIONS LISTED IN THIS DOCUMENT BEFORE YOU COME TO CLASS. Start with the section on “Setting up important accounts” and then move on to “Setting up important software” (if you want to be able to run your code locally on your computer without having to rely on internet-based resources).</strong></p>
+</section>
+<hr class="docutils" />
+<section id="table-of-contents">
+<h2>Table of Contents<a class="headerlink" href="#table-of-contents" title="Link to this heading">#</a></h2>
+<section id="setting-up-important-accounts">
+<h3><a class="reference internal" href="#accounts"><span class="xref myst">Setting up important accounts</span></a><a class="headerlink" href="#setting-up-important-accounts" title="Link to this heading">#</a></h3>
+<ul class="simple">
+<li><p><a class="reference internal" href="#jupyterhub"><span class="xref myst">MSU’s JupyterHub Interface</span></a></p>
+<ul>
+<li><p><a class="reference internal" href="#connecting"><span class="xref myst">Instructions for connecting to the JupyterHub serve</span></a></p></li>
+<li><p><a class="reference internal" href="#uploadnotebook"><span class="xref myst">Instructions for getting notebook files onto JupyterHub</span></a></p></li>
+<li><p><a class="reference internal" href="#downloadnotebook"><span class="xref myst">Instructions for downloading notebooks from JupyterHub to turn them in</span></a></p></li>
+</ul>
+</li>
+<li><p><a class="reference internal" href="#slack"><span class="xref myst">Course Communication with Slack</span></a></p>
+<ul>
+<li><p><a class="reference internal" href="#slackguidelines"><span class="xref myst">Slack usage guidelines</span></a></p></li>
+</ul>
+</li>
+<li><p><a class="reference internal" href="#github"><span class="xref myst">Setting up a student GitHub account</span></a></p></li>
+</ul>
+</section>
+<section id="setting-up-important-software-if-you-want-to-run-your-code-locally">
+<h3><a class="reference internal" href="#software"><span class="xref myst">Setting up important software (if you want to run your code locally)</span></a><a class="headerlink" href="#setting-up-important-software-if-you-want-to-run-your-code-locally" title="Link to this heading">#</a></h3>
+<ul class="simple">
+<li><p><a class="reference internal" href="#python"><span class="xref myst">Installing Python</span></a></p>
+<ul>
+<li><p><a class="reference internal" href="#update-anaconda"><span class="xref myst">Updating a previous installation</span></a></p></li>
+<li><p><a class="reference internal" href="#check-path"><span class="xref myst">Checking that Python is available in your command line path</span></a></p></li>
+<li><p><a class="reference internal" href="#install-anaconda"><span class="xref myst">If you don’t have a fully functioning, up-to-date version</span></a></p>
+<ul>
+<li><p><a class="reference internal" href="#anaconda-windows"><span class="xref myst">Installing Anaconda for Windows</span></a></p></li>
+<li><p><a class="reference internal" href="#anaconda-mac"><span class="xref myst">Installing Anaconda for Mac</span></a></p></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p><a class="reference internal" href="#git"><span class="xref myst">Using Git for version control</span></a></p>
+<ul>
+<li><p><a class="reference internal" href="#git-windows"><span class="xref myst">Installing Git if you have a Windows computer</span></a></p></li>
+<li><p><a class="reference internal" href="#git-mac"><span class="xref myst">Installing Git if you have a Mac computer</span></a></p>
+<ul>
+<li><p><a class="reference internal" href="#git-mac-install"><span class="xref myst">Download and install the newest version of Git for Mac</span></a></p></li>
+</ul>
+</li>
+<li><p><a class="reference internal" href="#git-linux"><span class="xref myst">Installing Git if you have a Linux computer</span></a></p></li>
+</ul>
+</li>
+</ul>
+<!-- * [Installing the Atom text editor](#atom) -->
+<hr class="docutils" />
+<p><a id="accounts"></a></p>
+</section>
+</section>
+<section id="id1">
+<h2>Setting up important accounts<a class="headerlink" href="#id1" title="Link to this heading">#</a></h2>
+<hr class="docutils" />
+<p><a id="jupyterhub"></a></p>
+<section id="msu-s-jupyterhub-interface">
+<h3>MSU’s JupyterHub Interface<a class="headerlink" href="#msu-s-jupyterhub-interface" title="Link to this heading">#</a></h3>
+<p>Since it can be challenging for instructors to troubleshoot a wide range of computer issues remotely owing to variations in computer operating systems, user access, and hardware, <strong>you are expected to ensure that you can access the JupyterHub interface provided by the College of Engineering</strong>. Ultimately, it is up to you if you choose to use the JupyterHub server or your local Python installation for the assignments in this course, but if you run into issues with your local installation, the instructors will recommend that you switch to JupyterHub until you can troubleshoot your issues. In addition, some assignments may <strong>require</strong> that you use the JupyterHub server.</p>
+<p>The JupyterHub server hosted by the College of Engineering creates a virtual environment that allows you to run simple commands and host Jupyter notebooks. <strong>To make sure that you have access to this server, follow the directions below</strong>. If you have not previously used JupyterHub, note that there are extra steps involved that require that you upload and download you Jupyter notebooks to and from the JupyterHub server in order to turn them in on D2L – this may be different than your experience with using your local Python installation.</p>
+<p><a id="connecting"></a></p>
+<section id="instructions-for-connecting-to-the-engineering-jupyterhub-server">
+<h4>Instructions for connecting to the engineering JupyterHub server:<a class="headerlink" href="#instructions-for-connecting-to-the-engineering-jupyterhub-server" title="Link to this heading">#</a></h4>
+<p>Every student enrolled in this class will be given an engineering computing account. If this is your first time using your Engineering account you will need to activate the account by going to the following website:</p>
+<p><a class="reference external" href="https://www.egr.msu.edu/decs/myaccount/?page=activate">https://www.egr.msu.edu/decs/myaccount/?page=activate</a></p>
+<p>You can activate your EGR account from any EGR lab computer. There are instructions on the top left of the computer’s background for logging in. The page that loads after following these instructions will advise you on the next steps for activation, including your initial password.
+If you are unable to activate your account in a DECS lab, then please call or email DECS for assistance with activating your EGR account. You can reach the DECS Support Office at <a class="reference external" href="mailto:Support&#37;&#52;&#48;egr&#46;msu&#46;edu">Support<span>&#64;</span>egr<span>&#46;</span>msu<span>&#46;</span>edu</a>, at 517-353-8891, or by stopping in to EB 1325.</p>
+<!-- Enter your MSU NetID. The initial password will be your APID with an @ on the end (example: A12345678@) and then you have to set a password that meets the requirements listed on the page. Verify the password. Then agree to the terms and Activate. -->
+<p>Once your account is activated <strong>you can access the classroom JupyterHub server using the following instructions</strong>:</p>
+<ol class="arabic simple">
+<li><p>Open up a web browser and go to the following URL: <a class="reference external" href="https://jupyterhub.egr.msu.edu">https://jupyterhub.egr.msu.edu</a>. Feel free to use whichever one you want or whichever one happens to be functioning when you try.</p></li>
+<li><p>Type your engineering login name. This will be your MSU NetID.</p></li>
+<li><p>Type your engineering (DECS account) password.</p></li>
+</ol>
+<p>If everything is working properly you will see the main “Files” windows in the Jupyter interface.</p>
+<p><em>If you <strong>ever</strong> run into an issue with accessing JupyterHub, contact <a class="reference external" href="mailto:jupyterhub&#37;&#52;&#48;egr&#46;msu&#46;edu">jupyterhub<span>&#64;</span>egr<span>&#46;</span>msu<span>&#46;</span>edu</a> for support.</em></p>
+<p>The following directions should serve as a reference for how you can go about uploading and downloading Jupyter notebooks and turning them in.</p>
+<p><a id="uploadnotebook"></a></p>
+<section id="instructions-for-getting-jupyter-notebook-files-onto-jupyterhub">
+<h5>Instructions for getting Jupyter notebook files onto JupyterHub:<a class="headerlink" href="#instructions-for-getting-jupyter-notebook-files-onto-jupyterhub" title="Link to this heading">#</a></h5>
+<p>Jupyter notebooks (also referred to as IPython notebooks) are files that end with the .ipynb extension.  We will give you these files for all of your assignments, you will edit them and turn in the edited files in using the class Website.</p>
+<p>You can download the .ipynb assignment files from the class website. Once you have an .ipynb file you can load it into Jupyter using the “upload” button on the main “Files” tab in the JupyterHub web interface. Hitting this button will cause a file browser window to open. Just navigate to your ipynb file (wherever you downloaded it to), select it, and hit the open button.</p>
+<p>Once you see your filename in the jupyter window you can just click on that name to start using that file.</p>
+<p><a id="downloadnotebook"></a></p>
+</section>
+<section id="instructions-for-downloading-jupyter-notebooks-from-jupyterhub-and-turning-them-in">
+<h5>Instructions for downloading Jupyter notebooks from JupyterHub and turning them in:<a class="headerlink" href="#instructions-for-downloading-jupyter-notebooks-from-jupyterhub-and-turning-them-in" title="Link to this heading">#</a></h5>
+<p>When you are finished editing your Jupyter notebook and are ready to turn it in you will need to download the .ipynb file from the JupyterHub interface.</p>
+<ol class="arabic simple">
+<li><p>With the notebook file open in JupyterHub, go to the “File” menu, select the “Download as” menu option and then choose “Notebook (.ipynb)”</p></li>
+<li><p>Pick a place to save the file (e.g. the desktop, your downloads folder, or a special folder for CMSE 202 content).</p></li>
+<li><p>Make sure you keep a copy of the .ipynb file for your own records.</p></li>
+<li><p>Go to the Desire 2 Learn (<a class="reference external" href="http://d2l.msu.edu">http://d2l.msu.edu</a>) class website and upload the .ipynb file into the appropriate assignment folder.</p></li>
+</ol>
+<p><strong>NOTE</strong>:  Video versions of these instructions are available on the CMSE YouTube channel <a class="reference external" href="https://www.youtube.com/watch?v=l7mhi4ww6tY">here</a> and <a class="reference external" href="https://www.youtube.com/watch?v=5WSQnGmz3IA">here</a>.</p>
+<p><a id="slack"></a></p>
+<!--
+### Course Communication with Slack
+
+We will be using Slack ([http://slack.com](http://slack.com)) as our means of communicating about course content as the semester progresses and to provide a space for you to ask questions and get help. We believe that this will provide an excellent avenue to have discussions not only with course instructors, TAs, and LAs, but also between you and your fellow classmates. In order to join the Slack team that we’ve created for the course you should complete the following steps:
+
+1. Go to [https://cmse-courses.slack.com/signup](https://cmse-courses.slack.com/signup)
+2. Once there, sign up using your @msu.edu email address.
+	**Important**: When you create your account, use your 	MSU NetID as your user name. This will make it easier for your instructors to recognize you within the Slack channels.
+
+Once you've joined the CMSE Courses Slack team, you'll need to **add yourself to two channels** (these channels are listed on the course website homepage). To add yourself to these channels, click on "Channels" and search for the appropriate channel.
+
+The "help" channel will be the place to go for any questions about assignments in the course or issues you're having with your computer or Python. We encourage you to help out other classmates when you can! The section-specific channel will be used by your instructor for important messages relevant only to your section of the course.
+
+<a id="slackguidelines"></a>
+#### Slack usage guidelines
+
+In order to ensure that Slack is a useful tool that does not become overly time-consuming for the course instructors, TAs, or LAs, we have a list of rules for how we expect you to use Slack. They are:
+
+1. **Do not post your solutions to out-of-class assignments directly into Slack unless prompted by an instructor**.
+2. Before you ask a question, be sure to check the other section channels to see if the question has already been answered.
+3. The Slack team is primarily for you, the students, so help each other.
+4. The TAs and LAs will monitor the channels, but will defer to the students to work through things. They will only enter a conversation if students are going down the wrong path and/or there are too few other students involved. However, you should not expect that the TAs or LAs will always be available. The TAs and LAs will spend a limited amount of time “logged in” to Slack and we ask that you be respectful of their time.
+5. Slack is meant to be used to help you when you are stuck with a minor issue. If you are having major issues or trouble understanding the concept, go to office/helproom hours.  Office/helproom hours are meant for more in-depth discussions of course content.
+6. Course instructors will monitor Slack when time permits, but might only pop on to examine progress. While they may offer help, it is not recommended that you rely on getting that help on short timescales. Instructors will not respond to the same student twice within a 30 minute time interval.
+7. Only in rare cases should you contact an instructor through a private channel. But, if you are struggling, feel free to use this option.
+8. Be courteous to everyone on Slack. Students who are being rude or who are excessively posting might be banned from posting on the course Slack channel.
+-->
+</section>
+</section>
+</section>
+<section id="course-communication-with-teams">
+<h3>Course Communication with Teams<a class="headerlink" href="#course-communication-with-teams" title="Link to this heading">#</a></h3>
+<p>We will be using <a class="reference external" href="https://tech.msu.edu/technology/collaborative-tools/spartan365/">Teams</a> as our means of communicating about course content as the semester progresses and to provide a space for you to ask questions and get help. We believe that this will provide an excellent avenue to have discussions not only with course instructors, TAs, and LAs, but also between you and your fellow classmates. In order to join the Slack team that we’ve created for the course you should complete the following steps:</p>
+<ol class="arabic simple">
+<li><p>Go to <a class="reference external" href="https://tech.msu.edu/technology/collaborative-tools/spartan365/">https://tech.msu.edu/technology/collaborative-tools/spartan365/</a></p></li>
+<li><p>Once there, sign up using your &#64;msu.edu email address.
+<strong>Important</strong>: When you create your account, use your 	MSU NetID as your user name. This will make it easier for your instructors to recognize you within the Slack channels.</p></li>
+</ol>
+<p>Once you’ve joined the MSU Teams channel, you’ll need to <strong>add yourself to two channels</strong> (these channels are listed on the course website homepage). To add yourself to these channels, click on “Channels” and search for the appropriate channel.</p>
+<p>The “help” channel will be the place to go for any questions about assignments in the course or issues you’re having with your computer or Python. We encourage you to help out other classmates when you can! The section-specific channel will be used by your instructor for important messages relevant only to your section of the course.</p>
+<p><a id="slackguidelines"></a></p>
+<section id="teams-channel-usage-guidelines">
+<h4>Teams channel usage guidelines<a class="headerlink" href="#teams-channel-usage-guidelines" title="Link to this heading">#</a></h4>
+<p>In order to ensure that Teams is a useful tool that does not become overly time-consuming for the course instructors, TAs, or LAs, we have a list of rules for how we expect you to use Teams. They are:</p>
+<ol class="arabic simple">
+<li><p><strong>Do not post your solutions to out-of-class assignments directly into Teams channels unless prompted by an instructor</strong>.</p></li>
+<li><p>Before you ask a question, be sure to check the other section channels to see if the question has already been answered.</p></li>
+<li><p>The Teams is primarily for you, the students, so help each other.</p></li>
+<li><p>The TAs and LAs will monitor the channels, but will defer to the students to work through things. They will only enter a conversation if students are going down the wrong path and/or there are too few other students involved. However, you should not expect that the TAs or LAs will always be available. The TAs and LAs will spend a limited amount of time “logged in” to Slack and we ask that you be respectful of their time.</p></li>
+<li><p>Teams is meant to be used to help you when you are stuck with a minor issue. If you are having major issues or trouble understanding the concept, go to office/helproom hours.  Office/helproom hours are meant for more in-depth discussions of course content.</p></li>
+<li><p>Course instructors will monitor Slack when time permits, but might only pop on to examine progress. While they may offer help, it is not recommended that you rely on getting that help on short timescales. Instructors will not respond to the same student twice within a 30 minute time interval.</p></li>
+<li><p>Only in rare cases should you contact an instructor through a private channel. But, if you are struggling, feel free to use this option.</p></li>
+<li><p>Be courteous to everyone on Teams. Students who are being rude or who are excessively posting might be banned from posting on the course Teams channel.</p></li>
+</ol>
+<p><a id="github"></a></p>
+</section>
+</section>
+<section id="setting-up-a-student-github-account">
+<h3>Setting up a student GitHub account<a class="headerlink" href="#setting-up-a-student-github-account" title="Link to this heading">#</a></h3>
+<p>From time to time in the course, you may be expected create, use, and share GitHub repositories with your instructors and your fellow classmates. If you don’t know what a GitHub repository is, don’t worry! You’ll learn about Git repositories and how to host them on GitHub in class.</p>
+<p>In order to do this, you need to set up an account on <a class="reference external" href="https://github.com/">GitHub</a>. Go to <a class="github reference external" href="https://github.com/"></a> and sign up for an account <strong>using your “&#64;msu.edu” email address</strong>. It is important that you sign up using your “&#64;msu.edu” account so that you can get the <em>Student Pack</em>, which gives you special access to software and unlimited private repositories. The student pack can be found <a class="reference external" href="https://education.github.com/pack">here</a>. <strong>You are expected to request access to the Student Pack before you come to class.</strong> Once you have a GitHub account, the instructors will be able to give you access to any important course GitHub repositories.</p>
+<hr class="docutils" />
+<p><a id="software"></a></p>
+</section>
+</section>
+<section id="id2">
+<h2>Setting up important software <br> (if you want to run your code locally)<a class="headerlink" href="#id2" title="Link to this heading">#</a></h2>
+<hr class="docutils" />
+<p><a id="python"></a></p>
+<section id="installing-python-for-this-course">
+<h3>Installing Python for this course<a class="headerlink" href="#installing-python-for-this-course" title="Link to this heading">#</a></h3>
+<p>If you choose to use a local Python installation for this course (you’re absolutely welcome to!), you need to have an <strong>Anaconda</strong> Python installation that is both <strong>functioning</strong> and <strong>current</strong>. If you have a past installation, you are expected to make sure it is up-to-date. You can update your current Anaconda install by following <a class="reference internal" href="#update-anaconda"><span class="xref myst">these directions</span></a>.</p>
+<p>In addition to making sure your installation is updated, you should also ensure that the Anaconda installation is in your default path. You can check that this is true by following <a class="reference internal" href="#check-path"><span class="xref myst">these directions</span></a></p>
+<p>If you don’t already have Anaconda installed or if you already had Anaconda, but you couldn’t get the update to work or ensure that Anaconda is in your path, you should install a fresh version of Anaconda following <a class="reference internal" href="#install-anaconda"><span class="xref myst">these directions</span></a>.</p>
+<p><a id="update-anaconda"></a></p>
+<section id="updating-a-previous-installation">
+<h4>Updating a previous installation<a class="headerlink" href="#updating-a-previous-installation" title="Link to this heading">#</a></h4>
+<p><a id="update-windows"></a></p>
+<section id="updating-on-windows-jump-to-mac-directions">
+<h5>Updating on Windows (<a class="reference internal" href="#update-mac"><span class="xref myst">jump to Mac directions</span></a>)<a class="headerlink" href="#updating-on-windows-jump-to-mac-directions" title="Link to this heading">#</a></h5>
+<ol class="arabic">
+<li><p>Make sure you are connected to the internet</p></li>
+<li><p>Find your Anaconda prompt and update Anaconda.</p>
+<a class="reference internal image-reference" href="../_images/prompt.PNG"><img alt="prompt" src="../_images/prompt.PNG" style="width: 500px;" /></a>
+<p>On keyboard press <kbd> Windows-key </kbd> or simply use the search bar on the taskbar if it is visible. Search <code class="docutils literal notranslate"><span class="pre">Anaconda</span> <span class="pre">Prompt</span></code> and right-click on the search result and select “Run as administrator”.</p>
+<a class="reference internal image-reference" href="../_images/update01.PNG"><img alt="update" src="../_images/update01.PNG" style="width: 500px;" /></a>
+<p>Type in the command <code class="docutils literal notranslate"><span class="pre">conda</span> <span class="pre">update</span> <span class="pre">--all</span></code> and press <code class="docutils literal notranslate"><span class="pre">Enter</span></code>. This command will update anaconda.</p>
+<a class="reference internal image-reference" href="../_images/update02.PNG"><img alt="confirm" src="../_images/update02.PNG" style="width: 500px;" /></a>
+<p>To continue type <code class="docutils literal notranslate"><span class="pre">y</span></code> and press enter.</p>
+<a class="reference internal image-reference" href="../_images/update03.PNG"><img alt="exit" src="../_images/update03.PNG" style="width: 500px;" /></a>
+<p>If all goes well you should be all updated. To close out of the terminal type <code class="docutils literal notranslate"><span class="pre">exit</span></code> and press enter.</p>
+</li>
+</ol>
+<p>Now double-check that Python is <a class="reference internal" href="#check-path"><span class="xref myst">available in your commandline path</span></a>.</p>
+<p><a id="update-mac"></a></p>
+</section>
+<section id="updating-on-a-mac-jump-to-windows-directions">
+<h5>Updating on a Mac <a class="reference internal" href="#update-windows"><span class="xref myst">(jump to Windows directions</span></a>)<a class="headerlink" href="#updating-on-a-mac-jump-to-windows-directions" title="Link to this heading">#</a></h5>
+<ol class="arabic">
+<li><p>Make sure you are connected to the internet</p></li>
+<li><p>Find your terminal and update Anaconda.</p>
+<a class="reference internal image-reference" href="../_images/cmd_update.png"><img alt="cmd_update" src="../_images/cmd_update.png" style="width: 500px;" /></a>
+<p>Using Spotlight by pressing <kbd> command </kbd> + <kbd> space-bar </kbd> or simply use the search bar in the top right corner search <code class="docutils literal notranslate"><span class="pre">terminal</span></code> and press <code class="docutils literal notranslate"><span class="pre">Enter</span></code>. Then type in the command <code class="docutils literal notranslate"><span class="pre">conda</span> <span class="pre">update</span> <span class="pre">--all</span></code> and press <code class="docutils literal notranslate"><span class="pre">Enter</span></code>. This command will update anaconda.</p>
+<a class="reference internal image-reference" href="../_images/update_y.png"><img alt="update_y" src="../_images/update_y.png" style="width: 500px;" /></a>
+<p>To continue type <code class="docutils literal notranslate"><span class="pre">y</span></code> and press enter.</p>
+<a class="reference internal image-reference" href="../_images/update_done.png"><img alt="update_done" src="../_images/update_done.png" style="width: 500px;" /></a>
+<p>If all goes well you should be all updated.</p>
+</li>
+</ol>
+<p><a id="check-path"></a></p>
+</section>
+</section>
+<section id="checking-that-python-is-available-in-your-command-line-path">
+<h4>Checking that Python is available in your command line path<a class="headerlink" href="#checking-that-python-is-available-in-your-command-line-path" title="Link to this heading">#</a></h4>
+<p><a id="check-path-windows"></a></p>
+<section id="checking-your-path-on-windows-jump-to-mac-directions">
+<h5>Checking your path on Windows (<a class="reference internal" href="#check-path-mac"><span class="xref myst">jump to Mac directions</span></a>)<a class="headerlink" href="#checking-your-path-on-windows-jump-to-mac-directions" title="Link to this heading">#</a></h5>
+<ol class="arabic">
+<li><p>Make sure Anaconda is already installed on your system.</p></li>
+<li><p>Open up any terminal besides anaconda prompt and run Jupyter Notebook.</p>
+<a class="reference internal image-reference" href="../_images/run.PNG"><img alt="run" src="../_images/run.PNG" style="width: 500px;" /></a>
+<p>On keyboard press <kbd> Windows-key </kbd> + <kbd> r </kbd> or simply use the search bar on the taskbar if it is visible. Enter <code class="docutils literal notranslate"><span class="pre">cmd</span></code> and press enter. This will open up the Windows Command terminal.</p>
+<a class="reference internal image-reference" href="../_images/cmd_jupyter.PNG"><img alt="jupyter" src="../_images/cmd_jupyter.PNG" style="width: 500px;" /></a>
+<p>Type in <code class="docutils literal notranslate"><span class="pre">jupyter</span> <span class="pre">notebook</span></code> and press <code class="docutils literal notranslate"><span class="pre">Enter</span></code>. This should launch a jupyter notebook tab on a web browser.</p>
+<a class="reference internal image-reference" href="../_images/exit01.PNG"><img alt="exit01" src="../_images/exit01.PNG" style="width: 500px;" /></a>
+<a class="reference internal image-reference" href="../_images/exit02.PNG"><img alt="exit02" src="../_images/exit02.PNG" style="width: 500px;" /></a>
+<p>To exit jupyter notebook close the tab on the web browser, and go to the terminal window and type <kbd> Ctrl </kbd> + <kbd> c </kbd> twice in a row.</p>
+</li>
+</ol>
+<p><a id="check-path-mac"></a></p>
+</section>
+<section id="checking-your-path-on-a-mac-jump-to-windows-directions">
+<h5>Checking your path on a Mac (<a class="reference internal" href="#check-path-windows"><span class="xref myst">jump to Windows directions</span></a>)<a class="headerlink" href="#checking-your-path-on-a-mac-jump-to-windows-directions" title="Link to this heading">#</a></h5>
+<ol class="arabic">
+<li><p>Make sure Anaconda is already installed on your system.</p></li>
+<li><p>Open up the terminal and run Jupyter Notebook.</p>
+<a class="reference internal image-reference" href="../_images/cmd_jupyter_mac.png"><img alt="cmd_jupyter" src="../_images/cmd_jupyter_mac.png" style="width: 500px;" /></a>
+<p>Using Spotlight by pressing <kbd> command </kbd> + <kbd> space-bar </kbd> or simply use the search bar in the top right corner search <code class="docutils literal notranslate"><span class="pre">terminal</span></code> and press <code class="docutils literal notranslate"><span class="pre">Enter</span></code>. Then type in <code class="docutils literal notranslate"><span class="pre">jupyter</span> <span class="pre">notebook</span></code> and press <code class="docutils literal notranslate"><span class="pre">Enter</span></code>.</p>
+<a class="reference internal image-reference" href="../_images/jup.png"><img alt="jup" src="../_images/jup.png" style="width: 750px;" /></a>
+<p>This should launch a jupyter notebook tab on a web browser and the terminal should look like this.</p>
+<a class="reference internal image-reference" href="../_images/jup_close.png"><img alt="jup_close" src="../_images/jup_close.png" style="width: 500px;" /></a>
+<p>To exit jupyter notebook close the tab on the web browser, and go to the terminal window and type <kbd> control </kbd> + <kbd> c </kbd> twice in a row.</p>
+</li>
+</ol>
+<p><a id="install-anaconda"></a></p>
+</section>
+</section>
+<section id="if-you-don-t-having-a-fully-functioning-up-to-date-installation-of-anaconda-python">
+<h4>If you don’t having a fully functioning up-to-date installation of Anaconda Python<a class="headerlink" href="#if-you-don-t-having-a-fully-functioning-up-to-date-installation-of-anaconda-python" title="Link to this heading">#</a></h4>
+<p>If you have a Windows computer, jump to <a class="reference internal" href="#anaconda-windows"><span class="xref myst">this section</span></a> and follow the instructions.</p>
+<p>If you have a Mac, jump to <a class="reference internal" href="#anaconda-mac"><span class="xref myst">this section</span></a> and follow the instructions.</p>
+<p>If you have a Linux computer and aren’t sure how to go about installing Anaconda, contact you instructor.</p>
+<p><a id="anaconda-windows"></a></p>
+<section id="installing-anaconda-for-windows">
+<h5>Installing Anaconda for Windows<a class="headerlink" href="#installing-anaconda-for-windows" title="Link to this heading">#</a></h5>
+<p>Instructions for downloading and installing Anaconda (Python 3):</p>
+<ol class="arabic">
+<li><p>Go to the <a class="reference external" href="https://www.anaconda.com/download/">Anaconda Download webpage:</a></p></li>
+<li><p>Use the <code class="docutils literal notranslate"><span class="pre">download</span></code> button (or scroll until you see <code class="docutils literal notranslate"><span class="pre">Anaconda</span> <span class="pre">Installers</span></code>)</p>
+<a class="reference internal image-reference" href="../_images/anaconda_download.PNG"><img alt="Anaconda_download_1" src="../_images/anaconda_download.PNG" style="width: 500px;" /></a>
+</li>
+<li><p>Download the current version of Python 3, you’ll notice there is a 32-bit and 64-bit version. If you are unsure which you should download, you’ll most likely want the 64-bit version, but if you want to be sure, follow the instructions below.</p>
+<p>a. On keyboard press <kbd> Windows-key </kbd> or simply use the search bar on the taskbar if it is visible.</p>
+<p>b. Search <code class="docutils literal notranslate"><span class="pre">System</span> <span class="pre">Information</span></code> and click on the search result.</p>
+<a class="reference internal image-reference" href="../_images/system.PNG"><img alt="system" src="../_images/system.PNG" style="width: 500px;" /></a>
+<p>c. Look for the line called <code class="docutils literal notranslate"><span class="pre">System</span> <span class="pre">Type</span></code></p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>* If it reads `x64-based PC` you have a 64-bit system and you should download 64-bit Anaconda.
+
+* If it reads `x86-based PC` you have a 32-bit system and you should download 32-bit Anaconda.
+</pre></div>
+</div>
+<a class="reference internal image-reference" href="../_images/sys.PNG"><img alt="x64" src="../_images/sys.PNG" style="width: 500px;" /></a>
+</li>
+<li><p>After downloading, run the Anaconda Installer Executable. Say <code class="docutils literal notranslate"><span class="pre">yes</span></code> to any warnings.</p>
+<a class="reference internal image-reference" href="../_images/01.PNG"><img alt="Setup" src="../_images/01.PNG" style="width: 500px;" /></a>
+<a class="reference internal image-reference" href="../_images/02.PNG"><img alt="License Agreement" src="../_images/02.PNG" style="width: 500px;" /></a>
+<a class="reference internal image-reference" href="../_images/03.PNG"><img alt="Permission" src="../_images/03.PNG" style="width: 500px;" /></a>
+<p>Any option here is ok, change to <code class="docutils literal notranslate"><span class="pre">All</span> <span class="pre">Users</span></code> if you want to install to all accounts on your PC.</p>
+<a class="reference internal image-reference" href="../_images/04.PNG"><img alt="location" src="../_images/04.PNG" style="width: 500px;" /></a>
+<p><em>Change the Destination folder at your own risk</em> If troubles creep up later in class with using Anaconda, this might make the issues harder to fix. If you do change location, make sure it remains on the drive your windows installation is on.</p>
+<a class="reference internal image-reference" href="../_images/05.PNG"><img alt="install" src="../_images/05.PNG" style="width: 500px;" /></a>
+<p><strong>Make sure to enable this option</strong> This is required for software this class uses.</p>
+<a class="reference internal image-reference" href="../_images/06.PNG"><img alt="during" src="../_images/06.PNG" style="width: 500px;" /></a>
+<p>Installation may take awhile, it may stay at this screen for awhile. Be patient.</p>
+<a class="reference internal image-reference" href="../_images/07.PNG"><img alt="complete" src="../_images/07.PNG" style="width: 500px;" /></a>
+<a class="reference internal image-reference" href="../_images/08.PNG"><img alt="almost" src="../_images/08.PNG" style="width: 500px;" /></a>
+<a class="reference internal image-reference" href="../_images/09a.PNG"><img alt="finished" src="../_images/09a.PNG" style="width: 500px;" /></a>
+<p>Any option here is okay, if you want to get a feel for the things Anaconda can do, feel free to keep those checkboxes selected.</p>
+</li>
+<li><p>Open the command line program on your computer.</p>
+<p>a. On keyboard press <kbd> Windows-key </kbd> + <kbd> r </kbd> or simply use the search bar on the taskbar if it is visible.</p>
+<p>b. Enter <code class="docutils literal notranslate"><span class="pre">cmd</span></code> and press enter.</p>
+<p><img alt="run" src="../_images/run.PNG" /></p>
+</li>
+<li><p>Type <code class="docutils literal notranslate"><span class="pre">jupyter</span> <span class="pre">notebook</span></code> in the command line and hit enter.</p>
+<a class="reference internal image-reference" href="../_images/cmd_jupyter.PNG"><img alt="jupyter" src="../_images/cmd_jupyter.PNG" style="width: 500px;" /></a>
+<p>If everything goes correctly, a browser window should open up with the Jupyter interface running. If things don’t work, don’t worry, we will help you get started.</p>
+<a class="reference internal image-reference" href="../_images/exit01.PNG"><img alt="exit01" src="../_images/exit01.PNG" style="width: 500px;" /></a>
+<p>To exit jupyter notebook close the tab on the web browser, and go to the cmd window and type <kbd> Ctrl </kbd> + <kbd> c </kbd> twice in a row.</p>
+<a class="reference internal image-reference" href="../_images/exit02.PNG"><img alt="exit02" src="../_images/exit02.PNG" style="width: 500px;" /></a>
+<p>To close out of the terminal type <code class="docutils literal notranslate"><span class="pre">exit</span></code> and press enter.</p>
+</li>
+</ol>
+<p><em>If for any reason you still don’t have Anaconda functioning on your computer and you’d like to get it working, contact you instructor!</em></p>
+<p><a id="anaconda-mac"></a></p>
+</section>
+<section id="installing-anaconda-for-mac">
+<h5>Installing Anaconda for Mac<a class="headerlink" href="#installing-anaconda-for-mac" title="Link to this heading">#</a></h5>
+<p>Instructions for downloading Anaconda (Python 3):</p>
+<ol class="arabic">
+<li><p>Go to the <a class="reference external" href="https://www.anaconda.com/download/">Anaconda Download webpage:</a></p></li>
+<li><p>Use the <code class="docutils literal notranslate"><span class="pre">download</span></code> button  (or scroll until you see <code class="docutils literal notranslate"><span class="pre">Anaconda</span> <span class="pre">Installers</span></code>)</p>
+<a class="reference internal image-reference" href="../_images/anaconda_download_mac.png"><img alt="Anaconda_download_mac" src="../_images/anaconda_download_mac.png" style="width: 500px;" /></a>
+</li>
+<li><p>Download the current version of Python 3, you’ll notice there is a “Graphical” and “Command Line” installer. This guide covers the Graphical, but feel free to use the Command Line if you wish.</p></li>
+<li><p>After downloading, run the <code class="docutils literal notranslate"><span class="pre">Anaconda3</span></code> installer that popped into the dock (or you can open it from the <code class="docutils literal notranslate"><span class="pre">Downloads</span></code> folder as well).</p>
+<a class="reference internal image-reference" href="../_images/agree.png"><img alt="agree" src="../_images/agree.png" style="width: 500px;" /></a>
+<p>Press the <code class="docutils literal notranslate"><span class="pre">Continue</span></code> button</p>
+<a class="reference internal image-reference" href="../_images/welcome.png"><img alt="welcome" src="../_images/welcome.png" style="width: 500px;" /></a>
+<p>Press the <code class="docutils literal notranslate"><span class="pre">Continue</span></code> button.</p>
+<a class="reference internal image-reference" href="../_images/read.png"><img alt="read" src="../_images/read.png" style="width: 500px;" /></a>
+<p>Press the <code class="docutils literal notranslate"><span class="pre">Continue</span></code> button.</p>
+<a class="reference internal image-reference" href="../_images/license.png"><img alt="license" src="../_images/license.png" style="width: 500px;" /></a>
+<p>Press the <code class="docutils literal notranslate"><span class="pre">Continue</span></code> button.</p>
+<a class="reference internal image-reference" href="../_images/license_agree.png"><img alt="license_agree" src="../_images/license_agree.png" style="width: 500px;" /></a>
+<p>Press the <code class="docutils literal notranslate"><span class="pre">Agree</span></code> button.</p>
+<a class="reference internal image-reference" href="../_images/destination.png"><img alt="destination" src="../_images/destination.png" style="width: 500px;" /></a>
+<p>You may notice that there is an error if you are running macOS Catalina or higher. We will want to change the destination for both the sake of macOS Catalina users, and those that are running macOS Mojave or sooner in case if you ever do update to macOS Catalina. Click on <code class="docutils literal notranslate"><span class="pre">Install</span> <span class="pre">on</span> <span class="pre">a</span> <span class="pre">specific</span> <span class="pre">disk...</span></code></p>
+<a class="reference internal image-reference" href="../_images/drive.png"><img alt="drive" src="../_images/drive.png" style="width: 500px;" /></a>
+<p>Make sure to click and select your main harddrive (You may only have one if no other storage device is connected to the compiter). Then click the <code class="docutils literal notranslate"><span class="pre">Choose</span> <span class="pre">Folder...</span></code> button.</p>
+<a class="reference internal image-reference" href="../_images/home.png"><img alt="home" src="../_images/home.png" style="width: 500px;" /></a>
+<p>Then click on the <code class="docutils literal notranslate"><span class="pre">Users</span></code> -&gt; <code class="docutils literal notranslate"><span class="pre">[YOUR_USERNAME]</span></code>. The <code class="docutils literal notranslate"><span class="pre">[YOUR_USERNAME]</span></code> should be the username of the account you are logged into. In my case this is <code class="docutils literal notranslate"><span class="pre">brandonmcintyre</span></code>. Then click in the bottom left hand corner on the <code class="docutils literal notranslate"><span class="pre">New</span> <span class="pre">Folder</span></code> button.</p>
+<a class="reference internal image-reference" href="../_images/new.png"><img alt="new" src="../_images/new.png" style="width: 500px;" /></a>
+<p>You can enter any name you want for the folder as long as it does not have a space in it. For this tutorial we will use <code class="docutils literal notranslate"><span class="pre">me</span></code>. Then click <code class="docutils literal notranslate"><span class="pre">Create</span></code>.</p>
+<a class="reference internal image-reference" href="../_images/choose.png"><img alt="choose" src="../_images/choose.png" style="width: 500px;" /></a>
+<p>If all went well the folder should be created and should be automatically selected. Now click the <code class="docutils literal notranslate"><span class="pre">Choose</span></code> button.</p>
+<a class="reference internal image-reference" href="../_images/cont.png"><img alt="cont" src="../_images/cont.png" style="width: 500px;" /></a>
+<p>Press the <code class="docutils literal notranslate"><span class="pre">Continue</span></code> button.</p>
+<a class="reference internal image-reference" href="../_images/install.png"><img alt="install" src="../_images/install.png" style="width: 500px;" /></a>
+<p>Press the <code class="docutils literal notranslate"><span class="pre">Install</span></code> button.</p>
+<a class="reference internal image-reference" href="../_images/password.png"><img alt="password" src="../_images/password.png" style="width: 500px;" /></a>
+<p>Enter your password then click <code class="docutils literal notranslate"><span class="pre">Install</span> <span class="pre">Software</span></code>.</p>
+<a class="reference internal image-reference" href="../_images/during.png"><img alt="during" src="../_images/during.png" style="width: 500px;" /></a>
+<p>This may take a moment to install.</p>
+<a class="reference internal image-reference" href="../_images/allow.png"><img alt="allow" src="../_images/allow.png" style="width: 500px;" /></a>
+<p>Press <code class="docutils literal notranslate"><span class="pre">OK</span></code> button to allow.</p>
+<a class="reference internal image-reference" href="../_images/pycharm.png"><img alt="pycharm" src="../_images/pycharm.png" style="width: 500px;" /></a>
+<p>Press the <code class="docutils literal notranslate"><span class="pre">Continue</span></code> button.</p>
+<a class="reference internal image-reference" href="../_images/finished.png"><img alt="finished" src="../_images/finished.png" style="width: 500px;" /></a>
+<p>Then press the <code class="docutils literal notranslate"><span class="pre">Close</span></code> button. Then to finish, press <code class="docutils literal notranslate"><span class="pre">Move</span> <span class="pre">to</span> <span class="pre">Trash</span></code> to delete the installer.</p>
+</li>
+<li><p>Open terminal on your computer by using Spotlight by pressing <kbd> command </kbd> + <kbd> space-bar </kbd> or simply use the search bar in the top right corner search <code class="docutils literal notranslate"><span class="pre">terminal</span></code> and press <code class="docutils literal notranslate"><span class="pre">Enter</span></code>. Then type <code class="docutils literal notranslate"><span class="pre">jupyter</span> <span class="pre">notebook</span></code> in the command line and hit enter.</p>
+<a class="reference internal image-reference" href="../_images/cmd_jupyter_mac.png"><img alt="cmd_jupyter_mac" src="../_images/cmd_jupyter_mac.png" style="width: 500px;" /></a>
+<a class="reference internal image-reference" href="../_images/jup.png"><img alt="jup" src="../_images/jup.png" style="width: 750px;" /></a>
+<p>This should launch a jupyter notebook tab on a web browser and the terminal should look like this.</p>
+<a class="reference internal image-reference" href="../_images/jup_close.png"><img alt="jup_close" src="../_images/jup_close.png" style="width: 500px;" /></a>
+<p>To exit jupyter notebook close the tab on the web browser, and go to the terminal window and type <kbd> control </kbd> + <kbd> c </kbd> twice in a row. Now you can close the terminal.</p>
+</li>
+</ol>
+<p><em>If for any reason you still don’t have Anaconda functioning on your computer and you’d like to get it working, contact you instructor!</em></p>
+<p><a id="git"></a></p>
+</section>
+</section>
+</section>
+<section id="using-git-for-version-control">
+<h3>Using Git for version control<a class="headerlink" href="#using-git-for-version-control" title="Link to this heading">#</a></h3>
+<p>From time to time, we’ll be using Git in this course to keep track of changes to our code. Keeping track of the revision history of code called “version control”, we’ll be discussing this in more detail in class. You’ll need to make sure that you have Git installed on your computer. Follow the steps below based on the type of computer you’re using.</p>
+<p>When these situations arise, it will be possible to use the MSU JupyterHub interface, but if you would like to have a local installation of Git on your computer, following the directions below.</p>
+<p>Use <a class="reference internal" href="#git-windows"><span class="xref myst">these directions</span></a> if you have a Windows machine.</p>
+<p><a class="reference internal" href="#git-mac"><span class="xref myst">These directions</span></a> if you have a Mac.</p>
+<p>And <a class="reference internal" href="#git-linux"><span class="xref myst">these directions</span></a> if you have a Linux machine.</p>
+<p><a id="git-windows"></a></p>
+<section id="installing-git-if-you-have-a-windows-computer">
+<h4>Installing Git if you have a <strong>Windows</strong> computer:<a class="headerlink" href="#installing-git-if-you-have-a-windows-computer" title="Link to this heading">#</a></h4>
+<p>If you have Windows 10 and would like to experiment with using the Windows Subystem for Linux (WSL) during this course, contact your instructor for a more detailed guide on how you can try to set everything up using that functionality. However, this is not strictly necessary and you can simply follow the directions below to set up Git within the standard Windows operating system.</p>
+<ol class="arabic">
+<li><p>Go to the <a class="reference external" href="https://git-scm.com/downloads">Git Download webpage</a>, and download the Windows version.</p></li>
+<li><p>After downloading, run the Git exectuable file. Say <code class="docutils literal notranslate"><span class="pre">yes</span></code> to any warnings.</p>
+<a class="reference internal image-reference" href="../_images/g01.PNG"><img alt="license" src="../_images/g01.PNG" style="width: 500px;" /></a>
+<a class="reference internal image-reference" href="../_images/g02.PNG"><img alt="location" src="../_images/g02.PNG" style="width: 500px;" /></a>
+<p>It is suggested to leave this alone, however, if you do want to change the location, make sure it is in the same drive that Anaconda is installed in.</p>
+<a class="reference internal image-reference" href="../_images/g03.png"><img alt="desktop" src="../_images/g03.png" style="width: 500px;" /></a>
+<p>If you click this option, a shortcut linking to the terminal will be placed on your desktop. Alternatively, once the terminal is started you can pin the program to your taskbar, or search for it with <kbd> Windows-key </kbd></p>
+<a class="reference internal image-reference" href="../_images/g04.PNG"><img alt="start" src="../_images/g04.PNG" style="width: 500px;" /></a>
+<a class="reference internal image-reference" href="../_images/g05.PNG"><img alt="text" src="../_images/g05.PNG" style="width: 500px;" /></a>
+<p>Any text editor can be used here, however, if you have never used a command line text editor just leave it to Vim for now. We will cover text editors later.</p>
+<a class="reference internal image-reference" href="../_images/g06a.PNG"><img alt="PATH" src="../_images/g06a.PNG" style="width: 500px;" /></a>
+<p>Either option 2 or 3 is ok. It is recommend to use option 2, however, if you want unix-commands to be avalible in native command prompts (like MS-DOS or powershell) you can select option 3.</p>
+<a class="reference internal image-reference" href="../_images/g07.PNG"><img alt="SSL" src="../_images/g07.PNG" style="width: 500px;" /></a>
+<a class="reference internal image-reference" href="../_images/g08.PNG"><img alt="line" src="../_images/g08.PNG" style="width: 500px;" /></a>
+<a class="reference internal image-reference" href="../_images/g09.PNG"><img alt="mintty" src="../_images/g09.PNG" style="width: 500px;" /></a>
+<a class="reference internal image-reference" href="../_images/g10.PNG"><img alt="pull" src="../_images/g10.PNG" style="width: 500px;" /></a>
+<a class="reference internal image-reference" href="../_images/g11.PNG"><img alt="extra1" src="../_images/g11.PNG" style="width: 500px;" /></a>
+<a class="reference internal image-reference" href="../_images/g12.PNG"><img alt="extra2" src="../_images/g12.PNG" style="width: 500px;" /></a>
+<a class="reference internal image-reference" href="../_images/g13.png"><img alt="finished" src="../_images/g13.png" style="width: 500px;" /></a>
+<p>Make sure to check the box that says <code class="docutils literal notranslate"><span class="pre">Launch</span> <span class="pre">Git</span> <span class="pre">Bash</span></code>. This is helpful for the next step. If you accidently do not check the box, you can always press <kbd> Windows-key </kbd> and search for Git Bash</p>
+</li>
+</ol>
+<p><a id="conda_bash"></a></p>
+<section id="adding-anaconda-functionality-to-git-bash">
+<h5>Adding Anaconda functionality to Git-Bash<a class="headerlink" href="#adding-anaconda-functionality-to-git-bash" title="Link to this heading">#</a></h5>
+<p>Next we are going to add Anaconda’s python to our Git-bash terminal. This is crucial as this is what will allow us to run python from the terminal, and install new packages into our Anaconda’s python. We will first add Anaconda to our PATH, and then “create an alias” to run python from Git-bash.</p>
+<ol class="arabic">
+<li><p>Find your Anaconda prompt (If needed, see above for screenshots). To do this, on the keyboard press <kbd> Windows-key </kbd> or simply use the search bar on the taskbar if it is visible. Search <code class="docutils literal notranslate"><span class="pre">Anaconda</span> <span class="pre">Prompt</span></code> and click on the search result.</p></li>
+<li><p>Type <code class="docutils literal notranslate"><span class="pre">where</span> <span class="pre">python</span></code> and press enter.</p>
+<a class="reference internal image-reference" href="../_images/a01.PNG"><img alt="python_location" src="../_images/a01.PNG" style="width: 500px;" /></a>
+<p>Notice that there may be two locations. We are looking for the location that has <code class="docutils literal notranslate"><span class="pre">anaconda3</span></code> in the location. Keep this window open while we switch over to using the Git Bash terminal.</p>
+</li>
+<li><p>Using Git Bash (which should be open from our last step), navigate to what is known as your home directory by typing <code class="docutils literal notranslate"><span class="pre">cd</span> <span class="pre">~</span></code> in the terminal. (Notice how the symbols changed from <code class="docutils literal notranslate"><span class="pre">/</span></code> known as the “root” directory to <code class="docutils literal notranslate"><span class="pre">~</span></code> which is our “home” directory) (It is also possible you may load into your home directory automatically as well)</p>
+<a class="reference internal image-reference" href="../_images/a02.PNG"><img alt="home" src="../_images/a02.PNG" style="width: 500px;" /></a>
+</li>
+<li><p>Using a text editor, the <code class="docutils literal notranslate"><span class="pre">.bashrc</span></code> file will need to modified to include the path to Anconda’s python using the <code class="docutils literal notranslate"><span class="pre">alias</span></code> feature. It is most likely that you will not already have the <code class="docutils literal notranslate"><span class="pre">.bashrc</span></code> so the file will need to be created. (For reference the <code class="docutils literal notranslate"><span class="pre">.bashrc</span></code> file is a file that contains settings that is ran everytime the terminal is started)</p>
+<a class="reference internal image-reference" href="../_images/a03.PNG"><img alt="vi" src="../_images/a03.PNG" style="width: 500px;" /></a>
+<p>Type <code class="docutils literal notranslate"><span class="pre">vi</span> <span class="pre">.bashrc</span></code> into the Git Bash terminal. This will open up/create the <code class="docutils literal notranslate"><span class="pre">.bashrc</span></code> with a command line text editor called Vim.</p>
+<a class="reference internal image-reference" href="../_images/a04.png"><img alt="insert" src="../_images/a04.png" style="width: 500px;" /></a>
+<p>Press (lowercase)<code class="docutils literal notranslate"><span class="pre">i</span></code>. You will notice that this bottom left corner will go from <em>blank</em> to saying <code class="docutils literal notranslate"><span class="pre">--</span> <span class="pre">INSERT</span> <span class="pre">--</span></code>. This changed the mode from “Command Mode” to “Insert Mode”. Command Mode is where you can run commands such as save, exit, and the like. Insert mode is where you can type into the file and edit its contents.</p>
+<p><img alt="alias" src="../_images/a05.PNG" />  Now we will use the location found when using <code class="docutils literal notranslate"><span class="pre">where</span> <span class="pre">python</span></code> in Anaconda Prompt (there may be two locations, use the one with <code class="docutils literal notranslate"><span class="pre">Anaconda3</span></code> in the location path) to create an alias for running python from the terminal. The general format is <code class="docutils literal notranslate"><span class="pre">alias</span> <span class="pre">python='winpty</span> <span class="pre">[PATH</span> <span class="pre">FROM</span> <span class="pre">&quot;WHERE</span> <span class="pre">PYTHON&quot;]'</span></code>.</p>
+<p>To make this a little easier would be to copy and paste from the Anconda Prompt. First we need to type <code class="docutils literal notranslate"><span class="pre">alias</span> <span class="pre">python='winpty</span> </code> into the Git Bash terminal.</p>
+<p>Then, to copy the “Anaconda3” python path from Anaconda Prompt, use your mouse to <em>left-click</em> and drag over the text in Anaconda Prompt to highlight it, and then <em>right-click</em> on the highlighted text. This should make the highlighting of the text disappear. This now means you have copied the text you just highlighted.</p>
+<p>Go over to the Git Bash terminal and <em>right-click</em> into the terminal. Now there should be an option to <code class="docutils literal notranslate"><span class="pre">Paste</span></code>, click that. Then make sure to type <code class="docutils literal notranslate"><span class="pre">'</span></code> at the end of what you just copied.</p>
+<p>Next we are going to need to edit the location path from windows notation, to unix-like notation. To do this use the arrow-keys to move along the text, and change all back-slashes <code class="docutils literal notranslate"><span class="pre">\</span></code> to <code class="docutils literal notranslate"><span class="pre">/</span></code> forward-slashes. Then change <code class="docutils literal notranslate"><span class="pre">C:</span></code> to lowercase <code class="docutils literal notranslate"><span class="pre">/c</span></code>. Then you should have the correct alias.</p>
+<p><strong>(If you cannot get this method to work, simply type out the above alias by hand)</strong></p>
+<a class="reference internal image-reference" href="../_images/a06.PNG"><img alt="Save" src="../_images/a06.PNG" style="width: 500px;" /></a>
+<p>To save and close the file we will need to return back to the “Command Mode” to do this press the <code class="docutils literal notranslate"><span class="pre">Esc</span></code> on your keyboard. You will notice the bottom left-hand corner will go from <code class="docutils literal notranslate"><span class="pre">--</span> <span class="pre">INSERT</span> <span class="pre">--</span></code> to <em>blank</em>. Then type on your keyboard <code class="docutils literal notranslate"><span class="pre">:wq</span></code> and press enter. This is the command to save (or <em>write</em> to the disk <code class="docutils literal notranslate"><span class="pre">w</span></code>) and to quit the text editor (<code class="docutils literal notranslate"><span class="pre">q</span></code>).</p>
+<a class="reference internal image-reference" href="../_images/a07.PNG"><img alt="cat" src="../_images/a07.PNG" style="width: 500px;" /></a>
+<p>Then to check and make sure you entered the alias write, run the the command <code class="docutils literal notranslate"><span class="pre">cat</span> <span class="pre">.bashrc</span></code>. The <code class="docutils literal notranslate"><span class="pre">cat</span></code> command “prints” to your terminal all of the file contents. In our case this is contents of our <code class="docutils literal notranslate"><span class="pre">.bashrc</span></code> file. Keep Git Bash open for later steps.</p>
+</li>
+<li><p>The PATH varibles in windows may need to altered to include the PATH to our Anaconda Installation. This will make sure to link Anaconda commands with the Git Bash terminal.</p>
+<a class="reference internal image-reference" href="../_images/a08.PNG"><img alt="search" src="../_images/a08.PNG" style="width: 500px;" /></a>
+<p>On keyboard press <kbd> Windows-key </kbd> or simply use the search bar on the taskbar if it is visible. Type in <code class="docutils literal notranslate"><span class="pre">Edit</span> <span class="pre">environment</span> <span class="pre">varibles</span> <span class="pre">for</span> <span class="pre">your</span> <span class="pre">account</span></code>. Click on the search result.</p>
+<a class="reference internal image-reference" href="../_images/a09.PNG"><img alt="Path" src="../_images/a09.PNG" style="width: 500px;" /></a>
+<p>Under the first section “User variables for [YOUR USERNAME]” double click on the line that has <code class="docutils literal notranslate"><span class="pre">Path</span></code> under the <code class="docutils literal notranslate"><span class="pre">Varaible</span></code> column.</p>
+<a class="reference internal image-reference" href="../_images/a10.PNG"><img alt="environment" src="../_images/a10.PNG" style="width: 500px;" /></a>
+<p>Here we can check and see all of the PATH variables for our terminal. You may notice Paths to Anaconda3 already entered in (except instead of my username “bmcin” you will have your own username). <em>If you have all of the Anaconda3 paths in this picture</em> (minus the one that starts with <code class="docutils literal notranslate"><span class="pre">%USERPROFILE%</span></code>) you are fine and can close out of these windows and skip to step 6. <em>If you do not have any/only partial of the Anaconda3 paths</em> (Again, minus the one that starts with <code class="docutils literal notranslate"><span class="pre">%USERPROFILE%</span></code>) then you will need to add these paths. The paths may vary by system if you saved Anaconda3 not in the default spot the Anaconda Installer suggested. Fortunately, we can use the path from the <code class="docutils literal notranslate"><span class="pre">where</span> <span class="pre">python</span></code> command we ran on the anaconda prompt in step 2 to get the paths we need.</p>
+<a class="reference internal image-reference" href="../_images/a11.PNG"><img alt="Add" src="../_images/a11.PNG" style="width: 500px;" /></a>
+<p>You will notice that the path from <code class="docutils literal notranslate"><span class="pre">where</span> <span class="pre">python</span></code> returns a path that has “Anaconda3” in the path. <code class="docutils literal notranslate"><span class="pre">C:\Users\bmcin\anaconda3\python.exe</span></code>. What you will want to do is copy everything up to “anaconda3” (<code class="docutils literal notranslate"><span class="pre">C:\Users\bmcin\anaconda3</span></code>). Then press the <code class="docutils literal notranslate"><span class="pre">New</span></code> button and then paste the path in there. Then add on whatever else is necessary to complete the path. You will need each of the following paths.<em>Note: [ANACONDA PATH] is the path you copied.</em></p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">[ANACONDA</span> <span class="pre">PATH]</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">[ANACONDA</span> <span class="pre">PATH]\Scripts</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">[ANACONDA</span> <span class="pre">PATH]\Library\bin</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">[ANACONDA</span> <span class="pre">PATH]\Library\usr\bin</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">[ANACONDA</span> <span class="pre">PATH]\Library\mingw-w64\bin</span></code></p></li>
+</ul>
+<p>Once finished adding the paths, press <code class="docutils literal notranslate"><span class="pre">OK</span></code> on the first window to close it, and press <code class="docutils literal notranslate"><span class="pre">OK</span></code> again to close the second window.</p>
+</li>
+<li><p>To finish this out we will need to “run” the <code class="docutils literal notranslate"><span class="pre">.bashrc</span></code> file to apply our changes, and then check to make sure we are all set.</p>
+<a class="reference internal image-reference" href="../_images/a12.PNG"><img alt="source" src="../_images/a12.PNG" style="width: 500px;" /></a>
+<p>In the Git Bash terminal, type and enter <code class="docutils literal notranslate"><span class="pre">source</span> <span class="pre">.bashrc</span></code>. This will apply the changes we made earlier to the file. If you encounter an error in this part or the next part, it is most likely you did not close your <code class="docutils literal notranslate"><span class="pre">'</span></code> in your alias, you did not put a <code class="docutils literal notranslate"><span class="pre">/</span></code> in front of the <code class="docutils literal notranslate"><span class="pre">c</span></code>, or you spelled something wrong. Follow step 4 again.</p>
+<a class="reference internal image-reference" href="../_images/a13.PNG"><img alt="python" src="../_images/a13.PNG" style="width: 500px;" /></a>
+<p>To test if everything was successful, in Git Bash type <code class="docutils literal notranslate"><span class="pre">python</span></code> and press enter, if all is well the terminal should appear as it does above. Currently you will be running the “python interpreter” which is a program that runs in your terminal.</p>
+<p><em>If successful, and the terminal looks like it does above</em> use the key combination <kbd> Ctrl </kbd> + <kbd> d </kbd> to quit out of the python interpreter. Then type in <code class="docutils literal notranslate"><span class="pre">exit</span></code> and hit enter, this will close the terminal.</p>
+<p><em>If unsucessful, and nothing appears or there is an error</em> you can simply just simply close the terminal with the <code class="docutils literal notranslate"><span class="pre">X</span></code> in the top right corner.</p>
+</li>
+</ol>
+<p><a id="startup"></a></p>
+</section>
+<section id="changing-startup-location-to-home-directory">
+<h5>Changing startup location to Home directory<a class="headerlink" href="#changing-startup-location-to-home-directory" title="Link to this heading">#</a></h5>
+<p>This next step is to ensure that when Git Bash starts up, you will load into the home directory (<code class="docutils literal notranslate"><span class="pre">~</span></code>) instead of the root directory (<code class="docutils literal notranslate"><span class="pre">/</span></code>). This will make it less likely for the file and folders in the root directory to be harmed, and proper file storage etiquette be followed.</p>
+<ol class="arabic">
+<li><p>Close down the Git Bash terminal if open, and restart. You may notice a Warning in the terminal saying <code class="docutils literal notranslate"><span class="pre">.bash_profile</span></code> and other files are missing, you can saftely ignore this.</p></li>
+<li><p>Navigate to the home directory and open <code class="docutils literal notranslate"><span class="pre">.bash_profile</span></code> in a text editor.</p>
+<a class="reference internal image-reference" href="../_images/profile.PNG"><img alt="profile" src="../_images/profile.PNG" style="width: 500px;" /></a>
+<p>In the terminal type <code class="docutils literal notranslate"><span class="pre">cd</span> <span class="pre">~</span></code> and press <code class="docutils literal notranslate"><span class="pre">Enter</span></code> to change your directory to the Home directory. Then type <code class="docutils literal notranslate"><span class="pre">vi</span> <span class="pre">.bash_profile</span></code> and press <code class="docutils literal notranslate"><span class="pre">Enter</span></code>. This will open the <code class="docutils literal notranslate"><span class="pre">.bash_profile</span></code> file that is used to run the <code class="docutils literal notranslate"><span class="pre">.bashrc</span></code> file that we edited earlier.</p>
+</li>
+<li><p>Add a line that changes the directory to home</p>
+<a class="reference internal image-reference" href="../_images/home_cd.PNG"><img alt="home_cd" src="../_images/home_cd.PNG" style="width: 500px;" /></a>
+<p>Press (lowercase)<code class="docutils literal notranslate"><span class="pre">i</span></code> on the keyboard. Then, using the down-arrow key <kbd> ↓ </kbd> on your keyboard move to the last possible line you can. You will notice the screen will flash if you are try pressing the down-arrow while on the last line. Then, using the right-arrow key <kbd> → </kbd> on your keyboard move to the end of the line. Again, you will notice the screen will flash if you are try pressing the right-arrow while at the end of the line. Then, on the keyboard press <code class="docutils literal notranslate"><span class="pre">Enter</span></code> and this should make a newline. Type <code class="docutils literal notranslate"><span class="pre">cd</span> <span class="pre">~</span></code>. If done successfully, the file should look like this. <em>Note: if any of the lines above the <code class="docutils literal notranslate"><span class="pre">cd</span> <span class="pre">~</span></code> were altered, this could break things. Make sure you did not alter any of those lines before continuing. If you did happen to mess them up, press <code class="docutils literal notranslate"><span class="pre">Esc</span></code> on the keyboard and then type <code class="docutils literal notranslate"><span class="pre">:q!</span></code> and press <code class="docutils literal notranslate"><span class="pre">Enter</span></code> this will not save any of the changes you made, and you can try editing it again.</em></p>
+<a class="reference internal image-reference" href="../_images/close_vim.PNG"><img alt="close_vim" src="../_images/close_vim.PNG" style="width: 500px;" /></a>
+<p>To save and close the file we will need to return back to the “Command Mode” to do this press the <code class="docutils literal notranslate"><span class="pre">Esc</span></code> on your keyboard. You will notice the bottom left-hand corner will go from <code class="docutils literal notranslate"><span class="pre">--</span> <span class="pre">INSERT</span> <span class="pre">--</span></code> to <em>blank</em>. Then type on your keyboard <code class="docutils literal notranslate"><span class="pre">:wq</span></code> and press <code class="docutils literal notranslate"><span class="pre">Enter</span></code>. This is the command to save (or <em>write</em> to the disk <code class="docutils literal notranslate"><span class="pre">w</span></code>) and to quit the text editor (<code class="docutils literal notranslate"><span class="pre">q</span></code>).</p>
+</li>
+<li><p>Test to make sure you start up in the home directory.</p>
+<a class="reference internal image-reference" href="../_images/test_home.PNG"><img alt="test_home" src="../_images/test_home.PNG" style="width: 500px;" /></a>
+<p>First close down the Terminal. Then open it back up. If all went well you should start up in the Home directory. You can tell by looking here. If it has <code class="docutils literal notranslate"><span class="pre">~</span></code> then we are all-set.</p>
+</li>
+</ol>
+<p><strong>Congrats you are done with setting up a terminal!</strong><br />
+<em>If at anypoint anything got too confusing or you were not successful, please let your instructor know during class or through email and they can work with you to resolve any issues.</em></p>
+<p><a id="git-mac"></a></p>
+</section>
+</section>
+<section id="install-git-if-you-have-a-mac-computer">
+<h4>Install Git if you have a <strong>Mac</strong> computer:<a class="headerlink" href="#install-git-if-you-have-a-mac-computer" title="Link to this heading">#</a></h4>
+<p>As a Mac user, you may already have Git install on your computer since Mac You may already have Git installed on your computer.</p>
+<p>You can check if this is the case by opening the “Terminal” application (search for it in Spotlight if you don’t know where it is by pressing <kbd> command </kbd> + <kbd> space-bar </kbd> or use the search bar in the top right corner search <code class="docutils literal notranslate"><span class="pre">terminal</span></code> and press <code class="docutils literal notranslate"><span class="pre">Enter</span></code>) and then type <code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">--version</span></code> and hit enter. Like so:</p>
+<a class="reference internal image-reference" href="../_images/git_version.png"><img alt="git_version" src="../_images/git_version.png" style="width: 500px;" /></a>
+<p>If you already have Git installed, it should tell you what version you have. If Git isn’t installed, it will either tell you that it can’t find Git, or it will ask if you want to install the “Command Line Tools” to install Git. You’re welcome to use the version on you machine, or the version that Command Line Tools installs, but if you want the newest version of Git you’ll have to install it yourself. Read on if you want to embark on this journey!</p>
+<p><a id="git-mac-install"></a></p>
+<section id="download-and-install-the-newest-version-of-git-for-mac">
+<h5>Download and install the newest version of Git for Mac<a class="headerlink" href="#download-and-install-the-newest-version-of-git-for-mac" title="Link to this heading">#</a></h5>
+<ol class="arabic">
+<li><p>First, you’ll want to onstall <code class="docutils literal notranslate"><span class="pre">Homebrew</span></code>. Visit the <a class="reference external" href="https://brew.sh/">Homebrew main page</a> for instructions on how to install <code class="docutils literal notranslate"><span class="pre">Homebrew</span></code></p>
+<a class="reference internal image-reference" href="../_images/hb.png"><img alt="homebrew" src="../_images/hb.png" style="width: 750px;" /></a>
+<p>Copy and paste the terminal command into the terminal and press <code class="docutils literal notranslate"><span class="pre">Enter</span></code>.</p>
+<a class="reference internal image-reference" href="../_images/hb_password.png"><img alt="hb_password" src="../_images/hb_password.png" style="width: 500px;" /></a>
+<p>Enter the password to your account and press <code class="docutils literal notranslate"><span class="pre">Enter</span></code>.</p>
+<a class="reference internal image-reference" href="../_images/hb_cont.png"><img alt="hb_cont" src="../_images/hb_cont.png" style="width: 500px;" /></a>
+<p>To continue press the <code class="docutils literal notranslate"><span class="pre">Enter</span></code> button. This will take a moment to install everything necessary.</p>
+<a class="reference internal image-reference" href="../_images/hb_cont_2.png"><img alt="hb_cont_2" src="../_images/hb_cont_2.png" style="width: 500px;" /></a>
+<p>To continue enter your password. Press the <code class="docutils literal notranslate"><span class="pre">Enter</span></code> button.</p>
+<a class="reference internal image-reference" href="../_images/hb_cont_3.png"><img alt="hb_cont_3" src="../_images/hb_cont_3.png" style="width: 500px;" /></a>
+<p>If sucessful you will now be done.</p>
+</li>
+<li><p>In the terminal install git via homebrew.</p>
+<a class="reference internal image-reference" href="../_images/git_brew.png"><img alt="git_brew" src="../_images/git_brew.png" style="width: 500px;" /></a>
+<p>Type in the terminal <code class="docutils literal notranslate"><span class="pre">brew</span> <span class="pre">install</span> <span class="pre">git</span></code>. Then press <code class="docutils literal notranslate"><span class="pre">Enter</span></code>.</p>
+<a class="reference internal image-reference" href="../_images/git_done.png"><img alt="git_done" src="../_images/git_done.png" style="width: 500px;" /></a>
+<p>If successful, there should be no errors, to test type <code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">--version</span></code> and press <code class="docutils literal notranslate"><span class="pre">Enter</span></code>. You should then see a version.</p>
+</li>
+</ol>
+<p><a id="git-linux"></a></p>
+</section>
+</section>
+<section id="install-git-if-you-have-a-linux-computer">
+<h4>Install Git if you have a <strong>Linux</strong> computer:<a class="headerlink" href="#install-git-if-you-have-a-linux-computer" title="Link to this heading">#</a></h4>
+<p>In the “Console” application, use the appropriate command from this page: <a class="reference external" href="https://git-scm.com/download/linux">https://git-scm.com/download/linux</a></p>
+<p>Once you finish the installation process, you should be able to open the Console and run <code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">--version</span></code> to see if Git has been successfully installed.</p>
+<!--
+<a id="atom"></a>
+### Installing the Atom text editor
+
+In this course you may be expected to work outside of Jupyter notebooks to write Python scripts from time to time, which you'll run from the Command Line Interface. In order to write these scripts, you'll need to be comfortable using a text editor. If you don't already have a good text editor that you prefer using you can use one of the system defaults, but if you'd like to try another options, Atom can be a good choice. To install Atom, go to [https://atom.io/](https://atom.io/) and download the version appropriate for your computer.
+
+You may wish to read through the installation information specific to your operating system:
+
+**Windows**: [http://flight-manual.atom.io/getting-started/sections/installing-atom/#platform-windows](http://flight-manual.atom.io/getting-started/sections/installing-atom/#platform-windows)
+
+**Mac**: [http://flight-manual.atom.io/getting-started/sections/installing-atom/#platform-mac](http://flight-manual.atom.io/getting-started/sections/installing-atom/#platform-mac)
+
+**Linux**: [http://flight-manual.atom.io/getting-started/sections/installing-atom/#platform-linux](http://flight-manual.atom.io/getting-started/sections/installing-atom/#platform-linux)
+
+-->
+</section>
+</section>
+</section>
+<hr class="docutils" />
+<section id="that-s-it-we-look-forward-to-seeing-you-in-class">
+<h2>That’s it! We look forward to seeing you in class!<a class="headerlink" href="#that-s-it-we-look-forward-to-seeing-you-in-class" title="Link to this heading">#</a></h2>
+</section>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./course_materials"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="CMSE202_Calendar.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">CMSE 202 Course Schedule</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="SemesterProjectDetails.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">CMSE 202</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <dialog id="pst-secondary-sidebar-modal"></dialog>
+                <div id="pst-secondary-sidebar" class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#software-setup-guide">Software Setup Guide</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#table-of-contents">Table of Contents</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#setting-up-important-accounts"><span class="xref myst">Setting up important accounts</span></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#setting-up-important-software-if-you-want-to-run-your-code-locally"><span class="xref myst">Setting up important software (if you want to run your code locally)</span></a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">Setting up important accounts</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#msu-s-jupyterhub-interface">MSU’s JupyterHub Interface</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#instructions-for-connecting-to-the-engineering-jupyterhub-server">Instructions for connecting to the engineering JupyterHub server:</a><ul class="nav section-nav flex-column">
+<li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#instructions-for-getting-jupyter-notebook-files-onto-jupyterhub">Instructions for getting Jupyter notebook files onto JupyterHub:</a></li>
+<li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#instructions-for-downloading-jupyter-notebooks-from-jupyterhub-and-turning-them-in">Instructions for downloading Jupyter notebooks from JupyterHub and turning them in:</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#course-communication-with-teams">Course Communication with Teams</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#teams-channel-usage-guidelines">Teams channel usage guidelines</a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#setting-up-a-student-github-account">Setting up a student GitHub account</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">Setting up important software <br/> (if you want to run your code locally)</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#installing-python-for-this-course">Installing Python for this course</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#updating-a-previous-installation">Updating a previous installation</a><ul class="nav section-nav flex-column">
+<li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#updating-on-windows-jump-to-mac-directions">Updating on Windows (<span class="xref myst">jump to Mac directions</span>)</a></li>
+<li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#updating-on-a-mac-jump-to-windows-directions">Updating on a Mac <span class="xref myst">(jump to Windows directions</span>)</a></li>
+</ul>
+</li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#checking-that-python-is-available-in-your-command-line-path">Checking that Python is available in your command line path</a><ul class="nav section-nav flex-column">
+<li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#checking-your-path-on-windows-jump-to-mac-directions">Checking your path on Windows (<span class="xref myst">jump to Mac directions</span>)</a></li>
+<li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#checking-your-path-on-a-mac-jump-to-windows-directions">Checking your path on a Mac (<span class="xref myst">jump to Windows directions</span>)</a></li>
+</ul>
+</li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#if-you-don-t-having-a-fully-functioning-up-to-date-installation-of-anaconda-python">If you don’t having a fully functioning up-to-date installation of Anaconda Python</a><ul class="nav section-nav flex-column">
+<li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#installing-anaconda-for-windows">Installing Anaconda for Windows</a></li>
+<li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#installing-anaconda-for-mac">Installing Anaconda for Mac</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#using-git-for-version-control">Using Git for version control</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#installing-git-if-you-have-a-windows-computer">Installing Git if you have a <strong>Windows</strong> computer:</a><ul class="nav section-nav flex-column">
+<li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#adding-anaconda-functionality-to-git-bash">Adding Anaconda functionality to Git-Bash</a></li>
+<li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#changing-startup-location-to-home-directory">Changing startup location to Home directory</a></li>
+</ul>
+</li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#install-git-if-you-have-a-mac-computer">Install Git if you have a <strong>Mac</strong> computer:</a><ul class="nav section-nav flex-column">
+<li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#download-and-install-the-newest-version-of-git-for-mac">Download and install the newest version of Git for Mac</a></li>
+</ul>
+</li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#install-git-if-you-have-a-linux-computer">Install Git if you have a <strong>Linux</strong> computer:</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#that-s-it-we-look-forward-to-seeing-you-in-class">That’s it! We look forward to seeing you in class!</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By Hui-Chia Yu
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2025.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script defer src="../_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf"></script>
+<script defer src="../_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>
