@@ -69,9 +69,10 @@ The details regarding the software needed for this course are provided in the â€
 
 Homework assignments that are submitted late will be accepted **for up to two days beyond the due date **(i.e., 48 hours past the original deadline)**. If the assignment is submitted within 24 hours of the original deadline, there is a 10% penalty**. This applies even if the assignment is 1 minute late. Similarly, **if it is submitted in the 24-48 hour window, a 20% deduction is applied**. Again, **after the 48th hour, the assignment will no longer be accepted**. If you need additional extensions or withhold the late penalty for extenuating circumstances, you must contact the instructor **before** the assignment is due to discuss this.
 
-**Quiz/Exams**: The intended plan is for this class to have two exams over the course of the semester, a midterm and a final. However, as the semester progresses, should we find that we need to adapt to a new course format, this could be changed to multiple short quizzes which would each be worth a smaller fraction of the overall grade. Should we decide to make this change, you will be notified well in advance of any such quizzes.
+**Quiz/Exam**: Short quizzes (ideally 2-3) will be used to assess studentsâ€™ learning outcomes. Each will be worth a small fraction of the overall exam grade. Should we decide to make change of the quiz policy, you will be notified well in advance of such decision.
 
-**Semester Project**:  This class will have an end-of-semester project that will involve synthesizing the computational modeling, data analysis, and data visualization techniques that you learned over the course of the term and presenting it (them) in writing and in an oral presentation. Project proposals will be due at roughly the halfway point of the course. These will be group projects and they will likely be presented during the last week of classes. More details on these projects will be available near the middle of the semester.
+**Semester Project**: This class will have an individual end-of-semester project. An ideal project is to implement the computational modeling and data analysis techniques that you learned over the course of the term to your existing research work, such that students get most out of the class efforts. You will present your project in writing and in an oral presentation. Along the course of the semester, project proposals and updates are required, and the instructor will discuss the progress and provide suggestions to you. 
+
 
 ### Course meeting times and locations
 
@@ -79,7 +80,7 @@ You are expected to attend all scheduled class sessions. If you need to miss cla
 
 ### Other important information
 
-**Course Website and Calendar**:  This course has a website where important information regarding the course will be posted (e.g. syllabus, schedule, office hours calendar, etc): [https://cmse.msu.edu/cmse202](https://msu-cmse-courses.github.io/cmse202-S25-jb/index.html)
+**Course Website and Calendar**:  This course has a website where important information regarding the course will be posted (e.g. syllabus, schedule, office hours calendar, etc): [https://huichiayu.github.io/nthu_mse.github.io]( https://huichiayu.github.io/nthu_mse.github.io/index.html)
 
 In addition, this course also uses a Desire2Learn (D2L) page for course assignment management, which can be found at [https://d2l.msu.edu](https://d2l.msu.edu). **All assignments will be handed in via Desire2Learn** unless otherwise specified (e.g. via GitHub). If you cannot access the course D2L page, notify your instructor immediately.
 
