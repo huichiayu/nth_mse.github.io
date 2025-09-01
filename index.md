@@ -43,18 +43,12 @@ There are also section specific channels in the format of **TBA**<!--`#cmse202-#
 
 ### Section Instructors
 
-* **Justin Gambrell** (Sections 001 & 002), [gambre11@msu.edu](mailto:gambre11@msu.edu)  
-Assistant Professor  
-Department of Computational Mathematics, Science and Engineering  
 
 * **Hui-Chia Yu** (Section 003), [hcy@msu.edu](mailto:hcy@msu.edu)  
-Associate Professor  
-Department of Computational Mathematics, Science and Engineering  
-Department of Chemical Engineering and Materials Sciences  
+Associate Professor<br>
+Department of Computational Mathematics, Science and Engineering<br>
+Department of Chemical Engineering and Materials Sciences<br>
 
-* **Luciano Silvestri** (Section 004), [silves28@msu.edu](mailto:silves28@msu.edu)  
-Assistant Professor  
-Departments of Computational Mathematics, Science and Engineering
 
 
   
