@@ -1,0 +1,1126 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="../../" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Pre-Class Assignment: Python Review and Intro to Git &#8212; CMSE 202 Course Website</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  <!--
+    this give us a css class that will be invisible only if js is disabled
+  -->
+  <noscript>
+    <style>
+      .pst-js-only { display: none !important; }
+
+    </style>
+  </noscript>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../../_static/styles/theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
+<link href="../../_static/styles/pydata-sphinx-theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
+
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=b76e3c8a" />
+    <link rel="stylesheet" type="text/css" href="../../_static/styles/sphinx-book-theme.css?v=a3416100" />
+    <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css?v=13237357" />
+    <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="../../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-thebe.css?v=4fa983c6" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-design.min.css?v=95c83b7e" />
+  
+  <!-- So that users can add custom icons -->
+  <script src="../../_static/scripts/fontawesome.js?digest=8878045cc6db502f8baf"></script>
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../../_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf" />
+<link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf" />
+
+    <script src="../../_static/documentation_options.js?v=9eb32ce0"></script>
+    <script src="../../_static/doctools.js?v=9a2dae69"></script>
+    <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../../_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="../../_static/copybutton.js?v=f281be69"></script>
+    <script src="../../_static/scripts/sphinx-book-theme.js?v=887ef09a"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../../_static/togglebutton.js?v=4a39c7ea"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="../../_static/design-tabs.js?v=f930bc37"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script async="async" src="../../_static/sphinx-thebe.js?v=c100c467"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'daily/Day-03/Day-03_Pre-Class_PythonReview+GitIntro-STUDENT';</script>
+    <link rel="icon" href="../../_static/logo.png"/>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="In-Class Assignment: Practice with Git and GitHub" href="Day-03_In-Class_GitPractice-STUDENT.html" />
+    <link rel="prev" title="Day 3" href="../../section_files/day_3.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  <meta name="docsearch:version" content="" />
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
+  
+  <dialog id="pst-search-dialog">
+    
+<form class="bd-search d-flex align-items-center"
+      action="../../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         placeholder="Search..."
+         aria-label="Search..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form>
+  </dialog>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+      <dialog id="pst-primary-sidebar-modal"></dialog>
+      <div id="pst-primary-sidebar" class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="../../index.html">
+  
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="../../_static/logo.png" class="logo__image only-light" alt="CMSE 202 Course Website - Home"/>
+    <img src="../../_static/logo.png" class="logo__image only-dark pst-js-only" alt="CMSE 202 Course Website - Home"/>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item">
+
+<button class="btn search-button-field search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+ <i class="fa-solid fa-magnifying-glass"></i>
+ <span class="search-button__default-text">Search</span>
+ <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+</button></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">Course Materials</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../../course_materials/CMSE202_Syllabus.html">Syllabus</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../course_materials/CMSE202_Calendar.html">Schedule</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../course_materials/CMSE202_HelpRoomCalendar.html">Office Hours and Help Room</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../course_materials/SoftwareSetupGuide.html">Software Setup Guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../course_materials/CMSE202_GenerativeAI_Policy.html">Generative AI Policy</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://upload.wikimedia.org/wikipedia/commons/7/79/Unix_command_cheatsheet.pdf">CLI (Unix/Mac/Linux) commands cheat sheet</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../course_materials/BashVsPowershell_CheatSheet.html">Bash vs PowerShell</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://wac-cdn.atlassian.com/dam/jcr:e7e22f25-bba2-4ef1-a197-53f46b6df4a5/SWTM-2088_Atlassian-Git-Cheatsheet.pdf?cdnVersion=525">Git Cheat Sheet</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://raw.githubusercontent.com/msu-cmse-courses/cmse202-supplemental-data/main/documents/How-to-Access-Anaconda-Powershell-Prompt.pdf">How to Access “Anaconda Powershell Prompt” (for Windows users)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../course_materials/Pull_Request_Guide.html">Making and merging Pull Requests on GitHub</a></li>
+
+
+
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Semester Project</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../../course_materials/SemesterProjectDetails.html">Semester Project Details</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../course_materials/CMSE202_FinalProjectRequirementsAndGradingRubric.html">Semester Project Requirements and Grading Rubric</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Exams</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../../course_materials/MidtermStudyGuide.html">Midterm Study Guide</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Daily Content</span></p>
+<ul class="current nav bd-sidenav">
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../section_files/day_1.html">Day 1</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../Day-01/Day-01_In-Class_Overview-STUDENT.html">In-class Notebook: Welcome to CMSE202</a></li>
+
+
+
+
+
+
+
+
+
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../section_files/day_2.html">Day 2</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../Day-02/Day-02_Pre-Class_ReflectionAndCommandLineInterface-STUDENT.html">Pre-Class Assignment: Reflection and an introduction to the Command Line Interface (CLI)</a></li>
+
+
+
+<li class="toctree-l2"><a class="reference internal" href="../Day-02/Day-02_In-Class_CommandLineInterface-STUDENT.html">In-class Notebook: Command line interface</a></li>
+
+
+</ul>
+</details></li>
+<li class="toctree-l1 current active has-children"><a class="reference internal" href="../../section_files/day_3.html">Day 3</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul class="current">
+<li class="toctree-l2 current active"><a class="current reference internal" href="#">Pre-Class Assignment: Python Review and Intro to Git</a></li>
+
+<li class="toctree-l2"><a class="reference internal" href="Day-03_In-Class_GitPractice-STUDENT.html">In-Class Assignment: Practice with Git and GitHub</a></li>
+
+
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../section_files/day_4.html">Day 4</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../Day-04/Day-04_Pre-Class_DownloadingFilesAndInstallingPackages-STUDENT.html">Pre-class Assignment: Python Packages</a></li>
+
+
+
+
+
+<li class="toctree-l2"><a class="reference internal" href="../Day-04/Day-04_In-Class_PythonPackagesAndMapPlotting-STUDENT.html">In-class Assignment: Installing Python Packages and Plotting with Maps in Python</a></li>
+
+
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../section_files/day_5.html">Day 5</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../Day-05/Day-05_Pre-Class_PandasReview-STUDENT.html">Pre-Class Assignment: Pandas Review</a></li>
+
+
+<li class="toctree-l2"><a class="reference internal" href="../Day-05/Day-05_In-Class_PandasReview-STUDENT.html">In-Class Assignment: Reviewing Pandas and exploring data</a></li>
+
+
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../section_files/day_6.html">Day 6</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../Day-06/Day-06_Pre-class_ObjectsClasses-STUDENT.html">Pre-class Assignment: Introduction to Object Oriented Programming (OOP)</a></li>
+
+
+<li class="toctree-l2"><a class="reference internal" href="../Day-06/Day-06_In-Class_ObjectsClasses-STUDENT.html">In-class Assignment: We have a Zoo!</a></li>
+
+
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../section_files/day_7.html">Day 7</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../Day-07/Day-07_Pre-class_ObjectInheritanceAndComposition-STUDENT.html">Pre-class Assignment: object inheritance and composition</a></li>
+
+
+<li class="toctree-l2"><a class="reference internal" href="../Day-07/Day-07_In-Class_ObjectInheritanceAndComposition-STUDENT.html">In-class Assignment: We have a Zoo! (part 2)</a></li>
+
+
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../section_files/day_8.html">Day 8</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../Day-08/Day-08_Pre-Class_SuperbugsABM-STUDENT.html">Pre-Class Assignment: Agent-based Modeling of Superbugs</a></li>
+
+
+
+
+
+<li class="toctree-l2"><a class="reference internal" href="../Day-08/Day-08_In-Class_ABMSuperbugs1-STUDENT.html">In-Class Assignment: Simulating Superbugs using agent-based modeling</a></li>
+
+
+
+
+
+
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../section_files/day_9.html">Day 9</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../Day-09/Day-09_Pre-Class_OOPAntForaging-STUDENT.html">Pre-Class Assignment: Reviewing another agent-based model built using Object Oriented Programming (OOP)</a></li>
+
+
+<li class="toctree-l2"><a class="reference internal" href="../Day-09/Day-09_In-Class_ABMSuperbugs2-STUDENT.html">In-Class Assignment: Agent Based Modeling of Superbugs (part 2)</a></li>
+
+
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../section_files/day_10.html">Day 10</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../Day-10/Day-10_Pre-Class_GraphTheory-STUDENT.html">Pre-Class Assignment: Conflicts in Git and Graph Theory</a></li>
+
+
+<li class="toctree-l2"><a class="reference internal" href="../Day-10/Day-10_In-Class_GraphTheory-STUDENT.html">In-Class Assignment: Graph Theory</a></li>
+
+
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../section_files/day_11.html">Day 11</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../Day-11/Day-11_Pre-Class_GraphTheoryCellTowers-STUDENT.html">Pre-class Assignment: Project Brainstorming &amp; Graph Theory and Cell Towers</a></li>
+
+
+
+
+
+<li class="toctree-l2"><a class="reference internal" href="../Day-11/Day-11_In-Class_GraphTheoryCellTowers-STUDENT.html">In-class Assignment: Graph Theory and Cell Towers</a></li>
+
+
+
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../section_files/day_12.html">Day 12</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../Day-12/Day-12_In-Class_ProjectProposals-STUDENT.html">In-Class Assignment: Reviewing Project Ideas</a></li>
+
+
+
+
+
+
+
+
+
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../section_files/day_13.html">Day 13</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../Day-13/Day-13_Pre-Class_Regression-STUDENT.html">Pre-Class Assignment: Regression</a></li>
+
+
+
+<li class="toctree-l2"><a class="reference internal" href="../Day-13/Day-13_In-Class-Regression-STUDENT.html">In-Class Assignment: Linear Regression</a></li>
+
+
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../section_files/day_14.html">Day 14</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../Day-14/Day-14_Pre-Class-PolynomialRegression-STUDENT.html">Pre-Class Assignment: Polynomial Regression</a></li>
+
+
+
+<li class="toctree-l2"><a class="reference internal" href="../Day-14/Day-14_In-Class_MultipleRegression-STUDENT.html">In-Class Assignment: Multiple Regression</a></li>
+
+
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../section_files/day_15.html">Day 15</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../Day-15/Day-15_Pre-Class_MachineLearningIntro-STUDENT.html">Pre-class Assignment: Intro to Machine Learning</a></li>
+
+
+<li class="toctree-l2"><a class="reference internal" href="../Day-15/Day-15_In-Class_ML-LogisticRegression-STUDENT.html">In-Class Assignment: Machine Learning; classification with logistic regression</a></li>
+
+
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../section_files/day_16.html">Day 16</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../Day-16/Day-16_Pre-Class_GitRevisited-STUDENT.html">Pre-Class Assignment: Git with it! (collaborating with Git)</a></li>
+
+
+
+<li class="toctree-l2"><a class="reference internal" href="../Day-16/Day-16_In-Class_CollaboratingWithGit-STUDENT.html">In-Class Assignment: Collaborating with Git</a></li>
+
+
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../section_files/day_17.html">Day 17</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../Day-17/Day-17_Pre-Class_AIPracticeAndProductiveGroupwork-STUDENT.html">Pre-Class Assignment: Revisiting generative AI and reflecting on group work experiences</a></li>
+
+
+
+<li class="toctree-l2"><a class="reference internal" href="../Day-17/Day-17_In-Class_RevisitingGenerativeAIAndProjectPlanning-STUDENT.html">In-Class Assignment: Revisiting Generative AI and Project Planning</a></li>
+
+
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../section_files/day_18.html">Day 18</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../Day-18/Day-18_Pre-Class_Perceptron-STUDENT.html">Pre-class Assignment: The Perceptron Classifier (a simple neural network)</a></li>
+
+
+<li class="toctree-l2"><a class="reference internal" href="../Day-18/Day-18_In-Class_Perceptron-STUDENT.html">In-Class Assignment: The Perceptron Classifier</a></li>
+
+
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../section_files/day_19.html">Day 19</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../Day-19/Day-19_In-Class_PerceptronExtension-STUDENT.html">In-Class Challenge Assignment: Experimenting with the Perceptron</a></li>
+
+
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../section_files/day_20.html">Day 20</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../Day-20/Day-20_Pre-Class_SVMs-STUDENT.html">Pre-Class Assignment: Support Vector Machines (SVMs)</a></li>
+
+
+
+<li class="toctree-l2"><a class="reference internal" href="../Day-20/Day-20_In-Class_SVMs-STUDENT.html">In-Class Assignment: Machine learning with an SVM Classifier</a></li>
+
+
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../section_files/day_21.html">Day 21</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../Day-21/Day-21_Pre-Class_SVMs2-STUDENT.html">Pre-Class Assignment: Further exploration of SVMs</a></li>
+
+
+
+<li class="toctree-l2"><a class="reference internal" href="../Day-21/Day-21_In-Class_SVMs2-STUDENT.html">In-Class Assignment: SVMs continued</a></li>
+
+
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../section_files/day_22.html">Day 22</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../Day-22/Day-22_Pre-Class_ProjectUpdateReminder-STUDENT.html">Pre-Class Assignment: Project updates!</a></li>
+
+
+
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../section_files/day_23.html">Day 23</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../Day-23/Day-23_Pre-Class_PCA-STUDENT.html">Pre-Class Assignment: Principal Component Analysis</a></li>
+
+
+
+</ul>
+</details></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Homework</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../../homework/SS25/HW01/HW-01_GitPracticeDebuggingPythonPackagesAndClasses-SS25-STUDENT.html">Homework 1</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../homework/SS25/HW02/HW02_Part1-Orbits-SS25-STUDENT.html">Homework 2 Part 1</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../homework/SS25/HW02/HW02_Part2-Risk-SS25-STUDENT.html">Homework 2 Part 2</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../homework/SS25/HW03/HW-03_Regression-S25-STUDENT.html">Homework Assignment 3</a></li>
+
+
+
+
+
+
+
+
+
+<li class="toctree-l1"><a class="reference internal" href="../../homework/SS25/HW04/HW-04_Perceptron_SVM_STUDENT.html">Homework 4</a></li>
+
+
+
+
+
+
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+      <div class="sidebar-primary-item">
+<div id="ethical-ad-placement"
+      class="flat"
+      data-ea-publisher="readthedocs"
+      data-ea-type="readthedocs-sidebar"
+      data-ea-manual="true">
+</div></div>
+  </div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><button class="sidebar-toggle primary-toggle btn btn-sm" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</button></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="../../_sources/daily/Day-03/Day-03_Pre-Class_PythonReview+GitIntro-STUDENT.ipynb" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.ipynb</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button pst-js-only" aria-label="Color mode" data-bs-title="Color mode"  data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <i class="theme-switch fa-solid fa-sun                fa-lg" data-mode="light" title="Light"></i>
+  <i class="theme-switch fa-solid fa-moon               fa-lg" data-mode="dark"  title="Dark"></i>
+  <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"  title="System Settings"></i>
+</button>
+
+
+<button class="btn btn-sm pst-navbar-icon search-button search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+</button>
+<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</button>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Pre-Class Assignment: Python Review and Intro to Git</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">Pre-Class Assignment: Python Review and Intro to Git</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#day-3">Day 3</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#put-your-name-here"><p style="text-align: right;"> ✅ Put your name here</p></a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#goals-for-today-s-pre-class-assignment">Goals for today’s pre-class assignment</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#assignment-instructions">Assignment instructions</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#part-1-continuing-to-revisit-your-python-skills">Part 1. Continuing to revisit your Python skills</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#building-a-conceptual-model-using-python-tutor">Building a conceptual model  Using Python Tutor</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#watch-the-above-video-and-answer-the-following-questions">Watch the above video and answer the following questions:</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#review-of-python-containers-lists-sets-dictionaries-tuples">Review of Python Containers (lists, sets, dictionaries, tuples)</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#the-cell-below-includes-a-reproduction-of-the-table-from-the-video">The cell below includes a reproduction of the table from the video.</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#part-2-getting-to-know-git">Part 2. Getting to Know Git</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#why-use-git">2.1: Why use Git?</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#answer-sustainable-software-development">Answer: Sustainable Software Development</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#what-is-sustainable-software-development">What is Sustainable Software Development?</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">2.1.1:</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#examples-of-sustainable-software-challenges">Examples of Sustainable Software Challenges</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">2.1.2:</a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#what-is-git">2.2: What is Git?</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id3">2.2.1</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id4">2.2.2</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#a-brief-interlude-to-get-git-setup">A BRIEF INTERLUDE TO GET GIT SETUP</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#github-account">Github Account</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#important-generating-a-personal-access-token-for-github"><font color="red">IMPORTANT:</font> Generating a Personal Access Token for GitHub</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#using-git">2.3: Using Git</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id5">2.3.1</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#follow-up-questions">Follow-up Questions</a></li>
+</ul>
+</li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#assignment-wrap-up">Assignment wrap-up</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#congratulations-you-re-done-with-your-pre-class-assignment">Congratulations, you’re done with your pre-class assignment!</a></li>
+</ul>
+</li>
+</ul>
+
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section class="tex2jax_ignore mathjax_ignore" id="pre-class-assignment-python-review-and-intro-to-git">
+<h1>Pre-Class Assignment: Python Review and Intro to Git<a class="headerlink" href="#pre-class-assignment-python-review-and-intro-to-git" title="Link to this heading">#</a></h1>
+<section id="day-3">
+<h2>Day 3<a class="headerlink" href="#day-3" title="Link to this heading">#</a></h2>
+<section id="put-your-name-here">
+<h3><p style="text-align: right;"> ✅ Put your name here</p><a class="headerlink" href="#put-your-name-here" title="Link to this heading">#</a></h3>
+<div align="left"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e0/Git-logo.svg/1280px-Git-logo.svg.png" alt="git logo" width=400></div></section>
+</section>
+<section id="goals-for-today-s-pre-class-assignment">
+<h2>Goals for today’s pre-class assignment<a class="headerlink" href="#goals-for-today-s-pre-class-assignment" title="Link to this heading">#</a></h2>
+<ol class="arabic simple">
+<li><p>Continue to revisit some basic Python skills (exploring Python Tutor and reviewing Python data structures)</p></li>
+<li><p>Learn the basics of version control using Git.</p></li>
+</ol>
+<section id="assignment-instructions">
+<h3>Assignment instructions<a class="headerlink" href="#assignment-instructions" title="Link to this heading">#</a></h3>
+<p>Watch the videos below, do the readings linked to below the videos, and complete the assigned programming problems.  Please get started early, and come to office hours if you have any questions! You should also use Slack to help each other thought any issues you run into!</p>
+<p><strong>This assignment is due by 11:59 p.m. the day before class,</strong> and should be uploaded into the appropriate “Pre-class assignments” submission folder.  Submission instructions can be found at the end of the notebook.</p>
+</section>
+</section>
+<hr class="docutils" />
+<section id="part-1-continuing-to-revisit-your-python-skills">
+<h2>Part 1. Continuing to revisit your Python skills<a class="headerlink" href="#part-1-continuing-to-revisit-your-python-skills" title="Link to this heading">#</a></h2>
+<p><strong>IMPORTANT NOTE</strong>: The content in this section is meant to be an opportunity for you to continue dusting any lingering cobwebs off of your Python skills. If you feel like you could use some refreshers on some basic Python content, work through this material. If you’re feeling pretty good about your Python skills, feel free to skim through the content and only spend time on the stuff that seems useful.</p>
+<section id="building-a-conceptual-model-using-python-tutor">
+<h3>Building a conceptual model  Using <a class="reference external" href="http://www.pythontutor.com/">Python Tutor</a><a class="headerlink" href="#building-a-conceptual-model-using-python-tutor" title="Link to this heading">#</a></h3>
+<p>This section introduces a learning tool called <a class="reference external" href="http://www.pythontutor.com/">Python Tutor</a>.  This is a web-based tool you can use to help figure out how the python interpreter maintains the state of variables and modules.  I recommend using this tool anytime you are confused about what is going on inside of python. Please watch the following video for an example about using Python Tutor.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">IPython.display</span> <span class="kn">import</span> <span class="n">YouTubeVideo</span>
+<span class="n">YouTubeVideo</span><span class="p">(</span><span class="s2">&quot;1OQ_E1y73Es&quot;</span><span class="p">,</span><span class="n">width</span><span class="o">=</span><span class="mi">800</span><span class="p">,</span><span class="n">height</span><span class="o">=</span><span class="mi">450</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="watch-the-above-video-and-answer-the-following-questions">
+<h3>Watch the above video and answer the following questions:<a class="headerlink" href="#watch-the-above-video-and-answer-the-following-questions" title="Link to this heading">#</a></h3>
+<p>✅ <strong>Question 1:</strong>  In words, describe how python tutor represents the following two dimensional list:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">l</span> <span class="o">=</span> <span class="p">[</span> <span class="p">[(</span><span class="s1">&#39;me&#39;</span><span class="p">,</span><span class="s1">&#39;you&#39;</span><span class="p">),</span> <span class="mi">20</span><span class="p">,</span> <span class="mi">30</span><span class="p">],</span> <span class="p">[</span><span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">6</span><span class="p">],</span> <span class="p">[</span><span class="s1">&#39;a&#39;</span><span class="p">,</span><span class="s1">&#39;b&#39;</span><span class="p">,</span><span class="s1">&#39;c&#39;</span><span class="p">]]</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p><font size=+3>✎</font> Do This - Erase the contents of this cell and replace it with your answer to the above question!  (double-click on this text to edit this cell, and hit shift+enter to save the text). Please use appropriate Markup formating to make your answer’s easy to read.</p>
+<p>✅ <strong>Question 2:</strong>  Play with Python Tutor to see what else you can visualize.  Write an interesting example. Either an example that demonstrates something you didn’t fully understand or an example that highlights a limitation of the tool.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#Do This - Erase the contents of this code cell and put your example code here</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>✅ <strong>Question 3:</strong>  Describe what you learned or what you found interesting in your answer to Question 2.</p>
+<p><font size=+3>✎</font> Do This - Erase the contents of this cell and replace it with your answer to the above question!  (double-click on this text to edit this cell, and hit shift+enter to save the text). Please use appropriate Markup formating to make your answer’s easy to read.</p>
+</section>
+<section id="review-of-python-containers-lists-sets-dictionaries-tuples">
+<h3>Review of Python Containers (lists, sets, dictionaries, tuples)<a class="headerlink" href="#review-of-python-containers-lists-sets-dictionaries-tuples" title="Link to this heading">#</a></h3>
+<p>The following video reviews all of the way that Python can natively story data (without something like Pandas). Note that the one exception to this is that the video talks about NumPy arrays, which are not a default Python functionality. You might find it useful to review this material to reminder yourself how you can store and manipulate data in Python since you’ll be working a lot with data this semester.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">IPython.display</span> <span class="kn">import</span> <span class="n">YouTubeVideo</span>
+<span class="n">YouTubeVideo</span><span class="p">(</span><span class="s2">&quot;aBqTgR-gP3g&quot;</span><span class="p">,</span><span class="n">width</span><span class="o">=</span><span class="mi">800</span><span class="p">,</span><span class="n">height</span><span class="o">=</span><span class="mi">450</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<section id="the-cell-below-includes-a-reproduction-of-the-table-from-the-video">
+<h4>The cell below includes a reproduction of the table from the video.<a class="headerlink" href="#the-cell-below-includes-a-reproduction-of-the-table-from-the-video" title="Link to this heading">#</a></h4>
+<p><strong>Note</strong>: If you’re using “JupyterLab” instead of the standard Jupyter Notebook interface, you may find that this table runs off the edge of your browser window. If this happens, you are encouraged to open it as a standard Jupyter Notebook to end up with a version of the table that will scroll left-to-right. Newer versions of JupyterLab appear to have resolved this issue though.</p>
+<div class="pst-scrollable-table-container"><table class="table">
+<thead>
+<tr class="row-odd"><th class="head text-left"><p>Container Type</p></th>
+<th class="head text-left"><p>Mutable or Immutable</p></th>
+<th class="head text-left"><p>Initialization <em>Without</em> Values</p></th>
+<th class="head text-left"><p>Initializtion <em>With</em> Values</p></th>
+<th class="head text-left"><p>Adding Values to Container</p></th>
+<th class="head text-left"><p>Removing Values from Container</p></th>
+<th class="head text-left"><p>Modifying Values</p></th>
+<th class="head text-left"><p>Access Method</p></th>
+<th class="head text-left"><p>Notable Operations and Additional Information</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td class="text-left"><p><strong>List</strong></p></td>
+<td class="text-left"><p>Mutable</p></td>
+<td class="text-left"><p><ul><li><code class="docutils literal notranslate"><span class="pre">a=list()</span></code> </li><li> <code class="docutils literal notranslate"><span class="pre">a=[]</span></code> </li></ul></p></td>
+<td class="text-left"><p><code class="docutils literal notranslate"><span class="pre">a=['1',</span> <span class="pre">'2',</span> <span class="pre">'3']</span></code></p></td>
+<td class="text-left"><p><ul><li><code class="docutils literal notranslate"> <span class="pre">list.append(item)</span> <span class="pre">#Adds</span> <span class="pre">item</span> <span class="pre">to</span> <span class="pre">the</span> <span class="pre">end</span> <span class="pre">of</span> <span class="pre">the</span> <span class="pre">list</span></code> </li><li> <code class="docutils literal notranslate"> <span class="pre">list.insert(index,</span> <span class="pre">item)</span> <span class="pre">#Adds</span> <span class="pre">item</span> <span class="pre">to</span> <span class="pre">the</span> <span class="pre">specified</span> <span class="pre">index</span> <span class="pre">in</span> <span class="pre">the</span> <span class="pre">list</span></code></li></ul></p></td>
+<td class="text-left"><p><code class="docutils literal notranslate"><span class="pre">list.remove(item)</span> <span class="pre">#removes</span> <span class="pre">the</span> <span class="pre">first</span> <span class="pre">instance</span> <span class="pre">of</span> <span class="pre">'item'</span> <span class="pre">from</span> <span class="pre">the</span> <span class="pre">list.</span> <span class="pre">If</span> <span class="pre">there</span> <span class="pre">is</span> <span class="pre">not</span> <span class="pre">such</span> <span class="pre">element,</span> <span class="pre">this</span> <span class="pre">will</span> <span class="pre">cause</span> <span class="pre">an</span> <span class="pre">error</span></code></p></td>
+<td class="text-left"><p><code class="docutils literal notranslate"><span class="pre">&gt;&gt;&gt;</span> <span class="pre">a[0]</span> <span class="pre">=</span> <span class="pre">'cat'</span></code> <br> <code class="docutils literal notranslate"><span class="pre">&gt;&gt;&gt;</span> <span class="pre">a</span></code> <br> <code class="docutils literal notranslate"><span class="pre">['cat',</span> <span class="pre">'2',</span> <span class="pre">'3']</span></code></p></td>
+<td class="text-left"><p>Access by index: <br> <code class="docutils literal notranslate"><span class="pre">&gt;&gt;&gt;</span> <span class="pre">a[0]</span></code> <br> <code class="docutils literal notranslate"><span class="pre">1</span></code></p></td>
+<td class="text-left"><p>See webpage at <a class="reference external" href="http://www.linuxtopia.org/online_books/programming_books/python_programming/python_ch14s07.html">http://www.linuxtopia.org/online_books/programming_books/python_programming/python_ch14s07.html</a> for some helpful methods when dealing with lists.</p></td>
+</tr>
+<tr class="row-odd"><td class="text-left"><p><strong>Dictionary</strong></p></td>
+<td class="text-left"><p>Mutable</p></td>
+<td class="text-left"><p><code class="docutils literal notranslate"><span class="pre">student={}</span></code></p></td>
+<td class="text-left"><p><code class="docutils literal notranslate"><span class="pre">&gt;&gt;&gt;</span> <span class="pre">student={'name':</span> <span class="pre">'John</span> <span class="pre">Doe',</span> <span class="pre">'age':</span> <span class="pre">22,</span> <span class="pre">'college':</span> <span class="pre">'MSU'}</span></code></p></td>
+<td class="text-left"><p><code class="docutils literal notranslate"><span class="pre">&gt;&gt;&gt;</span> <span class="pre">student['major']='Computer</span> <span class="pre">Science'</span></code> <br> <code class="docutils literal notranslate"><span class="pre">&gt;&gt;&gt;</span> <span class="pre">student</span></code> <br> <code class="docutils literal notranslate"><span class="pre">{'name':</span> <span class="pre">'John</span> <span class="pre">Doe',</span> <span class="pre">'age':</span> <span class="pre">22,</span> <span class="pre">'college':</span> <span class="pre">'MSU',</span> <span class="pre">'major':</span> <span class="pre">'Computer</span> <span class="pre">Science'}</span></code></p></td>
+<td class="text-left"><p><code class="docutils literal notranslate"><span class="pre">del</span> <span class="pre">dictName[keyName]</span> <span class="pre">#This</span> <span class="pre">method</span> <span class="pre">removes</span> <span class="pre">all</span> <span class="pre">entries</span> <span class="pre">associated</span> <span class="pre">with</span> <span class="pre">the</span> <span class="pre">given</span> <span class="pre">key</span></code></p></td>
+<td class="text-left"><p><code class="docutils literal notranslate"><span class="pre">&gt;&gt;&gt;</span> <span class="pre">student['age']</span> <span class="pre">=</span> <span class="pre">23</span></code> <br> <code class="docutils literal notranslate"><span class="pre">&gt;&gt;&gt;</span> <span class="pre">student</span></code> <br> <code class="docutils literal notranslate"><span class="pre">{'name':</span> <span class="pre">'John</span> <span class="pre">Doe',</span> <span class="pre">'age':</span> <span class="pre">23,</span> <span class="pre">'college':</span> <span class="pre">'MSU',</span> <span class="pre">'major':</span> <span class="pre">'Computer</span> <span class="pre">Science'}</span></code></p></td>
+<td class="text-left"><p>Access by key word. Note that this key <strong>must</strong> be a string. <br> <code class="docutils literal notranslate"><span class="pre">&gt;&gt;&gt;student['college']</span></code> <br> <code class="docutils literal notranslate"><span class="pre">MSU</span></code></p></td>
+<td class="text-left"><p>The ‘in’ keyword can be very helpful with dictionaries. Ex: <br><ul><li><code class="docutils literal notranslate"><span class="pre">'k'</span> <span class="pre">in</span> <span class="pre">dict</span> <span class="pre">#Returns</span> <span class="pre">true</span> <span class="pre">if</span> <span class="pre">key</span> <span class="pre">'k'</span> <span class="pre">is</span> <span class="pre">in</span> <span class="pre">dictionary</span> <span class="pre">dict</span></code></li><li><code class="docutils literal notranslate"><span class="pre">'k'</span> <span class="pre">not</span> <span class="pre">in</span> <span class="pre">dict</span> <span class="pre">#Returns</span> <span class="pre">true</span> <span class="pre">if</span> <span class="pre">key</span> <span class="pre">'k'</span> <span class="pre">is</span> <span class="pre">not</span> <span class="pre">in</span> <span class="pre">dicitonary</span> <span class="pre">dict</span></code></li><li><code class="docutils literal notranslate"><span class="pre">for</span> <span class="pre">key</span> <span class="pre">in</span> <span class="pre">dict</span> <span class="pre">#This</span> <span class="pre">will</span> <span class="pre">iterate</span> <span class="pre">over</span> <span class="pre">all</span> <span class="pre">keys</span> <span class="pre">in</span> <span class="pre">dictionary</span> <span class="pre">dict</span></code></li></ul> <br>See webpage at <a class="reference external" href="http://www.python-course.eu/python3_dictionaries.php">http://www.python-course.eu/python3_dictionaries.php</a> for additional helpful methods and operations</p></td>
+</tr>
+<tr class="row-even"><td class="text-left"><p><strong>Set</strong></p></td>
+<td class="text-left"><p>Mutable. However the objects contained within a set <strong>must</strong> be immutable.</p></td>
+<td class="text-left"><p><code class="docutils literal notranslate"><span class="pre">s=set()</span></code></p></td>
+<td class="text-left"><p><code class="docutils literal notranslate"><span class="pre">s=set(['a','b','c'])</span></code></p></td>
+<td class="text-left"><p><code class="docutils literal notranslate"><span class="pre">s.add(item)</span></code></p></td>
+<td class="text-left"><p><ul><li> <code class="docutils literal notranslate"><span class="pre">set.discard(item)</span> <span class="pre">#If</span> <span class="pre">item</span> <span class="pre">is</span> <span class="pre">in</span> <span class="pre">the</span> <span class="pre">set,</span> <span class="pre">the</span> <span class="pre">item</span> <span class="pre">is</span> <span class="pre">removed,</span> <span class="pre">otherwise</span> <span class="pre">nothing</span> <span class="pre">happens</span></code> </li><li> <code class="docutils literal notranslate"><span class="pre">set.remove(item)</span> <span class="pre">#If</span> <span class="pre">item</span> <span class="pre">is</span> <span class="pre">in</span> <span class="pre">the</span> <span class="pre">set,</span> <span class="pre">the</span> <span class="pre">item</span> <span class="pre">is</span> <span class="pre">removed,</span> <span class="pre">otherwise</span> <span class="pre">raise</span> <span class="pre">a</span> <span class="pre">KeyError</span></code> </li><li> <code class="docutils literal notranslate"><span class="pre">set.pop()</span> <span class="pre">#Remove</span> <span class="pre">and</span> <span class="pre">return</span> <span class="pre">an</span> <span class="pre">arbitrary</span> <span class="pre">element</span> <span class="pre">from</span> <span class="pre">the</span> <span class="pre">set.</span> <span class="pre">If</span> <span class="pre">the</span> <span class="pre">set</span> <span class="pre">is</span> <span class="pre">empty,</span> <span class="pre">raise</span> <span class="pre">a</span> <span class="pre">KeyError</span></code> </li></p></td>
+<td class="text-left"><p>Sets are unordered, therefore indexing does not mean anything. To modify a set, you must directly add or remove elements.</p></td>
+<td class="text-left"><p><code class="docutils literal notranslate"><span class="pre">&gt;&gt;&gt;</span> <span class="pre">set.pop()</span> <span class="pre">#This</span> <span class="pre">will</span> <span class="pre">remove</span> <span class="pre">and</span> <span class="pre">return</span> <span class="pre">an</span> <span class="pre">arbitrary</span> <span class="pre">element</span> <span class="pre">from</span> <span class="pre">the</span> <span class="pre">set</span></code></p></td>
+<td class="text-left"><p>Some helpful methods include:<ul><li><code class="docutils literal notranslate"><span class="pre">difference()</span></code></li><li><code class="docutils literal notranslate"><span class="pre">intersection()</span></code></li><li><code class="docutils literal notranslate"><span class="pre">isdisjoint()</span></code></li><li><code class="docutils literal notranslate"><span class="pre">union()</span></code></li></ul><br> See webpage at <a class="reference external" href="http://www.programiz.com/python-programming/set">http://www.programiz.com/python-programming/set</a> for additional helpful methods and operations</p></td>
+</tr>
+<tr class="row-odd"><td class="text-left"><p><strong>Tuple</strong></p></td>
+<td class="text-left"><p>Immutable</p></td>
+<td class="text-left"><p><ul><li><code class="docutils literal notranslate"><span class="pre">t=()</span></code></li><li> <code class="docutils literal notranslate"><span class="pre">t=tuple()</span></code></li><ul></p></td>
+<td class="text-left"><p><ul><li>1-tuple:<br><code class="docutils literal notranslate"><span class="pre">t=('Hello',)</span></code></li><li> 2-tuple:<br> <code class="docutils literal notranslate"><span class="pre">t=('Hello',</span> <span class="pre">'Goodbye')</span></code></li><ul></p></td>
+<td class="text-left"><p>N/A</p></td>
+<td class="text-left"><p>N/A</p></td>
+<td class="text-left"><p>N/A</p></td>
+<td class="text-left"><p><code class="docutils literal notranslate"><span class="pre">t=('Hello','Goodbye','Goodnight')</span></code><ul><li>Access By Index: <br> <code class="docutils literal notranslate"><span class="pre">&gt;&gt;&gt;</span> <span class="pre">t[0]</span></code> <br> <code class="docutils literal notranslate"><span class="pre">'Hello'</span></code> </li><br><li> Access By Slice <br> <code class="docutils literal notranslate"><span class="pre">&gt;&gt;&gt;t[0:1:2]</span></code> <br> <code class="docutils literal notranslate"><span class="pre">('Hello','Goodbye')</span></code></li></ul></p></td>
+<td class="text-left"><p><ul><li>Packing and Unpacking</li><br><li>Tuple to List: <code class="docutils literal notranslate"><span class="pre">list(tupleName)</span></code></li></ul></p></td>
+</tr>
+<tr class="row-even"><td class="text-left"><p><strong>NumPy Array*</strong></p></td>
+<td class="text-left"><p>Mutable</p></td>
+<td class="text-left"><p><code class="docutils literal notranslate"><span class="pre">a=np.array([])</span></code></p></td>
+<td class="text-left"><p><code class="docutils literal notranslate"><span class="pre">a=np.array([1,2,3,4,5])</span></code></p></td>
+<td class="text-left"><p><ul><li><code class="docutils literal notranslate"><span class="pre">np.insert(arrayName,index,values,axis)</span> <span class="pre">#Inserts</span> <span class="pre">a</span> <span class="pre">value</span> <span class="pre">for</span> <span class="pre">an</span> <span class="pre">array</span> <span class="pre">at</span> <span class="pre">the</span> <span class="pre">given</span> <span class="pre">index.</span></code> </li><li><code class="docutils literal notranslate"><span class="pre">np.append(arrayName,value,axis)</span> <span class="pre">#Appends</span> <span class="pre">values</span> <span class="pre">to</span> <span class="pre">the</span> <span class="pre">end</span> <span class="pre">of</span> <span class="pre">an</span> <span class="pre">array.</span></code></li></ul></p></td>
+<td class="text-left"><p><code class="docutils literal notranslate"><span class="pre">np.array(array,index/indices,axis)</span> <span class="pre">#Returns</span> <span class="pre">a</span> <span class="pre">new</span> <span class="pre">array</span> <span class="pre">with</span> <span class="pre">the</span> <span class="pre">given</span> <span class="pre">index</span> <span class="pre">or</span> <span class="pre">array</span> <span class="pre">of</span> <span class="pre">indices</span> <span class="pre">deleted</span> <span class="pre">on</span> <span class="pre">the</span> <span class="pre">given</span> <span class="pre">axis</span></code></p></td>
+<td class="text-left"><p><code class="docutils literal notranslate"><span class="pre">&gt;&gt;&gt;</span> <span class="pre">a[4]</span> <span class="pre">=</span> <span class="pre">12</span></code> <br> <code class="docutils literal notranslate"><span class="pre">array([</span> <span class="pre">1,</span>&#160; <span class="pre">2,</span>&#160; <span class="pre">3,</span>&#160; <span class="pre">4,</span> <span class="pre">12])</span></code> <br><br> For additional information on manipulating NumPy Arrays see the webpage at <a class="reference external" href="http://docs.scipy.org/doc/numpy/reference/routines.array-manipulation.html">http://docs.scipy.org/doc/numpy/reference/routines.array-manipulation.html</a></p></td>
+<td class="text-left"><p><ul><li>Access By Index: <br> <code class="docutils literal notranslate"><span class="pre">&gt;&gt;&gt;</span> <span class="pre">a[0]</span> </code><br><code class="docutils literal notranslate"><span class="pre">1</span></code></li><li>Access By Slice: <br> <code class="docutils literal notranslate"><span class="pre">&gt;&gt;&gt;</span> <span class="pre">a[0:5:2]</span> </code><br> <code class="docutils literal notranslate"><span class="pre">array([1,</span> <span class="pre">3,</span> <span class="pre">5])</span></code> </li></ul><br>See webpage at <a class="reference external" href="http://docs.scipy.org/doc/numpy/reference/arrays.indexing.html">http://docs.scipy.org/doc/numpy/reference/arrays.indexing.html</a> for further information about indexing of NumPy Arrays</p></td>
+<td class="text-left"><p>See webpages at <a class="reference external" href="http://www.scipy-lectures.org/intro/numpy/array_object.html">http://www.scipy-lectures.org/intro/numpy/array_object.html</a> and <a class="reference external" href="https://docs.scipy.org/doc/numpy-dev/user/quickstart.html">https://docs.scipy.org/doc/numpy-dev/user/quickstart.html</a> for additional information on NumPy Arrays</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<p>*Use of the NumPy Array requires the NumPy Python Module. In these examples, it is assumed that the import statement is “import numpy as np”</p>
+<hr class="docutils" />
+<p>✅ <strong>Question 4:</strong> What is the difference between mutable and immutable objects?  Give an example of a scientific model where you would choose one over the other (ex. maybe a tuple vs. a list). Explain the choice.</p>
+<p><font size=+3>✎</font> Do This - Erase the contents of this cell and replace it with your answer to the above question!  (double-click on this text to edit this cell, and hit shift+enter to save the text). Please use appropriate Markup formating to make your answer’s easy to read.</p>
+<p>✅ <strong>Question 5:</strong> Imagine a function that takes filename as a string input and counts the number of times each word appears in the file.  What type of container would make the most sense for storing the words and the word counts?  Why?</p>
+<p><font size=+3>✎</font> Do This - Erase the contents of this cell and replace it with your answer to the above question!  (double-click on this text to edit this cell, and hit shift+enter to save the text). Please use appropriate Markup formating to make your answer’s easy to read.</p>
+<p>✅ <strong>Question 6:</strong>  A digital image is often represented as a three dimensional array.  Where the first dimension is row, the second dimension is column and the third dimension is a color.  Create a three dimensional containers of numbers with 10 rows, 10 columns and 3 colors (red, green and blue) and initialize all of the numbers to zero.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#Do This - put your code here to generate a 3D container.</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+</section>
+</section>
+<hr class="docutils" />
+<section id="part-2-getting-to-know-git">
+<h2>Part 2. Getting to Know Git<a class="headerlink" href="#part-2-getting-to-know-git" title="Link to this heading">#</a></h2>
+<p>(<strong>NOTE:</strong> This material was either inspired by or drawn from <a class="reference external" href="https://escholarship.org/uc/item/6fv1s464#main">Frisbie, R. L, Grete, P., &amp; Glines, F. W. (2022)</a>)</p>
+<img src="https://git-scm.com/images/logos/downloads/Git-Logo-2Color.png" width="200">
+<section id="why-use-git">
+<h3>2.1: Why use Git?<a class="headerlink" href="#why-use-git" title="Link to this heading">#</a></h3>
+</section>
+<section id="answer-sustainable-software-development">
+<h3>Answer: Sustainable Software Development<a class="headerlink" href="#answer-sustainable-software-development" title="Link to this heading">#</a></h3>
+<section id="what-is-sustainable-software-development">
+<h4>What is Sustainable Software Development?<a class="headerlink" href="#what-is-sustainable-software-development" title="Link to this heading">#</a></h4>
+<p>Generally, when we say sustainable software, we mean software that:</p>
+<ol class="arabic simple">
+<li><p>Is useful for more than a single task (like having a publication quality plotting program you can use for all plots instead of redoing it every time),</p></li>
+<li><p>Is shareable (so other people can read and understand it, and perhaps use it),</p></li>
+<li><p>It works not just on your computer with your particular settings (for file locations, python libraries, etc.)</p></li>
+<li><p>Finally, if the software is used by a larger community, then that community should know how to interact with the code and each other.
+Some examples: Android, Linux, Python, SciPy, matplotlib, Enzo, and many more!</p></li>
+</ol>
+</section>
+<section id="id1">
+<h4>2.1.1:<a class="headerlink" href="#id1" title="Link to this heading">#</a></h4>
+<p>Before moving on, broadly think about collaborative software development from small to large projects. Write down questions, concerns, or general topics of interest pertaining to challenges and processes in different collaborative software development environments.</p>
+<p><font size=+3>✎</font> Write your answer here.</p>
+</section>
+<section id="examples-of-sustainable-software-challenges">
+<h4>Examples of Sustainable Software Challenges<a class="headerlink" href="#examples-of-sustainable-software-challenges" title="Link to this heading">#</a></h4>
+<p>In a professional setting, you’ll be asked to work on large projects with many people working on them simultaneously. This can create a logistical nightmare, as you want all of the different pieces that everyone is working on to be able to work together.</p>
+<p>Let’s look at a few situations that can help us understand why Git is such a powerful tool in software development.</p>
+<ol class="arabic simple">
+<li><p><em>You’re working on an app with four friends–Han, Mika, Jacob, and Navi–just for fun. You’re collaborating on code meant to look up files in a database, and Navi wants to add a function to the code. How can you both work on the same file at the same time?</em></p></li>
+<li><p><em>As you’re working on your app, you realize that yesterday’s change has broken the entire app. It was a pretty big change, and you’re not sure you can remember what the code looked like previously, and you don’t have time to rewrite it anyways. Moreover, your collaborators have also made changes to the code in the intervening time. How could you fix this problem?</em></p></li>
+<li><p><em>You’ve finished your app, and now you want to make it public, both so that the public can use it and that future employers can see it and see what you’re capable of doing. You also want to ensure that the code you worked so hard on isn’t lost if your computer dies. How can you make it accessible to others and ensure it isn’t easily lost?</em></p></li>
+</ol>
+</section>
+<section id="id2">
+<h4>2.1.2:<a class="headerlink" href="#id2" title="Link to this heading">#</a></h4>
+<p>What are some possible solutions to these problems?</p>
+<p><font size=+3>✎</font> Write your answer here.</p>
+</section>
+</section>
+<section id="what-is-git">
+<h3>2.2: What is Git?<a class="headerlink" href="#what-is-git" title="Link to this heading">#</a></h3>
+<p><font size=+3>👀</font> <a class="reference external" href="https://mediaspace.msu.edu/media/Introduction+to+Git/1_oz7wqmwz"><strong>Watch the following video</strong></a> (&lt;- click the link!) to get an understanding of what Git is and does.</p>
+<section id="id3">
+<h4>2.2.1<a class="headerlink" href="#id3" title="Link to this heading">#</a></h4>
+<p>In your own words, describe what a commit is.</p>
+<p><font size=+3>✎</font> Write your answer here.</p>
+</section>
+<section id="id4">
+<h4>2.2.2<a class="headerlink" href="#id4" title="Link to this heading">#</a></h4>
+<p>Now, go back to the problems and concerns you identfied in 2.1.1, as well as the issues raised in the section “Examples of Sustainable Software Challenges.”</p>
+<p>Based on your new understanding of Git, if/how could you use Git to solve these problems?</p>
+<p><font size=+3>✎</font> Write your answer here.</p>
+</section>
+</section>
+</section>
+<section id="a-brief-interlude-to-get-git-setup">
+<h2>A BRIEF INTERLUDE TO GET GIT SETUP<a class="headerlink" href="#a-brief-interlude-to-get-git-setup" title="Link to this heading">#</a></h2>
+<section id="github-account">
+<h3>Github Account<a class="headerlink" href="#github-account" title="Link to this heading">#</a></h3>
+<p>Go to <a class="reference external" href="http://github.com">github.com</a> and make an account (if you haven’t already done so).</p>
+<p>As a quick, but important, aside: Git is the name of the software system that we’re using. <em>Github</em> is a hosting service that we’re using to store our remote repos. There are other hosting services–like Gitlab and Bitbucket–but we’ll be sticking with Github for this class.</p>
+</section>
+<section id="important-generating-a-personal-access-token-for-github">
+<h3><font color="red">IMPORTANT:</font> Generating a Personal Access Token for GitHub<a class="headerlink" href="#important-generating-a-personal-access-token-for-github" title="Link to this heading">#</a></h3>
+<p>In order to clone private repositories and push/pull changes to those repositories on GitHub, you will also need a Personal Access Token (PAT) to access GitHub via the terminal on your computer or within JupyterHub (for security reasons). <strong>When typing the PAT as the password it will not appear on the command line, but it is being entered. This is a security feature so that your password is not visible</strong></p>
+<p>To get a PAT, <a class="reference external" href="https://mediaspace.msu.edu/media/Setting+up+a+personal+access+token+on+Github.com/1_exthwtyb"><strong>watch this video.</strong></a> <font size=+3>👀</font></p>
+<p><strong>Useful suggestions</strong>: Once you’ve set up a PAT and you’ve confirmed that you can use it to access GitHub, we have a couple of suggestions:</p>
+<ol class="arabic">
+<li><p>Save it somewhere safe (like in a password manager or in a file on a secure computer) because you’ll need it again later.</p></li>
+<li><p>You may wish to store your GitHub login credentials in your git configuration file so that you don’t have to enter them every time you want to push/pull changes to/from GitHub. To do this, you can run the following command in your terminal:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>git<span class="w"> </span>config<span class="w"> </span>--global<span class="w"> </span>credential.helper<span class="w"> </span>store
+</pre></div>
+</div>
+<p><strong>Note</strong>: If working locally (not on JupyterHub) and you’re using a Mac, you may need to use the following command instead of the one above:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>git<span class="w"> </span>config<span class="w"> </span>--global<span class="w"> </span>credential.helper<span class="w"> </span>osxkeychain
+</pre></div>
+</div>
+</li>
+</ol>
+</section>
+<section id="using-git">
+<h3>2.3: Using Git<a class="headerlink" href="#using-git" title="Link to this heading">#</a></h3>
+<p>Let’s start getting our hands dirty with Git.</p>
+<p><font size=+3>👀</font> <a class="reference external" href="https://mediaspace.msu.edu/media/Git+Tutorial/1_8qvay5ca"><strong>Watch this video to get a quick tutorial on using Git and GitHub.</strong></a> (&lt;- click the link!)
+<strong>NOTE:</strong> There is a misstatement around 3:00 in the video; the version of the repo that they are in is the <em>local</em> repo, not the remote repo.</p>
+<section id="id5">
+<h4>2.3.1<a class="headerlink" href="#id5" title="Link to this heading">#</a></h4>
+<p><strong>Make a new repo called <code class="docutils literal notranslate"><span class="pre">CMSE202-f25-turnin</span></code></strong>. This will be the repo where you will turn in your homework assignments and your exams.</p>
+<p><strong>Once you’ve made your repo, clone it to JupyterHub, modify the README file so that it has your name and what section of CMSE 202 you’re in, and commit your changes. Then, push your changes to the remote repo.</strong></p>
+</section>
+</section>
+</section>
+<hr class="docutils" />
+<section id="follow-up-questions">
+<h2>Follow-up Questions<a class="headerlink" href="#follow-up-questions" title="Link to this heading">#</a></h2>
+<p>Copy and paste the following questions into the appropriate box (for instance, cell 11) in the assignment survey include below and answer them there. (Note: You’ll have to fill out the section number and the assignment number and go to the “NEXT” section of the survey to paste in these questions.)</p>
+<ol class="arabic simple">
+<li><p>Python review: How often do you use the “dictionary” variable type in Python? Can you come up with an example for when a dictionary is particularly useful for storing information?</p></li>
+<li><p>Have you ever used Git prior to this course? If so, in what context?</p></li>
+<li><p>In your own words, explain why using a software tool like Git might be useful when you’re working on a collaborative coding project.</p></li>
+</ol>
+</section>
+</section>
+<hr class="docutils" />
+<section class="tex2jax_ignore mathjax_ignore" id="assignment-wrap-up">
+<h1>Assignment wrap-up<a class="headerlink" href="#assignment-wrap-up" title="Link to this heading">#</a></h1>
+<p>Hopefully you were able to get through all of that! We’ll be trouble-shooting any issues you had, working with remote git repositories, and testing out some more complicated git commands in class.</p>
+<p>Please fill out the form that appears when you run the code below.  <strong>You must completely fill this out in order to receive credit for the assignment!</strong></p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">IPython.display</span> <span class="kn">import</span> <span class="n">HTML</span>
+<span class="n">HTML</span><span class="p">(</span>
+<span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">&lt;iframe </span>
+<span class="sd">	src=&quot;https://forms.office.com/r/mWHXCESRw9&quot; </span>
+<span class="sd">	width=&quot;800px&quot; </span>
+<span class="sd">	height=&quot;600px&quot; </span>
+<span class="sd">	frameborder=&quot;0&quot; </span>
+<span class="sd">	marginheight=&quot;0&quot; </span>
+<span class="sd">	marginwidth=&quot;0&quot;&gt;</span>
+<span class="sd">	Loading...</span>
+<span class="sd">&lt;/iframe&gt;</span>
+<span class="sd">&quot;&quot;&quot;</span>
+<span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html">
+<iframe 
+	src="https://forms.office.com/r/mWHXCESRw9" 
+	width="800px" 
+	height="600px" 
+	frameborder="0" 
+	marginheight="0" 
+	marginwidth="0">
+	Loading...
+</iframe>
+</div></div>
+</div>
+<hr class="docutils" />
+<section id="congratulations-you-re-done-with-your-pre-class-assignment">
+<h2>Congratulations, you’re done with your pre-class assignment!<a class="headerlink" href="#congratulations-you-re-done-with-your-pre-class-assignment" title="Link to this heading">#</a></h2>
+<p>Now, you just need to submit this assignment by uploading it to the course <a href="https://d2l.msu.edu/">Desire2Learn</a> web page for the appropriate pre-class submission folder (Don’t forget to add your name in the first cell).</p>
+<p>© Copyright 2025,  Department of Computational Mathematics, Science and Engineering at Michigan State University</p>
+</section>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "conda-base-py"
+        },
+        kernelOptions: {
+            name: "conda-base-py",
+            path: "./daily/Day-03"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'conda-base-py'</script>
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="../../section_files/day_3.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">Day 3</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="Day-03_In-Class_GitPractice-STUDENT.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">In-Class Assignment: Practice with Git and GitHub</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <dialog id="pst-secondary-sidebar-modal"></dialog>
+                <div id="pst-secondary-sidebar" class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">Pre-Class Assignment: Python Review and Intro to Git</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#day-3">Day 3</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#put-your-name-here"><p style="text-align: right;"> ✅ Put your name here</p></a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#goals-for-today-s-pre-class-assignment">Goals for today’s pre-class assignment</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#assignment-instructions">Assignment instructions</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#part-1-continuing-to-revisit-your-python-skills">Part 1. Continuing to revisit your Python skills</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#building-a-conceptual-model-using-python-tutor">Building a conceptual model  Using Python Tutor</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#watch-the-above-video-and-answer-the-following-questions">Watch the above video and answer the following questions:</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#review-of-python-containers-lists-sets-dictionaries-tuples">Review of Python Containers (lists, sets, dictionaries, tuples)</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#the-cell-below-includes-a-reproduction-of-the-table-from-the-video">The cell below includes a reproduction of the table from the video.</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#part-2-getting-to-know-git">Part 2. Getting to Know Git</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#why-use-git">2.1: Why use Git?</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#answer-sustainable-software-development">Answer: Sustainable Software Development</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#what-is-sustainable-software-development">What is Sustainable Software Development?</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">2.1.1:</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#examples-of-sustainable-software-challenges">Examples of Sustainable Software Challenges</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">2.1.2:</a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#what-is-git">2.2: What is Git?</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id3">2.2.1</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id4">2.2.2</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#a-brief-interlude-to-get-git-setup">A BRIEF INTERLUDE TO GET GIT SETUP</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#github-account">Github Account</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#important-generating-a-personal-access-token-for-github"><font color="red">IMPORTANT:</font> Generating a Personal Access Token for GitHub</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#using-git">2.3: Using Git</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id5">2.3.1</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#follow-up-questions">Follow-up Questions</a></li>
+</ul>
+</li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#assignment-wrap-up">Assignment wrap-up</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#congratulations-you-re-done-with-your-pre-class-assignment">Congratulations, you’re done with your pre-class assignment!</a></li>
+</ul>
+</li>
+</ul>
+
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By MSU CMSE
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2025.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script defer src="../../_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf"></script>
+<script defer src="../../_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>

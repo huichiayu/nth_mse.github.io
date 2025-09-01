@@ -1,0 +1,1075 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="../../" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>In-class Notebook: Command line interface &#8212; CMSE 202 Course Website</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  <!--
+    this give us a css class that will be invisible only if js is disabled
+  -->
+  <noscript>
+    <style>
+      .pst-js-only { display: none !important; }
+
+    </style>
+  </noscript>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../../_static/styles/theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
+<link href="../../_static/styles/pydata-sphinx-theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
+
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=b76e3c8a" />
+    <link rel="stylesheet" type="text/css" href="../../_static/styles/sphinx-book-theme.css?v=a3416100" />
+    <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css?v=13237357" />
+    <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="../../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-thebe.css?v=4fa983c6" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-design.min.css?v=95c83b7e" />
+  
+  <!-- So that users can add custom icons -->
+  <script src="../../_static/scripts/fontawesome.js?digest=8878045cc6db502f8baf"></script>
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../../_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf" />
+<link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf" />
+
+    <script src="../../_static/documentation_options.js?v=9eb32ce0"></script>
+    <script src="../../_static/doctools.js?v=9a2dae69"></script>
+    <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../../_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="../../_static/copybutton.js?v=f281be69"></script>
+    <script src="../../_static/scripts/sphinx-book-theme.js?v=887ef09a"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../../_static/togglebutton.js?v=4a39c7ea"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="../../_static/design-tabs.js?v=f930bc37"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script async="async" src="../../_static/sphinx-thebe.js?v=c100c467"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'daily/Day-02/Day-02_In-Class_CommandLineInterface-STUDENT';</script>
+    <link rel="icon" href="../../_static/logo.png"/>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="Day 3" href="../../section_files/day_3.html" />
+    <link rel="prev" title="Pre-Class Assignment: Reflection and an introduction to the Command Line Interface (CLI)" href="Day-02_Pre-Class_ReflectionAndCommandLineInterface-STUDENT.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  <meta name="docsearch:version" content="" />
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
+  
+  <dialog id="pst-search-dialog">
+    
+<form class="bd-search d-flex align-items-center"
+      action="../../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         placeholder="Search..."
+         aria-label="Search..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form>
+  </dialog>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+      <dialog id="pst-primary-sidebar-modal"></dialog>
+      <div id="pst-primary-sidebar" class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="../../index.html">
+  
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="../../_static/logo.png" class="logo__image only-light" alt="CMSE 202 Course Website - Home"/>
+    <img src="../../_static/logo.png" class="logo__image only-dark pst-js-only" alt="CMSE 202 Course Website - Home"/>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item">
+
+<button class="btn search-button-field search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+ <i class="fa-solid fa-magnifying-glass"></i>
+ <span class="search-button__default-text">Search</span>
+ <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+</button></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">Course Materials</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../../course_materials/CMSE202_Syllabus.html">Syllabus</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../course_materials/CMSE202_Calendar.html">Schedule</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../course_materials/CMSE202_HelpRoomCalendar.html">Office Hours and Help Room</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../course_materials/SoftwareSetupGuide.html">Software Setup Guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../course_materials/CMSE202_GenerativeAI_Policy.html">Generative AI Policy</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://upload.wikimedia.org/wikipedia/commons/7/79/Unix_command_cheatsheet.pdf">CLI (Unix/Mac/Linux) commands cheat sheet</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../course_materials/BashVsPowershell_CheatSheet.html">Bash vs PowerShell</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://wac-cdn.atlassian.com/dam/jcr:e7e22f25-bba2-4ef1-a197-53f46b6df4a5/SWTM-2088_Atlassian-Git-Cheatsheet.pdf?cdnVersion=525">Git Cheat Sheet</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://raw.githubusercontent.com/msu-cmse-courses/cmse202-supplemental-data/main/documents/How-to-Access-Anaconda-Powershell-Prompt.pdf">How to Access “Anaconda Powershell Prompt” (for Windows users)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../course_materials/Pull_Request_Guide.html">Making and merging Pull Requests on GitHub</a></li>
+
+
+
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Semester Project</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../../course_materials/SemesterProjectDetails.html">Semester Project Details</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../course_materials/CMSE202_FinalProjectRequirementsAndGradingRubric.html">Semester Project Requirements and Grading Rubric</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Exams</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../../course_materials/MidtermStudyGuide.html">Midterm Study Guide</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Daily Content</span></p>
+<ul class="current nav bd-sidenav">
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../section_files/day_1.html">Day 1</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../Day-01/Day-01_In-Class_Overview-STUDENT.html">In-class Notebook: Welcome to CMSE202</a></li>
+
+
+
+
+
+
+
+
+
+</ul>
+</details></li>
+<li class="toctree-l1 current active has-children"><a class="reference internal" href="../../section_files/day_2.html">Day 2</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="Day-02_Pre-Class_ReflectionAndCommandLineInterface-STUDENT.html">Pre-Class Assignment: Reflection and an introduction to the Command Line Interface (CLI)</a></li>
+
+
+
+<li class="toctree-l2 current active"><a class="current reference internal" href="#">In-class Notebook: Command line interface</a></li>
+
+
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../section_files/day_3.html">Day 3</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../Day-03/Day-03_Pre-Class_PythonReview%2BGitIntro-STUDENT.html">Pre-Class Assignment: Python Review and Intro to Git</a></li>
+
+<li class="toctree-l2"><a class="reference internal" href="../Day-03/Day-03_In-Class_GitPractice-STUDENT.html">In-Class Assignment: Practice with Git and GitHub</a></li>
+
+
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../section_files/day_4.html">Day 4</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../Day-04/Day-04_Pre-Class_DownloadingFilesAndInstallingPackages-STUDENT.html">Pre-class Assignment: Python Packages</a></li>
+
+
+
+
+
+<li class="toctree-l2"><a class="reference internal" href="../Day-04/Day-04_In-Class_PythonPackagesAndMapPlotting-STUDENT.html">In-class Assignment: Installing Python Packages and Plotting with Maps in Python</a></li>
+
+
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../section_files/day_5.html">Day 5</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../Day-05/Day-05_Pre-Class_PandasReview-STUDENT.html">Pre-Class Assignment: Pandas Review</a></li>
+
+
+<li class="toctree-l2"><a class="reference internal" href="../Day-05/Day-05_In-Class_PandasReview-STUDENT.html">In-Class Assignment: Reviewing Pandas and exploring data</a></li>
+
+
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../section_files/day_6.html">Day 6</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../Day-06/Day-06_Pre-class_ObjectsClasses-STUDENT.html">Pre-class Assignment: Introduction to Object Oriented Programming (OOP)</a></li>
+
+
+<li class="toctree-l2"><a class="reference internal" href="../Day-06/Day-06_In-Class_ObjectsClasses-STUDENT.html">In-class Assignment: We have a Zoo!</a></li>
+
+
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../section_files/day_7.html">Day 7</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../Day-07/Day-07_Pre-class_ObjectInheritanceAndComposition-STUDENT.html">Pre-class Assignment: object inheritance and composition</a></li>
+
+
+<li class="toctree-l2"><a class="reference internal" href="../Day-07/Day-07_In-Class_ObjectInheritanceAndComposition-STUDENT.html">In-class Assignment: We have a Zoo! (part 2)</a></li>
+
+
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../section_files/day_8.html">Day 8</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../Day-08/Day-08_Pre-Class_SuperbugsABM-STUDENT.html">Pre-Class Assignment: Agent-based Modeling of Superbugs</a></li>
+
+
+
+
+
+<li class="toctree-l2"><a class="reference internal" href="../Day-08/Day-08_In-Class_ABMSuperbugs1-STUDENT.html">In-Class Assignment: Simulating Superbugs using agent-based modeling</a></li>
+
+
+
+
+
+
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../section_files/day_9.html">Day 9</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../Day-09/Day-09_Pre-Class_OOPAntForaging-STUDENT.html">Pre-Class Assignment: Reviewing another agent-based model built using Object Oriented Programming (OOP)</a></li>
+
+
+<li class="toctree-l2"><a class="reference internal" href="../Day-09/Day-09_In-Class_ABMSuperbugs2-STUDENT.html">In-Class Assignment: Agent Based Modeling of Superbugs (part 2)</a></li>
+
+
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../section_files/day_10.html">Day 10</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../Day-10/Day-10_Pre-Class_GraphTheory-STUDENT.html">Pre-Class Assignment: Conflicts in Git and Graph Theory</a></li>
+
+
+<li class="toctree-l2"><a class="reference internal" href="../Day-10/Day-10_In-Class_GraphTheory-STUDENT.html">In-Class Assignment: Graph Theory</a></li>
+
+
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../section_files/day_11.html">Day 11</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../Day-11/Day-11_Pre-Class_GraphTheoryCellTowers-STUDENT.html">Pre-class Assignment: Project Brainstorming &amp; Graph Theory and Cell Towers</a></li>
+
+
+
+
+
+<li class="toctree-l2"><a class="reference internal" href="../Day-11/Day-11_In-Class_GraphTheoryCellTowers-STUDENT.html">In-class Assignment: Graph Theory and Cell Towers</a></li>
+
+
+
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../section_files/day_12.html">Day 12</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../Day-12/Day-12_In-Class_ProjectProposals-STUDENT.html">In-Class Assignment: Reviewing Project Ideas</a></li>
+
+
+
+
+
+
+
+
+
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../section_files/day_13.html">Day 13</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../Day-13/Day-13_Pre-Class_Regression-STUDENT.html">Pre-Class Assignment: Regression</a></li>
+
+
+
+<li class="toctree-l2"><a class="reference internal" href="../Day-13/Day-13_In-Class-Regression-STUDENT.html">In-Class Assignment: Linear Regression</a></li>
+
+
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../section_files/day_14.html">Day 14</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../Day-14/Day-14_Pre-Class-PolynomialRegression-STUDENT.html">Pre-Class Assignment: Polynomial Regression</a></li>
+
+
+
+<li class="toctree-l2"><a class="reference internal" href="../Day-14/Day-14_In-Class_MultipleRegression-STUDENT.html">In-Class Assignment: Multiple Regression</a></li>
+
+
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../section_files/day_15.html">Day 15</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../Day-15/Day-15_Pre-Class_MachineLearningIntro-STUDENT.html">Pre-class Assignment: Intro to Machine Learning</a></li>
+
+
+<li class="toctree-l2"><a class="reference internal" href="../Day-15/Day-15_In-Class_ML-LogisticRegression-STUDENT.html">In-Class Assignment: Machine Learning; classification with logistic regression</a></li>
+
+
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../section_files/day_16.html">Day 16</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../Day-16/Day-16_Pre-Class_GitRevisited-STUDENT.html">Pre-Class Assignment: Git with it! (collaborating with Git)</a></li>
+
+
+
+<li class="toctree-l2"><a class="reference internal" href="../Day-16/Day-16_In-Class_CollaboratingWithGit-STUDENT.html">In-Class Assignment: Collaborating with Git</a></li>
+
+
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../section_files/day_17.html">Day 17</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../Day-17/Day-17_Pre-Class_AIPracticeAndProductiveGroupwork-STUDENT.html">Pre-Class Assignment: Revisiting generative AI and reflecting on group work experiences</a></li>
+
+
+
+<li class="toctree-l2"><a class="reference internal" href="../Day-17/Day-17_In-Class_RevisitingGenerativeAIAndProjectPlanning-STUDENT.html">In-Class Assignment: Revisiting Generative AI and Project Planning</a></li>
+
+
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../section_files/day_18.html">Day 18</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../Day-18/Day-18_Pre-Class_Perceptron-STUDENT.html">Pre-class Assignment: The Perceptron Classifier (a simple neural network)</a></li>
+
+
+<li class="toctree-l2"><a class="reference internal" href="../Day-18/Day-18_In-Class_Perceptron-STUDENT.html">In-Class Assignment: The Perceptron Classifier</a></li>
+
+
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../section_files/day_19.html">Day 19</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../Day-19/Day-19_In-Class_PerceptronExtension-STUDENT.html">In-Class Challenge Assignment: Experimenting with the Perceptron</a></li>
+
+
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../section_files/day_20.html">Day 20</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../Day-20/Day-20_Pre-Class_SVMs-STUDENT.html">Pre-Class Assignment: Support Vector Machines (SVMs)</a></li>
+
+
+
+<li class="toctree-l2"><a class="reference internal" href="../Day-20/Day-20_In-Class_SVMs-STUDENT.html">In-Class Assignment: Machine learning with an SVM Classifier</a></li>
+
+
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../section_files/day_21.html">Day 21</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../Day-21/Day-21_Pre-Class_SVMs2-STUDENT.html">Pre-Class Assignment: Further exploration of SVMs</a></li>
+
+
+
+<li class="toctree-l2"><a class="reference internal" href="../Day-21/Day-21_In-Class_SVMs2-STUDENT.html">In-Class Assignment: SVMs continued</a></li>
+
+
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../section_files/day_22.html">Day 22</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../Day-22/Day-22_Pre-Class_ProjectUpdateReminder-STUDENT.html">Pre-Class Assignment: Project updates!</a></li>
+
+
+
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../section_files/day_23.html">Day 23</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../Day-23/Day-23_Pre-Class_PCA-STUDENT.html">Pre-Class Assignment: Principal Component Analysis</a></li>
+
+
+
+</ul>
+</details></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Homework</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../../homework/SS25/HW01/HW-01_GitPracticeDebuggingPythonPackagesAndClasses-SS25-STUDENT.html">Homework 1</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../homework/SS25/HW02/HW02_Part1-Orbits-SS25-STUDENT.html">Homework 2 Part 1</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../homework/SS25/HW02/HW02_Part2-Risk-SS25-STUDENT.html">Homework 2 Part 2</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../homework/SS25/HW03/HW-03_Regression-S25-STUDENT.html">Homework Assignment 3</a></li>
+
+
+
+
+
+
+
+
+
+<li class="toctree-l1"><a class="reference internal" href="../../homework/SS25/HW04/HW-04_Perceptron_SVM_STUDENT.html">Homework 4</a></li>
+
+
+
+
+
+
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+      <div class="sidebar-primary-item">
+<div id="ethical-ad-placement"
+      class="flat"
+      data-ea-publisher="readthedocs"
+      data-ea-type="readthedocs-sidebar"
+      data-ea-manual="true">
+</div></div>
+  </div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><button class="sidebar-toggle primary-toggle btn btn-sm" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</button></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="../../_sources/daily/Day-02/Day-02_In-Class_CommandLineInterface-STUDENT.ipynb" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.ipynb</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button pst-js-only" aria-label="Color mode" data-bs-title="Color mode"  data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <i class="theme-switch fa-solid fa-sun                fa-lg" data-mode="light" title="Light"></i>
+  <i class="theme-switch fa-solid fa-moon               fa-lg" data-mode="dark"  title="Dark"></i>
+  <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"  title="System Settings"></i>
+</button>
+
+
+<button class="btn btn-sm pst-navbar-icon search-button search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+</button>
+<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</button>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>In-class Notebook: Command line interface</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">In-class Notebook: Command line interface</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#day-2">Day 2</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#cmse-202">CMSE 202</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#put-your-name-here"><p style="text-align: right;"> ✅ <strong>Put your name here</strong> </p></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#learning-goals-for-today-s-class">Learning goals for today’s class:</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#agenda-for-today-s-class">Agenda for today’s class</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#revisting-common-command-line-commands">1. Revisting common command line commands</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#downloading-files-from-the-command-line-using-curl">2. Downloading files from the command line using <code class="docutils literal notranslate"><span class="pre">curl</span></code></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#setting-up-a-cmse-202-directory-using-the-command-line">3. Setting up a CMSE 202 directory using the command line</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#stop">🛑 STOP</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#downloading-and-editing-a-simple-broken-python-script">4. Downloading and editing a simple (broken) Python script</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#modifying-another-python-script-but-this-time-with-the-vi-text-editor">5. Modifying another Python script, but this time with the <code class="docutils literal notranslate"><span class="pre">vi</span></code> text editor</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#opening-the-file-with-vi">Opening the file with vi</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#can-we-do-something-a-little-more-interesting">Can we do something a little more interesting?</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#testing-out-command-line-commands-from-inside-a-jupyter-notebook">6. Testing out command line commands from <strong>inside</strong> a Jupyter notebook</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#using">Using “<code class="docutils literal notranslate"><span class="pre">!</span></code>”</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#using-the-built-in-ipython-command-line-commands">Using the built-in IPython command line commands</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#time-permitting">Time permitting</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#congratulations-you-re-done">Congratulations, you’re done!</a></li>
+</ul>
+</li>
+</ul>
+
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section class="tex2jax_ignore mathjax_ignore" id="in-class-notebook-command-line-interface">
+<h1>In-class Notebook: Command line interface<a class="headerlink" href="#in-class-notebook-command-line-interface" title="Link to this heading">#</a></h1>
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="day-2">
+<h1>Day 2<a class="headerlink" href="#day-2" title="Link to this heading">#</a></h1>
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="cmse-202">
+<h1>CMSE 202<a class="headerlink" href="#cmse-202" title="Link to this heading">#</a></h1>
+<section id="put-your-name-here">
+<h2><p style="text-align: right;"> ✅ <strong>Put your name here</strong> </p><a class="headerlink" href="#put-your-name-here" title="Link to this heading">#</a></h2>
+<img src="https://easy-peasy.ai/cdn-cgi/image/quality=80,format=auto,width=700/https://fdczvxmwwjwpwbeeqcth.supabase.co/storage/v1/object/public/images/28037f3a-df85-41f9-84bc-951589caebd7/fee883b3-3f9f-4083-87f4-a84013b4b073.png" width= 600>
+<p style="text-align: right;">
+<p>From <a><a class="reference external" href="https://easy-peasy.ai/ai-image-generator/images/dynamic-unix-command-line-interface-image">https://easy-peasy.ai/ai-image-generator/images/dynamic-unix-command-line-interface-image</a></p></p>
+<!-- <img src="https://blog.ssdnodes.com/blog/wp-content/uploads/2018/05/201805_faceless.gif" width= 600>
+<p style="text-align: right;"> -->
+<!-- From <a>https://blog.ssdnodes.com/blog/blinking-cursor-distant-server/</a>
+</p> --></section>
+<section id="learning-goals-for-today-s-class">
+<h2>Learning goals for today’s class:<a class="headerlink" href="#learning-goals-for-today-s-class" title="Link to this heading">#</a></h2>
+<p>By the end of class, you should:</p>
+<ul class="simple">
+<li><p>Be more comfortable using the command line interface to:</p>
+<ul>
+<li><p>create and move between directories on your computer</p></li>
+<li><p>move, copy, and edit files</p></li>
+<li><p>download files from the internet</p></li>
+<li><p>run Python scripts</p></li>
+</ul>
+</li>
+<li><p>Be able to Enter the “vi” text editor, edit a file, and gracefully exit the text editor (all from starting on the command line)</p></li>
+<li><p>Be able to run command line commands from inside of a Jupyter notebook</p></li>
+</ul>
+</section>
+<section id="agenda-for-today-s-class">
+<h2>Agenda for today’s class<a class="headerlink" href="#agenda-for-today-s-class" title="Link to this heading">#</a></h2>
+<ol class="arabic simple">
+<li><p><a class="reference internal" href="#commands"><span class="xref myst">Revisiting common commandline commands</span></a></p></li>
+<li><p><a class="reference internal" href="#curl"><span class="xref myst">Downloading files from the command line using <code class="docutils literal notranslate"><span class="pre">curl</span></code></span></a></p></li>
+<li><p><a class="reference internal" href="#directories"><span class="xref myst">Setting up a CMSE 202 directory using the command line</span></a></p></li>
+<li><p><a class="reference internal" href="#script"><span class="xref myst">Downloading and editing a simple (broken) Python script</span></a></p></li>
+<li><p><a class="reference internal" href="#vi"><span class="xref myst">Modifying another Python script, but this time with the <code class="docutils literal notranslate"><span class="pre">vi</span></code> text editor</span></a></p></li>
+<li><p><a class="reference internal" href="#jupyter-commands"><span class="xref myst">Testing out command line commands from <strong>inside</strong> a Jupyter notebook</span></a></p></li>
+</ol>
+<hr class="docutils" />
+<p><a id="commands"></a></p>
+</section>
+<section id="revisting-common-command-line-commands">
+<h2>1. Revisting common command line commands<a class="headerlink" href="#revisting-common-command-line-commands" title="Link to this heading">#</a></h2>
+<p><strong>✅ Do this:</strong> Before you dive into today’s activity, take a moment to remind yourself of some of the commands that came up in the pre-class assignment. If you don’t remember what they do, check in your with your group or your instructor.</p>
+<p><strong>Note</strong>: there might be a few in this list that <em>didn’t</em> come up, so make note of them and figure out what they do!</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">clear</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">pwd</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">ls</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">cd</span> <span class="pre">[directory]</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">cd</span> <span class="pre">..</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">cd</span> <span class="pre">.</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">cd</span> <span class="pre">~</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">cd</span> <span class="pre">-</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">cd</span> <span class="pre">/</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">touch</span> <span class="pre">[new</span> <span class="pre">file]</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">cp</span></code></p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">cp</span> <span class="pre">[file]</span> <span class="pre">[new</span> <span class="pre">file]</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">cp</span> <span class="pre">-r</span> <span class="pre">[folder]</span> <span class="pre">[new</span> <span class="pre">folder]</span></code></p></li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">mv</span></code></p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">mv</span> <span class="pre">[path</span> <span class="pre">to</span> <span class="pre">file/folder]</span> <span class="pre">[new</span> <span class="pre">path</span> <span class="pre">to</span> <span class="pre">file/folder]</span></code> (note that this can be used for relocating files or renaming files)</p></li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">rm</span></code></p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">rm</span> <span class="pre">[file]</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">rm</span> <span class="pre">-r</span> <span class="pre">[folder]</span></code></p></li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">less</span> <span class="pre">[file]</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">more</span> <span class="pre">[file]</span></code></p></li>
+</ul>
+<p><strong>✅ Do this</strong>: Remind yourself how you can interact with Python on the commandline as well by revisiting these commands:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">python</span></code></p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">import</span> <span class="pre">random</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">random.randint(1,100)</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">exit()</span></code></p></li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">ipython</span></code></p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">import</span> <span class="pre">numpy</span> <span class="pre">as</span> <span class="pre">np</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">np.linspace(0,100,5)</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">ls</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">pwd</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">cd</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">exit()</span></code></p></li>
+</ul>
+</li>
+</ul>
+<hr class="docutils" />
+<p><a id="curl"></a></p>
+</section>
+<section id="downloading-files-from-the-command-line-using-curl">
+<h2>2. Downloading files from the command line using <code class="docutils literal notranslate"><span class="pre">curl</span></code><a class="headerlink" href="#downloading-files-from-the-command-line-using-curl" title="Link to this heading">#</a></h2>
+<p>Not only can you create, move, copy, and delete files on the command line, there are also commands that allow you to download files from the internet.</p>
+<p>One such command for doing this is the <code class="docutils literal notranslate"><span class="pre">curl</span></code> command. Since you may not be familiar with this command, one option would be to do a quick google search for “curl unix command” which would bring up a page like this one: <a class="reference external" href="https://www.tutorialspoint.com/unix_commands/curl.htm">https://www.tutorialspoint.com/unix_commands/curl.htm</a></p>
+<p>Of course, most command line commands also have a built-in set of documentation that explains what the command does and how it works. You can access this using the <code class="docutils literal notranslate"><span class="pre">man</span></code> command, to access the “manual” for that command.</p>
+<p><strong>✅ Do This</strong>: If you haven’t already, save this notebook and upload it to JupyterHub and continue working on it there. Then, open up a new Terminal in JupyterHub. Once you’re there, try running the following command:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>man<span class="w"> </span>curl
+</pre></div>
+</div>
+<p>(You’re also welcome to do this locally on your computer if you’ve set up a command line interface that works on your computer)</p>
+<p>This command should bring up the manual for the <code class="docutils literal notranslate"><span class="pre">curl</span></code> command. You can step through this file one line at a time by pressing <kbd>Return</kbd> or <kbd>Enter</kbd> on your keyboard, or if you want to page through a page at a time you can press <kbd>F</kbd> or <kbd>B</kbd> to move forward and backward respectively. To quit out of the manual page, press <kbd>Q</kbd>.</p>
+<p><strong>✅ Do This</strong>: Now that you can access the manual for the <code class="docutils literal notranslate"><span class="pre">curl</span></code> command, use it or the internet link provided above to answer the following questions:</p>
+<p><font size=+3>✎</font> Do This - Edit this markdown to answer the questions below.</p>
+<ol class="arabic simple">
+<li><p>What information does the <code class="docutils literal notranslate"><span class="pre">curl</span></code> command need to download a file from the internet?</p></li>
+</ol>
+<p><em>Put your answer here.</em></p>
+<ol class="arabic simple" start="2">
+<li><p>Does <code class="docutils literal notranslate"><span class="pre">curl</span></code> save the data to a file by default or does it just output to the terminal? If it doesn’t output it to a file by default, what flag (using <code class="docutils literal notranslate"><span class="pre">-</span></code> or <code class="docutils literal notranslate"><span class="pre">--</span></code>) do you need to use to make it do so? Is there more than one flag that can do this? To test this out, you can experiment a bit by using the <a class="reference external" href="http://README.md">README.md</a> file from supplemental repository for the course:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">https://raw.githubusercontent.com/msu-cmse-courses/cmse202-F22-data/main/README.md</span></code></p></li>
+</ul>
+</li>
+</ol>
+<p><em>Put your answer here.</em></p>
+<p><strong>✅ Do This</strong>: Using what you’ve learned, what would be the command to download the <a class="reference external" href="http://README.md">README.md</a> file from the course website such that it is saved using the same filename?</p>
+<p><font size=+3>✎</font> Do This - Erase this and put your answer here.</p>
+<p><strong>✅ Do This</strong>: Confirm that you’re right by running your command on your terminal (if you haven’t done so already). Once you’re sure it works as intended, feel free to delete that file using <code class="docutils literal notranslate"><span class="pre">rm</span></code>.</p>
+<hr class="docutils" />
+<p><a id="directories"></a></p>
+</section>
+<section id="setting-up-a-cmse-202-directory-using-the-command-line">
+<h2>3. Setting up a CMSE 202 directory using the command line<a class="headerlink" href="#setting-up-a-cmse-202-directory-using-the-command-line" title="Link to this heading">#</a></h2>
+<p>If you’ve haven’t already, in this section you’re going practice setting up a directory structure on JupyterHub (or your computer if you’re working on things locally) for storing content related to CMSE 202.</p>
+<p><strong>✅ Do This</strong> - Using the <strong>command line interface</strong>, do the following:</p>
+<ul class="simple">
+<li><p>Create a new directory in your home directory called <code class="docutils literal notranslate"><span class="pre">CMSE202</span></code> (if you can’t remember which command to use, ask your group for help!)</p></li>
+<li><p>Then, <strong>inside</strong> the <code class="docutils literal notranslate"><span class="pre">CMSE202</span></code> directory, create two additional directories: <code class="docutils literal notranslate"><span class="pre">notebooks</span></code> and <code class="docutils literal notranslate"><span class="pre">scripts</span></code> (remind yourself how to change directories)</p></li>
+<li><p>Double-check that everything worked by running the <code class="docutils literal notranslate"><span class="pre">pwd</span></code> and <code class="docutils literal notranslate"><span class="pre">ls</span></code> commands to poke around in your new directories.</p></li>
+<li><p>If you already have some 202 notebooks on JupyterHub (or your computer), try using the <code class="docutils literal notranslate"><span class="pre">mv</span></code> command to move them into your new directories – this might be a little tricky at first!</p></li>
+</ul>
+</section>
+<section id="stop">
+<h2>🛑 STOP<a class="headerlink" href="#stop" title="Link to this heading">#</a></h2>
+<p>Check in with an instructor and show your work!</p>
+<hr class="docutils" />
+<p><a id="script"></a></p>
+</section>
+<section id="downloading-and-editing-a-simple-broken-python-script">
+<h2>4. Downloading and editing a simple (broken) Python script<a class="headerlink" href="#downloading-and-editing-a-simple-broken-python-script" title="Link to this heading">#</a></h2>
+<p>Now that you have a directory structure set up for CMSE 202, let’s download a Python script into your new <code class="docutils literal notranslate"><span class="pre">scripts</span></code> directory.</p>
+<p><strong>✅ Do This</strong>: Make sure to navigate into your <code class="docutils literal notranslate"><span class="pre">scripts</span></code> directory on the command line and then use <code class="docutils literal notranslate"><span class="pre">curl</span></code> to download the following script (make sure you use the right flag so that it is saved as “<a class="reference external" href="http://fib.py">fib.py</a>”:</p>
+<p><code class="docutils literal notranslate"><span class="pre">https://raw.githubusercontent.com/msu-cmse-courses/cmse202-F22-data/main/code_samples/fib.py</span></code></p>
+<p><strong>✅ Do This</strong>: Now that you have the file downloaded, do the following:</p>
+<ol class="arabic simple">
+<li><p>Run the script on the command line using Python and look at the results.</p></li>
+<li><p>Open the file and take a look at the comments. Do you understand what the code is doing? Is there anything in the code that you’ve never seen before? If so, discuss these new components with your group and see if you can make sense of them. Specifically, do you understand what the following code is doing?</p></li>
+</ol>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">if</span> <span class="vm">__name__</span><span class="o">==</span> <span class="s2">&quot;__main__&quot;</span><span class="p">:</span>
+    <span class="n">main</span><span class="p">()</span>
+</pre></div>
+</div>
+<ol class="arabic simple" start="3">
+<li><p>Is the code correctly doing what it is meant to do? If not, can you figure out what’s going wrong?</p></li>
+</ol>
+<p>Is the cell below, <strong>explain</strong>:</p>
+<ul class="simple">
+<li><p>what the entire code is doing</p></li>
+<li><p>what is supposed to do</p></li>
+<li><p>how you might fix it</p></li>
+<li><p>anything you didn’t originally understand about the code (along with an explanation of what you learned about the confusing code)</p></li>
+</ul>
+<p><font size=+3>✎</font> Do This - Erase this and answer the questions from the cell above.</p>
+<p><strong>✅ Do This</strong>: Now that you know what’s wrong with the code, <strong>fix it!</strong> Edit the file with your solution and then re-run the code to make sure it works as intended.</p>
+<hr class="docutils" />
+<p><a id="vi"></a></p>
+</section>
+<section id="modifying-another-python-script-but-this-time-with-the-vi-text-editor">
+<h2>5. Modifying another Python script, but this time with the <code class="docutils literal notranslate"><span class="pre">vi</span></code> text editor<a class="headerlink" href="#modifying-another-python-script-but-this-time-with-the-vi-text-editor" title="Link to this heading">#</a></h2>
+<p>OK, so now that you’ve explored a Python script and have begun to get comfortable with running such a script on the command line, you’re going to download another script, but instead of editing the file withing the Jupyter text editor, you’ve doing to modify the script using a command-line-based text editor that is widely available on many systems: “<a class="reference external" href="https://en.wikipedia.org/wiki/Vi">vi</a>”</p>
+<p>For this part of the activity, you’re going to work with a script that is designed to calculate the <span class="math notranslate nohighlight">\(x\)</span>-position and <span class="math notranslate nohighlight">\(y\)</span>-position of a projectile as a function of time. Since you are not expected to know the equations for projectile motion off the top of your head for this class, there are provided here:</p>
+<div class="math notranslate nohighlight">
+\[x(t) = v_{0}t\cos(\theta)\]</div>
+<div class="math notranslate nohighlight">
+\[y(t) = v_{0}t\sin(\theta) - \frac{1}{2}gt^2\]</div>
+<p>where <span class="math notranslate nohighlight">\(v_0\)</span> is the magnitude of the initial velocity in meters per second, <span class="math notranslate nohighlight">\(\theta\)</span> is the angle that that the projectile is launched at in radians, <span class="math notranslate nohighlight">\(g\)</span> is the acceleration due to gravity in meters per seconds-squared, and <span class="math notranslate nohighlight">\(t\)</span> is the time in seconds.</p>
+<p>You do not need to understand the physics behind projectfile motion to complete this activity, <strong>you only need to understand what the code is doing so that you can modify it a bit.</strong></p>
+<p><strong>✅ Do This</strong>: Download the following script in your <code class="docutils literal notranslate"><span class="pre">scripts</span></code> directory using the command line:</p>
+<p><code class="docutils literal notranslate"><span class="pre">https://raw.githubusercontent.com/msu-cmse-courses/cmse202-F22-data/main/code_samples/projectile_motion.py</span></code></p>
+<p>Once you’ve downloaded it, <strong>test it out</strong> by running it on the command line. You should find that when the script runs, it makes an image called <code class="docutils literal notranslate"><span class="pre">x_vs_time.png</span></code>. You can find this image by looking for it on your Jupyter “home page”. It should look something like this:</p>
+<div align="center"><img src="https://i.ibb.co/VvvYGQn/x-vs-time.png" alt="x-vs-time" border="0" width=400></div>
+<p><strong>✅ Do This</strong>: Once you have the script downloaded and have confirmed that it works as intended, <strong>make a copy of it using the command line</strong> and call this new file <code class="docutils literal notranslate"><span class="pre">projectile_motion_2.py</span></code> (clever name, no?). What was the command you used to make the copy of the original?</p>
+<p><font size=+3>✎</font> Do This - Put the command you used to copy the file here.</p>
+<section id="opening-the-file-with-vi">
+<h3>Opening the file with vi<a class="headerlink" href="#opening-the-file-with-vi" title="Link to this heading">#</a></h3>
+<p><strong>✅ Do This</strong>: Using the <code class="docutils literal notranslate"><span class="pre">vi</span></code> directions from the PCA, let’s try opening the copy of the original script and making a few minor changes. Do the following:</p>
+<ul class="simple">
+<li><p>Open <code class="docutils literal notranslate"><span class="pre">projectile_motion_2.py</span></code> using the <code class="docutils literal notranslate"><span class="pre">vi</span></code> command on the command line</p></li>
+<li><p>Make the following changes to the script:</p>
+<ul>
+<li><p>Change the call to the <code class="docutils literal notranslate"><span class="pre">compute_trajectory</span></code> function in the <code class="docutils literal notranslate"><span class="pre">main</span></code> function so that the velocity of projectile is 750 m s <span class="math notranslate nohighlight">\(^{-1}\)</span> and the launch angle is 45 degrees. <strong>Do not alter the <code class="docutils literal notranslate"><span class="pre">compute_trajectory</span></code> function itself</strong>.</p></li>
+</ul>
+</li>
+<li><p>Save and quit the file.</p></li>
+<li><p>Test out your new function by running the script on the command line. If everything went as planned, you should have a new plot of <span class="math notranslate nohighlight">\(x\)</span> as a function of time that looks like this (indicating that the projectile traveled farther):</p></li>
+</ul>
+<div align="center"><img src="https://i.ibb.co/Kb286ZY/x-vs-time.png" alt="x-vs-time" border="0" width=400></div><section id="can-we-do-something-a-little-more-interesting">
+<h4>Can we do something a little more interesting?<a class="headerlink" href="#can-we-do-something-a-little-more-interesting" title="Link to this heading">#</a></h4>
+<p>Looking at a straight line isn’t all that much fun. It would be more interesting to see how the project traveled vertically since it should start out going up, but eventually slow down and change direction under the force of gravity. Wouldn’t it be nice if our script produced <strong><span class="math notranslate nohighlight">\(y\)</span> as a function of time</strong>?</p>
+<p><strong>✅ Do This</strong>: <strong>Using <code class="docutils literal notranslate"><span class="pre">vi</span></code></strong>, make a new function that plots <code class="docutils literal notranslate"><span class="pre">y</span></code> as a function of time. You should be able to use the pre-existing <code class="docutils literal notranslate"><span class="pre">plot_x_vs_time</span></code> as a basis for your new function. While this can be a little tedious if you’re just using the insert mode in <code class="docutils literal notranslate"><span class="pre">vi</span></code>, there are some additional <code class="docutils literal notranslate"><span class="pre">vi</span></code> commands that can make this a little eaiser. Try out the following:</p>
+<ul class="simple">
+<li><p>Once you open the file in <code class="docutils literal notranslate"><span class="pre">vi</span></code>, move your cursor to the front of the line where <code class="docutils literal notranslate"><span class="pre">def</span> <span class="pre">plot_x_vs_time</span></code> is. Then press <kbd>v</kbd> and then move your cursor down until the entire function is highlighted.</p></li>
+<li><p>Once the entire function is highlighted, press <kbd>y</kbd> for “yank” (copy) and then move your cursor down to a blank line below the <code class="docutils literal notranslate"><span class="pre">plot_x_vs_time</span></code> function and press <kbd>p</kbd> for “paste”. You should find that a duplicate version of the new function exists. You can now use insert mode to modify that function!</p></li>
+</ul>
+<p>There’s a lot that vi can do once you start learning some of the commands and there are a lot of resources available for learning the commands (like this simple <a class="reference external" href="https://ryanstutorials.net/linuxtutorial/cheatsheetvi.php">cheat sheet</a>).</p>
+<p>In your new version of the Python script, make sure you call your new function inside the <code class="docutils literal notranslate"><span class="pre">main</span></code> function and ensure that it saves a new file called <code class="docutils literal notranslate"><span class="pre">y_vs_time.png</span></code>. You should get something that looks like this:</p>
+<div align="center"><img src="https://i.ibb.co/7WY2kBz/y-vs-time.png" alt="y-vs-time" border="0" width=400></div>
+<p>Much more interesting!</p>
+<hr class="docutils" />
+<p><a id="jupyter-commands"></a></p>
+</section>
+</section>
+</section>
+<section id="testing-out-command-line-commands-from-inside-a-jupyter-notebook">
+<h2>6. Testing out command line commands from <strong>inside</strong> a Jupyter notebook<a class="headerlink" href="#testing-out-command-line-commands-from-inside-a-jupyter-notebook" title="Link to this heading">#</a></h2>
+<p>No that you’ve started to get comfortable with navigating the command line interface and editing files. Wer’e gonna spend the last bit of this assignment visiting how some of the same commands can be run from <strong>inside</strong> the Jupyter notebook itself.</p>
+<section id="using">
+<h3>Using “<code class="docutils literal notranslate"><span class="pre">!</span></code>”<a class="headerlink" href="#using" title="Link to this heading">#</a></h3>
+<p>One way to access command line commands from <em>inside</em> your jupyter notebook is to use the exclamation point/bang symbol, <code class="docutils literal notranslate"><span class="pre">!</span></code>. This symbol actually tells the Jupyter notebook to run the command on whatever the underlying default command prompt is for the computer where the Jupyter notebook is being run. In the case of JupyterHub, this is the “Terminal” that we’ve already talked a bit about, but if you’re running the Jupyter notebook on you computer locally, it may be something different, so be aware that this behavior may change depending on what computer/system you’re using!</p>
+<p><strong>✅ Do This</strong>: Try running the following cell to see what happens. Do the results make sense?</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">!</span>pwd
+<span class="o">!</span>ls
+</pre></div>
+</div>
+</div>
+</div>
+<p><strong>✅ Do This</strong>: <strong>Carefully</strong> try executing some of the other command line commands you’ve learned using <code class="docutils literal notranslate"><span class="pre">!</span></code>. As always, make sure you know what you expect the command to <strong>before you run it!</strong> Did all of the commands you tried work? Which, if any, didn’t? You may want to experiment with using more than one cell.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Test out some &quot;!&quot; commands here</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="using-the-built-in-ipython-command-line-commands">
+<h3>Using the built-in IPython command line commands<a class="headerlink" href="#using-the-built-in-ipython-command-line-commands" title="Link to this heading">#</a></h3>
+<p>Because Jupyter notebooks are also <strong>IPython</strong> notebooks you can run some of the same commands that are available to you when you’re using the IPython command prompt.</p>
+<p><strong>✅ Do This</strong>: Run the following two cells. Do the results makes sense?</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">pwd</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">ls</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p><strong>✅ Question</strong>: What happens if you combined the above to commands into one cell? Does it work? If not, why not? What is happening with how the Jupyter notebook is interpreting the information?</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Test out putting both commands in the same cell here</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p><strong>✅ Do This</strong>: Experiment with other commands to determine which ones work and which ones don’t. <strong>Proceed with caution!</strong></p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Experiment here and create cells as necessary</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+</section>
+<hr class="docutils" />
+<section id="time-permitting">
+<h2>Time permitting<a class="headerlink" href="#time-permitting" title="Link to this heading">#</a></h2>
+<p>If you find yourself with extra time available and you haven’t yet tried getting all of this to work on your own computer (rather than JuypterHub), visit the sofware setup guide that is linked on the <a class="reference external" href="https://msu-cmse-courses.github.io/cmse202-S25-jb/">course website</a> and give it a shot. If you run into issues, or you’ve already tried and run into issues, ask an instructor to take a look!</p>
+</section>
+<hr class="docutils" />
+<section id="congratulations-you-re-done">
+<h2>Congratulations, you’re done!<a class="headerlink" href="#congratulations-you-re-done" title="Link to this heading">#</a></h2>
+<p>Now, you just need to submit this assignment by uploading it to the course <a href="https://d2l.msu.edu/">Desire2Learn</a> web page for today’s assignment submission folder. (Don’t forget to add your name in the first cell!).</p>
+<p>© Copyright 2025,  The Department of Computational Mathematics, Science and Engineering at Michigan State University.</p>
+</section>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "conda-base-py"
+        },
+        kernelOptions: {
+            name: "conda-base-py",
+            path: "./daily/Day-02"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'conda-base-py'</script>
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="Day-02_Pre-Class_ReflectionAndCommandLineInterface-STUDENT.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">Pre-Class Assignment: Reflection and an introduction to the Command Line Interface (CLI)</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="../../section_files/day_3.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Day 3</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <dialog id="pst-secondary-sidebar-modal"></dialog>
+                <div id="pst-secondary-sidebar" class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">In-class Notebook: Command line interface</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#day-2">Day 2</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#cmse-202">CMSE 202</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#put-your-name-here"><p style="text-align: right;"> ✅ <strong>Put your name here</strong> </p></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#learning-goals-for-today-s-class">Learning goals for today’s class:</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#agenda-for-today-s-class">Agenda for today’s class</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#revisting-common-command-line-commands">1. Revisting common command line commands</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#downloading-files-from-the-command-line-using-curl">2. Downloading files from the command line using <code class="docutils literal notranslate"><span class="pre">curl</span></code></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#setting-up-a-cmse-202-directory-using-the-command-line">3. Setting up a CMSE 202 directory using the command line</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#stop">🛑 STOP</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#downloading-and-editing-a-simple-broken-python-script">4. Downloading and editing a simple (broken) Python script</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#modifying-another-python-script-but-this-time-with-the-vi-text-editor">5. Modifying another Python script, but this time with the <code class="docutils literal notranslate"><span class="pre">vi</span></code> text editor</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#opening-the-file-with-vi">Opening the file with vi</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#can-we-do-something-a-little-more-interesting">Can we do something a little more interesting?</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#testing-out-command-line-commands-from-inside-a-jupyter-notebook">6. Testing out command line commands from <strong>inside</strong> a Jupyter notebook</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#using">Using “<code class="docutils literal notranslate"><span class="pre">!</span></code>”</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#using-the-built-in-ipython-command-line-commands">Using the built-in IPython command line commands</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#time-permitting">Time permitting</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#congratulations-you-re-done">Congratulations, you’re done!</a></li>
+</ul>
+</li>
+</ul>
+
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By MSU CMSE
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2025.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script defer src="../../_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf"></script>
+<script defer src="../../_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>

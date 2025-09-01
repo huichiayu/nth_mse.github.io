@@ -1,0 +1,1215 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="../../../" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Homework Assignment 2 &#8212; CMSE 202 Course Website</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  <!--
+    this give us a css class that will be invisible only if js is disabled
+  -->
+  <noscript>
+    <style>
+      .pst-js-only { display: none !important; }
+
+    </style>
+  </noscript>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../../../_static/styles/theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
+<link href="../../../_static/styles/pydata-sphinx-theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
+
+    <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css?v=b76e3c8a" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/styles/sphinx-book-theme.css?v=a3416100" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/togglebutton.css?v=13237357" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/sphinx-thebe.css?v=4fa983c6" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/sphinx-design.min.css?v=95c83b7e" />
+  
+  <!-- So that users can add custom icons -->
+  <script src="../../../_static/scripts/fontawesome.js?digest=8878045cc6db502f8baf"></script>
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../../../_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf" />
+<link rel="preload" as="script" href="../../../_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf" />
+
+    <script src="../../../_static/documentation_options.js?v=9eb32ce0"></script>
+    <script src="../../../_static/doctools.js?v=9a2dae69"></script>
+    <script src="../../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../../../_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="../../../_static/copybutton.js?v=f281be69"></script>
+    <script src="../../../_static/scripts/sphinx-book-theme.js?v=887ef09a"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../../../_static/togglebutton.js?v=4a39c7ea"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="../../../_static/design-tabs.js?v=f930bc37"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script async="async" src="../../../_static/sphinx-thebe.js?v=c100c467"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'homework/SS25/HW02/HW02_Part1-Orbits-SS25-STUDENT';</script>
+    <link rel="icon" href="../../../_static/logo.png"/>
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../search.html" />
+    <link rel="next" title="Homework Assignment 2" href="HW02_Part2-Risk-SS25-STUDENT.html" />
+    <link rel="prev" title="Homework Assignment 1" href="../HW01/HW-01_GitPracticeDebuggingPythonPackagesAndClasses-SS25-STUDENT.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  <meta name="docsearch:version" content="" />
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
+  
+  <dialog id="pst-search-dialog">
+    
+<form class="bd-search d-flex align-items-center"
+      action="../../../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         placeholder="Search..."
+         aria-label="Search..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form>
+  </dialog>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+      <dialog id="pst-primary-sidebar-modal"></dialog>
+      <div id="pst-primary-sidebar" class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="../../../index.html">
+  
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="../../../_static/logo.png" class="logo__image only-light" alt="CMSE 202 Course Website - Home"/>
+    <img src="../../../_static/logo.png" class="logo__image only-dark pst-js-only" alt="CMSE 202 Course Website - Home"/>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item">
+
+<button class="btn search-button-field search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+ <i class="fa-solid fa-magnifying-glass"></i>
+ <span class="search-button__default-text">Search</span>
+ <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+</button></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">Course Materials</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../../../course_materials/CMSE202_Syllabus.html">Syllabus</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../course_materials/CMSE202_Calendar.html">Schedule</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../course_materials/CMSE202_HelpRoomCalendar.html">Office Hours and Help Room</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../course_materials/SoftwareSetupGuide.html">Software Setup Guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../course_materials/CMSE202_GenerativeAI_Policy.html">Generative AI Policy</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://upload.wikimedia.org/wikipedia/commons/7/79/Unix_command_cheatsheet.pdf">CLI (Unix/Mac/Linux) commands cheat sheet</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../course_materials/BashVsPowershell_CheatSheet.html">Bash vs PowerShell</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://wac-cdn.atlassian.com/dam/jcr:e7e22f25-bba2-4ef1-a197-53f46b6df4a5/SWTM-2088_Atlassian-Git-Cheatsheet.pdf?cdnVersion=525">Git Cheat Sheet</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://raw.githubusercontent.com/msu-cmse-courses/cmse202-supplemental-data/main/documents/How-to-Access-Anaconda-Powershell-Prompt.pdf">How to Access “Anaconda Powershell Prompt” (for Windows users)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../course_materials/Pull_Request_Guide.html">Making and merging Pull Requests on GitHub</a></li>
+
+
+
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Semester Project</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../../../course_materials/SemesterProjectDetails.html">Semester Project Details</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../course_materials/CMSE202_FinalProjectRequirementsAndGradingRubric.html">Semester Project Requirements and Grading Rubric</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Exams</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../../../course_materials/MidtermStudyGuide.html">Midterm Study Guide</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Daily Content</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../../section_files/day_1.html">Day 1</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../daily/Day-01/Day-01_In-Class_Overview-STUDENT.html">In-class Notebook: Welcome to CMSE202</a></li>
+
+
+
+
+
+
+
+
+
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../../section_files/day_2.html">Day 2</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../daily/Day-02/Day-02_Pre-Class_ReflectionAndCommandLineInterface-STUDENT.html">Pre-Class Assignment: Reflection and an introduction to the Command Line Interface (CLI)</a></li>
+
+
+
+<li class="toctree-l2"><a class="reference internal" href="../../../daily/Day-02/Day-02_In-Class_CommandLineInterface-STUDENT.html">In-class Notebook: Command line interface</a></li>
+
+
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../../section_files/day_3.html">Day 3</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../daily/Day-03/Day-03_Pre-Class_PythonReview%2BGitIntro-STUDENT.html">Pre-Class Assignment: Python Review and Intro to Git</a></li>
+
+<li class="toctree-l2"><a class="reference internal" href="../../../daily/Day-03/Day-03_In-Class_GitPractice-STUDENT.html">In-Class Assignment: Practice with Git and GitHub</a></li>
+
+
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../../section_files/day_4.html">Day 4</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../daily/Day-04/Day-04_Pre-Class_DownloadingFilesAndInstallingPackages-STUDENT.html">Pre-class Assignment: Python Packages</a></li>
+
+
+
+
+
+<li class="toctree-l2"><a class="reference internal" href="../../../daily/Day-04/Day-04_In-Class_PythonPackagesAndMapPlotting-STUDENT.html">In-class Assignment: Installing Python Packages and Plotting with Maps in Python</a></li>
+
+
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../../section_files/day_5.html">Day 5</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../daily/Day-05/Day-05_Pre-Class_PandasReview-STUDENT.html">Pre-Class Assignment: Pandas Review</a></li>
+
+
+<li class="toctree-l2"><a class="reference internal" href="../../../daily/Day-05/Day-05_In-Class_PandasReview-STUDENT.html">In-Class Assignment: Reviewing Pandas and exploring data</a></li>
+
+
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../../section_files/day_6.html">Day 6</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../daily/Day-06/Day-06_Pre-class_ObjectsClasses-STUDENT.html">Pre-class Assignment: Introduction to Object Oriented Programming (OOP)</a></li>
+
+
+<li class="toctree-l2"><a class="reference internal" href="../../../daily/Day-06/Day-06_In-Class_ObjectsClasses-STUDENT.html">In-class Assignment: We have a Zoo!</a></li>
+
+
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../../section_files/day_7.html">Day 7</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../daily/Day-07/Day-07_Pre-class_ObjectInheritanceAndComposition-STUDENT.html">Pre-class Assignment: object inheritance and composition</a></li>
+
+
+<li class="toctree-l2"><a class="reference internal" href="../../../daily/Day-07/Day-07_In-Class_ObjectInheritanceAndComposition-STUDENT.html">In-class Assignment: We have a Zoo! (part 2)</a></li>
+
+
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../../section_files/day_8.html">Day 8</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../daily/Day-08/Day-08_Pre-Class_SuperbugsABM-STUDENT.html">Pre-Class Assignment: Agent-based Modeling of Superbugs</a></li>
+
+
+
+
+
+<li class="toctree-l2"><a class="reference internal" href="../../../daily/Day-08/Day-08_In-Class_ABMSuperbugs1-STUDENT.html">In-Class Assignment: Simulating Superbugs using agent-based modeling</a></li>
+
+
+
+
+
+
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../../section_files/day_9.html">Day 9</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../daily/Day-09/Day-09_Pre-Class_OOPAntForaging-STUDENT.html">Pre-Class Assignment: Reviewing another agent-based model built using Object Oriented Programming (OOP)</a></li>
+
+
+<li class="toctree-l2"><a class="reference internal" href="../../../daily/Day-09/Day-09_In-Class_ABMSuperbugs2-STUDENT.html">In-Class Assignment: Agent Based Modeling of Superbugs (part 2)</a></li>
+
+
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../../section_files/day_10.html">Day 10</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../daily/Day-10/Day-10_Pre-Class_GraphTheory-STUDENT.html">Pre-Class Assignment: Conflicts in Git and Graph Theory</a></li>
+
+
+<li class="toctree-l2"><a class="reference internal" href="../../../daily/Day-10/Day-10_In-Class_GraphTheory-STUDENT.html">In-Class Assignment: Graph Theory</a></li>
+
+
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../../section_files/day_11.html">Day 11</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../daily/Day-11/Day-11_Pre-Class_GraphTheoryCellTowers-STUDENT.html">Pre-class Assignment: Project Brainstorming &amp; Graph Theory and Cell Towers</a></li>
+
+
+
+
+
+<li class="toctree-l2"><a class="reference internal" href="../../../daily/Day-11/Day-11_In-Class_GraphTheoryCellTowers-STUDENT.html">In-class Assignment: Graph Theory and Cell Towers</a></li>
+
+
+
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../../section_files/day_12.html">Day 12</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../daily/Day-12/Day-12_In-Class_ProjectProposals-STUDENT.html">In-Class Assignment: Reviewing Project Ideas</a></li>
+
+
+
+
+
+
+
+
+
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../../section_files/day_13.html">Day 13</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../daily/Day-13/Day-13_Pre-Class_Regression-STUDENT.html">Pre-Class Assignment: Regression</a></li>
+
+
+
+<li class="toctree-l2"><a class="reference internal" href="../../../daily/Day-13/Day-13_In-Class-Regression-STUDENT.html">In-Class Assignment: Linear Regression</a></li>
+
+
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../../section_files/day_14.html">Day 14</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../daily/Day-14/Day-14_Pre-Class-PolynomialRegression-STUDENT.html">Pre-Class Assignment: Polynomial Regression</a></li>
+
+
+
+<li class="toctree-l2"><a class="reference internal" href="../../../daily/Day-14/Day-14_In-Class_MultipleRegression-STUDENT.html">In-Class Assignment: Multiple Regression</a></li>
+
+
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../../section_files/day_15.html">Day 15</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../daily/Day-15/Day-15_Pre-Class_MachineLearningIntro-STUDENT.html">Pre-class Assignment: Intro to Machine Learning</a></li>
+
+
+<li class="toctree-l2"><a class="reference internal" href="../../../daily/Day-15/Day-15_In-Class_ML-LogisticRegression-STUDENT.html">In-Class Assignment: Machine Learning; classification with logistic regression</a></li>
+
+
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../../section_files/day_16.html">Day 16</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../daily/Day-16/Day-16_Pre-Class_GitRevisited-STUDENT.html">Pre-Class Assignment: Git with it! (collaborating with Git)</a></li>
+
+
+
+<li class="toctree-l2"><a class="reference internal" href="../../../daily/Day-16/Day-16_In-Class_CollaboratingWithGit-STUDENT.html">In-Class Assignment: Collaborating with Git</a></li>
+
+
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../../section_files/day_17.html">Day 17</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../daily/Day-17/Day-17_Pre-Class_AIPracticeAndProductiveGroupwork-STUDENT.html">Pre-Class Assignment: Revisiting generative AI and reflecting on group work experiences</a></li>
+
+
+
+<li class="toctree-l2"><a class="reference internal" href="../../../daily/Day-17/Day-17_In-Class_RevisitingGenerativeAIAndProjectPlanning-STUDENT.html">In-Class Assignment: Revisiting Generative AI and Project Planning</a></li>
+
+
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../../section_files/day_18.html">Day 18</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../daily/Day-18/Day-18_Pre-Class_Perceptron-STUDENT.html">Pre-class Assignment: The Perceptron Classifier (a simple neural network)</a></li>
+
+
+<li class="toctree-l2"><a class="reference internal" href="../../../daily/Day-18/Day-18_In-Class_Perceptron-STUDENT.html">In-Class Assignment: The Perceptron Classifier</a></li>
+
+
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../../section_files/day_19.html">Day 19</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../daily/Day-19/Day-19_In-Class_PerceptronExtension-STUDENT.html">In-Class Challenge Assignment: Experimenting with the Perceptron</a></li>
+
+
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../../section_files/day_20.html">Day 20</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../daily/Day-20/Day-20_Pre-Class_SVMs-STUDENT.html">Pre-Class Assignment: Support Vector Machines (SVMs)</a></li>
+
+
+
+<li class="toctree-l2"><a class="reference internal" href="../../../daily/Day-20/Day-20_In-Class_SVMs-STUDENT.html">In-Class Assignment: Machine learning with an SVM Classifier</a></li>
+
+
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../../section_files/day_21.html">Day 21</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../daily/Day-21/Day-21_Pre-Class_SVMs2-STUDENT.html">Pre-Class Assignment: Further exploration of SVMs</a></li>
+
+
+
+<li class="toctree-l2"><a class="reference internal" href="../../../daily/Day-21/Day-21_In-Class_SVMs2-STUDENT.html">In-Class Assignment: SVMs continued</a></li>
+
+
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../../section_files/day_22.html">Day 22</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../daily/Day-22/Day-22_Pre-Class_ProjectUpdateReminder-STUDENT.html">Pre-Class Assignment: Project updates!</a></li>
+
+
+
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../../section_files/day_23.html">Day 23</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../daily/Day-23/Day-23_Pre-Class_PCA-STUDENT.html">Pre-Class Assignment: Principal Component Analysis</a></li>
+
+
+
+</ul>
+</details></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Homework</span></p>
+<ul class="current nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../HW01/HW-01_GitPracticeDebuggingPythonPackagesAndClasses-SS25-STUDENT.html">Homework 1</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">Homework 2 Part 1</a></li>
+<li class="toctree-l1"><a class="reference internal" href="HW02_Part2-Risk-SS25-STUDENT.html">Homework 2 Part 2</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../HW03/HW-03_Regression-S25-STUDENT.html">Homework Assignment 3</a></li>
+
+
+
+
+
+
+
+
+
+<li class="toctree-l1"><a class="reference internal" href="../HW04/HW-04_Perceptron_SVM_STUDENT.html">Homework 4</a></li>
+
+
+
+
+
+
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+      <div class="sidebar-primary-item">
+<div id="ethical-ad-placement"
+      class="flat"
+      data-ea-publisher="readthedocs"
+      data-ea-type="readthedocs-sidebar"
+      data-ea-manual="true">
+</div></div>
+  </div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><button class="sidebar-toggle primary-toggle btn btn-sm" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</button></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="../../../_sources/homework/SS25/HW02/HW02_Part1-Orbits-SS25-STUDENT.ipynb" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.ipynb</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button pst-js-only" aria-label="Color mode" data-bs-title="Color mode"  data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <i class="theme-switch fa-solid fa-sun                fa-lg" data-mode="light" title="Light"></i>
+  <i class="theme-switch fa-solid fa-moon               fa-lg" data-mode="dark"  title="Dark"></i>
+  <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"  title="System Settings"></i>
+</button>
+
+
+<button class="btn btn-sm pst-navbar-icon search-button search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+</button>
+<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</button>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Homework Assignment 2</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#modeling-planets-orbits">Modeling planets’ orbits</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#notebook-1-of-2">(Notebook 1 of 2)</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#put-your-name-here"><p style="text-align: right;"> ✅ Put your name here.</p></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#put-your-github-username-here"><p style="text-align: right;"> ✅ Put your <em>GitHub username</em> here.</p></a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#table-of-contents">Table of contents</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#learning-goals">Learning Goals</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#pre-assignment-survey">Pre-assignment Survey</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#stop">🛑 STOP</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#part-1-planet-orbits-and-migration-types-14-points">Part 1: Planet orbits and migration types (14 Points)</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#orbital-period">Orbital period</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#classes">Classes</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">🛑 STOP</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#part-2-modeling-planet-migration-using-agent-based-modeling-33-points">Part 2. Modeling planet migration using Agent Based Modeling (33 points)</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#dimensions">Dimensions</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#model-set-up">Model Set-up</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#modeling-a-system-of-2-planets-around-a-star">Modeling a system of 2 planets around a star</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#visualization">Visualization</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#modeling-a-system-of-1-big-planet-and-n-small-planets-around-a-star">Modeling a system of 1 big planet and N small planets around a star</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">Visualization</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id3">🛑 STOP</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#post-assignment-survey">Post-assignment Survey</a></li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section class="tex2jax_ignore mathjax_ignore" id="homework-assignment-2">
+<h1>Homework Assignment 2<a class="headerlink" href="#homework-assignment-2" title="Link to this heading">#</a></h1>
+<section id="modeling-planets-orbits">
+<h2>Modeling planets’ orbits<a class="headerlink" href="#modeling-planets-orbits" title="Link to this heading">#</a></h2>
+<section id="notebook-1-of-2">
+<h3>(Notebook 1 of 2)<a class="headerlink" href="#notebook-1-of-2" title="Link to this heading">#</a></h3>
+</section>
+<section id="put-your-name-here">
+<h3><p style="text-align: right;"> ✅ Put your name here.</p><a class="headerlink" href="#put-your-name-here" title="Link to this heading">#</a></h3>
+</section>
+<section id="put-your-github-username-here">
+<h3><p style="text-align: right;"> ✅ Put your <em>GitHub username</em> here.</p><a class="headerlink" href="#put-your-github-username-here" title="Link to this heading">#</a></h3>
+<p><a id="toc"></a></p>
+</section>
+</section>
+<section id="table-of-contents">
+<h2>Table of contents<a class="headerlink" href="#table-of-contents" title="Link to this heading">#</a></h2>
+<ol class="arabic simple" start="0">
+<li><p><a class="reference internal" href="#ofhrs"><span class="xref myst">Pre Assignment Survey</span></a> (0 points + 1 git)</p></li>
+<li><p><a class="reference internal" href="#part1"><span class="xref myst">Planet orbits and migration</span></a> (14 points + 1 git)</p></li>
+<li><p><a class="reference internal" href="#part2"><span class="xref myst">Modeling planet migration</span></a> (33 points + 1 git)</p></li>
+</ol>
+</section>
+<section id="learning-goals">
+<h2>Learning Goals<a class="headerlink" href="#learning-goals" title="Link to this heading">#</a></h2>
+<p>By the end of this assignment, you should be able to:</p>
+<ul class="simple">
+<li><p>Define planet migration types</p></li>
+<li><p>Compare orbit shapes, based on the mass of the planet/the star, the radius of the orbit, and the eccentricity</p></li>
+<li><p>Be able to find the orbital period from orbit properties</p></li>
+<li><p>Be able to write methods and attributes of a class, based on the description of the final needed result</p></li>
+<li><p>Be able to define agents using classes in Python and interactions between them using methods of Python classes.</p></li>
+<li><p>Describe an agent-based model that accurately presents the properties of a planetary system.</p></li>
+<li><p>Implement the evolution of the agent-based model by correctly applying the rules for the model and updating the state of the agents in the model.</p></li>
+<li><p>Be able to identify needed forces and their effect on modeling planet migration.</p></li>
+<li><p>Be able to visualize and describe the results of planetary migration simulation.</p></li>
+</ul>
+<p>Work through the following assignment, making sure to follow all of the directions and answer all of the questions.</p>
+<p>The assignment is split into two notebooks:</p>
+<ul class="simple">
+<li><p>Notebook 1 of 2 is worth <strong>14 + 33 + 3 = 51 points</strong></p></li>
+<li><p>Notebook 2 of 2 is worth <strong>1+ 42 + 1 = 44 points</strong>
+for a total of <strong>95 points</strong>. Point values for each part are included in the section headers and question prompts.</p></li>
+</ul>
+<p><strong>This assignment is due at 11:59 pm on Friday, March 21st.</strong> It should be uploaded into the “Homework Assignments” submission folder for Homework #2 on D2L.  Submission instructions can be found at the end of the notebook. <strong>You must also fill out a survey regarding this assignment.</strong> The link to this survey can also be found at the end of the notebook.</p>
+<hr class="docutils" />
+<p><a id="ofhrs"></a>
+<a class="reference internal" href="#toc"><span class="xref myst">Back to ToC</span></a></p>
+</section>
+<section id="pre-assignment-survey">
+<h2>Pre-assignment Survey<a class="headerlink" href="#pre-assignment-survey" title="Link to this heading">#</a></h2>
+<p>Please fill out the pre-assignment survey <a class="reference external" href="https://forms.office.com/r/qLEDb8Fhtr"><strong>here</strong></a>.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<hr class="docutils" />
+<section id="stop">
+<h2>🛑 STOP<a class="headerlink" href="#stop" title="Link to this heading">#</a></h2>
+<p><strong>Pause to commit your changes to your Git repository! (1 points)</strong></p>
+<p>Create a <code class="docutils literal notranslate"><span class="pre">hw-02</span></code> folder in your <code class="docutils literal notranslate"><span class="pre">cmse202-s25-turnin</span></code> repo. Take a moment to save your notebook, add and commit the changes to your Git repository using the commit message “<strong>Initial commit of HW 2</strong>”, no need to push the changes to GitHub yet, but you can if you want.</p>
+<hr class="docutils" />
+<p><a id=part1></a>
+<a class="reference internal" href="#toc"><span class="xref myst">Back to ToC</span></a></p>
+</section>
+<section id="part-1-planet-orbits-and-migration-types-14-points">
+<h2>Part 1: Planet orbits and migration types (14 Points)<a class="headerlink" href="#part-1-planet-orbits-and-migration-types-14-points" title="Link to this heading">#</a></h2>
+<p>✅ <strong>Do this:</strong> Watch these 2 videos and answer the questions below.</p>
+<ul class="simple">
+<li><p><a class="reference external" href="https://www.youtube.com/watch?v=pRvVK2m_wGE">Orbit types</a></p></li>
+<li><p><a class="reference external" href="https://www.youtube.com/watch?v=BGPBNeTFXZk">Planetary Migration in a Disk</a> -</p></li>
+</ul>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">IPython.display</span> <span class="kn">import</span> <span class="n">YouTubeVideo</span>
+
+<span class="n">YouTubeVideo</span><span class="p">(</span><span class="s1">&#39;pRvVK2m_wGE&#39;</span><span class="p">,</span> <span class="n">width</span><span class="o">=</span><span class="mi">800</span><span class="p">,</span> <span class="n">height</span><span class="o">=</span><span class="mi">400</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">YouTubeVideo</span><span class="p">(</span><span class="s1">&#39;BGPBNeTFXZk&#39;</span><span class="p">,</span> <span class="n">width</span><span class="o">=</span><span class="mi">800</span><span class="p">,</span> <span class="n">height</span><span class="o">=</span><span class="mi">400</span><span class="p">,</span> <span class="n">end</span><span class="o">=</span><span class="mi">260</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>✅ <strong>Question 1.1 (1 point):</strong> What shape is Earth’s orbit?</p>
+<p>✎ Do This - Erase the contents of this cell and replace it with your answer to the above question! (double-click on this text to edit this cell, and hit shift+enter to save the text)</p>
+<p>✅ <strong>Question 1.2 (3 points):</strong> How many types of orbit shapes did the 1st video mention? Which shape is more common for satellites and planets in our Solar system?</p>
+<p>✎ Do This - Erase the contents of this cell and replace it with your answer to the above question! (double-click on this text to edit this cell, and hit shift+enter to save the text)</p>
+<p>✅ <strong>Question 1.3 (1 point):</strong> How many types of migration did the 2nd video mention?</p>
+<p>✎ Do This - Erase the contents of this cell and replace it with your answer to the above question! (double-click on this text to edit this cell, and hit shift+enter to save the text)</p>
+<p>✅ <strong>Question 1.4 (2 points):</strong> We see hot Jupiters (planets the size of Jupiter but hot!) in orbits very, very close to their stars. Because of the temperature in these regions, there is no way that planets the size of Jupiter (300 times Earth’s mass and 11 times Earth’s radius) could form because the star would just steal all the gas and not let the planet to form. But we still see hot Jupiters in those orbits. How do they end up near their stars?</p>
+<p>✎ Do This - Erase the contents of this cell and replace it with your answer to the above question! (double-click on this text to edit this cell, and hit shift+enter to save the text)</p>
+</section>
+<section id="orbital-period">
+<h2>Orbital period<a class="headerlink" href="#orbital-period" title="Link to this heading">#</a></h2>
+<p>An important parameter for a planet orbiting a star is its orbital period. This is the time it takes for the planet to travel 1 whole orbit. For example, for the Earth the orbital period is 1 year. Using any Large Language Model(LLM), identify how you can find the orbital period from radius/semi-major axis of the orbit. Make sure to ask follow up questions to make sure you get an <em><strong>equation</strong></em> for orbital period T and radius a (or r). <strong>Use 2 different prompts</strong> and copy and paste both answers in the 2 cells below. Make sure to include a screenshot of the equation you get.</p>
+<p><strong>Prompt 1:</strong></p>
+<p><strong>Answer 1:</strong></p>
+<p><strong>Prompt 2:</strong></p>
+<p><strong>Answer 2:</strong></p>
+<p>✅ <strong>Question 1.5 (2 points):</strong> Which prompt got you the answer with the equation? Why do you think one prompt was better to use than the other?</p>
+<p>✎ Do This - Erase the contents of this cell and replace it with your answer to the above question! (double-click on this text to edit this cell, and hit shift+enter to save the text)</p>
+<p>The equation that you found is called <strong>Kepler’s third law</strong>. Using google or any other search engine, try to find the same equation and verify that GenAI gave you the correct answer.</p>
+<p>✅ <strong>Task 1.6 (1 point):</strong> Place a screenshot of the same equation from a reliable source below. Include a reference to that source.</p>
+<p>✎ Do This - Erase the contents of this cell and replace it with your answer to the above question! (double-click on this text to edit this cell, and hit shift+enter to save the text)</p>
+<p>✅ <strong>Question 1.7 (2 points):</strong> Using the equation you found in the previous step answer the following question. Planet 1’s orbital radius is 4 times bigger than Planet 2’s orbital radius. They are orbiting the same star. Which planet’s orbital period will be greater? Explain your reasoning.</p>
+<p>✎ Do This - Erase the contents of this cell and replace it with your answer to the above question! (double-click on this text to edit this cell, and hit shift+enter to save the text)</p>
+</section>
+<section id="classes">
+<h2>Classes<a class="headerlink" href="#classes" title="Link to this heading">#</a></h2>
+<p>In Keppler’s third law, there is a constant called the gravitation constant and it has the value <span class="math notranslate nohighlight">\(G = 6.67 \times 10^{-11} \frac{N m^2}{{kg}^2}\)</span>. Because this number is constant it means that conceptually its value makes no difference in the effects gravity has. That is why we will set the value of this constant to 1.</p>
+<p>✅ <strong>Do this 1.8 (2 points):</strong> Using the information you found in the previous part, change the class below to calculate the orbital period in the corresponding method of the <code class="docutils literal notranslate"><span class="pre">Planet</span></code> class.
+Make sure to run the cell under the class to make sure your code works correctly. You will get approximately 99.34 as your orbital period if your code is written correctly.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">Planet</span><span class="p">:</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    A class representing a planet orbiting a star.</span>
+
+<span class="sd">    Attributes:</span>
+<span class="sd">        mass (float): The mass of the planet.</span>
+<span class="sd">        orbital_radius (float): The distance of the planet from its star.</span>
+<span class="sd">        star_mass (float): The mass of the star the planet orbits.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">mass</span><span class="p">,</span> <span class="n">orbital_radius</span><span class="p">,</span> <span class="n">star_mass</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Initialize a Planet instance with mass, orbital radius, and the mass of its star.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">mass</span> <span class="o">=</span> <span class="n">mass</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">orbital_radius</span> <span class="o">=</span> <span class="n">orbital_radius</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">star_mass</span> <span class="o">=</span> <span class="n">star_mass</span>
+        
+    <span class="k">def</span> <span class="nf">get_orbital_period</span><span class="p">():</span> <span class="c1">#add the missing parameters here</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Calculate and return the orbital period of the planet.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="c1"># here you need to use the equation you found that relates orbital period and radius.</span>
+        <span class="k">pass</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#test your code by running this cell</span>
+<span class="n">planet</span> <span class="o">=</span> <span class="n">Planet</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="mi">100</span><span class="p">,</span> <span class="mi">4000</span><span class="p">)</span>
+<span class="n">planet</span><span class="o">.</span><span class="n">get_orbital_period</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>np.float64(99.345882657961)
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<hr class="docutils" />
+<section id="id1">
+<h2>🛑 STOP<a class="headerlink" href="#id1" title="Link to this heading">#</a></h2>
+<p><strong>Pause to commit your changes to your Git repository! (1 points)</strong></p>
+<p>Take a moment to save your notebook, commit the changes to your Git repository using the commit message “<strong>Committing Part 1</strong>”, no need to push the changes to GitHub yet, but you can if you want.</p>
+<hr class="docutils" />
+<p><a id=part2></a>
+<a class="reference internal" href="#toc"><span class="xref myst">Back to ToC</span></a></p>
+</section>
+<section id="part-2-modeling-planet-migration-using-agent-based-modeling-33-points">
+<h2>Part 2. Modeling planet migration using Agent Based Modeling (33 points)<a class="headerlink" href="#part-2-modeling-planet-migration-using-agent-based-modeling-33-points" title="Link to this heading">#</a></h2>
+<section id="dimensions">
+<h3>Dimensions<a class="headerlink" href="#dimensions" title="Link to this heading">#</a></h3>
+<p>We are going to try modeling planet interaction with surrounding material using Agent Based Modeling (ABM). For the sake of this assignment, we will keep our model simple. We will assume several things:</p>
+<ul class="simple">
+<li><p>All orbits are circular.</p></li>
+<li><p>Interactions can only change the radius of the orbit, but NOT the shape!</p></li>
+<li><p>Only forces acting towards the center or outwards from the center <em>radially</em> matter! (The vertical force <span class="math notranslate nohighlight">\(F_r\)</span> in the sketch below)</p></li>
+</ul>
+<p>These assumptions let us look at our system as 2 dimensional BUT only care about <em>radial</em> forces, aka forces acting along the radius of the orbit.</p>
+<p><img alt="image" src="https://www.ux1.eiu.edu/~cfadd/1350/06CirMtn/Images/NetForce.jpg" /></p>
+<p>✅ <strong>Do this 2.1: (1 points)</strong> For the pictures below write down the dimensions of the system.</p>
+<p><strong>Picture 1</strong></p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">IPython.display</span> <span class="kn">import</span> <span class="n">Image</span> 
+  
+<span class="c1"># get the image </span>
+<span class="n">Image</span><span class="p">(</span><span class="n">url</span><span class="o">=</span><span class="s2">&quot;https://raw.githubusercontent.com/sonachitchyan/abm_images/main/system1.png&quot;</span><span class="p">,</span> <span class="n">width</span><span class="o">=</span><span class="mi">600</span><span class="p">,</span> <span class="n">height</span><span class="o">=</span><span class="mi">300</span><span class="p">)</span> 
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><img src="https://raw.githubusercontent.com/sonachitchyan/abm_images/main/system1.png" width="600" height="300"/></div></div>
+</div>
+<p>✎ Do This - Erase the contents of this cell and replace it with your answer to the above question! (double-click on this text to edit this cell, and hit shift+enter to save the text)</p>
+<p><strong>Picture 2</strong></p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">IPython.display</span> <span class="kn">import</span> <span class="n">Image</span> 
+  
+<span class="c1"># get the image </span>
+<span class="n">Image</span><span class="p">(</span><span class="n">url</span><span class="o">=</span><span class="s2">&quot;https://raw.githubusercontent.com/sonachitchyan/abm_images/main/system2.png&quot;</span><span class="p">)</span> 
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><img src="https://raw.githubusercontent.com/sonachitchyan/abm_images/main/system2.png"/></div></div>
+</div>
+<p>✎ Do This - Erase the contents of this cell and replace it with your answer to the above question! (double-click on this text to edit this cell, and hit shift+enter to save the text)</p>
+</section>
+<section id="model-set-up">
+<h3>Model Set-up<a class="headerlink" href="#model-set-up" title="Link to this heading">#</a></h3>
+<p>✅ <strong>Question 2.2 (1 points):</strong> What are the agents of the model in this case?</p>
+<p>✎ Do This - Erase the contents of this cell and replace it with your answer to the above question! (double-click on this text to edit this cell, and hit shift+enter to save the text)</p>
+<p>✅ <strong>Question 2.3 (2 points):</strong> How many different classes do we need to model this system? Take into account the agents and the system that we need to run the simulation.</p>
+<p>✎ Do This - Erase the contents of this cell and replace it with your answer to the above question! (double-click on this text to edit this cell, and hit shift+enter to save the text)</p>
+</section>
+</section>
+<section id="modeling-a-system-of-2-planets-around-a-star">
+<h2>Modeling a system of 2 planets around a star<a class="headerlink" href="#modeling-a-system-of-2-planets-around-a-star" title="Link to this heading">#</a></h2>
+<p>If we have a system of 2 planets orbiting a star, these planets interact with each other gravitationally. This force is proportional to the planets’ masses (bigger mass -&gt; stronger force/interaction) and inversely proportional to the distance between the planets (bigger distance -&gt; weaker force/interaction). If this force is substantial, it can move the planets from their initial orbits, even make them collide in extreme cases! To make sense of how this happens, we can start from a simplified model of 2 planets orbiting the same star. In this part you will create and run that model, plot how the radius from the host star changes for each planet.</p>
+<p>✅ <strong>Question 2.4 (4 points):</strong> Add docstrings to the methods below. You should include a description of what the method does, a description of parameters and and what the method returns.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">calculate_forces</span><span class="p">(</span><span class="n">planet1</span><span class="p">,</span> <span class="n">planet2</span><span class="p">):</span>
+    <span class="c1">## NOTE: this finds the force planet2 exerts on planet1.</span>
+    <span class="c1">## ADD YOUR DOSCTRING HERE</span>
+    <span class="n">force_x</span> <span class="o">=</span> <span class="n">planet2</span><span class="o">.</span><span class="n">mass</span> <span class="o">*</span> <span class="n">planet1</span><span class="o">.</span><span class="n">mass</span> <span class="o">*</span> <span class="p">(</span><span class="n">planet2</span><span class="o">.</span><span class="n">x</span> <span class="o">-</span> <span class="n">planet1</span><span class="o">.</span><span class="n">x</span><span class="p">)</span> <span class="o">/</span> <span class="p">((</span><span class="n">planet2</span><span class="o">.</span><span class="n">x</span> <span class="o">-</span> <span class="n">planet1</span><span class="o">.</span><span class="n">x</span><span class="p">)</span><span class="o">**</span><span class="mi">2</span> <span class="o">+</span> <span class="p">(</span><span class="n">planet2</span><span class="o">.</span><span class="n">y</span> <span class="o">-</span> <span class="n">planet1</span><span class="o">.</span><span class="n">y</span><span class="p">)</span><span class="o">**</span><span class="mi">2</span><span class="p">)</span><span class="o">**</span><span class="p">(</span><span class="mf">1.5</span><span class="p">)</span>
+    <span class="n">force_y</span> <span class="o">=</span> <span class="n">planet2</span><span class="o">.</span><span class="n">mass</span> <span class="o">*</span> <span class="n">planet1</span><span class="o">.</span><span class="n">mass</span> <span class="o">*</span>  <span class="p">(</span><span class="n">planet2</span><span class="o">.</span><span class="n">y</span> <span class="o">-</span> <span class="n">planet1</span><span class="o">.</span><span class="n">y</span><span class="p">)</span> <span class="o">/</span> <span class="p">((</span><span class="n">planet2</span><span class="o">.</span><span class="n">x</span> <span class="o">-</span> <span class="n">planet1</span><span class="o">.</span><span class="n">x</span><span class="p">)</span><span class="o">**</span><span class="mi">2</span> <span class="o">+</span> <span class="p">(</span><span class="n">planet2</span><span class="o">.</span><span class="n">y</span> <span class="o">-</span> <span class="n">planet1</span><span class="o">.</span><span class="n">y</span><span class="p">)</span><span class="o">**</span><span class="mi">2</span><span class="p">)</span><span class="o">**</span><span class="p">(</span><span class="mf">1.5</span><span class="p">)</span>
+    <span class="n">force_radial</span> <span class="o">=</span> <span class="n">force_x</span> <span class="o">*</span> <span class="n">planet1</span><span class="o">.</span><span class="n">x</span><span class="o">/</span><span class="n">planet1</span><span class="o">.</span><span class="n">radius</span> <span class="o">+</span> <span class="n">force_y</span> <span class="o">*</span> <span class="n">planet1</span><span class="o">.</span><span class="n">y</span><span class="o">/</span><span class="n">planet1</span><span class="o">.</span><span class="n">radius</span>
+    <span class="k">return</span> <span class="n">force_radial</span>
+
+<span class="k">def</span> <span class="nf">take_step</span><span class="p">(</span><span class="n">planet</span><span class="p">,</span> <span class="n">force</span><span class="p">,</span> <span class="n">delta_time</span><span class="p">):</span>
+    <span class="c1">##NOTE: this function calculates the step that planet takes in delta_t time of the simulation and updates the properties of the planet.</span>
+    <span class="c1">##There is no return because the changes are done to the planet directly.</span>
+    <span class="c1">## ADD YOUR DOSCTRING HERE</span>
+    
+    <span class="n">acceleration</span> <span class="o">=</span> <span class="n">force</span> <span class="o">/</span> <span class="n">planet</span><span class="o">.</span><span class="n">mass</span>
+    <span class="n">radius_change</span> <span class="o">=</span> <span class="mf">0.5</span> <span class="o">*</span> <span class="n">acceleration</span> <span class="o">*</span> <span class="n">delta_time</span><span class="o">**</span><span class="mi">2</span> <span class="o">+</span> <span class="n">planet</span><span class="o">.</span><span class="n">velocity_radial</span> <span class="o">*</span> <span class="n">delta_time</span>
+    <span class="n">velocity_change</span> <span class="o">=</span> <span class="n">acceleration</span> <span class="o">*</span> <span class="n">delta_time</span>
+    <span class="n">planet</span><span class="o">.</span><span class="n">radius</span> <span class="o">=</span> <span class="n">planet</span><span class="o">.</span><span class="n">radius</span> <span class="o">+</span> <span class="n">radius_change</span>
+    <span class="n">planet</span><span class="o">.</span><span class="n">x</span> <span class="o">=</span> <span class="n">planet</span><span class="o">.</span><span class="n">radius</span> <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">cos</span><span class="p">(</span><span class="mi">2</span> <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">pi</span> <span class="o">*</span> <span class="n">delta_time</span> <span class="o">/</span> <span class="n">planet</span><span class="o">.</span><span class="n">orbital_period</span><span class="p">)</span>
+    <span class="n">planet</span><span class="o">.</span><span class="n">y</span> <span class="o">=</span> <span class="n">planet</span><span class="o">.</span><span class="n">radius</span> <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">sin</span><span class="p">(</span><span class="mi">2</span> <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">pi</span> <span class="o">*</span> <span class="n">delta_time</span> <span class="o">/</span> <span class="n">planet</span><span class="o">.</span><span class="n">orbital_period</span><span class="p">)</span>
+    <span class="n">planet</span><span class="o">.</span><span class="n">velocity_radial</span> <span class="o">=</span> <span class="n">planet</span><span class="o">.</span><span class="n">velocity_radial</span> <span class="o">+</span> <span class="n">velocity_change</span>
+    
+    <span class="k">if</span> <span class="n">planet</span><span class="o">.</span><span class="n">radius</span> <span class="o">&lt;</span> <span class="mf">0.001</span><span class="p">:</span>
+        <span class="n">planet</span><span class="o">.</span><span class="n">radius</span> <span class="o">=</span> <span class="mi">0</span>
+        <span class="n">planet</span><span class="o">.</span><span class="n">status</span> <span class="o">=</span> <span class="s2">&quot;Terminated&quot;</span>
+    
+    <span class="n">planet</span><span class="o">.</span><span class="n">orbital_period</span> <span class="o">=</span> <span class="mi">2</span> <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">pi</span> <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="n">planet</span><span class="o">.</span><span class="n">radius</span><span class="o">**</span><span class="mi">3</span><span class="o">/</span><span class="n">planet</span><span class="o">.</span><span class="n">star_mass</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>✅ <strong>Question 2.5 (3 points):</strong> Describe what the code provided above does. What interaction does it describe? Explain both methods separately.</p>
+<p>✎ Do This - Erase the contents of this cell and replace it with your answer to the above question! (double-click on this text to edit this cell, and hit shift+enter to save the text)</p>
+<p>✅ <strong>Question 2.6 (3 points):</strong> Turn the following pseudo-code into code:</p>
+<div class="highlight-{python, notranslate"><div class="highlight"><pre><span></span>Class: Planet
+    - Represents a planet orbiting a star.
+
+  Attributes:
+      - mass (float): Set to the mass of the planet.
+      - radius (float): Set to the initial orbital radius of the planet.
+      - star_mass (float): Set to the mass of the star the planet orbits.
+      - orbital_period (float): Compute using Kepler’s third law: 
+        orbital_period = 2 * pi * sqrt(radius^3 / star_mass).
+      - velocity_radial (float): Initialize to 0.0.
+      - x (float): Set to radius (initial x-coordinate of the planet).
+      - y (float): Set to 0 (initial y-coordinate of the planet).
+      - status (string): Defaults to &quot;Active&quot;. Changes to &quot;Terminated&quot; if the planet falls into the star 
+        (radius &lt; sqrt(0.02)).
+  Methods:
+      - __init__: 
+        Assigns the default values to the attributes
+</pre></div>
+</div>
+<div class="highlight-{r, notranslate"><div class="highlight"><pre><span></span>Class: System
+    Represents a planetary system with a central star and two orbiting planets.
+
+Attributes:
+    - star_mass (float): Set to the mass of the central star.
+    - planet1 (Planet): Set to the first planet in the system.
+    - planet2 (Planet): Set to the second planet in the system.
+    - planet1_pos (list): Initialize as a list of lists with first element [0.0, planet1.radius], tracking planet1&#39;s position.
+    - planet2_pos (list): Initialize as a list of lists with first element [0.0, planet2.radius], tracking planet2&#39;s position.
+
+Methods:
+    - __init__:
+        Assigns the default values to the attributes.
+    - evolve(time):
+        Simulate the evolution of the system over a given time.
+        - Initialize:
+            - t (float): Set to 0.0.
+            - delta_time (float): Set to planet1.orbital_period / 5.
+        - While t &lt; time:
+            - Initialize:
+                - total_force_planet1 (float): Set to 0.0.
+                - total_force_planet2 (float): Set to 0.0.
+            - If both planets are &quot;Active&quot; and their squared distance &gt;= 0.02:
+                - Compute total_force_planet1 using calculate_forces(planet1, planet2).
+                - Compute total_force_planet2 using calculate_forces(planet2, planet1).
+                - Update planet1 position using take_step(planet1, total_force_planet1, delta_time).
+                - Update planet2 position using take_step(planet2, total_force_planet2, delta_time).
+            - Increment t by delta_time.
+            - Append [t, planet1.radius] to planet1_pos.
+            - Append [t, planet2.radius] to planet2_pos.
+            - If either planet’s status is &quot;Terminated&quot;, break the loop.
+</pre></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># your code here</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>✅ <strong>Do this:</strong> Explain what the code above does.</p>
+<p>✎ Do This - Erase the contents of this cell and replace it with your answer to the above question! (double-click on this text to edit this cell, and hit shift+enter to save the text)</p>
+<p>✅ <strong>Do this:</strong> After defining the <code class="docutils literal notranslate"><span class="pre">System</span></code> class, complete and run the following cell.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">pl1</span> <span class="o">=</span> <span class="n">Planet</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">400</span><span class="p">)</span> <span class="c1"># planet with mass 1, radius 10 and star mass 400</span>
+<span class="n">pl2</span> <span class="o">=</span> <span class="n">Planet</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">20</span><span class="p">,</span> <span class="mi">400</span><span class="p">)</span> <span class="c1"># planet with mass 1, radius 20 and star mass 400</span>
+<span class="n">system</span> <span class="o">=</span> <span class="n">System</span><span class="p">(</span><span class="mi">400</span><span class="p">,)</span> <span class="c1"># fill in the needed arguments</span>
+<span class="n">system</span><span class="o">.</span><span class="n">evolve</span><span class="p">(</span><span class="mi">2000</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<section id="visualization">
+<h3>Visualization<a class="headerlink" href="#visualization" title="Link to this heading">#</a></h3>
+<p>✅ <strong>Question 2.7 (1 point):</strong>  Now, taking the saved positions of our planets, we can track how their orbital radius changes with time. To do that, make a scatter plot of orbital radius vs time for both planets using the attributes of the <code class="docutils literal notranslate"><span class="pre">system</span></code> object. Use different colors and label the lines with “Planet 1” and “Planet 2”. You can use GenAI for this part but don’t forget to add a reference to your answer.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># your code here</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>✅ <strong>Question 2.8 (4 points):</strong> Using the plot you made, describe what is happening with the two planets. Is this what you expected to happen?</p>
+<p>✎ Do This - Erase the contents of this cell and replace it with your answer to the above question! (double-click on this text to edit this cell, and hit shift+enter to save the text)</p>
+</section>
+<section id="modeling-a-system-of-1-big-planet-and-n-small-planets-around-a-star">
+<h3>Modeling a system of 1 big planet and N small planets around a star<a class="headerlink" href="#modeling-a-system-of-1-big-planet-and-n-small-planets-around-a-star" title="Link to this heading">#</a></h3>
+<p>Now let’s extend our model for a system of 1 big planet (by big we mean Jupiter size planet) and a bunch of small planets around it, which will be an approximation for the disk.</p>
+<p>Here we will provide the generalized code that runs for a set number of planets.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">System</span><span class="p">:</span>
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">star_mass</span><span class="p">,</span> <span class="n">planet_list</span><span class="p">):</span>
+        <span class="c1"># the primaty planet we care about is the first planet in the list</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">star_mass</span> <span class="o">=</span> <span class="n">star_mass</span>
+        
+        <span class="bp">self</span><span class="o">.</span><span class="n">planet_list</span> <span class="o">=</span> <span class="n">planet_list</span>
+        
+        <span class="bp">self</span><span class="o">.</span><span class="n">number_of_planets</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">planet_list</span><span class="p">)</span>
+        
+        <span class="bp">self</span><span class="o">.</span><span class="n">plot_positions</span> <span class="o">=</span> <span class="p">[[</span><span class="mf">0.0</span><span class="p">,</span> <span class="n">planet_list</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">radius</span><span class="p">]]</span>
+    
+    <span class="k">def</span> <span class="nf">evolve</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">time</span><span class="p">):</span>
+        <span class="n">t</span> <span class="o">=</span> <span class="mf">0.0</span>
+        <span class="n">delta_time</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">planet_list</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">orbital_period</span><span class="o">/</span><span class="mi">5</span>
+        <span class="k">while</span> <span class="n">t</span> <span class="o">&lt;</span> <span class="n">time</span><span class="p">:</span>
+            <span class="c1"># delta_t = self.planet_list[0].orbital_period/5 ## this is the step that chooses the resolution of our simulation</span>
+            <span class="n">total_force_list</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">number_of_planets</span><span class="p">)</span>
+            <span class="k">for</span> <span class="n">i</span><span class="p">,</span> <span class="n">planet</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">planet_list</span><span class="p">):</span>
+                <span class="k">if</span> <span class="n">planet</span><span class="o">.</span><span class="n">status</span> <span class="o">==</span> <span class="s2">&quot;Active&quot;</span><span class="p">:</span>
+                    <span class="n">total_force_radial</span> <span class="o">=</span> <span class="mf">0.0</span>
+                    <span class="k">for</span> <span class="n">other_planet</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">planet_list</span><span class="p">:</span>
+                        <span class="k">if</span> <span class="n">other_planet</span><span class="o">.</span><span class="n">status</span> <span class="o">==</span> <span class="s2">&quot;Active&quot;</span><span class="p">:</span>
+                            <span class="k">if</span> <span class="n">other_planet</span> <span class="o">!=</span> <span class="n">planet</span> <span class="ow">and</span> <span class="p">(</span><span class="n">other_planet</span><span class="o">.</span><span class="n">x</span> <span class="o">-</span> <span class="n">planet</span><span class="o">.</span><span class="n">x</span><span class="p">)</span><span class="o">**</span><span class="mi">2</span> <span class="o">+</span> <span class="p">(</span><span class="n">other_planet</span><span class="o">.</span><span class="n">y</span> <span class="o">-</span> <span class="n">planet</span><span class="o">.</span><span class="n">y</span><span class="p">)</span><span class="o">**</span><span class="mi">2</span> <span class="o">&gt;=</span> <span class="mf">0.02</span><span class="p">:</span>
+                                <span class="n">total_force_radial</span> <span class="o">+=</span> <span class="n">calculate_forces</span><span class="p">(</span><span class="n">planet</span><span class="p">,</span> <span class="n">other_planet</span><span class="p">)</span>
+                    <span class="n">total_force_list</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="n">total_force_radial</span>
+
+            <span class="k">for</span> <span class="n">i</span><span class="p">,</span> <span class="n">planet</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">planet_list</span><span class="p">):</span>
+                <span class="k">if</span> <span class="n">planet</span><span class="o">.</span><span class="n">status</span> <span class="o">==</span> <span class="s2">&quot;Active&quot;</span><span class="p">:</span>
+                    <span class="n">take_step</span><span class="p">(</span><span class="n">planet</span><span class="p">,</span> <span class="n">total_force_list</span><span class="p">[</span><span class="n">i</span><span class="p">],</span> <span class="n">delta_time</span><span class="p">)</span>
+
+            
+            <span class="k">for</span> <span class="n">planet</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">planet_list</span><span class="p">:</span>
+                <span class="k">if</span> <span class="n">planet</span><span class="o">.</span><span class="n">radius</span> <span class="o">&lt;</span> <span class="mf">0.02</span><span class="p">:</span>
+                    <span class="n">planet</span><span class="o">.</span><span class="n">status</span> <span class="o">==</span> <span class="s2">&quot;Terminated&quot;</span>
+            <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">planet_list</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">status</span> <span class="o">==</span> <span class="s2">&quot;Terminated&quot;</span><span class="p">:</span>
+                <span class="k">break</span>
+            <span class="n">t</span> <span class="o">+=</span> <span class="n">delta_time</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">plot_positions</span><span class="o">.</span><span class="n">append</span><span class="p">([</span><span class="n">t</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">planet_list</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">radius</span><span class="p">])</span>
+            
+</pre></div>
+</div>
+</div>
+</div>
+<p>✅ <strong>Question 2.9 (4 points):</strong> How is the code above different from what you wrote for a 2 planet system?</p>
+<p>✎ Do This - Erase the contents of this cell and replace it with your answer to the above question! (double-click on this text to edit this cell, and hit shift+enter to save the text)</p>
+<p>✅ <strong>Question 2.10 (3 points):</strong> Run a simulation for a system of 51 planets orbiting a star with mass 400. The first planet of the list is the <em>primary</em> planet with mass 150 at radius 1, and the rest of the planets each have a mass of 0.1 and are evenly placed between 0.01 and 0.7 radii. Run the simulation for time of 10.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#your code here</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="id2">
+<h3>Visualization<a class="headerlink" href="#id2" title="Link to this heading">#</a></h3>
+<p>✅ <strong>Question 2.11 (1 point):</strong> Make the same visualization for radius vs time for the big planet. You can use GenAI for this part but don’t forget to add a reference to your answer.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#your code here</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>✅ <strong>Question 2.12 (2 points):</strong> Describe what is happening to the planets’ orbits based on the plot you made.</p>
+<p>✎ Do This - Erase the contents of this cell and replace it with your answer to the above question! (double-click on this text to edit this cell, and hit shift+enter to save the text)</p>
+<p>✅ <strong>Question 2.13 (4 points):</strong> Was this what you expected to see based on the concept of planetary migration? Explain why.</p>
+<p>✎ Do This - Erase the contents of this cell and replace it with your answer to the above question! (double-click on this text to edit this cell, and hit shift+enter to save the text)</p>
+</section>
+</section>
+<hr class="docutils" />
+<section id="id3">
+<h2>🛑 STOP<a class="headerlink" href="#id3" title="Link to this heading">#</a></h2>
+<p><strong>Pause to commit your changes to your Git repository! (1 points)</strong></p>
+<p>Take a moment to save your notebook, commit the changes to your Git repository using the commit message “<strong>Committing Part 2</strong>”, no need to push the changes to GitHub yet, but you can if you want.</p>
+<hr class="docutils" />
+<p>If you like, you can upload this file to D2L for a record. Nevertheless, <strong>we will grade the copy on GitHub</strong>.</p>
+<hr class="docutils" />
+</section>
+<hr class="docutils" />
+<section id="post-assignment-survey">
+<h2>Post-assignment Survey<a class="headerlink" href="#post-assignment-survey" title="Link to this heading">#</a></h2>
+<p>Please fill out the post-assignment survey <a class="reference external" href="https://forms.office.com/r/0DRDevWLJT"><strong>here</strong></a>.</p>
+<p>© Copyright 2024,  Department of Computational Mathematics, Science and Engineering at Michigan State University</p>
+</section>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "conda-base-py"
+        },
+        kernelOptions: {
+            name: "conda-base-py",
+            path: "./homework/SS25/HW02"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'conda-base-py'</script>
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="../HW01/HW-01_GitPracticeDebuggingPythonPackagesAndClasses-SS25-STUDENT.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">Homework Assignment 1</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="HW02_Part2-Risk-SS25-STUDENT.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Homework Assignment 2</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <dialog id="pst-secondary-sidebar-modal"></dialog>
+                <div id="pst-secondary-sidebar" class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#modeling-planets-orbits">Modeling planets’ orbits</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#notebook-1-of-2">(Notebook 1 of 2)</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#put-your-name-here"><p style="text-align: right;"> ✅ Put your name here.</p></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#put-your-github-username-here"><p style="text-align: right;"> ✅ Put your <em>GitHub username</em> here.</p></a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#table-of-contents">Table of contents</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#learning-goals">Learning Goals</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#pre-assignment-survey">Pre-assignment Survey</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#stop">🛑 STOP</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#part-1-planet-orbits-and-migration-types-14-points">Part 1: Planet orbits and migration types (14 Points)</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#orbital-period">Orbital period</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#classes">Classes</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">🛑 STOP</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#part-2-modeling-planet-migration-using-agent-based-modeling-33-points">Part 2. Modeling planet migration using Agent Based Modeling (33 points)</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#dimensions">Dimensions</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#model-set-up">Model Set-up</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#modeling-a-system-of-2-planets-around-a-star">Modeling a system of 2 planets around a star</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#visualization">Visualization</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#modeling-a-system-of-1-big-planet-and-n-small-planets-around-a-star">Modeling a system of 1 big planet and N small planets around a star</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">Visualization</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id3">🛑 STOP</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#post-assignment-survey">Post-assignment Survey</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By MSU CMSE
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2025.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script defer src="../../../_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf"></script>
+<script defer src="../../../_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>

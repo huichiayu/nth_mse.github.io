@@ -1,0 +1,999 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="../../" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Pre-Class Assignment: Reflection and an introduction to the Command Line Interface (CLI) &#8212; CMSE 202 Course Website</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  <!--
+    this give us a css class that will be invisible only if js is disabled
+  -->
+  <noscript>
+    <style>
+      .pst-js-only { display: none !important; }
+
+    </style>
+  </noscript>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../../_static/styles/theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
+<link href="../../_static/styles/pydata-sphinx-theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
+
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=b76e3c8a" />
+    <link rel="stylesheet" type="text/css" href="../../_static/styles/sphinx-book-theme.css?v=a3416100" />
+    <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css?v=13237357" />
+    <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="../../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-thebe.css?v=4fa983c6" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-design.min.css?v=95c83b7e" />
+  
+  <!-- So that users can add custom icons -->
+  <script src="../../_static/scripts/fontawesome.js?digest=8878045cc6db502f8baf"></script>
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../../_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf" />
+<link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf" />
+
+    <script src="../../_static/documentation_options.js?v=9eb32ce0"></script>
+    <script src="../../_static/doctools.js?v=9a2dae69"></script>
+    <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../../_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="../../_static/copybutton.js?v=f281be69"></script>
+    <script src="../../_static/scripts/sphinx-book-theme.js?v=887ef09a"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../../_static/togglebutton.js?v=4a39c7ea"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="../../_static/design-tabs.js?v=f930bc37"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script async="async" src="../../_static/sphinx-thebe.js?v=c100c467"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'daily/Day-02/Day-02_Pre-Class_ReflectionAndCommandLineInterface-STUDENT';</script>
+    <link rel="icon" href="../../_static/logo.png"/>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="In-class Notebook: Command line interface" href="Day-02_In-Class_CommandLineInterface-STUDENT.html" />
+    <link rel="prev" title="Day 2" href="../../section_files/day_2.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  <meta name="docsearch:version" content="" />
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
+  
+  <dialog id="pst-search-dialog">
+    
+<form class="bd-search d-flex align-items-center"
+      action="../../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         placeholder="Search..."
+         aria-label="Search..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form>
+  </dialog>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+      <dialog id="pst-primary-sidebar-modal"></dialog>
+      <div id="pst-primary-sidebar" class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="../../index.html">
+  
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="../../_static/logo.png" class="logo__image only-light" alt="CMSE 202 Course Website - Home"/>
+    <img src="../../_static/logo.png" class="logo__image only-dark pst-js-only" alt="CMSE 202 Course Website - Home"/>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item">
+
+<button class="btn search-button-field search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+ <i class="fa-solid fa-magnifying-glass"></i>
+ <span class="search-button__default-text">Search</span>
+ <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+</button></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">Course Materials</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../../course_materials/CMSE202_Syllabus.html">Syllabus</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../course_materials/CMSE202_Calendar.html">Schedule</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../course_materials/CMSE202_HelpRoomCalendar.html">Office Hours and Help Room</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../course_materials/SoftwareSetupGuide.html">Software Setup Guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../course_materials/CMSE202_GenerativeAI_Policy.html">Generative AI Policy</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://upload.wikimedia.org/wikipedia/commons/7/79/Unix_command_cheatsheet.pdf">CLI (Unix/Mac/Linux) commands cheat sheet</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../course_materials/BashVsPowershell_CheatSheet.html">Bash vs PowerShell</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://wac-cdn.atlassian.com/dam/jcr:e7e22f25-bba2-4ef1-a197-53f46b6df4a5/SWTM-2088_Atlassian-Git-Cheatsheet.pdf?cdnVersion=525">Git Cheat Sheet</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://raw.githubusercontent.com/msu-cmse-courses/cmse202-supplemental-data/main/documents/How-to-Access-Anaconda-Powershell-Prompt.pdf">How to Access “Anaconda Powershell Prompt” (for Windows users)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../course_materials/Pull_Request_Guide.html">Making and merging Pull Requests on GitHub</a></li>
+
+
+
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Semester Project</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../../course_materials/SemesterProjectDetails.html">Semester Project Details</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../course_materials/CMSE202_FinalProjectRequirementsAndGradingRubric.html">Semester Project Requirements and Grading Rubric</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Exams</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../../course_materials/MidtermStudyGuide.html">Midterm Study Guide</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Daily Content</span></p>
+<ul class="current nav bd-sidenav">
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../section_files/day_1.html">Day 1</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../Day-01/Day-01_In-Class_Overview-STUDENT.html">In-class Notebook: Welcome to CMSE202</a></li>
+
+
+
+
+
+
+
+
+
+</ul>
+</details></li>
+<li class="toctree-l1 current active has-children"><a class="reference internal" href="../../section_files/day_2.html">Day 2</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul class="current">
+<li class="toctree-l2 current active"><a class="current reference internal" href="#">Pre-Class Assignment: Reflection and an introduction to the Command Line Interface (CLI)</a></li>
+
+
+
+<li class="toctree-l2"><a class="reference internal" href="Day-02_In-Class_CommandLineInterface-STUDENT.html">In-class Notebook: Command line interface</a></li>
+
+
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../section_files/day_3.html">Day 3</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../Day-03/Day-03_Pre-Class_PythonReview%2BGitIntro-STUDENT.html">Pre-Class Assignment: Python Review and Intro to Git</a></li>
+
+<li class="toctree-l2"><a class="reference internal" href="../Day-03/Day-03_In-Class_GitPractice-STUDENT.html">In-Class Assignment: Practice with Git and GitHub</a></li>
+
+
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../section_files/day_4.html">Day 4</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../Day-04/Day-04_Pre-Class_DownloadingFilesAndInstallingPackages-STUDENT.html">Pre-class Assignment: Python Packages</a></li>
+
+
+
+
+
+<li class="toctree-l2"><a class="reference internal" href="../Day-04/Day-04_In-Class_PythonPackagesAndMapPlotting-STUDENT.html">In-class Assignment: Installing Python Packages and Plotting with Maps in Python</a></li>
+
+
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../section_files/day_5.html">Day 5</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../Day-05/Day-05_Pre-Class_PandasReview-STUDENT.html">Pre-Class Assignment: Pandas Review</a></li>
+
+
+<li class="toctree-l2"><a class="reference internal" href="../Day-05/Day-05_In-Class_PandasReview-STUDENT.html">In-Class Assignment: Reviewing Pandas and exploring data</a></li>
+
+
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../section_files/day_6.html">Day 6</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../Day-06/Day-06_Pre-class_ObjectsClasses-STUDENT.html">Pre-class Assignment: Introduction to Object Oriented Programming (OOP)</a></li>
+
+
+<li class="toctree-l2"><a class="reference internal" href="../Day-06/Day-06_In-Class_ObjectsClasses-STUDENT.html">In-class Assignment: We have a Zoo!</a></li>
+
+
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../section_files/day_7.html">Day 7</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../Day-07/Day-07_Pre-class_ObjectInheritanceAndComposition-STUDENT.html">Pre-class Assignment: object inheritance and composition</a></li>
+
+
+<li class="toctree-l2"><a class="reference internal" href="../Day-07/Day-07_In-Class_ObjectInheritanceAndComposition-STUDENT.html">In-class Assignment: We have a Zoo! (part 2)</a></li>
+
+
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../section_files/day_8.html">Day 8</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../Day-08/Day-08_Pre-Class_SuperbugsABM-STUDENT.html">Pre-Class Assignment: Agent-based Modeling of Superbugs</a></li>
+
+
+
+
+
+<li class="toctree-l2"><a class="reference internal" href="../Day-08/Day-08_In-Class_ABMSuperbugs1-STUDENT.html">In-Class Assignment: Simulating Superbugs using agent-based modeling</a></li>
+
+
+
+
+
+
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../section_files/day_9.html">Day 9</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../Day-09/Day-09_Pre-Class_OOPAntForaging-STUDENT.html">Pre-Class Assignment: Reviewing another agent-based model built using Object Oriented Programming (OOP)</a></li>
+
+
+<li class="toctree-l2"><a class="reference internal" href="../Day-09/Day-09_In-Class_ABMSuperbugs2-STUDENT.html">In-Class Assignment: Agent Based Modeling of Superbugs (part 2)</a></li>
+
+
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../section_files/day_10.html">Day 10</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../Day-10/Day-10_Pre-Class_GraphTheory-STUDENT.html">Pre-Class Assignment: Conflicts in Git and Graph Theory</a></li>
+
+
+<li class="toctree-l2"><a class="reference internal" href="../Day-10/Day-10_In-Class_GraphTheory-STUDENT.html">In-Class Assignment: Graph Theory</a></li>
+
+
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../section_files/day_11.html">Day 11</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../Day-11/Day-11_Pre-Class_GraphTheoryCellTowers-STUDENT.html">Pre-class Assignment: Project Brainstorming &amp; Graph Theory and Cell Towers</a></li>
+
+
+
+
+
+<li class="toctree-l2"><a class="reference internal" href="../Day-11/Day-11_In-Class_GraphTheoryCellTowers-STUDENT.html">In-class Assignment: Graph Theory and Cell Towers</a></li>
+
+
+
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../section_files/day_12.html">Day 12</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../Day-12/Day-12_In-Class_ProjectProposals-STUDENT.html">In-Class Assignment: Reviewing Project Ideas</a></li>
+
+
+
+
+
+
+
+
+
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../section_files/day_13.html">Day 13</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../Day-13/Day-13_Pre-Class_Regression-STUDENT.html">Pre-Class Assignment: Regression</a></li>
+
+
+
+<li class="toctree-l2"><a class="reference internal" href="../Day-13/Day-13_In-Class-Regression-STUDENT.html">In-Class Assignment: Linear Regression</a></li>
+
+
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../section_files/day_14.html">Day 14</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../Day-14/Day-14_Pre-Class-PolynomialRegression-STUDENT.html">Pre-Class Assignment: Polynomial Regression</a></li>
+
+
+
+<li class="toctree-l2"><a class="reference internal" href="../Day-14/Day-14_In-Class_MultipleRegression-STUDENT.html">In-Class Assignment: Multiple Regression</a></li>
+
+
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../section_files/day_15.html">Day 15</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../Day-15/Day-15_Pre-Class_MachineLearningIntro-STUDENT.html">Pre-class Assignment: Intro to Machine Learning</a></li>
+
+
+<li class="toctree-l2"><a class="reference internal" href="../Day-15/Day-15_In-Class_ML-LogisticRegression-STUDENT.html">In-Class Assignment: Machine Learning; classification with logistic regression</a></li>
+
+
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../section_files/day_16.html">Day 16</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../Day-16/Day-16_Pre-Class_GitRevisited-STUDENT.html">Pre-Class Assignment: Git with it! (collaborating with Git)</a></li>
+
+
+
+<li class="toctree-l2"><a class="reference internal" href="../Day-16/Day-16_In-Class_CollaboratingWithGit-STUDENT.html">In-Class Assignment: Collaborating with Git</a></li>
+
+
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../section_files/day_17.html">Day 17</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../Day-17/Day-17_Pre-Class_AIPracticeAndProductiveGroupwork-STUDENT.html">Pre-Class Assignment: Revisiting generative AI and reflecting on group work experiences</a></li>
+
+
+
+<li class="toctree-l2"><a class="reference internal" href="../Day-17/Day-17_In-Class_RevisitingGenerativeAIAndProjectPlanning-STUDENT.html">In-Class Assignment: Revisiting Generative AI and Project Planning</a></li>
+
+
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../section_files/day_18.html">Day 18</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../Day-18/Day-18_Pre-Class_Perceptron-STUDENT.html">Pre-class Assignment: The Perceptron Classifier (a simple neural network)</a></li>
+
+
+<li class="toctree-l2"><a class="reference internal" href="../Day-18/Day-18_In-Class_Perceptron-STUDENT.html">In-Class Assignment: The Perceptron Classifier</a></li>
+
+
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../section_files/day_19.html">Day 19</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../Day-19/Day-19_In-Class_PerceptronExtension-STUDENT.html">In-Class Challenge Assignment: Experimenting with the Perceptron</a></li>
+
+
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../section_files/day_20.html">Day 20</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../Day-20/Day-20_Pre-Class_SVMs-STUDENT.html">Pre-Class Assignment: Support Vector Machines (SVMs)</a></li>
+
+
+
+<li class="toctree-l2"><a class="reference internal" href="../Day-20/Day-20_In-Class_SVMs-STUDENT.html">In-Class Assignment: Machine learning with an SVM Classifier</a></li>
+
+
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../section_files/day_21.html">Day 21</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../Day-21/Day-21_Pre-Class_SVMs2-STUDENT.html">Pre-Class Assignment: Further exploration of SVMs</a></li>
+
+
+
+<li class="toctree-l2"><a class="reference internal" href="../Day-21/Day-21_In-Class_SVMs2-STUDENT.html">In-Class Assignment: SVMs continued</a></li>
+
+
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../section_files/day_22.html">Day 22</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../Day-22/Day-22_Pre-Class_ProjectUpdateReminder-STUDENT.html">Pre-Class Assignment: Project updates!</a></li>
+
+
+
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../section_files/day_23.html">Day 23</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../Day-23/Day-23_Pre-Class_PCA-STUDENT.html">Pre-Class Assignment: Principal Component Analysis</a></li>
+
+
+
+</ul>
+</details></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Homework</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../../homework/SS25/HW01/HW-01_GitPracticeDebuggingPythonPackagesAndClasses-SS25-STUDENT.html">Homework 1</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../homework/SS25/HW02/HW02_Part1-Orbits-SS25-STUDENT.html">Homework 2 Part 1</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../homework/SS25/HW02/HW02_Part2-Risk-SS25-STUDENT.html">Homework 2 Part 2</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../homework/SS25/HW03/HW-03_Regression-S25-STUDENT.html">Homework Assignment 3</a></li>
+
+
+
+
+
+
+
+
+
+<li class="toctree-l1"><a class="reference internal" href="../../homework/SS25/HW04/HW-04_Perceptron_SVM_STUDENT.html">Homework 4</a></li>
+
+
+
+
+
+
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+      <div class="sidebar-primary-item">
+<div id="ethical-ad-placement"
+      class="flat"
+      data-ea-publisher="readthedocs"
+      data-ea-type="readthedocs-sidebar"
+      data-ea-manual="true">
+</div></div>
+  </div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><button class="sidebar-toggle primary-toggle btn btn-sm" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</button></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="../../_sources/daily/Day-02/Day-02_Pre-Class_ReflectionAndCommandLineInterface-STUDENT.ipynb" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.ipynb</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button pst-js-only" aria-label="Color mode" data-bs-title="Color mode"  data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <i class="theme-switch fa-solid fa-sun                fa-lg" data-mode="light" title="Light"></i>
+  <i class="theme-switch fa-solid fa-moon               fa-lg" data-mode="dark"  title="Dark"></i>
+  <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"  title="System Settings"></i>
+</button>
+
+
+<button class="btn btn-sm pst-navbar-icon search-button search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+</button>
+<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</button>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Pre-Class Assignment: Reflection and an introduction to the Command Line Interface (CLI)</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">Pre-Class Assignment: Reflection and an introduction to the Command Line Interface (CLI)</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#day-2">Day 2</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#cmse-202">CMSE 202</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#learning-the-basics-of-the-using-the-terminal-on-the-engineering-jupyterhub-server">Learning the basics of the using the Terminal on the Engineering Jupyterhub Server</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#learning-goals-for-today-s-pre-class-assignment">Learning goals for today’s pre-class assignment</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#assignment-instructions">Assignment instructions</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#reflecting-on-your-experiences-with-programming-up-to-this-point">1. Reflecting on your experiences with programming up to this point</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#reminding-yourself-how-jupyter-jupyterhub-works">2. Reminding  yourself how Jupyter/JupyterHub works</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#what-is-a-command-line-interface-cli">3. What is a Command Line Interface (CLI)?</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#exploring-the-command-line-interface">Exploring the command line interface</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#file-manipulation-and-running-python-code-from-the-command-line">File manipulation and running python code from the command line</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#using-the-python-and-or-ipython-command-prompts">Using the Python and/or IPython Command Prompts</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#nice-work">Nice work!</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#opening-files-with-vi">4. Opening Files with vi</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#follow-up-questions">Follow-up Questions</a></li>
+</ul>
+</li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#assignment-wrap-up">Assignment wrap-up</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#congratulations-you-re-done-with-your-first-pre-class-assignment">Congratulations, you’re done with your first pre-class assignment!</a></li>
+</ul>
+</li>
+</ul>
+
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section class="tex2jax_ignore mathjax_ignore" id="pre-class-assignment-reflection-and-an-introduction-to-the-command-line-interface-cli">
+<h1>Pre-Class Assignment: Reflection and an introduction to the Command Line Interface (CLI)<a class="headerlink" href="#pre-class-assignment-reflection-and-an-introduction-to-the-command-line-interface-cli" title="Link to this heading">#</a></h1>
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="day-2">
+<h1>Day 2<a class="headerlink" href="#day-2" title="Link to this heading">#</a></h1>
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="cmse-202">
+<h1>CMSE 202<a class="headerlink" href="#cmse-202" title="Link to this heading">#</a></h1>
+<section id="learning-the-basics-of-the-using-the-terminal-on-the-engineering-jupyterhub-server">
+<h2>Learning the basics of the using the Terminal on the Engineering Jupyterhub Server<a class="headerlink" href="#learning-the-basics-of-the-using-the-terminal-on-the-engineering-jupyterhub-server" title="Link to this heading">#</a></h2>
+<p style="text-align: right;"> &#9989; Put your name here</p>
+<img src="https://nmap.org/movies/matrix/trinity-nmapscreen-hd-crop-1200x728.jpg" width=600></section>
+<section id="learning-goals-for-today-s-pre-class-assignment">
+<h2>Learning goals for today’s pre-class assignment<a class="headerlink" href="#learning-goals-for-today-s-pre-class-assignment" title="Link to this heading">#</a></h2>
+</p>
+By the end of this pre-class assignment, you should:
+<ol class="arabic simple">
+<li><p>Reflect on your previous experiences with programming</p></li>
+<li><p>Remind yourself of the basics of Jupyter notebooks and (re)familiarize yourself with using the Engineering JupyterHub server.</p></li>
+<li><p>Be able to describe and use a Command Line Interface (CLI) to run simple Unix commands and Python code.</p></li>
+</ol>
+</section>
+<section id="assignment-instructions">
+<h2>Assignment instructions<a class="headerlink" href="#assignment-instructions" title="Link to this heading">#</a></h2>
+<p>Pre-class assignments will be composed of a combination of videos, text to read, and small assignments.  The goal of these assignments is to prepare you for class the following day.  You should watch the videos and read the text, and then do the assigned work.  You will be graded on making a good-faith effort, not on absolute correctness! When you don’t understand something, make a note of it in the survey at the end of the notebook so that the instructor can work to address these issues.</p>
+<p>Remember, to make notebook cells that have Python code in them do something, hold down the ‘shift’ key and then press the ‘enter’ or ‘return’ key (you’ll have to do this to get videos to run).  To edit a cell (to add answers, for example) you double-click, add your text, and then enter it by holding down ‘shift’ and pressing ‘enter’.</p>
+<p><strong>This assignment is due by 11:59 p.m. the day before class,</strong> and should be uploaded into the appropriate “Pre-Class Assignments” submission folder on D2L. <strong>You should also make sure to provide thoughtful answers to the survey at the end of this assignment</strong> as this will also be used to ensure you get credit for your work.</p>
+</section>
+<hr class="docutils" />
+<section id="reflecting-on-your-experiences-with-programming-up-to-this-point">
+<h2>1. Reflecting on your experiences with programming up to this point<a class="headerlink" href="#reflecting-on-your-experiences-with-programming-up-to-this-point" title="Link to this heading">#</a></h2>
+<p>As you start CMSE 202, now is a good time to relfect on your prior programming experiences. Answer the following questions as you think back on what you’ve learned in the past about how to write and use code, either inside or outside the classroom.</p>
+<p>✅ <strong>Question 1:</strong>  Besides Python, what other languages have you been introduced to (ex. C, C++, R, FORTRAN, MATLAB, JS, etc). How comfortable are you using these other languages? Also comment on how you feel about your ability to write Python code. What do you feel like you have good mastery of in Python and where do you think you have room for improvement?</p>
+<p><font size=+3>✎</font> Do This - Erase the contents of this cell and replace it with your answer to the above question!  (double-click on this text to edit this cell, and hit shift+enter to save the text). Please use appropriate Markup formating to make your answer’s easy to read.</p>
+<p>✅ <strong>Question 2:</strong>  Besides Jupyter (the interface you’re using to access this notebook), What other programming interfaces have you used (if any)? Some examples may include; Command line interfaces, Python Spyder, Microsoft Visual Studio, Eclipse, etc. What do you like/dislike about each of these interfaces, Jupyter included?</p>
+<p><font size=+3>✎</font> Do This - Erase the contents of this cell and replace it with your answer to the above question!  (double-click on this text to edit this cell, and hit shift+enter to save the text)</p>
+<p>✅ <strong>Question 3:</strong> Think back on everything you’ve done that has involved programming up to this point, provide an example of something you did that you were particularly proud of or that you thought was particularly neat/interesting. In addition, reflecting on something you might have been less proud of, provide an example of something that you think you would do differently given the abilities you have now or could have done a better job with.</p>
+<p><font size=+3>✎</font> Do This - Erase the contents of this cell and replace it with your answer to the above question!  (double-click on this text to edit this cell, and hit shift+enter to save the text)</p>
+</section>
+<hr class="docutils" />
+<section id="reminding-yourself-how-jupyter-jupyterhub-works">
+<h2>2. Reminding  yourself how Jupyter/JupyterHub works<a class="headerlink" href="#reminding-yourself-how-jupyter-jupyterhub-works" title="Link to this heading">#</a></h2>
+<p>The following video will review the Python Jupyter interface and the Engineering JupyterHub server. Take this as an opportunity to reminder yourself how these tools work and what they do.</p>
+<p>In addition, make sure you can log onto the Engineering Jupyterhub account using the of following link:</p>
+<blockquote>
+<div><p><a class="reference external" href="http://jupyterhub.egr.msu.edu">http://jupyterhub.egr.msu.edu</a></p>
+</div></blockquote>
+<p>In order to log into the JupyterHub you need to activate your DECS account first. If you haven’t done this yet, go to:</p>
+<blockquote>
+<div><p><a class="reference external" href="https://www.egr.msu.edu/decs/myaccount/?page=activate">https://www.egr.msu.edu/decs/myaccount/?page=activate</a></p>
+</div></blockquote>
+<p>Your “Initial Password” is your PID, which is the number that starts with “A” on your MSU SpartanCard, followed by the “&#64;” symbol (e.g. A123467890&#64;). Once you activate your account, you’ll be able to log in to JupyterHub. Contact the instructor if you have issues with this process.</p>
+<p><strong>Note:</strong> In this course, the assumption will be that you have access to and are familiar with using the JupyterHub server, but if you prefer to use your local Python installation for the majority of the work in this course, you are welcome to do so. However, there may be times when JupyterHub is required to ensure that all of the software will work as intended. When you run into software issues with your local installations, the instructors will do their best to help you troubleshoot these issues, but if they prove particularly troublesome, you may need to revert to JupyyterHub as a backup. For this pre-class notebook, you will be expected to use the JupyterHub for all of the command-line interface (CLI) components to get practice with it. After you practice with the command line interface in JupyterHub, you are encouraged to see if you can do the same thing locally on your computer by following the recommendations for setting everything up in the Software Setup Guide (available on the <a class="reference external" href="https://msu-cmse-courses.github.io/cmse202-S25-jb/">course website</a>. Being able to run everything locally has the advantage of not relying on internet access, but it will not be required for you to succeed in the course.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># the commands below this comment imports the YouTube Video module and then displays</span>
+<span class="c1"># a specific YouTube video, with a given width and height.  You can watch the video</span>
+<span class="c1"># in full-screen mode, which can be easier to see, by clicking the little box in the</span>
+<span class="c1"># bottom-right corner of the video.</span>
+
+<span class="kn">from</span> <span class="nn">IPython.display</span> <span class="kn">import</span> <span class="n">YouTubeVideo</span>
+<span class="n">YouTubeVideo</span><span class="p">(</span><span class="s2">&quot;5WSQnGmz3IA&quot;</span><span class="p">,</span><span class="n">width</span><span class="o">=</span><span class="mi">800</span><span class="p">,</span><span class="n">height</span><span class="o">=</span><span class="mi">450</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>If the above YouTube video doesn’t work, you can try the <a class="reference external" href="https://mediaspace.msu.edu/media/t/0_hkqjufix">MediaSpace version</a>.</p>
+<p>✅ <strong>Question 4:</strong> Is there anything about using Jupyter or the JupyerHub server that you’re still feeling unsure about?</p>
+<p><font size=+3>✎</font> Do This - Erase the contents of this cell and replace it with your answer to the above question!  (double-click on this text to edit this cell, and hit shift+enter to save the text)</p>
+</section>
+<hr class="docutils" />
+<section id="what-is-a-command-line-interface-cli">
+<h2>3. What is a Command Line Interface (CLI)?<a class="headerlink" href="#what-is-a-command-line-interface-cli" title="Link to this heading">#</a></h2>
+<p>First off, in order to work through this part of this assignment, you will need to use the JupyterHub interface. If you’re already running this notebook there – you’re all set! If you have been working on this notebook on your local Python installation up to this point, you should save it, and then upload it to the JupyterHub and continue working on it there. You should can log onto the Engineering Jupyterhub account using the following link:</p>
+<blockquote>
+<div><p><a class="reference external" href="http://jupyterhub.egr.msu.edu">http://jupyterhub.egr.msu.edu</a></p>
+</div></blockquote>
+<p>At the end of the assignment, you’ll need to <strong>download the notebook from JupyterHub before you can upload it to D2L</strong>.</p>
+<section id="exploring-the-command-line-interface">
+<h3>Exploring the command line interface<a class="headerlink" href="#exploring-the-command-line-interface" title="Link to this heading">#</a></h3>
+<p>The following video will introduce you to the Engineering Jupyterhub Terminal program which is one possible Command Line Interface (CLI) that can be used for work done in this class. I highly recommend that you follow along and practice executing the same commands as the video.  If you are watching/listening to the video on-the-go, a summary of the commands presented in the video are included below as a reference for when you get back to your computer.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">IPython.display</span> <span class="kn">import</span> <span class="n">YouTubeVideo</span>
+<span class="n">YouTubeVideo</span><span class="p">(</span><span class="s2">&quot;ENlkdE8pIh8&quot;</span><span class="p">,</span><span class="n">width</span><span class="o">=</span><span class="mi">800</span><span class="p">,</span><span class="n">height</span><span class="o">=</span><span class="mi">450</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>If the above YouTube video doesn’t work or you <strong>want a higher resolution version</strong>, you can try the <a class="reference external" href="https://mediaspace.msu.edu/media/1_j2fo7xyp">MediaSpace version</a>.</p>
+<p>✅ <strong>Question 5:</strong> Now that you’ve have a chance to learn a bit about the commandline interface, review the commands below and <strong>add a short description for each of them</strong>.</p>
+<p><font size=+3>✎</font> Do This - Modify the following list to include short (just a few words) descriptions for each command as it was presented in the video.  A few descriptions are provided for you as examples and some of them are repeated:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">clear</span></code>:</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">pwd</span></code>:</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">ls</span></code>:</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">cd</span> <span class="pre">junk</span></code>: Change to the directory named junk</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">cd</span> <span class="pre">..</span></code>:</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">cd</span> <span class="pre">~</span></code>:</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">cd</span> <span class="pre">-</span></code>: Change to the previous directory</p></li>
+</ul>
+<p>✅ <strong>Question 6:</strong> What is the name of the command for creating a new directory in the terminal program?</p>
+<p><font size=+3>✎</font> Do This - Erase the contents of this cell and replace it with your answer to the above question!  (double-click on this text to edit this cell, and hit shift+enter to save the text)</p>
+</section>
+<section id="file-manipulation-and-running-python-code-from-the-command-line">
+<h3>File manipulation and running python code from the command line<a class="headerlink" href="#file-manipulation-and-running-python-code-from-the-command-line" title="Link to this heading">#</a></h3>
+<p>Now that you’ve had a chance to explore how to look around and move around your computer on the command line, let’s take a look at how we can create, copy, and move files using the command line.</p>
+<p>Watch the following video and try to follow along by experimenting your own command line interface.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">IPython.display</span> <span class="kn">import</span> <span class="n">YouTubeVideo</span>
+<span class="n">YouTubeVideo</span><span class="p">(</span><span class="s2">&quot;ujGqavjFqN0&quot;</span><span class="p">,</span><span class="n">width</span><span class="o">=</span><span class="mi">800</span><span class="p">,</span><span class="n">height</span><span class="o">=</span><span class="mi">450</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>If the above YouTube video doesn’t work or you <strong>want a higher resolution version</strong>, you can try the <a class="reference external" href="https://mediaspace.msu.edu/media/1_ew1cxonk">MediaSpace version</a>.</p>
+<p>✅ <strong>Question 7:</strong> Now that you’ve had a chance to learn a bit <strong>more</strong> about the commandline interface, review the commands below and <strong>add a short description for each of them</strong>.</p>
+<p><font size=+3>✎</font> Do This - Modify the following list to include short (just a few words) descriptions for each command as it was presented in the video.</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">touch</span></code>: (it might be worth doing an internet search for “touch unix command” for this one to unpack a bit more about what it does)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">cp</span></code>:</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">mv</span></code>:</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">rm</span></code>:</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">less</span></code>:</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">more</span></code>:</p></li>
+</ul>
+<p>✅ <strong>Question 8:</strong> If I have a Python script called <code class="docutils literal notranslate"><span class="pre">compute_average.py</span></code> and I wanted to execute script from the command line, what would be the command necessary to do that?</p>
+<p><font size=+3>✎</font> Do This - Erase the contents of this cell and replace it with your answer to the above question!  (double-click on this text to edit this cell, and hit shift+enter to save the text)</p>
+</section>
+<section id="using-the-python-and-or-ipython-command-prompts">
+<h3>Using the Python and/or IPython Command Prompts<a class="headerlink" href="#using-the-python-and-or-ipython-command-prompts" title="Link to this heading">#</a></h3>
+<p>OK, so you’re starting to learn a bit about how to use the command line to interact with your computer, manipulate files, and run Python scripts. But what if we want to just run some python code one line at a time inside of the command line interface? Perhaps we just want to fiddle with a code idea we have, or maybe we need to run a few simply calculations that don’t warrant using a Jupyter notebook or a script?</p>
+<p>Watch the following video to learn how you can run Python from the command line using the Python and IPython prompts.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">IPython.display</span> <span class="kn">import</span> <span class="n">YouTubeVideo</span>
+<span class="n">YouTubeVideo</span><span class="p">(</span><span class="s2">&quot;HLMgisd44C0&quot;</span><span class="p">,</span><span class="n">width</span><span class="o">=</span><span class="mi">800</span><span class="p">,</span><span class="n">height</span><span class="o">=</span><span class="mi">450</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>If the above YouTube video doesn’t work or you <strong>want a higher resolution version</strong>, you can try the <a class="reference external" href="https://mediaspace.msu.edu/media/1_csnhoyqh">MediaSpace version</a>.</p>
+<p>✅ <strong>Question 9:</strong> Now that you’ve had a chance to learn a bit about how to use the Python and IPython prompts, review the commands below and <strong>add a short description for each of them</strong>.</p>
+<p><font size=+3>✎</font> Do This - Modify the following list to include short (just a few words) descriptions for each command (not all of which were presented in the video). If you’re unsure about any of the commands, test them out on the command line!</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">python</span></code>:</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">import</span> <span class="pre">random</span></code>:</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">random.randint(1,100)</span></code>:</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">exit()</span></code>:</p></li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">ipython</span></code></p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">import</span> <span class="pre">numpy</span> <span class="pre">as</span> <span class="pre">np</span></code>:</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">np.linspace(0,100,5)</span></code>:</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">ls</span></code>:</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">pwd</span></code>:</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">cd</span></code>:</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">exit()</span></code>:</p></li>
+</ul>
+</li>
+</ul>
+</section>
+<section id="nice-work">
+<h3>Nice work!<a class="headerlink" href="#nice-work" title="Link to this heading">#</a></h3>
+<p>Hopefully you’re starting to understand how you can interact with computers using the command line in a variety of way. We’ll be exploring this more in class!</p>
+</section>
+</section>
+<hr class="docutils" />
+<section id="opening-files-with-vi">
+<h2>4. Opening Files with vi<a class="headerlink" href="#opening-files-with-vi" title="Link to this heading">#</a></h2>
+<p>Before there was Google Docs or even Microsoft Word, programmers needed a simple way to write a text file–a <em>text editor</em>. Previously, all code was written on physical punch cards; dynamically editing code/text stored in the computer <em>using the computer itself</em> would be a gian leap forward in terms of human-computer interaction. This is the world in which <code class="docutils literal notranslate"><span class="pre">vi</span></code> was born. Its functionality was bare-bones, but it did everything those early software engineers needed.</p>
+<p><strong>IMPORTANT</strong>: Make sure to read the following content; <code class="docutils literal notranslate"><span class="pre">vi</span></code> it’s the commands take a little getting used to, but it is an incredibly useful tool.</p>
+<ul class="simple">
+<li><p>To open a file in <code class="docutils literal notranslate"><span class="pre">vi</span></code> on the command line, you need to  type “<code class="docutils literal notranslate"><span class="pre">vi</span> <span class="pre">[file]</span></code>” into the CLI, which will open the file and dump you into the <code class="docutils literal notranslate"><span class="pre">vi</span></code> text editor</p></li>
+<li><p>When you first open <code class="docutils literal notranslate"><span class="pre">vi</span></code>, you will not be able to immediately type things to make modifications like you might be used to. Instead, you will start out in the <code class="docutils literal notranslate"><span class="pre">vi</span></code> “command mode”, which allows you to manipulate the file using specific letter-based commands.</p></li>
+<li><p>To enter the text-editing mode you’re familiar with, you need to press <kbd>i</kbd> which puts you in “insert mode”. From here, you can type normally.</p></li>
+<li><p>When you are done typing in insert mode, you need to press <kbd>ESC</kbd>, which takes you back to command mode.</p></li>
+<li><p>If you’re happy with everything you’ve done, you can type <code class="docutils literal notranslate"><span class="pre">:wq</span></code>, which will “write” (w) and then “quit” (q). If you ever want to quit <strong>without</strong> saving your changes, you can use <code class="docutils literal notranslate"><span class="pre">:q!</span></code>.</p></li>
+<li><p>For more <code class="docutils literal notranslate"><span class="pre">vi</span></code> commands, check out this <a class="reference external" href="https://ryanstutorials.net/linuxtutorial/cheatsheetvi.php">cheat sheet</a></p></li>
+</ul>
+<p>✅ <strong>Question 10</strong>: Use the directions above to make a new file, put some text in it, and save it. Specifically, do the following:</p>
+<ol class="arabic simple">
+<li><p>Open a new file called <code class="docutils literal notranslate"><span class="pre">new_file.txt</span></code> using <code class="docutils literal notranslate"><span class="pre">vi</span></code>.</p></li>
+<li><p>Enter the Insert mode (the command for which is given above).</p></li>
+<li><p>Write some text into the file.</p></li>
+<li><p>Write the contents of your new file and quit <code class="docutils literal notranslate"><span class="pre">vi</span></code> (the commands for which are given above).</p></li>
+</ol>
+</section>
+<hr class="docutils" />
+<section id="follow-up-questions">
+<h2>Follow-up Questions<a class="headerlink" href="#follow-up-questions" title="Link to this heading">#</a></h2>
+<p>Copy and paste the following questions into the appropriate box in the assignment survey include below and answer them there. (Note: You’ll have to fill out the section number and the assignment number and go to the “NEXT” section of the survey to paste in these questions.)</p>
+<ol class="arabic simple">
+<li><p>Are there any aspects of programming in Python that you feel like you still struggle with from time to time?</p></li>
+<li><p>Have you ever used a “Command Line Interface” before? If so, what did you use it for?</p></li>
+<li><p>If you’ve tried to get the command line interface working on your computer locally, have you succeeded? Are you able to run all of the same commands on your computer as were run in the videos above? If not, what are you having issues with? [Note: It is not absolutely necessary to get the command line interface working on your computer, but it can be handy to have as an option].</p></li>
+</ol>
+</section>
+</section>
+<hr class="docutils" />
+<section class="tex2jax_ignore mathjax_ignore" id="assignment-wrap-up">
+<h1>Assignment wrap-up<a class="headerlink" href="#assignment-wrap-up" title="Link to this heading">#</a></h1>
+<p>Please fill out the form that appears when you run the code below.  <strong>You must completely fill this out in order to receive credit for the assignment!</strong></p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">IPython.display</span> <span class="kn">import</span> <span class="n">HTML</span>
+<span class="n">HTML</span><span class="p">(</span>
+<span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">&lt;iframe </span>
+<span class="sd">	src=&quot;https://forms.office.com/r/mWHXCESRw9&quot; </span>
+<span class="sd">	width=&quot;800px&quot; </span>
+<span class="sd">	height=&quot;600px&quot; </span>
+<span class="sd">	frameborder=&quot;0&quot; </span>
+<span class="sd">	marginheight=&quot;0&quot; </span>
+<span class="sd">	marginwidth=&quot;0&quot;&gt;</span>
+<span class="sd">	Loading...</span>
+<span class="sd">&lt;/iframe&gt;</span>
+<span class="sd">&quot;&quot;&quot;</span>
+<span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<hr class="docutils" />
+<section id="congratulations-you-re-done-with-your-first-pre-class-assignment">
+<h2>Congratulations, you’re done with your first pre-class assignment!<a class="headerlink" href="#congratulations-you-re-done-with-your-first-pre-class-assignment" title="Link to this heading">#</a></h2>
+<p>Now, you just need to submit this assignment by uploading it to the course <a href="https://d2l.msu.edu/">Desire2Learn</a> web page for today’s submission folder (Don’t forget to add your name in the first cell).</p>
+<p>© Copyright 2025,  The Department of Computational Mathematics, Science and Engineering at Michigan State University</p>
+</section>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "conda-base-py"
+        },
+        kernelOptions: {
+            name: "conda-base-py",
+            path: "./daily/Day-02"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'conda-base-py'</script>
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="../../section_files/day_2.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">Day 2</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="Day-02_In-Class_CommandLineInterface-STUDENT.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">In-class Notebook: Command line interface</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <dialog id="pst-secondary-sidebar-modal"></dialog>
+                <div id="pst-secondary-sidebar" class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">Pre-Class Assignment: Reflection and an introduction to the Command Line Interface (CLI)</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#day-2">Day 2</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#cmse-202">CMSE 202</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#learning-the-basics-of-the-using-the-terminal-on-the-engineering-jupyterhub-server">Learning the basics of the using the Terminal on the Engineering Jupyterhub Server</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#learning-goals-for-today-s-pre-class-assignment">Learning goals for today’s pre-class assignment</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#assignment-instructions">Assignment instructions</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#reflecting-on-your-experiences-with-programming-up-to-this-point">1. Reflecting on your experiences with programming up to this point</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#reminding-yourself-how-jupyter-jupyterhub-works">2. Reminding  yourself how Jupyter/JupyterHub works</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#what-is-a-command-line-interface-cli">3. What is a Command Line Interface (CLI)?</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#exploring-the-command-line-interface">Exploring the command line interface</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#file-manipulation-and-running-python-code-from-the-command-line">File manipulation and running python code from the command line</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#using-the-python-and-or-ipython-command-prompts">Using the Python and/or IPython Command Prompts</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#nice-work">Nice work!</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#opening-files-with-vi">4. Opening Files with vi</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#follow-up-questions">Follow-up Questions</a></li>
+</ul>
+</li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#assignment-wrap-up">Assignment wrap-up</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#congratulations-you-re-done-with-your-first-pre-class-assignment">Congratulations, you’re done with your first pre-class assignment!</a></li>
+</ul>
+</li>
+</ul>
+
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By MSU CMSE
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2025.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script defer src="../../_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf"></script>
+<script defer src="../../_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>

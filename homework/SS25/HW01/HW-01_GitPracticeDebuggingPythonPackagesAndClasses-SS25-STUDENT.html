@@ -1,0 +1,1463 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="../../../" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Homework Assignment 1 &#8212; CMSE 202 Course Website</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  <!--
+    this give us a css class that will be invisible only if js is disabled
+  -->
+  <noscript>
+    <style>
+      .pst-js-only { display: none !important; }
+
+    </style>
+  </noscript>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../../../_static/styles/theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
+<link href="../../../_static/styles/pydata-sphinx-theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
+
+    <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css?v=b76e3c8a" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/styles/sphinx-book-theme.css?v=a3416100" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/togglebutton.css?v=13237357" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/sphinx-thebe.css?v=4fa983c6" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/sphinx-design.min.css?v=95c83b7e" />
+  
+  <!-- So that users can add custom icons -->
+  <script src="../../../_static/scripts/fontawesome.js?digest=8878045cc6db502f8baf"></script>
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../../../_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf" />
+<link rel="preload" as="script" href="../../../_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf" />
+
+    <script src="../../../_static/documentation_options.js?v=9eb32ce0"></script>
+    <script src="../../../_static/doctools.js?v=9a2dae69"></script>
+    <script src="../../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../../../_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="../../../_static/copybutton.js?v=f281be69"></script>
+    <script src="../../../_static/scripts/sphinx-book-theme.js?v=887ef09a"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../../../_static/togglebutton.js?v=4a39c7ea"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="../../../_static/design-tabs.js?v=f930bc37"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script async="async" src="../../../_static/sphinx-thebe.js?v=c100c467"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'homework/SS25/HW01/HW-01_GitPracticeDebuggingPythonPackagesAndClasses-SS25-STUDENT';</script>
+    <link rel="icon" href="../../../_static/logo.png"/>
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../search.html" />
+    <link rel="next" title="Homework Assignment 2" href="../HW02/HW02_Part1-Orbits-SS25-STUDENT.html" />
+    <link rel="prev" title="Pre-Class Assignment: Principal Component Analysis" href="../../../daily/Day-23/Day-23_Pre-Class_PCA-STUDENT.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  <meta name="docsearch:version" content="" />
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
+  
+  <dialog id="pst-search-dialog">
+    
+<form class="bd-search d-flex align-items-center"
+      action="../../../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         placeholder="Search..."
+         aria-label="Search..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form>
+  </dialog>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+      <dialog id="pst-primary-sidebar-modal"></dialog>
+      <div id="pst-primary-sidebar" class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="../../../index.html">
+  
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="../../../_static/logo.png" class="logo__image only-light" alt="CMSE 202 Course Website - Home"/>
+    <img src="../../../_static/logo.png" class="logo__image only-dark pst-js-only" alt="CMSE 202 Course Website - Home"/>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item">
+
+<button class="btn search-button-field search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+ <i class="fa-solid fa-magnifying-glass"></i>
+ <span class="search-button__default-text">Search</span>
+ <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+</button></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">Course Materials</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../../../course_materials/CMSE202_Syllabus.html">Syllabus</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../course_materials/CMSE202_Calendar.html">Schedule</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../course_materials/CMSE202_HelpRoomCalendar.html">Office Hours and Help Room</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../course_materials/SoftwareSetupGuide.html">Software Setup Guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../course_materials/CMSE202_GenerativeAI_Policy.html">Generative AI Policy</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://upload.wikimedia.org/wikipedia/commons/7/79/Unix_command_cheatsheet.pdf">CLI (Unix/Mac/Linux) commands cheat sheet</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../course_materials/BashVsPowershell_CheatSheet.html">Bash vs PowerShell</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://wac-cdn.atlassian.com/dam/jcr:e7e22f25-bba2-4ef1-a197-53f46b6df4a5/SWTM-2088_Atlassian-Git-Cheatsheet.pdf?cdnVersion=525">Git Cheat Sheet</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://raw.githubusercontent.com/msu-cmse-courses/cmse202-supplemental-data/main/documents/How-to-Access-Anaconda-Powershell-Prompt.pdf">How to Access “Anaconda Powershell Prompt” (for Windows users)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../course_materials/Pull_Request_Guide.html">Making and merging Pull Requests on GitHub</a></li>
+
+
+
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Semester Project</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../../../course_materials/SemesterProjectDetails.html">Semester Project Details</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../course_materials/CMSE202_FinalProjectRequirementsAndGradingRubric.html">Semester Project Requirements and Grading Rubric</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Exams</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../../../course_materials/MidtermStudyGuide.html">Midterm Study Guide</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Daily Content</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../../section_files/day_1.html">Day 1</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../daily/Day-01/Day-01_In-Class_Overview-STUDENT.html">In-class Notebook: Welcome to CMSE202</a></li>
+
+
+
+
+
+
+
+
+
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../../section_files/day_2.html">Day 2</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../daily/Day-02/Day-02_Pre-Class_ReflectionAndCommandLineInterface-STUDENT.html">Pre-Class Assignment: Reflection and an introduction to the Command Line Interface (CLI)</a></li>
+
+
+
+<li class="toctree-l2"><a class="reference internal" href="../../../daily/Day-02/Day-02_In-Class_CommandLineInterface-STUDENT.html">In-class Notebook: Command line interface</a></li>
+
+
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../../section_files/day_3.html">Day 3</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../daily/Day-03/Day-03_Pre-Class_PythonReview%2BGitIntro-STUDENT.html">Pre-Class Assignment: Python Review and Intro to Git</a></li>
+
+<li class="toctree-l2"><a class="reference internal" href="../../../daily/Day-03/Day-03_In-Class_GitPractice-STUDENT.html">In-Class Assignment: Practice with Git and GitHub</a></li>
+
+
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../../section_files/day_4.html">Day 4</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../daily/Day-04/Day-04_Pre-Class_DownloadingFilesAndInstallingPackages-STUDENT.html">Pre-class Assignment: Python Packages</a></li>
+
+
+
+
+
+<li class="toctree-l2"><a class="reference internal" href="../../../daily/Day-04/Day-04_In-Class_PythonPackagesAndMapPlotting-STUDENT.html">In-class Assignment: Installing Python Packages and Plotting with Maps in Python</a></li>
+
+
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../../section_files/day_5.html">Day 5</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../daily/Day-05/Day-05_Pre-Class_PandasReview-STUDENT.html">Pre-Class Assignment: Pandas Review</a></li>
+
+
+<li class="toctree-l2"><a class="reference internal" href="../../../daily/Day-05/Day-05_In-Class_PandasReview-STUDENT.html">In-Class Assignment: Reviewing Pandas and exploring data</a></li>
+
+
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../../section_files/day_6.html">Day 6</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../daily/Day-06/Day-06_Pre-class_ObjectsClasses-STUDENT.html">Pre-class Assignment: Introduction to Object Oriented Programming (OOP)</a></li>
+
+
+<li class="toctree-l2"><a class="reference internal" href="../../../daily/Day-06/Day-06_In-Class_ObjectsClasses-STUDENT.html">In-class Assignment: We have a Zoo!</a></li>
+
+
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../../section_files/day_7.html">Day 7</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../daily/Day-07/Day-07_Pre-class_ObjectInheritanceAndComposition-STUDENT.html">Pre-class Assignment: object inheritance and composition</a></li>
+
+
+<li class="toctree-l2"><a class="reference internal" href="../../../daily/Day-07/Day-07_In-Class_ObjectInheritanceAndComposition-STUDENT.html">In-class Assignment: We have a Zoo! (part 2)</a></li>
+
+
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../../section_files/day_8.html">Day 8</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../daily/Day-08/Day-08_Pre-Class_SuperbugsABM-STUDENT.html">Pre-Class Assignment: Agent-based Modeling of Superbugs</a></li>
+
+
+
+
+
+<li class="toctree-l2"><a class="reference internal" href="../../../daily/Day-08/Day-08_In-Class_ABMSuperbugs1-STUDENT.html">In-Class Assignment: Simulating Superbugs using agent-based modeling</a></li>
+
+
+
+
+
+
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../../section_files/day_9.html">Day 9</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../daily/Day-09/Day-09_Pre-Class_OOPAntForaging-STUDENT.html">Pre-Class Assignment: Reviewing another agent-based model built using Object Oriented Programming (OOP)</a></li>
+
+
+<li class="toctree-l2"><a class="reference internal" href="../../../daily/Day-09/Day-09_In-Class_ABMSuperbugs2-STUDENT.html">In-Class Assignment: Agent Based Modeling of Superbugs (part 2)</a></li>
+
+
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../../section_files/day_10.html">Day 10</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../daily/Day-10/Day-10_Pre-Class_GraphTheory-STUDENT.html">Pre-Class Assignment: Conflicts in Git and Graph Theory</a></li>
+
+
+<li class="toctree-l2"><a class="reference internal" href="../../../daily/Day-10/Day-10_In-Class_GraphTheory-STUDENT.html">In-Class Assignment: Graph Theory</a></li>
+
+
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../../section_files/day_11.html">Day 11</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../daily/Day-11/Day-11_Pre-Class_GraphTheoryCellTowers-STUDENT.html">Pre-class Assignment: Project Brainstorming &amp; Graph Theory and Cell Towers</a></li>
+
+
+
+
+
+<li class="toctree-l2"><a class="reference internal" href="../../../daily/Day-11/Day-11_In-Class_GraphTheoryCellTowers-STUDENT.html">In-class Assignment: Graph Theory and Cell Towers</a></li>
+
+
+
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../../section_files/day_12.html">Day 12</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../daily/Day-12/Day-12_In-Class_ProjectProposals-STUDENT.html">In-Class Assignment: Reviewing Project Ideas</a></li>
+
+
+
+
+
+
+
+
+
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../../section_files/day_13.html">Day 13</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../daily/Day-13/Day-13_Pre-Class_Regression-STUDENT.html">Pre-Class Assignment: Regression</a></li>
+
+
+
+<li class="toctree-l2"><a class="reference internal" href="../../../daily/Day-13/Day-13_In-Class-Regression-STUDENT.html">In-Class Assignment: Linear Regression</a></li>
+
+
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../../section_files/day_14.html">Day 14</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../daily/Day-14/Day-14_Pre-Class-PolynomialRegression-STUDENT.html">Pre-Class Assignment: Polynomial Regression</a></li>
+
+
+
+<li class="toctree-l2"><a class="reference internal" href="../../../daily/Day-14/Day-14_In-Class_MultipleRegression-STUDENT.html">In-Class Assignment: Multiple Regression</a></li>
+
+
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../../section_files/day_15.html">Day 15</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../daily/Day-15/Day-15_Pre-Class_MachineLearningIntro-STUDENT.html">Pre-class Assignment: Intro to Machine Learning</a></li>
+
+
+<li class="toctree-l2"><a class="reference internal" href="../../../daily/Day-15/Day-15_In-Class_ML-LogisticRegression-STUDENT.html">In-Class Assignment: Machine Learning; classification with logistic regression</a></li>
+
+
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../../section_files/day_16.html">Day 16</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../daily/Day-16/Day-16_Pre-Class_GitRevisited-STUDENT.html">Pre-Class Assignment: Git with it! (collaborating with Git)</a></li>
+
+
+
+<li class="toctree-l2"><a class="reference internal" href="../../../daily/Day-16/Day-16_In-Class_CollaboratingWithGit-STUDENT.html">In-Class Assignment: Collaborating with Git</a></li>
+
+
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../../section_files/day_17.html">Day 17</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../daily/Day-17/Day-17_Pre-Class_AIPracticeAndProductiveGroupwork-STUDENT.html">Pre-Class Assignment: Revisiting generative AI and reflecting on group work experiences</a></li>
+
+
+
+<li class="toctree-l2"><a class="reference internal" href="../../../daily/Day-17/Day-17_In-Class_RevisitingGenerativeAIAndProjectPlanning-STUDENT.html">In-Class Assignment: Revisiting Generative AI and Project Planning</a></li>
+
+
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../../section_files/day_18.html">Day 18</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../daily/Day-18/Day-18_Pre-Class_Perceptron-STUDENT.html">Pre-class Assignment: The Perceptron Classifier (a simple neural network)</a></li>
+
+
+<li class="toctree-l2"><a class="reference internal" href="../../../daily/Day-18/Day-18_In-Class_Perceptron-STUDENT.html">In-Class Assignment: The Perceptron Classifier</a></li>
+
+
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../../section_files/day_19.html">Day 19</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../daily/Day-19/Day-19_In-Class_PerceptronExtension-STUDENT.html">In-Class Challenge Assignment: Experimenting with the Perceptron</a></li>
+
+
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../../section_files/day_20.html">Day 20</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../daily/Day-20/Day-20_Pre-Class_SVMs-STUDENT.html">Pre-Class Assignment: Support Vector Machines (SVMs)</a></li>
+
+
+
+<li class="toctree-l2"><a class="reference internal" href="../../../daily/Day-20/Day-20_In-Class_SVMs-STUDENT.html">In-Class Assignment: Machine learning with an SVM Classifier</a></li>
+
+
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../../section_files/day_21.html">Day 21</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../daily/Day-21/Day-21_Pre-Class_SVMs2-STUDENT.html">Pre-Class Assignment: Further exploration of SVMs</a></li>
+
+
+
+<li class="toctree-l2"><a class="reference internal" href="../../../daily/Day-21/Day-21_In-Class_SVMs2-STUDENT.html">In-Class Assignment: SVMs continued</a></li>
+
+
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../../section_files/day_22.html">Day 22</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../daily/Day-22/Day-22_Pre-Class_ProjectUpdateReminder-STUDENT.html">Pre-Class Assignment: Project updates!</a></li>
+
+
+
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../../section_files/day_23.html">Day 23</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../daily/Day-23/Day-23_Pre-Class_PCA-STUDENT.html">Pre-Class Assignment: Principal Component Analysis</a></li>
+
+
+
+</ul>
+</details></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Homework</span></p>
+<ul class="current nav bd-sidenav">
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">Homework 1</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../HW02/HW02_Part1-Orbits-SS25-STUDENT.html">Homework 2 Part 1</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../HW02/HW02_Part2-Risk-SS25-STUDENT.html">Homework 2 Part 2</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../HW03/HW-03_Regression-S25-STUDENT.html">Homework Assignment 3</a></li>
+
+
+
+
+
+
+
+
+
+<li class="toctree-l1"><a class="reference internal" href="../HW04/HW-04_Perceptron_SVM_STUDENT.html">Homework 4</a></li>
+
+
+
+
+
+
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+      <div class="sidebar-primary-item">
+<div id="ethical-ad-placement"
+      class="flat"
+      data-ea-publisher="readthedocs"
+      data-ea-type="readthedocs-sidebar"
+      data-ea-manual="true">
+</div></div>
+  </div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><button class="sidebar-toggle primary-toggle btn btn-sm" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</button></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="../../../_sources/homework/SS25/HW01/HW-01_GitPracticeDebuggingPythonPackagesAndClasses-SS25-STUDENT.ipynb" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.ipynb</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button pst-js-only" aria-label="Color mode" data-bs-title="Color mode"  data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <i class="theme-switch fa-solid fa-sun                fa-lg" data-mode="light" title="Light"></i>
+  <i class="theme-switch fa-solid fa-moon               fa-lg" data-mode="dark"  title="Dark"></i>
+  <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"  title="System Settings"></i>
+</button>
+
+
+<button class="btn btn-sm pst-navbar-icon search-button search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+</button>
+<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</button>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Homework Assignment 1</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#git-practice-debugging-practice-and-new-python-packages-and-python-classes">Git practice, debugging practice, and new Python packages, and Python classes</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#put-your-name-here"><p style="text-align: right;"> ✅ Put your name here.</p></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#put-your-github-username-here"><p style="text-align: right;"> ✅ Put your <em>GitHub username</em> here.</p></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#goals-for-this-homework-assignment">Goals for this homework assignment</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#table-of-contents">Table of contents</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#part-0-visiting-office-hours-or-help-room-6-points">Part 0: Visiting Office Hours or Help Room (6 points)</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#going-to-office-hours-or-help-room">Going to Office Hours or Help Room</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#why-are-we-doing-this">Why are we doing this?</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#what-will-you-do">What will you do?</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#part-1-cli-and-git-14-points">Part 1: CLI and Git (14 points)</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#setting-up-a-git-repository-to-track-your-progress-on-your-assignments">Setting up a git repository to track your progress on your assignments</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#before-moving-on">Before moving on…</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#part-2-debugging-pandas-code-7-points">Part 2: Debugging Pandas code (7 points)</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#reading-python-and-pandas-code-and-understanding-errors-and-error-messages">Reading Python and Pandas code and understanding errors and error messages</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#import-pandas-before-moving-on">Import Pandas before moving on!</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#stop">🛑 STOP</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#part-3-downloading-and-analyzing-unfamiliar-data-8-points">Part 3: Downloading and analyzing unfamiliar data (8 points)</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">🛑 STOP</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#part-4-finding-and-using-a-python-package-from-github-11-points">Part 4: Finding and Using a Python Package from Github (11 points)</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#put-your-answer-here">Put your answer here</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">🛑 STOP</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#part-5-practice-with-using-python-classes-16-points">Part 5: Practice with using Python classes (16 points)</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#the-background">The background</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#modifying-the-class-to-alter-its-behavior-and-add-new-functionality">Modifying the class to alter its behavior and add new functionality</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#testing-your-fitdata-class-on-real-data">Testing your <code class="docutils literal notranslate"><span class="pre">FitData</span></code> class on real data</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id3">🛑 STOP</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#part-6-finishing-6-points">Part 6: Finishing (6 points)</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#assignment-wrap-up">Assignment wrap-up</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#congratulations-you-re-done">Congratulations, you’re done!</a></li>
+</ul>
+</li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section class="tex2jax_ignore mathjax_ignore" id="homework-assignment-1">
+<h1>Homework Assignment 1<a class="headerlink" href="#homework-assignment-1" title="Link to this heading">#</a></h1>
+<section id="git-practice-debugging-practice-and-new-python-packages-and-python-classes">
+<h2>Git practice, debugging practice, and new Python packages, and Python classes<a class="headerlink" href="#git-practice-debugging-practice-and-new-python-packages-and-python-classes" title="Link to this heading">#</a></h2>
+<section id="put-your-name-here">
+<h3><p style="text-align: right;"> ✅ Put your name here.</p><a class="headerlink" href="#put-your-name-here" title="Link to this heading">#</a></h3>
+</section>
+<section id="put-your-github-username-here">
+<h3><p style="text-align: right;"> ✅ Put your <em>GitHub username</em> here.</p><a class="headerlink" href="#put-your-github-username-here" title="Link to this heading">#</a></h3>
+</section>
+<section id="goals-for-this-homework-assignment">
+<h3>Goals for this homework assignment<a class="headerlink" href="#goals-for-this-homework-assignment" title="Link to this heading">#</a></h3>
+<p>By the end of this assignment, you should be able to:</p>
+<ul class="simple">
+<li><p>Use Git to create a repository, track changes to the files within the repository, and push those changes to a remote repository.</p></li>
+<li><p>Debug some basic Python code that involves Pandas.</p></li>
+<li><p>Read documentation and example code to use a new Python package</p></li>
+<li><p>Modify and use a simple Python class</p></li>
+</ul>
+<p>Work through the following assignment, making sure to follow all of the directions and answer all of the questions.</p>
+<p>There are <strong>68 points</strong> possible on this assignment. Point values for each part are included in the section headers and question prompts.</p>
+<p><strong>This assignment is due at 11:59 pm on Friday, February 21st.</strong> It should be uploaded into the “Homework Assignments” submission folder for Homework #1 on D2L.  Submission instructions can be found at the end of the notebook. <strong>You must also fill out a survey regarding this assignment.</strong> The link to this survey can also be found at the end of the notebook.</p>
+<p><a id="toc"></a></p>
+</section>
+</section>
+<section id="table-of-contents">
+<h2>Table of contents<a class="headerlink" href="#table-of-contents" title="Link to this heading">#</a></h2>
+<ol class="arabic simple" start="0">
+<li><p><a class="reference internal" href="#ofhrs"><span class="xref myst">Part 0: Office Hours and Help Room</span></a> (6 points)</p></li>
+<li><p><a class="reference internal" href="#gits"><span class="xref myst">Part 1: Git and CLI</span></a> (14 points)</p></li>
+<li><p><a class="reference internal" href="#debugging"><span class="xref myst">Part 2: Debugging</span></a> (7 points)</p></li>
+<li><p><a class="reference internal" href="#unfamiliar"><span class="xref myst">Part 3: Downloading and analyzing unfamiliar data</span></a> (8 points)</p></li>
+<li><p><a class="reference internal" href="#folium"><span class="xref myst">Part 4: Using documentation to use a new Python package</span></a> (11 points)</p></li>
+<li><p><a class="reference internal" href="#classes"><span class="xref myst">Part 5: Practice with using Python classes</span></a> (16 points)</p></li>
+<li><p><a class="reference internal" href="#conclusion"><span class="xref myst">Part 6: Finishing</span></a> (6 points)</p></li>
+</ol>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Calculate total points possible and print it</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Total number of points possible on this assignment is </span><span class="si">%i</span><span class="s2">.&quot;</span> <span class="o">%</span><span class="p">(</span><span class="mi">6</span><span class="o">+</span><span class="mi">14</span><span class="o">+</span><span class="mi">7</span><span class="o">+</span><span class="mi">8</span><span class="o">+</span><span class="mi">11</span><span class="o">+</span><span class="mi">16</span><span class="o">+</span><span class="mi">6</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+</div>
+<hr class="docutils" />
+<p><a id="ofhrs"></a>
+<a class="reference internal" href="#toc"><span class="xref myst">Back to ToC</span></a></p>
+</section>
+<section id="part-0-visiting-office-hours-or-help-room-6-points">
+<h2>Part 0: Visiting Office Hours or Help Room (6 points)<a class="headerlink" href="#part-0-visiting-office-hours-or-help-room-6-points" title="Link to this heading">#</a></h2>
+<section id="going-to-office-hours-or-help-room">
+<h3>Going to Office Hours or Help Room<a class="headerlink" href="#going-to-office-hours-or-help-room" title="Link to this heading">#</a></h3>
+<section id="why-are-we-doing-this">
+<h4>Why are we doing this?<a class="headerlink" href="#why-are-we-doing-this" title="Link to this heading">#</a></h4>
+<p>We want to make sure that everyone knows how to access the resources available to you. One of the best resources you have at your disposal is office hours/help room.</p>
+</section>
+<section id="what-will-you-do">
+<h4>What will you do?<a class="headerlink" href="#what-will-you-do" title="Link to this heading">#</a></h4>
+<p>(At minimum) Go to one office hour or help room session ​(it doesn’t matter which one you go to). Come with one question that you would like to talk about. It can be big or small. It can be about the homework, but it doesn’t have to be. It can be anything about the course or about computational modeling and data analysis in general.</p>
+<p>Once you get to office hours or help room, ask your question. All of the instructors for CMSE 202 (Professors, TAs, and LAs) will be adding to a running list of folks that we see during office hours; as long as your name appears on the list, you’ll get credit for this part of Homework 1.</p>
+<p><strong>NOTE:</strong> The day when the homework is due (<strong>Friday, February 21st at 11:59pm</strong>) will be the busiest time for folks to go to office hours or help room. You are <strong>STRONGLY</strong> encouraged to go to office hours or help room before Friday to get credit for this part of this assignment. (You should still feel free to go to office hours or helproom on Friday for help, though!)</p>
+<p>You can find the office hours calendar on the <a class="reference external" href="https://cmse.msu.edu/cmse202">course website</a>.</p>
+<p><strong>FINAL NOTE:</strong> If you are unable to attend office hours or help room, please contact the instructor to make alternative arrangements and explain why you are unable to attend.</p>
+<p><strong>✅ <strong>Question 0.1 (6 points)</strong></strong></p>
+<p>Type below the question you asked and <strong>who you asked it to</strong> (make sure you know who you’re talking to!). Make sure you double-check that the instructor made note of this.</p>
+<p>If you did not attend office hours or help room, please explain why.</p>
+<p><font size=6 color="#009600">✎</font> <em>Put your question here.</em></p>
+<p><font size=6 color="#009600">✎</font> <em>Put the instructor name here of the person you spoke with</em></p>
+<hr class="docutils" />
+<p><a id="gits"></a>
+<a class="reference internal" href="#toc"><span class="xref myst">Back to ToC</span></a></p>
+</section>
+</section>
+</section>
+<section id="part-1-cli-and-git-14-points">
+<h2>Part 1: CLI and Git (14 points)<a class="headerlink" href="#part-1-cli-and-git-14-points" title="Link to this heading">#</a></h2>
+<section id="setting-up-a-git-repository-to-track-your-progress-on-your-assignments">
+<h3>Setting up a git repository to track your progress on your assignments<a class="headerlink" href="#setting-up-a-git-repository-to-track-your-progress-on-your-assignments" title="Link to this heading">#</a></h3>
+<p><code class="docutils literal notranslate"><span class="pre">git</span></code> is a very important professional tool and we want you to get plenty of practice using it. The following set of questions prompt you to create a (private) Git repo for storing, updating, and turning in your homework assignments. You will <strong>share this repo with your course lead instructor and TA</strong> so that they can pull your completed assignments for grading.</p>
+<p>✅ <strong>Question 1.1 (2 points)</strong>:</p>
+<ol class="arabic simple">
+<li><p>On <a class="reference external" href="https://github.com">GitHub</a> make sure you are logged into your account and then, if you haven’t already, create a new <font color="red"><strong><em>private</em></strong></font> GitHub repository called <code class="docutils literal notranslate"><span class="pre">cmse202-s25-turnin</span></code>. <font color="red"><strong>Important note</strong></font>: you may have already created repository in a PCA, if you have, please use that one. If you have not, please create a new one.</p></li>
+<li><p>Once you’ve initialized the repository on GitHub, <strong>clone a copy of it onto JupyterHub or your computer</strong>.</p></li>
+</ol>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="c1"># Put the command you used to clone the repository here</span>
+</pre></div>
+</div>
+<p>✅ <strong>Question 1.2 (1 point)</strong>: Using the command line interface, move inside the repository folder</p>
+<p>What command did you use to enter into the folder?</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="c1"># Put the command to move into a new directory here.</span>
+</pre></div>
+</div>
+<p>✅ <strong>Question 1.3 (1 point)</strong>: Once inside the <code class="docutils literal notranslate"><span class="pre">cmse202-s25-turnin</span></code> repository, create a new folder called <code class="docutils literal notranslate"><span class="pre">hw-01</span></code>.</p>
+<p>What is the command to create the new folder ?</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="c1"># Put the command to create the folder/directory here</span>
+</pre></div>
+</div>
+<p>✅ <strong>Question 1.4 (1 point)</strong>: Move this notebook into that <strong>new directory</strong> in your repository then check the <strong><em>status</em></strong> of the repository</p>
+<p><font color="red"><strong>This is an important step</strong></font>: you’ll want to make sure you <strong>save and close</strong> the notebook before you do this step and then re-open it once you’ve added it to your repository. If you don’t do this, you could end up working on the wrong version of the notebook! Once you’ve moved the notebook correctly, re-open it and continue working on it.</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="c1"># Put the command you used to check the status of your repository here.</span>
+</pre></div>
+</div>
+<p>✅ <strong>Question 1.5 (1 point)</strong>: Copy and paste below the output of the status command.</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="c1"># Paste it here</span>
+</pre></div>
+</div>
+<p>✅ <strong>Question 1.6 (1 point)</strong>: What is the name of the current branch of the repository that you are in? (<em>Hint</em>: There should only be one branch at this time. We’ll learn more about branches in git later in the semester.)</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="c1"># Put your answer here</span>
+</pre></div>
+</div>
+<p>✅ <strong>Question 1.7 (3 points)</strong>:
+If you haven’t already, add your name and GitHub username to the top of the notebook, then add and commit <strong>ONLY</strong> the notebook.</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="c1"># Put the command(s) to add and commit here </span>
+</pre></div>
+</div>
+<p>What is the commit message you used ?</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="c1"># Copy your commit message here</span>
+</pre></div>
+</div>
+<p>✅ <strong>Question 1.8 (1 point):</strong> Before moving on. Check that the notebook you are working on is the correct one. Run the following cell. <strong>Are you in the new folder you just created?</strong> If not close this notebook and open the one in the <code class="docutils literal notranslate"><span class="pre">hw-01</span></code> folder. You’ll likely need to copy of over the work you did on the above questions if you were working on the wrong notebook.</p>
+<p>What command did you use to check which directory you are? What command did you use to list the files in the folder?</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="c1"># Put the command you used to push your changes to GitHub here</span>
+</pre></div>
+</div>
+<p>✅ <strong>Question 1.9 (3 points):</strong> Assuming that your notebook is in the right place and committed to your repository, <strong>push your changes to GitHub.</strong></p>
+<p>What command did you use to push your changes to GitHub?</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="c1"># Put the command you used to push your changes to GitHub here</span>
+</pre></div>
+</div>
+</section>
+<section id="before-moving-on">
+<h3>Before moving on…<a class="headerlink" href="#before-moving-on" title="Link to this heading">#</a></h3>
+<p><strong>Important</strong>: Make sure you’ve added your Professor and your TA as collaborators to your new “turnin” respository with “Read” access so that they can see your assignment. <strong>You should check <a class="reference external" href="https://msu-cmse-courses.github.io/cmse202-S25-jb/index.html">this website</a>  <em>for your section of the course</em> to get this information.</strong></p>
+<p><strong>Double-check the following</strong>: Make sure that the version of this notebook that you are working on is the same one that you just added to your repository! If you are working on a different copy of the notebook, <strong>none of your changes will be tracked</strong>.</p>
+<p>If everything went as intended, <strong>the file should now show up on your GitHub account</strong> in the “<code class="docutils literal notranslate"><span class="pre">cmse202-s25-turnin</span></code>” repository inside the <code class="docutils literal notranslate"><span class="pre">hw-01</span></code> directory that you just created.  Periodically, <strong>you’ll be asked to commit your changes to the repository. By the end of the assignment you should have multiple commits that correspond to your completion of each section (as specified below)</strong>. Of course, you can always commit your changes more often than that, if you wish.  It can be good to get into a habit of committing your changes any time you make a significant modification, or when you stop working on the project for a bit.</p>
+<hr class="docutils" />
+<p><a id="debugging"></a>
+<a class="reference internal" href="#toc"><span class="xref myst">Back to ToC</span></a></p>
+</section>
+</section>
+<section id="part-2-debugging-pandas-code-7-points">
+<h2>Part 2: Debugging Pandas code (7 points)<a class="headerlink" href="#part-2-debugging-pandas-code-7-points" title="Link to this heading">#</a></h2>
+<section id="reading-python-and-pandas-code-and-understanding-errors-and-error-messages">
+<h3>Reading Python and Pandas code and understanding errors and error messages<a class="headerlink" href="#reading-python-and-pandas-code-and-understanding-errors-and-error-messages" title="Link to this heading">#</a></h3>
+<p>In this section, you will practice reading and debugging code, specially examples that use Pandas (since we’ll be regularly using Pandas in the course and we spent some time reviewing Pandas in class). Debugging can be one of the most frustrating and time consuming part of a computational project, hence, it’s worth spending time parsing and debugging error messages.</p>
+<p>Review the following code. Make sure to read the comments to understand what the code is <em>supposed</em> to do. Then run the code and see what it outputs and/or the error message. Finally, <strong>make a copy of the code in the provided cell and then fix the code</strong>. When you fix the code <strong>add a comment to explain what was wrong with the original code</strong>.</p>
+<p><strong>IMPORTANT NOTE #1:</strong> not every block of code will result in an error message, but it won’t produce the desired output. Even if there is no error, there is something you need to fix within the code.</p>
+<p><strong>IMPORTANT NOTE #2:</strong> In some cases, the example may use a bit of Pandas code that you’re not familiar with yet, in these cases, you’ll need to consult the internet (or the Pandas documentation) to figure out what the code is doing. This is a very common practice in computational modeling and data analysis.</p>
+</section>
+<section id="import-pandas-before-moving-on">
+<h3>Import Pandas before moving on!<a class="headerlink" href="#import-pandas-before-moving-on" title="Link to this heading">#</a></h3>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Import Pandas</span>
+<span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span> 
+</pre></div>
+</div>
+</div>
+</div>
+<p>✅ <strong>Questions 2.1 (2 points)</strong>: Review the following piece of Pandas code, read the comments to understand what it is supposed to do, then run the code to see what the output is. <strong>DO NOT MODIFY THIS CODE CELL</strong>. (so that you can remember what the bug was)</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">## DO NOT CHANGE THIS CELL ##</span>
+
+<span class="c1"># Group df by column &#39;Subject&#39; and take the mean </span>
+
+<span class="n">df</span> <span class="o">=</span> <span class="n">pandas</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">({</span><span class="s1">&#39;Subject&#39;</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;Physics&#39;</span><span class="p">,</span> <span class="s1">&#39;Math&#39;</span><span class="p">,</span>
+                              <span class="s1">&#39;Math&#39;</span><span class="p">,</span> <span class="s1">&#39;Physics&#39;</span><span class="p">],</span>
+                   <span class="s1">&#39;Scores&#39;</span><span class="p">:</span> <span class="p">[</span><span class="mi">88</span><span class="p">,</span> <span class="mi">76</span><span class="p">,</span> <span class="mi">92</span><span class="p">,</span> <span class="mi">82</span><span class="p">]})</span>
+
+<span class="n">df</span><span class="o">.</span><span class="n">groupby</span><span class="p">(</span><span class="s1">&#39;Subject&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">mean</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>If you need to write any code to explore the nature of the bug, please do so in the cell below.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Put exploratory code here, if needed</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p><strong>DO THIS</strong>: Now that you understand what the bug is, fix it in the cell below and <strong>add a comment</strong> explaining what the bug was and how you fixed it.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Put your non-buggy code here</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>✅ <strong>Questions 2.2 (2 points)</strong>: Review the following piece of Pandas code, read the comments to understand what it is supposed to do, then run the code to see what the output is. <strong>DO NOT MODIFY THIS CODE CELL</strong>. (so that you can remember what the bug was)</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">## DO NOT CHANGE THIS CELL ##</span>
+
+<span class="c1">#use this pandas function to display all the dates between when hw1 is released until</span>
+<span class="c1">#when the hw is due</span>
+
+
+<span class="n">dates</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">date_range</span><span class="p">(</span><span class="s2">&quot;01312025&quot;</span><span class="p">,</span> <span class="n">periods</span><span class="o">=</span><span class="mi">22</span><span class="p">)</span>
+
+<span class="n">dates</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>If you need to write any code to explore the nature of the bug, please do so in the cell below.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Put exploratory code here, if needed</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p><strong>DO THIS</strong>: Now that you understand what the bug is, fix it in the cell below and <strong>add a comment</strong> explaining what the bug was and how you fixed it.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Put your non-buggy code here</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>✅ <strong>Questions 2.3 (2 points)</strong>: Review the following piece of Pandas code, read the comments to understand what it is supposed to do, then run the code to see what the output is. <strong>DO NOT MODIFY THIS CODE CELL</strong>. (so that you can remember what the bug was)</p>
+<p><strong>Note</strong> Assume the original dataframe ‘df’ cannot be changed. ie don’t modify the values in ‘df’ manually by erasing and re-typing, but by using functions and data cleaning methods to modify the data.</p>
+<p><strong>Note</strong>: The resulting dataframe should look like this:</p>
+<div class="pst-scrollable-table-container"><table class="table">
+<thead>
+<tr class="row-odd"><th class="head text-right"><p></p></th>
+<th class="head text-right"><p>A</p></th>
+<th class="head text-right"><p>B</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td class="text-right"><p>0</p></td>
+<td class="text-right"><p>3</p></td>
+<td class="text-right"><p>3</p></td>
+</tr>
+<tr class="row-odd"><td class="text-right"><p>1</p></td>
+<td class="text-right"><p>8</p></td>
+<td class="text-right"><p>4</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">## DO NOT CHANGE THIS CELL ##</span>
+
+<span class="c1"># Take a DataFrame with two columns of numbers</span>
+<span class="c1"># multiply the two columns by each other</span>
+<span class="c1"># Replace the old column &#39;A&#39; with the new numbers</span>
+<span class="c1"># Display the DataFrame</span>
+<span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">({</span><span class="s1">&#39;A&#39;</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;1&#39;</span><span class="p">,</span> <span class="s1">&#39;2&#39;</span><span class="p">],</span> <span class="s1">&#39;B&#39;</span><span class="p">:</span> <span class="p">[</span><span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">]})</span>
+<span class="n">df</span><span class="p">[</span><span class="s1">&#39;A&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="s1">&#39;A&#39;</span><span class="p">]</span><span class="o">*</span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;B&#39;</span><span class="p">]</span>
+<span class="n">df</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>If you need to write any code to explore the nature of the bug, please do so in the cell below.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Put exploratory code here, if needed</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p><strong>DO THIS</strong>: Now that you understand what the bug is, fix it in the cell below and <strong>add a comment</strong> explaining what the bug was and how you fixed it.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Put your non-buggy code here</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+</section>
+<hr class="docutils" />
+<section id="stop">
+<h2>🛑 STOP<a class="headerlink" href="#stop" title="Link to this heading">#</a></h2>
+<p><strong>Pause to add and commit your changes to your Git repository! (1 point)</strong></p>
+<p>Take a moment to save your notebook, commit the changes to your Git repository using the commit message <strong>“Committing Part 2”</strong>, no need to push the changes to GitHub, but you can if you want.</p>
+<hr class="docutils" />
+<p><a id="unfamiliar"></a>
+<a class="reference internal" href="#toc"><span class="xref myst">Back to ToC</span></a></p>
+</section>
+<section id="part-3-downloading-and-analyzing-unfamiliar-data-8-points">
+<h2>Part 3: Downloading and analyzing unfamiliar data (8 points)<a class="headerlink" href="#part-3-downloading-and-analyzing-unfamiliar-data-8-points" title="Link to this heading">#</a></h2>
+<p>For this part of the homework assignment, you’re to download and analyze a dataset potentially unknown to you. Go to this website and dowload the associated dataset (perhaps try download data as zip). [<a class="reference external" href="https://www.kaggle.com/datasets/jaidalmotra/pokemon-dataset/data">https://www.kaggle.com/datasets/jaidalmotra/pokemon-dataset/data</a>]. You’ll perform some simple, exploratory analysis.</p>
+<p>Make sure this file and your hw file are in the same folder location!</p>
+<p>✅ <strong>Question 3.1 (2 points)</strong>: <strong>Do this now:</strong> read in this file using pandas and display the first 16 rows. You should see the Pokemon names and numbers along with types and other stats.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#put your code here</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>✅ <strong>Question 3.2 (2 points)</strong>: Now let’s do some cleaning. Create a new dataframe with only the water type pokemon. Do this by creating a mask to filter the original dataset with the type1 column. How many pokemon have the water typing (using this masking method)?</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">### Put your code here</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>✅ <strong>Question 3.3 (3 points)</strong>: <strong>Construct a new data frame</strong> from your water type dataframe using a mask by only retaining the water pokemon with an attack stat of 100 or higher and name this dataframe “df_water_attackers”. Do the same thing with a different column of stats (hp, defense, sp_attack, sp_defense, or speed) and give this dataframe an appropriate name as well. Which of these two dataframes has more pokemon and how did you answer this question? (show your work/code)</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">### Put your code here</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<hr class="docutils" />
+<section id="id1">
+<h2>🛑 STOP<a class="headerlink" href="#id1" title="Link to this heading">#</a></h2>
+<p><strong>Pause to commit your changes to your Git repository! (1 point)</strong></p>
+<p>Take a moment to save your notebook, commit the changes to your Git repository using the commit message “<strong>Committing Part 3</strong>”, no need to push the changes to GitHub yet, but you can if you want.</p>
+<hr class="docutils" />
+<p><a id="folium"></a>
+<a class="reference internal" href="#toc"><span class="xref myst">Back to ToC</span></a></p>
+</section>
+<section id="part-4-finding-and-using-a-python-package-from-github-11-points">
+<h2>Part 4: Finding and Using a Python Package from Github (11 points)<a class="headerlink" href="#part-4-finding-and-using-a-python-package-from-github-11-points" title="Link to this heading">#</a></h2>
+<p>In this part of the assignment you will need to go through a Github page with a new package.</p>
+<p>We will use a new Python package <code class="docutils literal notranslate"><span class="pre">pyjokes</span></code>. As you work on this part of the assignment, you should take advantage of the <a class="reference external" href="https://github.com/pyjokes/pyjokes">pyjokes Github page</a> which contains some really useful information</p>
+<p>✅ <strong>Question 4.1 (1 point)</strong>: If you don’t already have the <code class="docutils literal notranslate"><span class="pre">pyjokes</span></code> package installed, what command could you use to install it? (you should run this command on the command line, if you need to).</p>
+<p>If you do already have it installed, what command did you use to install it?</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="c1"># Put the command for installing pyjokes here!</span>
+</pre></div>
+</div>
+<p>✅ <strong>Question 4.2 (2 points)</strong>:  <strong>Use pyjokes to output a joke in this notebook.</strong></p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">### Put your code here</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>✅ <strong>Question 4.3 (2 points)</strong>: display three jokes from pyjokes with one in Spanish, one in Russian, and one in a language of your choice other than English, Spanish, or Russian.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">### Put your code here</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>✅ <strong>Question 4.4 (1 point)</strong>: What are the names of the two/three different joke categories?</p>
+<section id="put-your-answer-here">
+<h3>Put your answer here<a class="headerlink" href="#put-your-answer-here" title="Link to this heading">#</a></h3>
+<p>✅ <strong>Question 4.5 (4 points)</strong>:  <strong>Where are the jokes coming from? Find the file that has the joke data in english and add this file to your hw_1 folder. How did you accomplish this task? Please describe in detail what steps you took to find the file and add it to your hw_1 folder.</strong></p>
+</section>
+</section>
+<hr class="docutils" />
+<section id="id2">
+<h2>🛑 STOP<a class="headerlink" href="#id2" title="Link to this heading">#</a></h2>
+<p><strong>Pause to commit your changes to your Git repository! (1 point)</strong></p>
+<p>Take a moment to save your notebook, commit the changes to your Git repository using the commit message “<strong>Committing Part 4</strong>”, no need to push the changes to GitHub yet, but you can if you want.</p>
+<hr class="docutils" />
+<p><a id="classes"></a>
+<a class="reference internal" href="#toc"><span class="xref myst">Back to ToC</span></a></p>
+</section>
+<section id="part-5-practice-with-using-python-classes-16-points">
+<h2>Part 5: Practice with using Python classes (16 points)<a class="headerlink" href="#part-5-practice-with-using-python-classes-16-points" title="Link to this heading">#</a></h2>
+<p>For this part of the assignment, you’re going to work on fleshing out a partially constructed Python class and then experiment with using it to see if it works as intended.</p>
+<section id="the-background">
+<h3>The background<a class="headerlink" href="#the-background" title="Link to this heading">#</a></h3>
+<p>Curve fitting is a commonly used method to develop a math function that represents the behavior of a mdataset. It aims to find the best-fit curve that minimizes the sum of squared differences between the predicted and actual values.</p>
+<p>In this part, we start with reviewing a sequential (procedurial) code and then appreciate the essentials of OOP code. Below is sequential code using <a class="reference external" href="https://docs.scipy.org/doc/scipy/reference/generated/scipy.optimize.curve_fit.html#scipy.optimize.curve_fit">scipy optimization libray</a> to curve-fit a set of data points to a function:</p>
+<p><span class="math notranslate nohighlight">\(f(x) = a\times\exp(-bx)+c\)</span>,</p>
+<p>where the coefficients <span class="math notranslate nohighlight">\(a\)</span>, <span class="math notranslate nohighlight">\(b\)</span>, and <span class="math notranslate nohighlight">\(c\)</span> are to be determined.</p>
+<p>First, let’s download the dataset using <code class="docutils literal notranslate"><span class="pre">curl</span></code> command from the URL: <code class="docutils literal notranslate"><span class="pre">https://raw.githubusercontent.com/huichiayu/cmse202-s25-supllemental_data/refs/heads/main/HW01/xy_dataset.csv</span></code>.</p>
+<p><strong>(1 point)</strong></p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># write your code in this cell</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>Run the cell below to load necesary libraries.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+<span class="kn">from</span> <span class="nn">scipy.optimize</span> <span class="kn">import</span> <span class="n">curve_fit</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>Use Pandas to read the data. You should have two numpy array: one for xdata and the other for ydata. Plot this dataset in scatter plot. <strong>(1 point)</strong></p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># write your code in this cell</span>
+
+
+
+<span class="c1"># print the values</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">xdata</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">ydata</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<hr class="docutils" />
+<p>Below is the sequential code. <strong>Review and run it. Make sure you understand what this code is doing.</strong></p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># procedurial code</span>
+<span class="c1"># plot data points</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">xdata</span><span class="p">,</span> <span class="n">ydata</span><span class="p">,</span> <span class="s1">&#39;bo&#39;</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;data&#39;</span><span class="p">)</span>
+
+
+<span class="c1">## define the function to be fitted. Here we use an exponential function. </span>
+<span class="k">def</span> <span class="nf">func</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">,</span> <span class="n">c</span><span class="p">):</span>
+    <span class="k">return</span> <span class="n">a</span> <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">exp</span><span class="p">(</span><span class="o">-</span><span class="n">b</span> <span class="o">*</span> <span class="n">x</span><span class="p">)</span> <span class="o">+</span> <span class="n">c</span>
+
+
+<span class="c1">## use curve fitting function in the Scipy library</span>
+<span class="n">popt</span><span class="p">,</span> <span class="n">pcov</span> <span class="o">=</span> <span class="n">curve_fit</span><span class="p">(</span><span class="n">func</span><span class="p">,</span> <span class="n">xdata</span><span class="p">,</span> <span class="n">ydata</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">popt</span><span class="p">)</span>
+
+<span class="c1">## draw the obtained curve</span>
+<span class="n">new_x</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">100</span><span class="p">)</span>
+<span class="n">new_y</span> <span class="o">=</span><span class="n">func</span><span class="p">(</span><span class="n">new_x</span><span class="p">,</span> <span class="n">popt</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">popt</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="n">popt</span><span class="p">[</span><span class="mi">2</span><span class="p">])</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">new_x</span><span class="p">,</span> <span class="n">new_y</span><span class="p">,</span> <span class="s1">&#39;r-&#39;</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;data&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<hr class="docutils" />
+<p>Now let’s create a Python class with the same functionalities for curve fitting. Below is a skeleton code as the starting point.  <strong>Review the code and try running it. Make sure you understand what this code is doing.</strong></p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+<span class="kn">from</span> <span class="nn">scipy.optimize</span> <span class="kn">import</span> <span class="n">curve_fit</span>
+
+
+
+<span class="k">class</span> <span class="nc">FitData</span><span class="p">:</span>
+
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="n">xdata</span><span class="p">,</span> <span class="n">ydata</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">xdata</span> <span class="o">=</span> <span class="n">xdata</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">ydata</span> <span class="o">=</span> <span class="n">ydata</span>
+        
+    <span class="k">def</span> <span class="nf">summary_stats</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="p">{</span>
+            <span class="s2">&quot;mean_x&quot;</span><span class="p">:</span> <span class="n">np</span><span class="o">.</span><span class="n">mean</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">xdata</span><span class="p">),</span> 
+            <span class="s2">&quot;std_x&quot;</span><span class="p">:</span> <span class="n">np</span><span class="o">.</span><span class="n">std</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">xdata</span><span class="p">),</span>
+            <span class="s2">&quot;mean_y&quot;</span><span class="p">:</span> <span class="n">np</span><span class="o">.</span><span class="n">mean</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">ydata</span><span class="p">),</span>
+            <span class="s2">&quot;std_y&quot;</span><span class="p">:</span> <span class="n">np</span><span class="o">.</span><span class="n">std</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">ydata</span><span class="p">)</span>
+        <span class="p">}</span>
+
+    <span class="k">def</span> <span class="nf">CurveFit_model</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="n">popt</span> <span class="o">=</span> <span class="n">curve_fit</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">func</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">xdata</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">ydata</span><span class="p">)</span>
+        <span class="k">return</span> <span class="p">{</span>
+            <span class="s2">&quot;coefficient a&quot;</span><span class="p">:</span> <span class="n">popt</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span>
+            <span class="s2">&quot;coefficient b&quot;</span><span class="p">:</span> <span class="n">popt</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> 
+            <span class="s2">&quot;coefficient c&quot;</span><span class="p">:</span> <span class="n">popt</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span>
+        <span class="p">}</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="modifying-the-class-to-alter-its-behavior-and-add-new-functionality">
+<h3>Modifying the class to alter its behavior and add new functionality<a class="headerlink" href="#modifying-the-class-to-alter-its-behavior-and-add-new-functionality" title="Link to this heading">#</a></h3>
+<p>For the remainder of this section of the assignment, <strong>you will be modifying the code of the class</strong> ( provided above) to add new functionality and alter its behavior.</p>
+<!--
+You will then be provided with snippets of code designed to test your modifications and confirm that you've implemented them as intended. -->
+<p><strong>When you make edits to the class provided, make sure to run the cell to save your changes before running tests!</strong></p>
+<p><em><font color="red">Note</font></em>: Feel free to experiment with using one of the generative AI tools out there to help you expand upon and modify the initial starting point for this new Python class. If you do this, <strong>make sure to include a link to the tool you used in the markdown cell below along with the prompt you used to generate the code and the date you accessed the tool.</strong> Additionally, it is important to make sure that you understand the code you’re working with, so make sure to review the code that is generated and make sure you understand what it is doing!</p>
+<p>Let’s define the target function in the cell below. Run it.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+
+<span class="k">def</span> <span class="nf">func</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">,</span> <span class="n">c</span><span class="p">):</span>
+    <span class="k">return</span> <span class="n">a</span> <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">exp</span><span class="p">(</span><span class="o">-</span><span class="n">b</span> <span class="o">*</span> <span class="n">x</span><span class="p">)</span> <span class="o">+</span> <span class="n">c</span>
+    
+</pre></div>
+</div>
+</div>
+</div>
+<p>Copy the OOP code to this cell and work from here.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Copy the code to this cell.</span>
+<span class="c1"># For the assignment prompts that follow, EDIT THIS VERSION OF THE PYTHON CLASS</span>
+<span class="c1"># This should help to ensure that you can always fall back to the original version provided above, should you need to.</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>✅ <strong>Questions 5.1 (3 points)</strong>: Test the class by <strong>running the following code to see what the output is</strong>. <strong>Debug the <code class="docutils literal notranslate"><span class="pre">FitData</span></code> class.</strong> <strong>DO NOT MODIFY THIS CODE CELL</strong>. (so that you can remember what the bug was)</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">## DO NOT CHANGE THIS CELL ##</span>
+
+<span class="c1"># This is an example usage of the class &quot;ModelData&quot; If it doesn&#39;t work, you need to make changes to the class.</span>
+<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+
+<span class="n">fn</span> <span class="o">=</span> <span class="n">func</span>
+
+<span class="n">data</span> <span class="o">=</span> <span class="n">FitData</span><span class="p">(</span><span class="n">xdata</span><span class="p">,</span> <span class="n">ydata</span><span class="p">)</span>
+<span class="n">stats</span> <span class="o">=</span> <span class="n">data</span><span class="o">.</span><span class="n">summary_stats</span><span class="p">()</span>
+<span class="n">model</span> <span class="o">=</span> <span class="n">data</span><span class="o">.</span><span class="n">CurveFit_model</span><span class="p">(</span><span class="n">func</span><span class="p">)</span>
+
+
+<span class="nb">print</span><span class="p">(</span><span class="n">stats</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">model</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p><strong>DO THIS</strong>: Now that you understand what the bug(s) is(are), fix it(them) in the cell below and <strong>add a comment</strong> explaining what the bug(s) was(were) and how you fixed it.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Put your non-buggy code here</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>✅ <strong>Question 5.2 (4 points)</strong>: Now, <strong>create a new class method named <code class="docutils literal notranslate"><span class="pre">plot_model</span></code>.</strong> It takes three input arguments: <code class="docutils literal notranslate"><span class="pre">magnitude</span></code>, <code class="docutils literal notranslate"><span class="pre">exponet</span></code>, and <code class="docutils literal notranslate"><span class="pre">intercept</span></code>. For the output, it generates two plots on the same figure: one is the scatter data points {(xdata, ydata)} and the other is the fitted curve.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Put your code here</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>✅ <strong>Question 5.3 (2 points)</strong>: Create a new class method called <code class="docutils literal notranslate"><span class="pre">predict</span></code> that predicts and returns the model prediction for a given input value <span class="math notranslate nohighlight">\(x\)</span>.</p>
+<p>If your <code class="docutils literal notranslate"><span class="pre">predict</span></code> method in <code class="docutils literal notranslate"><span class="pre">FitData</span></code> class works well, you should be able to test your <code class="docutils literal notranslate"><span class="pre">FitData</span></code> model using the cell below.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">## DO NOT CHANGE THIS CELL ##</span>
+
+<span class="c1"># This is an example usage of the &quot;predict&quot; method. If it doesn&#39;t work, you need to make changes to your method.</span>
+
+<span class="n">CurvF_test1</span> <span class="o">=</span> <span class="n">FitData</span><span class="p">(</span><span class="n">xdata</span><span class="p">,</span> <span class="n">ydata</span><span class="p">)</span>
+<span class="n">CurvF_test1</span><span class="o">.</span><span class="n">CurveFit_model</span><span class="p">(</span><span class="n">func</span><span class="p">)</span>
+<span class="n">CurvF_test1</span><span class="o">.</span><span class="n">plot_model</span><span class="p">()</span>
+
+<span class="n">x_new</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mf">5.0</span><span class="p">,</span> <span class="mf">6.5</span><span class="p">,</span> <span class="o">-</span><span class="mf">1.5</span><span class="p">])</span> 
+<span class="n">y_pred</span> <span class="o">=</span> <span class="n">CurvF_test1</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="n">x_new</span><span class="p">)</span>
+
+<span class="n">y_pred</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Put your code here</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="testing-your-fitdata-class-on-real-data">
+<h3>Testing your <code class="docutils literal notranslate"><span class="pre">FitData</span></code> class on real data<a class="headerlink" href="#testing-your-fitdata-class-on-real-data" title="Link to this heading">#</a></h3>
+<p>Now that you have an enhanced version of the initial <code class="docutils literal notranslate"><span class="pre">FitData</span></code> class, let’s see if it works as intended on some real data! Let’s see if your new class produces results that makes sense on Iris data.</p>
+<p>✅ <strong>Question 5.4 (4 points)</strong>: <strong>You will need to do this in the following steps:</strong></p>
+<ul class="simple">
+<li><p>First, download the Iris data from <a class="reference external" href="https://raw.githubusercontent.com/yangy5/HWFiles/main/Iris.csv">https://raw.githubusercontent.com/yangy5/HWFiles/main/Iris.csv</a>.</p></li>
+<li><p>Extract the data of species “versicolor”.</p></li>
+<li><p>Extract the data “sepal_length” and “sepal_width” from your versicolor data frame and save these values in two numpy arrays. (1 pt)</p></li>
+<li><p>Next, create a new instance of your <code class="docutils literal notranslate"><span class="pre">FitData</span></code> class, then use these numpy arrays as data points to fit the target curve given eariler. (2 pt)</p></li>
+<li><p>Finally, use your <code class="docutils literal notranslate"><span class="pre">plot_model</span></code> method (see <strong>Question 5.2</strong>) to plot the line as well as all the data points. (1 pt)</p></li>
+</ul>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># download the data using curl</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># use Pandas to load data</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Fit and plot the Iris sepal_length and sepal_width data</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+</section>
+<hr class="docutils" />
+<section id="id3">
+<h2>🛑 STOP<a class="headerlink" href="#id3" title="Link to this heading">#</a></h2>
+<p><strong>Pause to commit your changes to your Git repository! (1 point)</strong></p>
+<p>Take a moment to save your notebook, commit the changes to your Git repository using the commit message “<strong>Committing Part 5</strong>”, no need to push the changes to GitHub yet, but you can if you want.</p>
+<hr class="docutils" />
+<p><a id="conclusion"></a>
+<a class="reference internal" href="#toc"><span class="xref myst">Back to ToC</span></a></p>
+</section>
+<section id="part-6-finishing-6-points">
+<h2>Part 6: Finishing (6 points)<a class="headerlink" href="#part-6-finishing-6-points" title="Link to this heading">#</a></h2>
+<p><strong>Question 6.1 (2 points):</strong> Have you put <strong>your name</strong> and <strong>GitHub username</strong> at the top of your notebook?</p>
+<p><strong>Question 6.2 (2 points):</strong> Have you added the <strong>TA</strong> and <strong>Instructor</strong> to your GitHub repository? (You should have done this in Part 1, and they should have shared this information via Slack)</p>
+<p><strong>Question 6.3 (2 points):</strong> Finally, push your repository to GitHub so that all of the commits that you have been making along the way show up on GitHub.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Put the command you used to push to GitHub here</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p><strong>NOTE:</strong> The grader will be able to see your commit messages and whether you pushed the repo at this stage, if everything have gone as planned. The version on Github will be graded for this assignment.</p>
+</section>
+<hr class="docutils" />
+<section id="assignment-wrap-up">
+<h2>Assignment wrap-up<a class="headerlink" href="#assignment-wrap-up" title="Link to this heading">#</a></h2>
+<p>Please fill out the form that appears when you run the code below.  <strong>You must completely fill this out in order to receive credit for the assignment!</strong></p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">IPython.display</span> <span class="kn">import</span> <span class="n">HTML</span>
+<span class="n">HTML</span><span class="p">(</span>
+<span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">&lt;iframe </span>
+<span class="sd">	src=&quot;https://forms.office.com/r/XKjjVkQDca&quot; </span>
+<span class="sd">	width=&quot;800px&quot; </span>
+<span class="sd">	height=&quot;600px&quot; </span>
+<span class="sd">	frameborder=&quot;0&quot; </span>
+<span class="sd">	marginheight=&quot;0&quot; </span>
+<span class="sd">	marginwidth=&quot;0&quot;&gt;</span>
+<span class="sd">	Loading...</span>
+<span class="sd">&lt;/iframe&gt;</span>
+<span class="sd">&quot;&quot;&quot;</span>
+<span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<section id="congratulations-you-re-done">
+<h3>Congratulations, you’re done!<a class="headerlink" href="#congratulations-you-re-done" title="Link to this heading">#</a></h3>
+<p>If you like, you can upload this file to D2L for a record. Nevertheless, <strong>we will grade the copy on GitHub</strong>.</p>
+<p>© Copyright 2025,  Department of Computational Mathematics, Science and Engineering at Michigan State University</p>
+</section>
+</section>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "conda-base-py"
+        },
+        kernelOptions: {
+            name: "conda-base-py",
+            path: "./homework/SS25/HW01"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'conda-base-py'</script>
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="../../../daily/Day-23/Day-23_Pre-Class_PCA-STUDENT.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">Pre-Class Assignment: Principal Component Analysis</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="../HW02/HW02_Part1-Orbits-SS25-STUDENT.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Homework Assignment 2</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <dialog id="pst-secondary-sidebar-modal"></dialog>
+                <div id="pst-secondary-sidebar" class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#git-practice-debugging-practice-and-new-python-packages-and-python-classes">Git practice, debugging practice, and new Python packages, and Python classes</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#put-your-name-here"><p style="text-align: right;"> ✅ Put your name here.</p></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#put-your-github-username-here"><p style="text-align: right;"> ✅ Put your <em>GitHub username</em> here.</p></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#goals-for-this-homework-assignment">Goals for this homework assignment</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#table-of-contents">Table of contents</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#part-0-visiting-office-hours-or-help-room-6-points">Part 0: Visiting Office Hours or Help Room (6 points)</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#going-to-office-hours-or-help-room">Going to Office Hours or Help Room</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#why-are-we-doing-this">Why are we doing this?</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#what-will-you-do">What will you do?</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#part-1-cli-and-git-14-points">Part 1: CLI and Git (14 points)</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#setting-up-a-git-repository-to-track-your-progress-on-your-assignments">Setting up a git repository to track your progress on your assignments</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#before-moving-on">Before moving on…</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#part-2-debugging-pandas-code-7-points">Part 2: Debugging Pandas code (7 points)</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#reading-python-and-pandas-code-and-understanding-errors-and-error-messages">Reading Python and Pandas code and understanding errors and error messages</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#import-pandas-before-moving-on">Import Pandas before moving on!</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#stop">🛑 STOP</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#part-3-downloading-and-analyzing-unfamiliar-data-8-points">Part 3: Downloading and analyzing unfamiliar data (8 points)</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">🛑 STOP</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#part-4-finding-and-using-a-python-package-from-github-11-points">Part 4: Finding and Using a Python Package from Github (11 points)</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#put-your-answer-here">Put your answer here</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">🛑 STOP</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#part-5-practice-with-using-python-classes-16-points">Part 5: Practice with using Python classes (16 points)</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#the-background">The background</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#modifying-the-class-to-alter-its-behavior-and-add-new-functionality">Modifying the class to alter its behavior and add new functionality</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#testing-your-fitdata-class-on-real-data">Testing your <code class="docutils literal notranslate"><span class="pre">FitData</span></code> class on real data</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id3">🛑 STOP</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#part-6-finishing-6-points">Part 6: Finishing (6 points)</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#assignment-wrap-up">Assignment wrap-up</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#congratulations-you-re-done">Congratulations, you’re done!</a></li>
+</ul>
+</li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By MSU CMSE
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2025.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script defer src="../../../_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf"></script>
+<script defer src="../../../_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>

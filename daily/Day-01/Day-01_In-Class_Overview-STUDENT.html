@@ -1,0 +1,1007 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="../../" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>In-class Notebook: Welcome to CMSE202 &#8212; CMSE 202 Course Website</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  <!--
+    this give us a css class that will be invisible only if js is disabled
+  -->
+  <noscript>
+    <style>
+      .pst-js-only { display: none !important; }
+
+    </style>
+  </noscript>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../../_static/styles/theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
+<link href="../../_static/styles/pydata-sphinx-theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
+
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=b76e3c8a" />
+    <link rel="stylesheet" type="text/css" href="../../_static/styles/sphinx-book-theme.css?v=a3416100" />
+    <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css?v=13237357" />
+    <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="../../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-thebe.css?v=4fa983c6" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-design.min.css?v=95c83b7e" />
+  
+  <!-- So that users can add custom icons -->
+  <script src="../../_static/scripts/fontawesome.js?digest=8878045cc6db502f8baf"></script>
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../../_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf" />
+<link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf" />
+
+    <script src="../../_static/documentation_options.js?v=9eb32ce0"></script>
+    <script src="../../_static/doctools.js?v=9a2dae69"></script>
+    <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../../_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="../../_static/copybutton.js?v=f281be69"></script>
+    <script src="../../_static/scripts/sphinx-book-theme.js?v=887ef09a"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../../_static/togglebutton.js?v=4a39c7ea"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="../../_static/design-tabs.js?v=f930bc37"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script async="async" src="../../_static/sphinx-thebe.js?v=c100c467"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'daily/Day-01/Day-01_In-Class_Overview-STUDENT';</script>
+    <link rel="icon" href="../../_static/logo.png"/>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="Day 2" href="../../section_files/day_2.html" />
+    <link rel="prev" title="Day 1" href="../../section_files/day_1.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  <meta name="docsearch:version" content="" />
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
+  
+  <dialog id="pst-search-dialog">
+    
+<form class="bd-search d-flex align-items-center"
+      action="../../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         placeholder="Search..."
+         aria-label="Search..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form>
+  </dialog>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+      <dialog id="pst-primary-sidebar-modal"></dialog>
+      <div id="pst-primary-sidebar" class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="../../index.html">
+  
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="../../_static/logo.png" class="logo__image only-light" alt="CMSE 202 Course Website - Home"/>
+    <img src="../../_static/logo.png" class="logo__image only-dark pst-js-only" alt="CMSE 202 Course Website - Home"/>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item">
+
+<button class="btn search-button-field search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+ <i class="fa-solid fa-magnifying-glass"></i>
+ <span class="search-button__default-text">Search</span>
+ <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+</button></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">Course Materials</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../../course_materials/CMSE202_Syllabus.html">Syllabus</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../course_materials/CMSE202_Calendar.html">Schedule</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../course_materials/CMSE202_HelpRoomCalendar.html">Office Hours and Help Room</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../course_materials/SoftwareSetupGuide.html">Software Setup Guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../course_materials/CMSE202_GenerativeAI_Policy.html">Generative AI Policy</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://upload.wikimedia.org/wikipedia/commons/7/79/Unix_command_cheatsheet.pdf">CLI (Unix/Mac/Linux) commands cheat sheet</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../course_materials/BashVsPowershell_CheatSheet.html">Bash vs PowerShell</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://wac-cdn.atlassian.com/dam/jcr:e7e22f25-bba2-4ef1-a197-53f46b6df4a5/SWTM-2088_Atlassian-Git-Cheatsheet.pdf?cdnVersion=525">Git Cheat Sheet</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://raw.githubusercontent.com/msu-cmse-courses/cmse202-supplemental-data/main/documents/How-to-Access-Anaconda-Powershell-Prompt.pdf">How to Access “Anaconda Powershell Prompt” (for Windows users)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../course_materials/Pull_Request_Guide.html">Making and merging Pull Requests on GitHub</a></li>
+
+
+
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Semester Project</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../../course_materials/SemesterProjectDetails.html">Semester Project Details</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../course_materials/CMSE202_FinalProjectRequirementsAndGradingRubric.html">Semester Project Requirements and Grading Rubric</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Exams</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../../course_materials/MidtermStudyGuide.html">Midterm Study Guide</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Daily Content</span></p>
+<ul class="current nav bd-sidenav">
+<li class="toctree-l1 current active has-children"><a class="reference internal" href="../../section_files/day_1.html">Day 1</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul class="current">
+<li class="toctree-l2 current active"><a class="current reference internal" href="#">In-class Notebook: Welcome to CMSE202</a></li>
+
+
+
+
+
+
+
+
+
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../section_files/day_2.html">Day 2</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../Day-02/Day-02_Pre-Class_ReflectionAndCommandLineInterface-STUDENT.html">Pre-Class Assignment: Reflection and an introduction to the Command Line Interface (CLI)</a></li>
+
+
+
+<li class="toctree-l2"><a class="reference internal" href="../Day-02/Day-02_In-Class_CommandLineInterface-STUDENT.html">In-class Notebook: Command line interface</a></li>
+
+
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../section_files/day_3.html">Day 3</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../Day-03/Day-03_Pre-Class_PythonReview%2BGitIntro-STUDENT.html">Pre-Class Assignment: Python Review and Intro to Git</a></li>
+
+<li class="toctree-l2"><a class="reference internal" href="../Day-03/Day-03_In-Class_GitPractice-STUDENT.html">In-Class Assignment: Practice with Git and GitHub</a></li>
+
+
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../section_files/day_4.html">Day 4</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../Day-04/Day-04_Pre-Class_DownloadingFilesAndInstallingPackages-STUDENT.html">Pre-class Assignment: Python Packages</a></li>
+
+
+
+
+
+<li class="toctree-l2"><a class="reference internal" href="../Day-04/Day-04_In-Class_PythonPackagesAndMapPlotting-STUDENT.html">In-class Assignment: Installing Python Packages and Plotting with Maps in Python</a></li>
+
+
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../section_files/day_5.html">Day 5</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../Day-05/Day-05_Pre-Class_PandasReview-STUDENT.html">Pre-Class Assignment: Pandas Review</a></li>
+
+
+<li class="toctree-l2"><a class="reference internal" href="../Day-05/Day-05_In-Class_PandasReview-STUDENT.html">In-Class Assignment: Reviewing Pandas and exploring data</a></li>
+
+
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../section_files/day_6.html">Day 6</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../Day-06/Day-06_Pre-class_ObjectsClasses-STUDENT.html">Pre-class Assignment: Introduction to Object Oriented Programming (OOP)</a></li>
+
+
+<li class="toctree-l2"><a class="reference internal" href="../Day-06/Day-06_In-Class_ObjectsClasses-STUDENT.html">In-class Assignment: We have a Zoo!</a></li>
+
+
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../section_files/day_7.html">Day 7</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../Day-07/Day-07_Pre-class_ObjectInheritanceAndComposition-STUDENT.html">Pre-class Assignment: object inheritance and composition</a></li>
+
+
+<li class="toctree-l2"><a class="reference internal" href="../Day-07/Day-07_In-Class_ObjectInheritanceAndComposition-STUDENT.html">In-class Assignment: We have a Zoo! (part 2)</a></li>
+
+
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../section_files/day_8.html">Day 8</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../Day-08/Day-08_Pre-Class_SuperbugsABM-STUDENT.html">Pre-Class Assignment: Agent-based Modeling of Superbugs</a></li>
+
+
+
+
+
+<li class="toctree-l2"><a class="reference internal" href="../Day-08/Day-08_In-Class_ABMSuperbugs1-STUDENT.html">In-Class Assignment: Simulating Superbugs using agent-based modeling</a></li>
+
+
+
+
+
+
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../section_files/day_9.html">Day 9</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../Day-09/Day-09_Pre-Class_OOPAntForaging-STUDENT.html">Pre-Class Assignment: Reviewing another agent-based model built using Object Oriented Programming (OOP)</a></li>
+
+
+<li class="toctree-l2"><a class="reference internal" href="../Day-09/Day-09_In-Class_ABMSuperbugs2-STUDENT.html">In-Class Assignment: Agent Based Modeling of Superbugs (part 2)</a></li>
+
+
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../section_files/day_10.html">Day 10</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../Day-10/Day-10_Pre-Class_GraphTheory-STUDENT.html">Pre-Class Assignment: Conflicts in Git and Graph Theory</a></li>
+
+
+<li class="toctree-l2"><a class="reference internal" href="../Day-10/Day-10_In-Class_GraphTheory-STUDENT.html">In-Class Assignment: Graph Theory</a></li>
+
+
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../section_files/day_11.html">Day 11</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../Day-11/Day-11_Pre-Class_GraphTheoryCellTowers-STUDENT.html">Pre-class Assignment: Project Brainstorming &amp; Graph Theory and Cell Towers</a></li>
+
+
+
+
+
+<li class="toctree-l2"><a class="reference internal" href="../Day-11/Day-11_In-Class_GraphTheoryCellTowers-STUDENT.html">In-class Assignment: Graph Theory and Cell Towers</a></li>
+
+
+
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../section_files/day_12.html">Day 12</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../Day-12/Day-12_In-Class_ProjectProposals-STUDENT.html">In-Class Assignment: Reviewing Project Ideas</a></li>
+
+
+
+
+
+
+
+
+
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../section_files/day_13.html">Day 13</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../Day-13/Day-13_Pre-Class_Regression-STUDENT.html">Pre-Class Assignment: Regression</a></li>
+
+
+
+<li class="toctree-l2"><a class="reference internal" href="../Day-13/Day-13_In-Class-Regression-STUDENT.html">In-Class Assignment: Linear Regression</a></li>
+
+
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../section_files/day_14.html">Day 14</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../Day-14/Day-14_Pre-Class-PolynomialRegression-STUDENT.html">Pre-Class Assignment: Polynomial Regression</a></li>
+
+
+
+<li class="toctree-l2"><a class="reference internal" href="../Day-14/Day-14_In-Class_MultipleRegression-STUDENT.html">In-Class Assignment: Multiple Regression</a></li>
+
+
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../section_files/day_15.html">Day 15</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../Day-15/Day-15_Pre-Class_MachineLearningIntro-STUDENT.html">Pre-class Assignment: Intro to Machine Learning</a></li>
+
+
+<li class="toctree-l2"><a class="reference internal" href="../Day-15/Day-15_In-Class_ML-LogisticRegression-STUDENT.html">In-Class Assignment: Machine Learning; classification with logistic regression</a></li>
+
+
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../section_files/day_16.html">Day 16</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../Day-16/Day-16_Pre-Class_GitRevisited-STUDENT.html">Pre-Class Assignment: Git with it! (collaborating with Git)</a></li>
+
+
+
+<li class="toctree-l2"><a class="reference internal" href="../Day-16/Day-16_In-Class_CollaboratingWithGit-STUDENT.html">In-Class Assignment: Collaborating with Git</a></li>
+
+
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../section_files/day_17.html">Day 17</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../Day-17/Day-17_Pre-Class_AIPracticeAndProductiveGroupwork-STUDENT.html">Pre-Class Assignment: Revisiting generative AI and reflecting on group work experiences</a></li>
+
+
+
+<li class="toctree-l2"><a class="reference internal" href="../Day-17/Day-17_In-Class_RevisitingGenerativeAIAndProjectPlanning-STUDENT.html">In-Class Assignment: Revisiting Generative AI and Project Planning</a></li>
+
+
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../section_files/day_18.html">Day 18</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../Day-18/Day-18_Pre-Class_Perceptron-STUDENT.html">Pre-class Assignment: The Perceptron Classifier (a simple neural network)</a></li>
+
+
+<li class="toctree-l2"><a class="reference internal" href="../Day-18/Day-18_In-Class_Perceptron-STUDENT.html">In-Class Assignment: The Perceptron Classifier</a></li>
+
+
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../section_files/day_19.html">Day 19</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../Day-19/Day-19_In-Class_PerceptronExtension-STUDENT.html">In-Class Challenge Assignment: Experimenting with the Perceptron</a></li>
+
+
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../section_files/day_20.html">Day 20</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../Day-20/Day-20_Pre-Class_SVMs-STUDENT.html">Pre-Class Assignment: Support Vector Machines (SVMs)</a></li>
+
+
+
+<li class="toctree-l2"><a class="reference internal" href="../Day-20/Day-20_In-Class_SVMs-STUDENT.html">In-Class Assignment: Machine learning with an SVM Classifier</a></li>
+
+
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../section_files/day_21.html">Day 21</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../Day-21/Day-21_Pre-Class_SVMs2-STUDENT.html">Pre-Class Assignment: Further exploration of SVMs</a></li>
+
+
+
+<li class="toctree-l2"><a class="reference internal" href="../Day-21/Day-21_In-Class_SVMs2-STUDENT.html">In-Class Assignment: SVMs continued</a></li>
+
+
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../section_files/day_22.html">Day 22</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../Day-22/Day-22_Pre-Class_ProjectUpdateReminder-STUDENT.html">Pre-Class Assignment: Project updates!</a></li>
+
+
+
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../section_files/day_23.html">Day 23</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../Day-23/Day-23_Pre-Class_PCA-STUDENT.html">Pre-Class Assignment: Principal Component Analysis</a></li>
+
+
+
+</ul>
+</details></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Homework</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../../homework/SS25/HW01/HW-01_GitPracticeDebuggingPythonPackagesAndClasses-SS25-STUDENT.html">Homework 1</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../homework/SS25/HW02/HW02_Part1-Orbits-SS25-STUDENT.html">Homework 2 Part 1</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../homework/SS25/HW02/HW02_Part2-Risk-SS25-STUDENT.html">Homework 2 Part 2</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../homework/SS25/HW03/HW-03_Regression-S25-STUDENT.html">Homework Assignment 3</a></li>
+
+
+
+
+
+
+
+
+
+<li class="toctree-l1"><a class="reference internal" href="../../homework/SS25/HW04/HW-04_Perceptron_SVM_STUDENT.html">Homework 4</a></li>
+
+
+
+
+
+
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+      <div class="sidebar-primary-item">
+<div id="ethical-ad-placement"
+      class="flat"
+      data-ea-publisher="readthedocs"
+      data-ea-type="readthedocs-sidebar"
+      data-ea-manual="true">
+</div></div>
+  </div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><button class="sidebar-toggle primary-toggle btn btn-sm" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</button></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="../../_sources/daily/Day-01/Day-01_In-Class_Overview-STUDENT.ipynb" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.ipynb</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button pst-js-only" aria-label="Color mode" data-bs-title="Color mode"  data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <i class="theme-switch fa-solid fa-sun                fa-lg" data-mode="light" title="Light"></i>
+  <i class="theme-switch fa-solid fa-moon               fa-lg" data-mode="dark"  title="Dark"></i>
+  <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"  title="System Settings"></i>
+</button>
+
+
+<button class="btn btn-sm pst-navbar-icon search-button search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+</button>
+<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</button>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>In-class Notebook: Welcome to CMSE202</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">In-class Notebook: Welcome to CMSE202</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#day-1">Day 1</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#cmse-202">CMSE 202</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#put-your-name-here"><p style="text-align: right;"> ✅ <strong>Put your name here</strong> </p></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#agenda-for-today-s-class">Agenda for today’s class</a></li>
+</ul>
+</li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#lets-get-started">1. Lets get started!</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#important-note-1-read-this">Important Note #1 (read this!)</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#importat-note-2-read-this-too">Importat Note #2 (read this, too!)</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#a-day-in-your-life-as-a-cmse-202-student">A day in your life as a CMSE 202 student</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#bring-your-computer-to-class-and-make-sure-it-is-charged-and-ready-to-go">✅ Bring your computer to class and make sure it is charged and ready to go</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#download-the-jupyter-notebook-of-the-day">✅ Download the jupyter notebook of the day</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#follow-along-with-your-instructor-to-check-in-on-anything-you-might-have-missed-or-been-confused-about-from-the-pre-class-assignment">✅ Follow along with your instructor to check-in on anything you might have missed or been confused about from the pre-class assignment</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#listen-for-details-about-the-plans-for-that-day-s-class-period">✅ Listen for details about the plans for that day’s class period</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#work-on-the-in-class-activity-with-your-group">✅ Work on the in-class activity <em>with your group</em>!</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#before-we-move-on-make-sure-you-can-access-the-jupyterhub-server-if-you-aren-t-already-using-it">Before we move on, make sure you can access the JupyterHub server (if you aren’t already using it)</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#do-this-activate-your-engineering-account">✅ Do This - Activate your engineering account</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#do-this-try-logging-into-the-engineering-jupyterhub-website">✅ Do This - Try logging into the Engineering JupyterHub Website</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#do-this-try-uploading-this-notebook-into-jupyterhub">✅ Do This - Try uploading this notebook into JupyterHub</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#reminder-pre-semester-survey">2. Reminder: Pre-semester Survey</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#do-this-execute-the-cell-below-by-pressing-shift-enter-with-the-cell-highlighted-to-test-your-access-to-microsoft-forms-if-you-haven-t-completed-the-pre-course-survey-do-it-now">✅ Do This - Execute the cell below by pressing shift+enter with the cell highlighted to test your access to Microsoft Forms. If you haven’t completed the pre-course survey, do it now.</a></li>
+</ul>
+</li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#review-the-class-syllabus-and-in-class-procedures">3. Review the class syllabus and in-class procedures</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#do-this-go-to-the-course-website-and-review-the-course-syllabus">✅ Do This - Go to the course website and review the course syllabus.</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#day-to-day-class-structure">Day-to-day class structure</a></li>
+</ul>
+</li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#double-checking-that-your-software-is-working">4. Double-checking that your software is working</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#time-for-group-interaction">5. Time for group interaction!</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#building-a-concept-map-for-cmse-201-as-a-group">6. Building a concept map for CMSE 201 <em>as a group</em></a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#day-1-wrap-up">7. Day 1 Wrap-up</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#a-final-check-in">A final check-in</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#congratulations-you-re-done-with-your-first-in-class-assignment">Congratulations, you’re done with your first in-class assignment!</a></li>
+</ul>
+</li>
+</ul>
+
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section class="tex2jax_ignore mathjax_ignore" id="in-class-notebook-welcome-to-cmse202">
+<h1>In-class Notebook: Welcome to CMSE202<a class="headerlink" href="#in-class-notebook-welcome-to-cmse202" title="Link to this heading">#</a></h1>
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="day-1">
+<h1>Day 1<a class="headerlink" href="#day-1" title="Link to this heading">#</a></h1>
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="cmse-202">
+<h1>CMSE 202<a class="headerlink" href="#cmse-202" title="Link to this heading">#</a></h1>
+<section id="put-your-name-here">
+<h2><p style="text-align: right;"> ✅ <strong>Put your name here</strong> </p><a class="headerlink" href="#put-your-name-here" title="Link to this heading">#</a></h2>
+<p><img src="https://cmse.msu.edu/_assets/images/about/image001.png" width= 400><p style="text-align: right;">
+Image from <a class="reference external" href="https://cmse.msu.edu/">https://cmse.msu.edu/</a></p>
+</p></section>
+<section id="agenda-for-today-s-class">
+<h2>Agenda for today’s class<a class="headerlink" href="#agenda-for-today-s-class" title="Link to this heading">#</a></h2>
+</p>
+<ol class="arabic simple">
+<li><p><a class="reference internal" href="#start"><span class="xref myst">Getting started</span></a></p></li>
+<li><p><a class="reference internal" href="#survey"><span class="xref myst">Reminder about pre-semester survey (for those that haven’t done it)</span></a></p></li>
+<li><p><a class="reference internal" href="#syllabus"><span class="xref myst">Review the class syllabus and in-class procedures</span></a></p></li>
+<li><p><a class="reference internal" href="#software"><span class="xref myst">Double-checking that your software is working</span></a></p></li>
+<li><p><a class="reference internal" href="#group-formation"><span class="xref myst">Group formation and introduction</span></a></p></li>
+<li><p><a class="reference internal" href="#concept-map"><span class="xref myst">Building a concept map for CMSE 201</span></a></p></li>
+</ol>
+<hr class="docutils" />
+<p><a id="start"></a></p>
+</section>
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="lets-get-started">
+<h1>1. Lets get started!<a class="headerlink" href="#lets-get-started" title="Link to this heading">#</a></h1>
+<section id="important-note-1-read-this">
+<h2>Important Note #1 (read this!)<a class="headerlink" href="#important-note-1-read-this" title="Link to this heading">#</a></h2>
+<p>Unless a situation arises where you are unable to attend class, you are <strong>expected</strong> to be present for every class period. In as much as it is possible, you should notify your instructor if, for any reason, you have to miss class.</p>
+</section>
+<section id="importat-note-2-read-this-too">
+<h2>Importat Note #2 (read this, too!)<a class="headerlink" href="#importat-note-2-read-this-too" title="Link to this heading">#</a></h2>
+<p>If you’re ever looking for information about class check the course website (<a class="reference external" href="https://msu-cmse-courses.github.io/cmse202-S25-jb/index.html">https://msu-cmse-courses.github.io/cmse202-S25-jb/index.html</a>) or the course D2L page (<a class="reference external" href="http://d2l.msu.edu/">http://d2l.msu.edu/</a>). If you can’t find what you’re looking for there, reach out to your instructor via email or Slack.</p>
+</section>
+<section id="a-day-in-your-life-as-a-cmse-202-student">
+<h2>A day in your life as a CMSE 202 student<a class="headerlink" href="#a-day-in-your-life-as-a-cmse-202-student" title="Link to this heading">#</a></h2>
+<p>As part of every class session, you should get in the habit doing the following:</p>
+<section id="bring-your-computer-to-class-and-make-sure-it-is-charged-and-ready-to-go">
+<h3>✅ Bring your computer to class and make sure it is charged and ready to go<a class="headerlink" href="#bring-your-computer-to-class-and-make-sure-it-is-charged-and-ready-to-go" title="Link to this heading">#</a></h3>
+<p>You will be using you computer in class essentially every single day. If something ever happens and you will be without your computer, try to let you instructors know so that we can do our best to have a loaner laptop on hand.</p>
+</section>
+<section id="download-the-jupyter-notebook-of-the-day">
+<h3>✅ Download the jupyter notebook of the day<a class="headerlink" href="#download-the-jupyter-notebook-of-the-day" title="Link to this heading">#</a></h3>
+<ul class="simple">
+<li><p>Go to the <a href="https://msu-cmse-courses.github.io/cmse202-S25-jb/index.html">class web page</a> and download a copy of the notebook for class.</p></li>
+</ul>
+<!--
+* Go to the <a href="https://cmse.msu.edu/cmse202/">class web page</a> and download a copy of the notebook for class.
+-->
+</section>
+<section id="follow-along-with-your-instructor-to-check-in-on-anything-you-might-have-missed-or-been-confused-about-from-the-pre-class-assignment">
+<h3>✅ Follow along with your instructor to check-in on anything you might have missed or been confused about from the pre-class assignment<a class="headerlink" href="#follow-along-with-your-instructor-to-check-in-on-anything-you-might-have-missed-or-been-confused-about-from-the-pre-class-assignment" title="Link to this heading">#</a></h3>
+<ul class="simple">
+<li><p>During the first ~20 minutes of class, we’ll touch base on what you covered in the pre-class assignment</p></li>
+</ul>
+</section>
+<section id="listen-for-details-about-the-plans-for-that-day-s-class-period">
+<h3>✅ Listen for details about the plans for that day’s class period<a class="headerlink" href="#listen-for-details-about-the-plans-for-that-day-s-class-period" title="Link to this heading">#</a></h3>
+<ul class="simple">
+<li><p>Your instructor will go over what you’ll be working on during class</p></li>
+</ul>
+</section>
+<section id="work-on-the-in-class-activity-with-your-group">
+<h3>✅ Work on the in-class activity <em>with your group</em>!<a class="headerlink" href="#work-on-the-in-class-activity-with-your-group" title="Link to this heading">#</a></h3>
+<ul class="simple">
+<li><p>CMSE 202 is a collaborative course where you actively work on learning new material with your assigned group</p></li>
+</ul>
+</section>
+</section>
+<section id="before-we-move-on-make-sure-you-can-access-the-jupyterhub-server-if-you-aren-t-already-using-it">
+<h2>Before we move on, make sure you can access the JupyterHub server (if you aren’t already using it)<a class="headerlink" href="#before-we-move-on-make-sure-you-can-access-the-jupyterhub-server-if-you-aren-t-already-using-it" title="Link to this heading">#</a></h2>
+<p>If you’re not currently running this notebook on JupyterHub (<a class="reference external" href="https://jupyterhub.egr.msu.edu/">https://jupyterhub.egr.msu.edu/</a>), make sure you can access it. To do so, you may need to do the following:</p>
+<section id="do-this-activate-your-engineering-account">
+<h3>✅ Do This - Activate your engineering account<a class="headerlink" href="#do-this-activate-your-engineering-account" title="Link to this heading">#</a></h3>
+<p>When you enrolled in class you should have received an engineering login.  If you haven’t already, go to the following URL to activate the account and set your password. If you haven’t set up a DECS account previously, your initial password will be your APID with an &#64; on the end (example: A12345678&#64;).</p>
+<p><a class="reference external" href="https://www.egr.msu.edu/decs/myaccount/?page=activate">https://www.egr.msu.edu/decs/myaccount/?page=activate</a></p>
+</section>
+<section id="do-this-try-logging-into-the-engineering-jupyterhub-website">
+<h3>✅ Do This - Try logging into the Engineering JupyterHub Website<a class="headerlink" href="#do-this-try-logging-into-the-engineering-jupyterhub-website" title="Link to this heading">#</a></h3>
+<p><a class="reference external" href="http://jupyterhub.egr.msu.edu">http://jupyterhub.egr.msu.edu</a></p>
+</section>
+<section id="do-this-try-uploading-this-notebook-into-jupyterhub">
+<h3>✅ Do This - Try uploading this notebook into JupyterHub<a class="headerlink" href="#do-this-try-uploading-this-notebook-into-jupyterhub" title="Link to this heading">#</a></h3>
+<p>Make sure you understand how this process works and once you do, exit JupyterHub (unless you plan on using JupyterHub rather than a local installation of Python).</p>
+<hr class="docutils" />
+<p><a id="survey"></a></p>
+</section>
+</section>
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="reminder-pre-semester-survey">
+<h1>2. Reminder: Pre-semester Survey<a class="headerlink" href="#reminder-pre-semester-survey" title="Link to this heading">#</a></h1>
+<p><strong>If you didn’t already complete the pre-course sent to you in an email</strong>, please take a moment to do it now.</p>
+<section id="do-this-execute-the-cell-below-by-pressing-shift-enter-with-the-cell-highlighted-to-test-your-access-to-microsoft-forms-if-you-haven-t-completed-the-pre-course-survey-do-it-now">
+<h2>✅ Do This - Execute the cell below by pressing shift+enter with the cell highlighted to test your access to Microsoft Forms. If you haven’t completed the <a class="reference external" href="https://forms.office.com/r/Rp8Qit0fL5">pre-course survey</a>, do it now.<a class="headerlink" href="#do-this-execute-the-cell-below-by-pressing-shift-enter-with-the-cell-highlighted-to-test-your-access-to-microsoft-forms-if-you-haven-t-completed-the-pre-course-survey-do-it-now" title="Link to this heading">#</a></h2>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">IPython.display</span> <span class="kn">import</span> <span class="n">HTML</span>
+<span class="n">HTML</span><span class="p">(</span>
+<span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">&lt;iframe src=&quot;https://forms.office.com/r/BpNmfdD8eS&quot;</span>
+<span class="sd">width=&quot;800px&quot;</span>
+<span class="sd">height=&quot;600px&quot;</span>
+<span class="sd">frameborder=&quot;0&quot;</span>
+<span class="sd">marginheight=&quot;0&quot;</span>
+<span class="sd">marginwidth=&quot;0&quot;&gt;Loading...&lt;/iframe&gt;</span>
+<span class="sd">&quot;&quot;&quot;</span>
+<span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<hr class="docutils" />
+<p><a id="syllabus"></a></p>
+</section>
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="review-the-class-syllabus-and-in-class-procedures">
+<h1>3. Review the class syllabus and in-class procedures<a class="headerlink" href="#review-the-class-syllabus-and-in-class-procedures" title="Link to this heading">#</a></h1>
+<section id="do-this-go-to-the-course-website-and-review-the-course-syllabus">
+<h2>✅ Do This - Go to the <a class="reference external" href="https://msu-cmse-courses.github.io/cmse202-S25-jb/index.html#">course website</a> and review the course syllabus.<a class="headerlink" href="#do-this-go-to-the-course-website-and-review-the-course-syllabus" title="Link to this heading">#</a></h2>
+<ul class="simple">
+<li><p>Read through the syllabus and note any questions you may have. If you can’t access the syllabus for any reason, let you instructor know.</p></li>
+<li><p>We will go through the syllabus as a class.</p></li>
+<li><p><strong>Note:</strong> If you’re interested in doing an honors option, please contact me via email to discuss this.</p></li>
+</ul>
+</section>
+<section id="day-to-day-class-structure">
+<h2>Day-to-day class structure<a class="headerlink" href="#day-to-day-class-structure" title="Link to this heading">#</a></h2>
+<p>We are going to try and form some class habits to make things go smoothly and help keep us on task.</p>
+<p><strong>Step 1:</strong> Download the pre-class notebook from the class website (unless directed to download it from somewhere else). Watch any associated videos, answer questions, complete the assignment and turn it into D2L by 11:59 pm the day before class. Ideally, pre-class notebooks will be posted (at least) ~48 hours before they are due.</p>
+<p><strong>Step 2:</strong> During class, download the in-class notebook from the class website (or alternate specified location).</p>
+<p><strong>Step 3:</strong> While you wait for class to start, read through the notebook to get an idea about what we will be doing in class. Before starting on the activity, the instructor will cover concepts from the pre-class assignment and discuss the plans for the day.</p>
+<p><strong>Step 4:</strong> After a classroom-wide discussion, your instructor will prompt you to start working with your assigned group. You are expected to <strong>work with your group</strong> to complete the in-class activity. At the end of class you should be prepared to save your notebook and upload it to the correct location on D2L or to be “checked-out” by one of your course instructors to get credit for that day’s work. During this group work, the instructor, TA, and LAs will float between breakout rooms to help you progress through the assignment and to answer questions.</p>
+<p><strong>Step 5:</strong> Near the end of class, the course instructors may come by and ask that you display the work you did on your in-class notebook – <strong>this is one of the ways we will ensure that you get credit for coming to class and engaging with the content!</strong> We do not expect that you will have necessarily completed <strong>all</strong> of the assignment, but will award in-class participation based on a <strong>a committed effort to complete as much of the material as possible.</strong></p>
+<p><strong>Step 6:</strong> Before you leave class, make sure you put your name on the notebooks and turn it in to the D2L website if requested to do so.</p>
+<hr class="docutils" />
+<p><a id="software"></a></p>
+</section>
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="double-checking-that-your-software-is-working">
+<h1>4. Double-checking that your software is working<a class="headerlink" href="#double-checking-that-your-software-is-working" title="Link to this heading">#</a></h1>
+<p>Prior to the start of the semester, we sent out an admittedly lengthy software set up guide. Our intention was to be as comprehensive as possible with the guide so that you would have the ability to run <strong>all</strong> of the software you would need for this course locally on your computer. Having a local installation can be really handy for times when your internet is out or unreliably, but everything covered in this course is also possible through JupyterHub (<a class="reference external" href="http://jupyterhub.egr.msu.edu">http://jupyterhub.egr.msu.edu</a>), so you can use that as your primary computational platform is you wish.</p>
+<p>If you haven’t yet looked at the software setup guide, you can check it out <a class="reference external" href="https://msu-cmse-courses.github.io/cmse202-S25-jb/course_materials/SoftwareSetupGuide.html">here</a>.</p>
+<p>If you tried to get all of the software installed locally on your computer, but ran into issues. Today is a good day to ask your classmates or the instructors for help!</p>
+<hr class="docutils" />
+<p><a id="group-formation"></a></p>
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="time-for-group-interaction">
+<h1>5. Time for group interaction!<a class="headerlink" href="#time-for-group-interaction" title="Link to this heading">#</a></h1>
+<p>Your instructor will explain how group formation will work for the semester. Some sections may be using the <a class="reference external" href="https://catme.org/">CATME</a> software for group formation this semester. You’ll work with your group during every class.</p>
+<p>Once your instructor assigns you to your groups, make sure to <strong>take a few minutes to share the following details about you to your group</strong>. As a listener try to make sure your learn a bit more about your group members!</p>
+<p><strong>Share:</strong></p>
+<ol class="arabic simple">
+<li><p>Your name.</p></li>
+<li><p>Your major.</p></li>
+<li><p>Your reason for taking this class.</p></li>
+<li><p>A boring fact about yourself.</p></li>
+</ol>
+<p>Once everyone has had a chance to share, move onto the group activity below!</p>
+<hr class="docutils" />
+<p><a id="concept-map"></a></p>
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="building-a-concept-map-for-cmse-201-as-a-group">
+<h1>6. Building a concept map for CMSE 201 <em>as a group</em><a class="headerlink" href="#building-a-concept-map-for-cmse-201-as-a-group" title="Link to this heading">#</a></h1>
+<p>As you work in groups this semester, it will be important that you actively engage with your group to maximize your learning gains and ensure that you’re understanding the course material. From time to time, we may encourage you to use the whiteboards available in class to think through concepts and plan out the code that you’re going to write (of course, you can use the whiteboard even if we don’t encourage you to do so!)</p>
+<p>For your first group activity of the semester, you’re going to work with your group to <strong>create a <a class="reference external" href="https://en.wikipedia.org/wiki/Concept_map">concept map</a> of CMSE 201</strong>. Since CMSE 201 is a pre-requisite for this course and because many of you first learned to write code in CMSE 201, reminding ourselves what was taught in CMSE 201 can be a good place to start CMSE 202!</p>
+<p>Some example concept maps to represent climate change can be found in this <a class="reference external" href="https://doi.org/10.1007/s11165-015-9493-7">paper</a>.</p>
+<!--
+To see an example of a concept map, here's a simple one used to represent climate change using Google Jamboard, [click here](https://jamboard.google.com/d/11mt2o64Ap8zDDaaOPOAwC8SswZ3xVxOwT3tSpn3Lkmw/edit?usp=sharing).
+-->
+<p><strong>In building your concept map of CMSE 201, as a group you should discuss the following</strong>:</p>
+<ol class="arabic simple">
+<li><p>What would you consider to be 3-4 of the main concepts or themes in CMSE 201?</p></li>
+<li><p>Within this main concepts, what are some examples that represent those concepts/theme or what skills were necessary to master those concepts?</p></li>
+<li><p>Where are the connections or threads that run between the concepts, examples, or skills?</p></li>
+</ol>
+<p>As you come up with answers to these questions, start building your concept map as a group. <strong>You can appoint someone in the group to record your group’s thoughts and draw out your concept map, or you can work on it collaboratively and take turns adding content to the map</strong>.</p>
+<p><strong>You may find it useful to look at the course website from 201</strong>: <a class="reference external" href="https://cmse.msu.edu/cmse201">https://cmse.msu.edu/cmse201</a></p>
+<p>✅ Individually, try to write down some notes in your notes that come from your group discussion that summarize the main theme/concepts from 201 and some of the specific topic and skills that you recall from 201.</p>
+<p><font size=8 color="#009600">✎</font> Do This - Erase the contents of this cell and replace it with your answer to the above question!  (double-click on this text to edit this cell, and hit shift+enter to save the text)</p>
+<p>👥 As a class, if time permits, some of the groups will have an opportunity to present their concept map to the whole class. Make sure someone in the group is prepared to chair their screen to display your map and share a bit about your discussion!</p>
+<hr class="docutils" />
+<p><a id="end-of-class"></a></p>
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="day-1-wrap-up">
+<h1>7. Day 1 Wrap-up<a class="headerlink" href="#day-1-wrap-up" title="Link to this heading">#</a></h1>
+<section id="a-final-check-in">
+<h2>A final check-in<a class="headerlink" href="#a-final-check-in" title="Link to this heading">#</a></h2>
+<p>How did things go today? If you’re running into issues with the software needs for CMSE 202, now is a good time to send a note to your instructor explaining the problem(s) you’re running into.</p>
+<p>Do you have any other questions or concerns about the class? <strong>Include those in an email to your instructor as well!</strong>.</p>
+</section>
+<hr class="docutils" />
+<section id="congratulations-you-re-done-with-your-first-in-class-assignment">
+<h2>Congratulations, you’re done with your first in-class assignment!<a class="headerlink" href="#congratulations-you-re-done-with-your-first-in-class-assignment" title="Link to this heading">#</a></h2>
+<p>Now, you just need to either submit this assignment by uploading it to the course <a href="https://d2l.msu.edu/">Desire2Learn</a> web page for today’s assignment submission folder or get “checked-out” by one of your section instructors. (Don’t forget to add your name in the first cell!).</p>
+<p>© Copyright 2025,  The Department of Computational Mathematics, Science and Engineering at Michigan State University.</p>
+</section>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "conda-base-py"
+        },
+        kernelOptions: {
+            name: "conda-base-py",
+            path: "./daily/Day-01"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'conda-base-py'</script>
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="../../section_files/day_1.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">Day 1</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="../../section_files/day_2.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Day 2</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <dialog id="pst-secondary-sidebar-modal"></dialog>
+                <div id="pst-secondary-sidebar" class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">In-class Notebook: Welcome to CMSE202</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#day-1">Day 1</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#cmse-202">CMSE 202</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#put-your-name-here"><p style="text-align: right;"> ✅ <strong>Put your name here</strong> </p></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#agenda-for-today-s-class">Agenda for today’s class</a></li>
+</ul>
+</li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#lets-get-started">1. Lets get started!</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#important-note-1-read-this">Important Note #1 (read this!)</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#importat-note-2-read-this-too">Importat Note #2 (read this, too!)</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#a-day-in-your-life-as-a-cmse-202-student">A day in your life as a CMSE 202 student</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#bring-your-computer-to-class-and-make-sure-it-is-charged-and-ready-to-go">✅ Bring your computer to class and make sure it is charged and ready to go</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#download-the-jupyter-notebook-of-the-day">✅ Download the jupyter notebook of the day</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#follow-along-with-your-instructor-to-check-in-on-anything-you-might-have-missed-or-been-confused-about-from-the-pre-class-assignment">✅ Follow along with your instructor to check-in on anything you might have missed or been confused about from the pre-class assignment</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#listen-for-details-about-the-plans-for-that-day-s-class-period">✅ Listen for details about the plans for that day’s class period</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#work-on-the-in-class-activity-with-your-group">✅ Work on the in-class activity <em>with your group</em>!</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#before-we-move-on-make-sure-you-can-access-the-jupyterhub-server-if-you-aren-t-already-using-it">Before we move on, make sure you can access the JupyterHub server (if you aren’t already using it)</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#do-this-activate-your-engineering-account">✅ Do This - Activate your engineering account</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#do-this-try-logging-into-the-engineering-jupyterhub-website">✅ Do This - Try logging into the Engineering JupyterHub Website</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#do-this-try-uploading-this-notebook-into-jupyterhub">✅ Do This - Try uploading this notebook into JupyterHub</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#reminder-pre-semester-survey">2. Reminder: Pre-semester Survey</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#do-this-execute-the-cell-below-by-pressing-shift-enter-with-the-cell-highlighted-to-test-your-access-to-microsoft-forms-if-you-haven-t-completed-the-pre-course-survey-do-it-now">✅ Do This - Execute the cell below by pressing shift+enter with the cell highlighted to test your access to Microsoft Forms. If you haven’t completed the pre-course survey, do it now.</a></li>
+</ul>
+</li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#review-the-class-syllabus-and-in-class-procedures">3. Review the class syllabus and in-class procedures</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#do-this-go-to-the-course-website-and-review-the-course-syllabus">✅ Do This - Go to the course website and review the course syllabus.</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#day-to-day-class-structure">Day-to-day class structure</a></li>
+</ul>
+</li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#double-checking-that-your-software-is-working">4. Double-checking that your software is working</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#time-for-group-interaction">5. Time for group interaction!</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#building-a-concept-map-for-cmse-201-as-a-group">6. Building a concept map for CMSE 201 <em>as a group</em></a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#day-1-wrap-up">7. Day 1 Wrap-up</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#a-final-check-in">A final check-in</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#congratulations-you-re-done-with-your-first-in-class-assignment">Congratulations, you’re done with your first in-class assignment!</a></li>
+</ul>
+</li>
+</ul>
+
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By MSU CMSE
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2025.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script defer src="../../_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf"></script>
+<script defer src="../../_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>

@@ -1,0 +1,1111 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="../../" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>In-Class Assignment: Machine learning with an SVM Classifier &#8212; CMSE 202 Course Website</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  <!--
+    this give us a css class that will be invisible only if js is disabled
+  -->
+  <noscript>
+    <style>
+      .pst-js-only { display: none !important; }
+
+    </style>
+  </noscript>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../../_static/styles/theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
+<link href="../../_static/styles/pydata-sphinx-theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
+
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=b76e3c8a" />
+    <link rel="stylesheet" type="text/css" href="../../_static/styles/sphinx-book-theme.css?v=a3416100" />
+    <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css?v=13237357" />
+    <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="../../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-thebe.css?v=4fa983c6" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-design.min.css?v=95c83b7e" />
+  
+  <!-- So that users can add custom icons -->
+  <script src="../../_static/scripts/fontawesome.js?digest=8878045cc6db502f8baf"></script>
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../../_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf" />
+<link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf" />
+
+    <script src="../../_static/documentation_options.js?v=9eb32ce0"></script>
+    <script src="../../_static/doctools.js?v=9a2dae69"></script>
+    <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../../_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="../../_static/copybutton.js?v=f281be69"></script>
+    <script src="../../_static/scripts/sphinx-book-theme.js?v=887ef09a"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../../_static/togglebutton.js?v=4a39c7ea"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="../../_static/design-tabs.js?v=f930bc37"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script async="async" src="../../_static/sphinx-thebe.js?v=c100c467"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'daily/Day-20/Day-20_In-Class_SVMs-STUDENT';</script>
+    <link rel="icon" href="../../_static/logo.png"/>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="Day 21" href="../../section_files/day_21.html" />
+    <link rel="prev" title="Pre-Class Assignment: Support Vector Machines (SVMs)" href="Day-20_Pre-Class_SVMs-STUDENT.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  <meta name="docsearch:version" content="" />
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
+  
+  <dialog id="pst-search-dialog">
+    
+<form class="bd-search d-flex align-items-center"
+      action="../../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         placeholder="Search..."
+         aria-label="Search..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form>
+  </dialog>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+      <dialog id="pst-primary-sidebar-modal"></dialog>
+      <div id="pst-primary-sidebar" class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="../../index.html">
+  
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="../../_static/logo.png" class="logo__image only-light" alt="CMSE 202 Course Website - Home"/>
+    <img src="../../_static/logo.png" class="logo__image only-dark pst-js-only" alt="CMSE 202 Course Website - Home"/>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item">
+
+<button class="btn search-button-field search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+ <i class="fa-solid fa-magnifying-glass"></i>
+ <span class="search-button__default-text">Search</span>
+ <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+</button></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">Course Materials</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../../course_materials/CMSE202_Syllabus.html">Syllabus</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../course_materials/CMSE202_Calendar.html">Schedule</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../course_materials/CMSE202_HelpRoomCalendar.html">Office Hours and Help Room</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../course_materials/SoftwareSetupGuide.html">Software Setup Guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../course_materials/CMSE202_GenerativeAI_Policy.html">Generative AI Policy</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://upload.wikimedia.org/wikipedia/commons/7/79/Unix_command_cheatsheet.pdf">CLI (Unix/Mac/Linux) commands cheat sheet</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../course_materials/BashVsPowershell_CheatSheet.html">Bash vs PowerShell</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://wac-cdn.atlassian.com/dam/jcr:e7e22f25-bba2-4ef1-a197-53f46b6df4a5/SWTM-2088_Atlassian-Git-Cheatsheet.pdf?cdnVersion=525">Git Cheat Sheet</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://raw.githubusercontent.com/msu-cmse-courses/cmse202-supplemental-data/main/documents/How-to-Access-Anaconda-Powershell-Prompt.pdf">How to Access “Anaconda Powershell Prompt” (for Windows users)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../course_materials/Pull_Request_Guide.html">Making and merging Pull Requests on GitHub</a></li>
+
+
+
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Semester Project</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../../course_materials/SemesterProjectDetails.html">Semester Project Details</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../course_materials/CMSE202_FinalProjectRequirementsAndGradingRubric.html">Semester Project Requirements and Grading Rubric</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Exams</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../../course_materials/MidtermStudyGuide.html">Midterm Study Guide</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Daily Content</span></p>
+<ul class="current nav bd-sidenav">
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../section_files/day_1.html">Day 1</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../Day-01/Day-01_In-Class_Overview-STUDENT.html">In-class Notebook: Welcome to CMSE202</a></li>
+
+
+
+
+
+
+
+
+
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../section_files/day_2.html">Day 2</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../Day-02/Day-02_Pre-Class_ReflectionAndCommandLineInterface-STUDENT.html">Pre-Class Assignment: Reflection and an introduction to the Command Line Interface (CLI)</a></li>
+
+
+
+<li class="toctree-l2"><a class="reference internal" href="../Day-02/Day-02_In-Class_CommandLineInterface-STUDENT.html">In-class Notebook: Command line interface</a></li>
+
+
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../section_files/day_3.html">Day 3</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../Day-03/Day-03_Pre-Class_PythonReview%2BGitIntro-STUDENT.html">Pre-Class Assignment: Python Review and Intro to Git</a></li>
+
+<li class="toctree-l2"><a class="reference internal" href="../Day-03/Day-03_In-Class_GitPractice-STUDENT.html">In-Class Assignment: Practice with Git and GitHub</a></li>
+
+
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../section_files/day_4.html">Day 4</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../Day-04/Day-04_Pre-Class_DownloadingFilesAndInstallingPackages-STUDENT.html">Pre-class Assignment: Python Packages</a></li>
+
+
+
+
+
+<li class="toctree-l2"><a class="reference internal" href="../Day-04/Day-04_In-Class_PythonPackagesAndMapPlotting-STUDENT.html">In-class Assignment: Installing Python Packages and Plotting with Maps in Python</a></li>
+
+
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../section_files/day_5.html">Day 5</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../Day-05/Day-05_Pre-Class_PandasReview-STUDENT.html">Pre-Class Assignment: Pandas Review</a></li>
+
+
+<li class="toctree-l2"><a class="reference internal" href="../Day-05/Day-05_In-Class_PandasReview-STUDENT.html">In-Class Assignment: Reviewing Pandas and exploring data</a></li>
+
+
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../section_files/day_6.html">Day 6</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../Day-06/Day-06_Pre-class_ObjectsClasses-STUDENT.html">Pre-class Assignment: Introduction to Object Oriented Programming (OOP)</a></li>
+
+
+<li class="toctree-l2"><a class="reference internal" href="../Day-06/Day-06_In-Class_ObjectsClasses-STUDENT.html">In-class Assignment: We have a Zoo!</a></li>
+
+
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../section_files/day_7.html">Day 7</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../Day-07/Day-07_Pre-class_ObjectInheritanceAndComposition-STUDENT.html">Pre-class Assignment: object inheritance and composition</a></li>
+
+
+<li class="toctree-l2"><a class="reference internal" href="../Day-07/Day-07_In-Class_ObjectInheritanceAndComposition-STUDENT.html">In-class Assignment: We have a Zoo! (part 2)</a></li>
+
+
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../section_files/day_8.html">Day 8</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../Day-08/Day-08_Pre-Class_SuperbugsABM-STUDENT.html">Pre-Class Assignment: Agent-based Modeling of Superbugs</a></li>
+
+
+
+
+
+<li class="toctree-l2"><a class="reference internal" href="../Day-08/Day-08_In-Class_ABMSuperbugs1-STUDENT.html">In-Class Assignment: Simulating Superbugs using agent-based modeling</a></li>
+
+
+
+
+
+
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../section_files/day_9.html">Day 9</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../Day-09/Day-09_Pre-Class_OOPAntForaging-STUDENT.html">Pre-Class Assignment: Reviewing another agent-based model built using Object Oriented Programming (OOP)</a></li>
+
+
+<li class="toctree-l2"><a class="reference internal" href="../Day-09/Day-09_In-Class_ABMSuperbugs2-STUDENT.html">In-Class Assignment: Agent Based Modeling of Superbugs (part 2)</a></li>
+
+
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../section_files/day_10.html">Day 10</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../Day-10/Day-10_Pre-Class_GraphTheory-STUDENT.html">Pre-Class Assignment: Conflicts in Git and Graph Theory</a></li>
+
+
+<li class="toctree-l2"><a class="reference internal" href="../Day-10/Day-10_In-Class_GraphTheory-STUDENT.html">In-Class Assignment: Graph Theory</a></li>
+
+
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../section_files/day_11.html">Day 11</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../Day-11/Day-11_Pre-Class_GraphTheoryCellTowers-STUDENT.html">Pre-class Assignment: Project Brainstorming &amp; Graph Theory and Cell Towers</a></li>
+
+
+
+
+
+<li class="toctree-l2"><a class="reference internal" href="../Day-11/Day-11_In-Class_GraphTheoryCellTowers-STUDENT.html">In-class Assignment: Graph Theory and Cell Towers</a></li>
+
+
+
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../section_files/day_12.html">Day 12</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../Day-12/Day-12_In-Class_ProjectProposals-STUDENT.html">In-Class Assignment: Reviewing Project Ideas</a></li>
+
+
+
+
+
+
+
+
+
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../section_files/day_13.html">Day 13</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../Day-13/Day-13_Pre-Class_Regression-STUDENT.html">Pre-Class Assignment: Regression</a></li>
+
+
+
+<li class="toctree-l2"><a class="reference internal" href="../Day-13/Day-13_In-Class-Regression-STUDENT.html">In-Class Assignment: Linear Regression</a></li>
+
+
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../section_files/day_14.html">Day 14</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../Day-14/Day-14_Pre-Class-PolynomialRegression-STUDENT.html">Pre-Class Assignment: Polynomial Regression</a></li>
+
+
+
+<li class="toctree-l2"><a class="reference internal" href="../Day-14/Day-14_In-Class_MultipleRegression-STUDENT.html">In-Class Assignment: Multiple Regression</a></li>
+
+
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../section_files/day_15.html">Day 15</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../Day-15/Day-15_Pre-Class_MachineLearningIntro-STUDENT.html">Pre-class Assignment: Intro to Machine Learning</a></li>
+
+
+<li class="toctree-l2"><a class="reference internal" href="../Day-15/Day-15_In-Class_ML-LogisticRegression-STUDENT.html">In-Class Assignment: Machine Learning; classification with logistic regression</a></li>
+
+
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../section_files/day_16.html">Day 16</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../Day-16/Day-16_Pre-Class_GitRevisited-STUDENT.html">Pre-Class Assignment: Git with it! (collaborating with Git)</a></li>
+
+
+
+<li class="toctree-l2"><a class="reference internal" href="../Day-16/Day-16_In-Class_CollaboratingWithGit-STUDENT.html">In-Class Assignment: Collaborating with Git</a></li>
+
+
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../section_files/day_17.html">Day 17</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../Day-17/Day-17_Pre-Class_AIPracticeAndProductiveGroupwork-STUDENT.html">Pre-Class Assignment: Revisiting generative AI and reflecting on group work experiences</a></li>
+
+
+
+<li class="toctree-l2"><a class="reference internal" href="../Day-17/Day-17_In-Class_RevisitingGenerativeAIAndProjectPlanning-STUDENT.html">In-Class Assignment: Revisiting Generative AI and Project Planning</a></li>
+
+
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../section_files/day_18.html">Day 18</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../Day-18/Day-18_Pre-Class_Perceptron-STUDENT.html">Pre-class Assignment: The Perceptron Classifier (a simple neural network)</a></li>
+
+
+<li class="toctree-l2"><a class="reference internal" href="../Day-18/Day-18_In-Class_Perceptron-STUDENT.html">In-Class Assignment: The Perceptron Classifier</a></li>
+
+
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../section_files/day_19.html">Day 19</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../Day-19/Day-19_In-Class_PerceptronExtension-STUDENT.html">In-Class Challenge Assignment: Experimenting with the Perceptron</a></li>
+
+
+</ul>
+</details></li>
+<li class="toctree-l1 current active has-children"><a class="reference internal" href="../../section_files/day_20.html">Day 20</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="Day-20_Pre-Class_SVMs-STUDENT.html">Pre-Class Assignment: Support Vector Machines (SVMs)</a></li>
+
+
+
+<li class="toctree-l2 current active"><a class="current reference internal" href="#">In-Class Assignment: Machine learning with an SVM Classifier</a></li>
+
+
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../section_files/day_21.html">Day 21</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../Day-21/Day-21_Pre-Class_SVMs2-STUDENT.html">Pre-Class Assignment: Further exploration of SVMs</a></li>
+
+
+
+<li class="toctree-l2"><a class="reference internal" href="../Day-21/Day-21_In-Class_SVMs2-STUDENT.html">In-Class Assignment: SVMs continued</a></li>
+
+
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../section_files/day_22.html">Day 22</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../Day-22/Day-22_Pre-Class_ProjectUpdateReminder-STUDENT.html">Pre-Class Assignment: Project updates!</a></li>
+
+
+
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../section_files/day_23.html">Day 23</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../Day-23/Day-23_Pre-Class_PCA-STUDENT.html">Pre-Class Assignment: Principal Component Analysis</a></li>
+
+
+
+</ul>
+</details></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Homework</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../../homework/SS25/HW01/HW-01_GitPracticeDebuggingPythonPackagesAndClasses-SS25-STUDENT.html">Homework 1</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../homework/SS25/HW02/HW02_Part1-Orbits-SS25-STUDENT.html">Homework 2 Part 1</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../homework/SS25/HW02/HW02_Part2-Risk-SS25-STUDENT.html">Homework 2 Part 2</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../homework/SS25/HW03/HW-03_Regression-S25-STUDENT.html">Homework Assignment 3</a></li>
+
+
+
+
+
+
+
+
+
+<li class="toctree-l1"><a class="reference internal" href="../../homework/SS25/HW04/HW-04_Perceptron_SVM_STUDENT.html">Homework 4</a></li>
+
+
+
+
+
+
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+      <div class="sidebar-primary-item">
+<div id="ethical-ad-placement"
+      class="flat"
+      data-ea-publisher="readthedocs"
+      data-ea-type="readthedocs-sidebar"
+      data-ea-manual="true">
+</div></div>
+  </div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><button class="sidebar-toggle primary-toggle btn btn-sm" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</button></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="../../_sources/daily/Day-20/Day-20_In-Class_SVMs-STUDENT.ipynb" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.ipynb</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button pst-js-only" aria-label="Color mode" data-bs-title="Color mode"  data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <i class="theme-switch fa-solid fa-sun                fa-lg" data-mode="light" title="Light"></i>
+  <i class="theme-switch fa-solid fa-moon               fa-lg" data-mode="dark"  title="Dark"></i>
+  <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"  title="System Settings"></i>
+</button>
+
+
+<button class="btn btn-sm pst-navbar-icon search-button search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+</button>
+<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</button>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>In-Class Assignment: Machine learning with an SVM Classifier</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">In-Class Assignment: Machine learning with an SVM Classifier</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#day-20">Day 20</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#cmse-202">CMSE 202</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#put-your-name-here"><p style="text-align: right;"> ✅ <strong>Put your name here</strong> </p></a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#put-your-group-member-names-here"><p style="text-align: right;"> ✅ Put your group member names here</p></a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#agenda-for-today-s-class">Agenda for today’s class</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#imports">Imports:</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#review-of-pre-class-assignment">1. Review of Pre-Class assignment</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#what-does-an-svm-do-how-do-you-define-the-optimal-line-of-separation">What does an SVM do? How do you define the “optimal” line of separation?</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#the-svm-classifier">2. The SVM Classifier</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#classify-your-blob-data">2.1 Classify your “blob” data</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#running-the-svm-classifier">2.2 Running the SVM classifier</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#upacking-the-svm-results">2.3 Upacking the SVM results</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#visualizing-the-boundary-and-the-margins">3. Visualizing the boundary and the margins</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#what-is-a-hyperplane">3.1 What is a hyperplane?</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#drawing-the-boundary">3.2 Drawing the boundary</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#draw-the-support-vectors">3.3 Draw the Support Vectors</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#svm-margins">3.4 SVM Margins</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#calculating-the-margin">3.4.1 Calculating the margin</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#describing-the-function-margin-y-fn">3.4.2 Describing the function <code class="docutils literal notranslate"><span class="pre">margin_y_fn</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#hyperparameter-tuning-the-effect-of-c">4. Hyperparameter tuning (the effect of <code class="docutils literal notranslate"><span class="pre">C</span></code>)</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#automate-the-process-to-explore-the-effect-of-c">4.1 Automate the process to explore the effect of “C”</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#congratulations-we-re-done">Congratulations, we’re done!</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section class="tex2jax_ignore mathjax_ignore" id="in-class-assignment-machine-learning-with-an-svm-classifier">
+<h1>In-Class Assignment: Machine learning with an SVM Classifier<a class="headerlink" href="#in-class-assignment-machine-learning-with-an-svm-classifier" title="Link to this heading">#</a></h1>
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="day-20">
+<h1>Day 20<a class="headerlink" href="#day-20" title="Link to this heading">#</a></h1>
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="cmse-202">
+<h1>CMSE 202<a class="headerlink" href="#cmse-202" title="Link to this heading">#</a></h1>
+<section id="put-your-name-here">
+<h2><p style="text-align: right;"> ✅ <strong>Put your name here</strong> </p><a class="headerlink" href="#put-your-name-here" title="Link to this heading">#</a></h2>
+<section id="put-your-group-member-names-here">
+<h3><p style="text-align: right;"> ✅ Put your group member names here</p><a class="headerlink" href="#put-your-group-member-names-here" title="Link to this heading">#</a></h3>
+<!--
+<img src="https://i.stack.imgur.com/7sFL3.png" width=400px>
+-->
+<img src="https://i.ibb.co/Y73PXKYV/7sFL3.jpg" width=400/>
+</section>
+</section>
+<section id="agenda-for-today-s-class">
+<h2>Agenda for today’s class<a class="headerlink" href="#agenda-for-today-s-class" title="Link to this heading">#</a></h2>
+<ol class="arabic simple">
+<li><p><a class="reference internal" href="#review"><span class="xref myst">Review of Pre-Class assignment</span></a></p></li>
+<li><p><a class="reference internal" href="#svm"><span class="xref myst">The SVM Classifier</span></a></p></li>
+<li><p><a class="reference internal" href="#viz"><span class="xref myst">Visualizing the boundary and the margins</span></a></p></li>
+<li><p><a class="reference internal" href="#hyper-tuning"><span class="xref myst">Hyperparameter tuning (the effect of C)</span></a></p></li>
+</ol>
+</section>
+<section id="imports">
+<h2>Imports:<a class="headerlink" href="#imports" title="Link to this heading">#</a></h2>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># imports for the day</span>
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+<span class="kn">from</span> <span class="nn">sklearn.datasets</span> <span class="kn">import</span> <span class="n">make_blobs</span>
+<span class="kn">from</span> <span class="nn">sklearn.datasets</span> <span class="kn">import</span> <span class="n">make_classification</span>
+<span class="kn">from</span> <span class="nn">sklearn</span> <span class="kn">import</span> <span class="n">svm</span>
+</pre></div>
+</div>
+</div>
+</div>
+<hr class="docutils" />
+<p><a id="review"></a></p>
+</section>
+<section id="review-of-pre-class-assignment">
+<h2>1. Review of Pre-Class assignment<a class="headerlink" href="#review-of-pre-class-assignment" title="Link to this heading">#</a></h2>
+<p>We’ll discussion any questions that came up as a class.</p>
+<section id="what-does-an-svm-do-how-do-you-define-the-optimal-line-of-separation">
+<h3>What does an SVM do? How do you define the “optimal” line of separation?<a class="headerlink" href="#what-does-an-svm-do-how-do-you-define-the-optimal-line-of-separation" title="Link to this heading">#</a></h3>
+<p>✅ <strong>Do This:</strong> In the pre-class, we reviewed what a Support Vector Machine (SVM) is and how it worked. We asked you to consider how you might draw an “optimal” line of separation of a 2-class problem. Discuss this with your group members now and record the answer below.</p>
+<p><font size=+3>✎</font> Do This -  Write your discussion notes here.</p>
+<hr class="docutils" />
+<p><a id="svm"></a></p>
+</section>
+</section>
+<section id="the-svm-classifier">
+<h2>2. The SVM Classifier<a class="headerlink" href="#the-svm-classifier" title="Link to this heading">#</a></h2>
+<p>As you watched in the pre-class videos, the basic idea of the Support Vector Machine classifier is as follows:</p>
+<ul class="simple">
+<li><p>The algorithm creates a line and marks the points from each class that are the “closest” to the line. These points are called the <strong>support vectors</strong>. In the image at the top, the black dots have one support vector and the white circles have two (two points equidistant from the line). We then compute the distance between the line and the support vectors. This distance is called the <strong>margin</strong>.</p></li>
+<li><p>An SVM tries to make a decision boundary, in the form of a line, such that the separation between the two classes is as wide as possible.</p></li>
+</ul>
+<p>In this class, we’ll try running an SVM classifier and then see if we can judge how well it did. We can compare this to the line you made by hand in the pre-class assignment.</p>
+<section id="classify-your-blob-data">
+<h3>2.1 Classify your “blob” data<a class="headerlink" href="#classify-your-blob-data" title="Link to this heading">#</a></h3>
+<p>Let’s pull your “blob” data and graph forward from the pre-class assignment and use it here as data to run an SVM classifier on. We know by inspection that the data is linearly separable and that you tried come up with the equation of a line that separates the two classes.</p>
+<p>✅ <strong>Do This:</strong> Using what you did in your pre-class assignment, recreate the blob data, your scatter plot and the line you drew to separate the blobs. It should be the case that blobs created with the same <code class="docutils literal notranslate"><span class="pre">random_state</span></code> should make the same blobs. Is that true? <strong>If you didn’t get all of this worked out in your pre-class assignment, check in with your group and see what they did!</strong></p>
+<p><strong>It might be a good idea for everyone in your group to use the same <code class="docutils literal notranslate"><span class="pre">random_state</span></code> so you can compare more easily.</strong></p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># make your blobs, scatter plot them and draw your line.</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="running-the-svm-classifier">
+<h3>2.2 Running the SVM classifier<a class="headerlink" href="#running-the-svm-classifier" title="Link to this heading">#</a></h3>
+<p>The basic process for making an SVM classifier, as with all classifiers, is a follows:</p>
+<ul class="simple">
+<li><p>create the model</p></li>
+<li><p>fit the model</p></li>
+<li><p>examine the result</p></li>
+</ul>
+<p>Rather than trying to build an SVM classifier from scratch like you did with the Perceptron model, we’re going to use the <code class="docutils literal notranslate"><span class="pre">sklearn</span></code> module. You can find the main scikit-learn documentation <a class="reference external" href="https://scikit-learn.org/stable/user_guide.html">here</a>.</p>
+<p>To accomplish the steps above, you would use the <code class="docutils literal notranslate"><span class="pre">sklearn.svm.svc</span></code> (short for “Support Vector Classifier”) to do the work. Here are some of the details.</p>
+<ul class="simple">
+<li><p>To build the model you would use <code class="docutils literal notranslate"><span class="pre">svm.SVC</span></code>. This constructor takes a number of parameters:</p>
+<ul>
+<li><p>you can see all the <a href="https://scikit-learn.org/stable/modules/generated/sklearn.svm.SVC.html">parameters here</a>.</p></li>
+<li><p>the most important are the first two:</p>
+<ul>
+<li><p><strong>C</strong> this is a parameter of how the fit is to be done. We will explore this later, for now the default is fine.</p></li>
+<li><p><strong>kernel</strong> for linear separability we are going to use the <code class="docutils literal notranslate"><span class="pre">&quot;linear&quot;</span></code> kernel. Note that the kernel name is a string.</p></li>
+</ul>
+</li>
+<li><p>The constructor also returns a model</p></li>
+</ul>
+</li>
+<li><p>You then call <code class="docutils literal notranslate"><span class="pre">my_model.fit()</span></code> (or whatever you called your model variable) to fit the data. It takes two arguments:</p>
+<ul>
+<li><p>The array of data. Its shape is (<code class="docutils literal notranslate"><span class="pre">n_samples</span></code>, <code class="docutils literal notranslate"><span class="pre">n_features</span></code>). That is, the provided array is <code class="docutils literal notranslate"><span class="pre">n_samples</span></code> large and each sample (each element in the array) is an array of <code class="docutils literal notranslate"><span class="pre">n_features</span></code>.</p></li>
+<li><p>An array of class labels. It should be the size of <code class="docutils literal notranslate"><span class="pre">n_samples</span></code>, one for each data element. Typically these are integers.</p></li>
+</ul>
+</li>
+<li><p>This function returns the same model you called <code class="docutils literal notranslate"><span class="pre">fit()</span></code> from (thus you don’t need the return value)</p></li>
+</ul>
+<p><strong>Note: we are not using <code class="docutils literal notranslate"><span class="pre">train_test_split</span></code> for this model, you will fit your SVM model to the whole data set. We are simply comparing the linear separation you guessed to the one SVC produces.</strong></p>
+<p>✅ <strong>Do This:</strong> Create an SVC classifier using the <code class="docutils literal notranslate"><span class="pre">&quot;linear&quot;</span></code> kernel and with <code class="docutils literal notranslate"><span class="pre">C=10</span></code> (if you don’t specify the value for <code class="docutils literal notranslate"><span class="pre">C</span></code> argument, it will use the default, which is <code class="docutils literal notranslate"><span class="pre">1.0</span></code>). Then, fit the model to your data. <strong>Note</strong>: you should not expect any meaningful output just yet, so as long as your call to <code class="docutils literal notranslate"><span class="pre">fit()</span></code> doesn’t throw an error, you should be good to move on.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># build your classifier and call the fit function on your data here</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="upacking-the-svm-results">
+<h3>2.3 Upacking the SVM results<a class="headerlink" href="#upacking-the-svm-results" title="Link to this heading">#</a></h3>
+<p>What information can we get from the fitted SVM? Remember that these fitted models have <a class="reference external" href="https://scikit-learn.org/stable/modules/generated/sklearn.svm.SVC.html">a number of attributes and methods</a> that provide use with information regarding the fit.</p>
+<p>There are some useful attributes:</p>
+<ul class="simple">
+<li><p>The attributes <code class="docutils literal notranslate"><span class="pre">coef_</span></code> and <code class="docutils literal notranslate"><span class="pre">intercept_</span></code> (note the underline) can be used to draw the the boundary the classifier created. We’ll talk more about that below.</p></li>
+<li><p>The attribute <code class="docutils literal notranslate"><span class="pre">support_vectors_</span></code> are the coordinates of the support vectors used by the algorithm. In this case these are the 2D location of the data points that were determined to be the support vectors.</p></li>
+</ul>
+<p>And some useful methods:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">predict</span></code> takes single parameter, an array of shape (<code class="docutils literal notranslate"><span class="pre">number_of_data_to_predict</span></code>, <code class="docutils literal notranslate"><span class="pre">number_of_features</span></code>) and returns an array of class predictions.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">decision_function</span></code> takes single parameter, an array of shape (<code class="docutils literal notranslate"><span class="pre">number_of_data_to_predict</span></code>, <code class="docutils literal notranslate"><span class="pre">number_of_features</span></code>) and returns the distance from the decision border for each datum. The sign indicates the class the datum belongs to.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">score</span></code>, takes two parameters: array sample data of shape (<code class="docutils literal notranslate"><span class="pre">number_of_data_to_predict</span></code>, <code class="docutils literal notranslate"><span class="pre">number_of_features</span></code>) and array of size <code class="docutils literal notranslate"><span class="pre">number_of_data_to_predict</span></code> class labels and returns a percentage correct.</p></li>
+</ul>
+<p>✅ <strong>Do This:</strong>  Explore some of the methods above and write a bit of code that prints the accuracy of our formed classifier. What function should you use for this? Check the accuracy using the same data you used for find the model fit – does the result match your expectations?</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># explore some of the functions from above and print the accuracy of your model for the data you provided above</span>
+</pre></div>
+</div>
+</div>
+</div>
+<hr class="docutils" />
+<p><a id="viz"></a></p>
+</section>
+</section>
+<section id="visualizing-the-boundary-and-the-margins">
+<h2>3. Visualizing the boundary and the margins<a class="headerlink" href="#visualizing-the-boundary-and-the-margins" title="Link to this heading">#</a></h2>
+<p>We won’t go through the nitty-gritty details for “how” an SVM algorithm defines the optimal boundary – the pre-class video described conceptually what is happening – but we are going to try and get a few terms straight so we can plot some results and compare to our prediction.</p>
+<section id="what-is-a-hyperplane">
+<h3>3.1 What is a hyperplane?<a class="headerlink" href="#what-is-a-hyperplane" title="Link to this heading">#</a></h3>
+<p>A <a href="https://en.wikipedia.org/wiki/Hyperplane"> hyperplane </a> is geometric element whose dimensionality is one less than the space in which it is embedded. For our purposes, a hyperplane divides the embedded space. Thus:</p>
+<ul class="simple">
+<li><p>a 2D space can be divided by a 1D line</p></li>
+<li><p>a 3D space can be divided by a 2D plane</p></li>
+<li><p>and so on…</p></li>
+</ul>
+<p>The data that we generated is in 2D and thus we are trying to find a 1D hyperplane – a line – to divide the space. In general, an SVM can search in any n-dimensional space and find a n-1 hyperplane (or at least find the best one it is capable of) that divides the space. SVM literature thus talks always about hyperplanes as a more general concept. For the moment we will be content with hyperplanes in 1D, <strong>which are lines</strong>.</p>
+</section>
+<section id="drawing-the-boundary">
+<h3>3.2 Drawing the boundary<a class="headerlink" href="#drawing-the-boundary" title="Link to this heading">#</a></h3>
+<p>We are going to use the attributes of the fitted SVM to draw the line that was determined by the mode. First, let’s remember that the equation of a line in slope-intercept format is:</p>
+<div class="math notranslate nohighlight">
+\[ y = mx + b \]</div>
+<p>Where <span class="math notranslate nohighlight">\(m\)</span> is the slope and <span class="math notranslate nohighlight">\(b\)</span> is the intercept. However, there is another form of a line equation that is called the “standard” form which is:</p>
+<div class="math notranslate nohighlight">
+\[ Ax + By + C = 0 \]</div>
+<p>where <span class="math notranslate nohighlight">\(A\)</span> and <span class="math notranslate nohighlight">\(B\)</span> are the <strong>coefficients</strong> of the line. You should be able to convert back and forth between these two forms relatively easily. We had to do this when thinking about how to draw the best fit line from the Perceptron model as well!</p>
+<p>These standard coefficients are what are returned by the <code class="docutils literal notranslate"><span class="pre">.coef_</span></code> attributes of the classifier hyperplane. Assuming that we are doing a 2D (2 feature) classifier, the coefficients represent a line in standard format. Thus:</p>
+<div class="math notranslate nohighlight">
+\[ Ax + By + C = 0 \]</div>
+<p>then <code class="docutils literal notranslate"><span class="pre">.coef_</span></code> returns an array of <span class="math notranslate nohighlight">\([A, B]\)</span> and <code class="docutils literal notranslate"><span class="pre">intercept_</span></code> returns the <span class="math notranslate nohighlight">\(C\)</span> value of the line.</p>
+<p>By pulling that information from the model, you should be able to determine the slope-intercept form and draw the decision boundary through the “blobs”.</p>
+<p>✅ <strong>Do This:</strong> Plot the blobs again along with your predicted line from the pre-class assignment <strong>as well as the line from the model (i.e., the decision boundary)</strong>.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># your code to draw the blobs and the resulting decision boundary line</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>✅ <strong>Question:</strong> How well do your guess and the decision boundary agree? Is the decision boundary rotated at all when compared to your guess? If so, why would it be rotated that way?</p>
+<p><font size=+3>✎</font> Do this - Erase this and put your answer here.</p>
+<p>✅ <strong>Do This:</strong> Print the slope and the intercept you have calculated. Three decimal points of accuracy will do. <strong>Confirm that these numbers match the line representing the decision boundary in your plot.</strong></p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># print the slope and intercept here</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="draw-the-support-vectors">
+<h3>3.3 Draw the Support Vectors<a class="headerlink" href="#draw-the-support-vectors" title="Link to this heading">#</a></h3>
+<p>Remember that the attribute <code class="docutils literal notranslate"><span class="pre">support_vectors_</span></code> (note the trailing underline) of the model yields a list of points that are used as support vectors.</p>
+<p>✅ <strong>Do This:</strong> Using <code class="docutils literal notranslate"><span class="pre">support_vectors_</span></code>, redraw the blobs and boundary but now also mark the support vectors the algorithm used to determine the boundary. If you have trouble-coming up with a good way of marking the support vectors, chat with your group to brainstorm ideas!</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># draw now with support vectors</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="svm-margins">
+<h3>3.4 SVM Margins<a class="headerlink" href="#svm-margins" title="Link to this heading">#</a></h3>
+<p>Besides drawing the boundary, the SVM tries to draw a <strong>margin</strong>, a set of parallel lines on either side of the boundary. You learned about this in the pre-class video.</p>
+<p>This width of this margin is controlled by the <code class="docutils literal notranslate"><span class="pre">C</span></code> parameter. When you create the model (the <code class="docutils literal notranslate"><span class="pre">C</span></code> parameter is always positive), <code class="docutils literal notranslate"><span class="pre">C</span></code> tells the SVM optimization how much you want to avoid misclassifying each training example. For large values of <code class="docutils literal notranslate"><span class="pre">C</span></code>, the optimization will choose a smaller-margin hyperplane if that hyperplane does a better job of getting all the training points classified correctly. Conversely, a very small value of <code class="docutils literal notranslate"><span class="pre">C</span></code> will cause the optimizer to look for a larger-margin separating hyperplane, even if that hyperplane misclassifies more points. For very tiny values of <code class="docutils literal notranslate"><span class="pre">C</span></code>, you should get misclassified examples, often even if your training data is linearly separable.</p>
+<ul class="simple">
+<li><p>Large <code class="docutils literal notranslate"><span class="pre">C</span></code> - better job of classifying training data; smaller margin</p></li>
+<li><p>Smaller <code class="docutils literal notranslate"><span class="pre">C</span></code> - more misclassifcations; larger margin</p></li>
+</ul>
+<section id="calculating-the-margin">
+<h4>3.4.1 Calculating the margin<a class="headerlink" href="#calculating-the-margin" title="Link to this heading">#</a></h4>
+<p>Below, we have written a function that can help you draw the margins so that you can see the effect that <code class="docutils literal notranslate"><span class="pre">C</span></code> has on the SVM results. To think about how this works, let’s look at the image from the top of the notebook again:</p>
+<!--
+<img src="https://i.stack.imgur.com/7sFL3.png" width=300px>
+-->
+<img src="https://i.ibb.co/Y73PXKYV/7sFL3.jpg" width=300px>
+<p>The way that margins are determined follows this procedure:</p>
+<ul class="simple">
+<li><p>Looking at the image, the distance between the two margins is always <span class="math notranslate nohighlight">\(\frac{2}{\| w \|}\)</span>, and the distance from the boundary to one margin half that value (the margins are equidistant from the boundary)</p>
+<ul>
+<li><p><span class="math notranslate nohighlight">\(w\)</span> is the vector <span class="math notranslate nohighlight">\([A,B]\)</span> (the coefficients of x and y in standard form), so <span class="math notranslate nohighlight">\(\| w \| = \sqrt{A^2 + B^2} \)</span> and the margin distance is therefore <span class="math notranslate nohighlight">\(\frac{1}{\sqrt{A^2 + B^2}} \)</span></p></li>
+</ul>
+</li>
+<li><p>Given the boundary line x and y arrays, the updated <span class="math notranslate nohighlight">\(y_{margin-down}\)</span> array is: <span class="math notranslate nohighlight">\( y - \sqrt{1 + m^2} \)</span> and <span class="math notranslate nohighlight">\(y_{margin-up}\)</span> array is: <span class="math notranslate nohighlight">\(y + \sqrt{1 + m^2} \)</span></p></li>
+</ul>
+</section>
+<section id="describing-the-function-margin-y-fn">
+<h4>3.4.2 Describing the function <code class="docutils literal notranslate"><span class="pre">margin_y_fn</span></code><a class="headerlink" href="#describing-the-function-margin-y-fn" title="Link to this heading">#</a></h4>
+<p>The function below, <code class="docutils literal notranslate"><span class="pre">margin_y_fn</span></code>, takes 3 arguments:</p>
+<ul class="simple">
+<li><p>the y array of values of the boundary line</p></li>
+<li><p>The <code class="docutils literal notranslate"><span class="pre">A</span></code> coefficient from the fit</p></li>
+<li><p>The <code class="docutils literal notranslate"><span class="pre">B</span></code> coefficient from the fit</p></li>
+</ul>
+<p>It returns two values:</p>
+<ul class="simple">
+<li><p>an array of y values for the lower margin (given the same x values as the boundary line)</p></li>
+<li><p>an array of y values for the upper margin (also given the same x values as the boundary line).</p></li>
+</ul>
+<p>The function appears below. Make sure to run it before trying the next task.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">margin_y_fn</span><span class="p">(</span><span class="n">y</span><span class="p">,</span> <span class="n">A</span><span class="p">,</span> <span class="n">B</span><span class="p">):</span>
+    <span class="n">slope</span> <span class="o">=</span> <span class="o">-</span><span class="n">A</span><span class="o">/</span><span class="n">B</span>
+    <span class="n">margin_dist</span> <span class="o">=</span> <span class="mi">1</span><span class="o">/</span><span class="n">np</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="n">A</span><span class="o">**</span><span class="mi">2</span> <span class="o">+</span> <span class="n">B</span><span class="o">**</span><span class="mi">2</span><span class="p">)</span>
+    <span class="n">y_down</span> <span class="o">=</span> <span class="n">y</span> <span class="o">-</span> <span class="n">np</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="mi">1</span> <span class="o">+</span> <span class="n">slope</span><span class="o">**</span> <span class="mi">2</span><span class="p">)</span> <span class="o">*</span> <span class="n">margin_dist</span>
+    <span class="n">y_up</span> <span class="o">=</span> <span class="n">y</span> <span class="o">+</span> <span class="n">np</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="mi">1</span> <span class="o">+</span>  <span class="n">slope</span><span class="o">**</span> <span class="mi">2</span><span class="p">)</span> <span class="o">*</span> <span class="n">margin_dist</span>
+    <span class="k">return</span> <span class="n">y_down</span><span class="p">,</span> <span class="n">y_up</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>✅ <strong>Do This:</strong>  Using the function <code class="docutils literal notranslate"><span class="pre">margin_y_fn</span></code>, make a plot with: the blobs, the boundary, the support vectors, and, now, the margins.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># put your answer here</span>
+</pre></div>
+</div>
+</div>
+</div>
+<hr class="docutils" />
+<p><a id="hyper-tuning"></a></p>
+</section>
+</section>
+</section>
+<section id="hyperparameter-tuning-the-effect-of-c">
+<h2>4. Hyperparameter tuning (the effect of <code class="docutils literal notranslate"><span class="pre">C</span></code>)<a class="headerlink" href="#hyperparameter-tuning-the-effect-of-c" title="Link to this heading">#</a></h2>
+<p>As we discussed the parameter <code class="docutils literal notranslate"><span class="pre">C</span></code> controls that amount of misclassification that is acceptable:</p>
+<ul class="simple">
+<li><p>Large <code class="docutils literal notranslate"><span class="pre">C</span></code> - better job of classifying training data; smaller margin</p></li>
+<li><p>Smaller <code class="docutils literal notranslate"><span class="pre">C</span></code> - more misclassifcations; larger margin</p></li>
+</ul>
+<p>In this last section, we will look into the effect of choosing a different value of <code class="docutils literal notranslate"><span class="pre">C</span></code> for the same data. We will pull together all the work you have done so far into a single cell.</p>
+<p>✅ <strong>Do This:</strong> Below, copy and paste all the necesssary code that you wrote above such that the cell below does the following:</p>
+<ul class="simple">
+<li><p>make your fake data</p></li>
+<li><p>create an SVC model and fit it to your data</p></li>
+<li><p>calculate the decision boundaries</p></li>
+<li><p>plot the data, the optimal line, the decision boundaries and the support vectors, and</p></li>
+<li><p>print the accuracy.</p></li>
+</ul>
+<p>Make sure you run the cell and confirm that it produces the output you expect.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># your code</span>
+</pre></div>
+</div>
+</div>
+</div>
+<section id="automate-the-process-to-explore-the-effect-of-c">
+<h3>4.1 Automate the process to explore the effect of “C”<a class="headerlink" href="#automate-the-process-to-explore-the-effect-of-c" title="Link to this heading">#</a></h3>
+<p>Now that you have pulled at that code together and checked that it works, put it inside a function called <code class="docutils literal notranslate"><span class="pre">test_C_parameter</span></code> that runs all that code and takes the following arguments:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">C</span></code> - the hyperparamter that controls misclassifications</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">random_state</span></code> - the state associated with the created data</p></li>
+</ul>
+<p>Then run the function using a variety of choices for <code class="docutils literal notranslate"><span class="pre">C</span></code> to observe how the margins change. You might need to change <code class="docutils literal notranslate"><span class="pre">random_state</span></code> to get distributions of blobs that overlap a bit more in order to really understand how changing <code class="docutils literal notranslate"><span class="pre">C</span></code> influences the results.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># put any an all code you need here, create additional cells as necessary</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>✅ <strong>Question:</strong> What do you notice about changing <code class="docutils literal notranslate"><span class="pre">C</span></code> in terms of the properties of the margins and the misclassifications?</p>
+<p><font size=+3>✎</font> Do this - Erase this and put your answer here.</p>
+</section>
+<hr class="docutils" />
+<section id="congratulations-we-re-done">
+<h3>Congratulations, we’re done!<a class="headerlink" href="#congratulations-we-re-done" title="Link to this heading">#</a></h3>
+<p>Now, you just need to submit this assignment by uploading it to the course <a href="https://d2l.msu.edu/">Desire2Learn</a> web page for today’s submission folder (Don’t forget to add your names in the first cell).</p>
+<p>© Copyright 2025 Department of Computational Mathematics, Science and Engineering at Michigan State University</p>
+</section>
+</section>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "conda-base-py"
+        },
+        kernelOptions: {
+            name: "conda-base-py",
+            path: "./daily/Day-20"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'conda-base-py'</script>
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="Day-20_Pre-Class_SVMs-STUDENT.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">Pre-Class Assignment: Support Vector Machines (SVMs)</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="../../section_files/day_21.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Day 21</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <dialog id="pst-secondary-sidebar-modal"></dialog>
+                <div id="pst-secondary-sidebar" class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">In-Class Assignment: Machine learning with an SVM Classifier</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#day-20">Day 20</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#cmse-202">CMSE 202</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#put-your-name-here"><p style="text-align: right;"> ✅ <strong>Put your name here</strong> </p></a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#put-your-group-member-names-here"><p style="text-align: right;"> ✅ Put your group member names here</p></a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#agenda-for-today-s-class">Agenda for today’s class</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#imports">Imports:</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#review-of-pre-class-assignment">1. Review of Pre-Class assignment</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#what-does-an-svm-do-how-do-you-define-the-optimal-line-of-separation">What does an SVM do? How do you define the “optimal” line of separation?</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#the-svm-classifier">2. The SVM Classifier</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#classify-your-blob-data">2.1 Classify your “blob” data</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#running-the-svm-classifier">2.2 Running the SVM classifier</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#upacking-the-svm-results">2.3 Upacking the SVM results</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#visualizing-the-boundary-and-the-margins">3. Visualizing the boundary and the margins</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#what-is-a-hyperplane">3.1 What is a hyperplane?</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#drawing-the-boundary">3.2 Drawing the boundary</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#draw-the-support-vectors">3.3 Draw the Support Vectors</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#svm-margins">3.4 SVM Margins</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#calculating-the-margin">3.4.1 Calculating the margin</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#describing-the-function-margin-y-fn">3.4.2 Describing the function <code class="docutils literal notranslate"><span class="pre">margin_y_fn</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#hyperparameter-tuning-the-effect-of-c">4. Hyperparameter tuning (the effect of <code class="docutils literal notranslate"><span class="pre">C</span></code>)</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#automate-the-process-to-explore-the-effect-of-c">4.1 Automate the process to explore the effect of “C”</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#congratulations-we-re-done">Congratulations, we’re done!</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By MSU CMSE
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2025.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script defer src="../../_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf"></script>
+<script defer src="../../_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>

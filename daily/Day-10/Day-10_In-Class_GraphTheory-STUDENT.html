@@ -1,0 +1,1020 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="../../" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>In-Class Assignment: Graph Theory &#8212; CMSE 202 Course Website</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  <!--
+    this give us a css class that will be invisible only if js is disabled
+  -->
+  <noscript>
+    <style>
+      .pst-js-only { display: none !important; }
+
+    </style>
+  </noscript>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../../_static/styles/theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
+<link href="../../_static/styles/pydata-sphinx-theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
+
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=b76e3c8a" />
+    <link rel="stylesheet" type="text/css" href="../../_static/styles/sphinx-book-theme.css?v=a3416100" />
+    <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css?v=13237357" />
+    <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="../../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-thebe.css?v=4fa983c6" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-design.min.css?v=95c83b7e" />
+  
+  <!-- So that users can add custom icons -->
+  <script src="../../_static/scripts/fontawesome.js?digest=8878045cc6db502f8baf"></script>
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../../_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf" />
+<link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf" />
+
+    <script src="../../_static/documentation_options.js?v=9eb32ce0"></script>
+    <script src="../../_static/doctools.js?v=9a2dae69"></script>
+    <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../../_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="../../_static/copybutton.js?v=f281be69"></script>
+    <script src="../../_static/scripts/sphinx-book-theme.js?v=887ef09a"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../../_static/togglebutton.js?v=4a39c7ea"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="../../_static/design-tabs.js?v=f930bc37"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script async="async" src="../../_static/sphinx-thebe.js?v=c100c467"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'daily/Day-10/Day-10_In-Class_GraphTheory-STUDENT';</script>
+    <link rel="icon" href="../../_static/logo.png"/>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="Day 11" href="../../section_files/day_11.html" />
+    <link rel="prev" title="Pre-Class Assignment: Conflicts in Git and Graph Theory" href="Day-10_Pre-Class_GraphTheory-STUDENT.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  <meta name="docsearch:version" content="" />
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
+  
+  <dialog id="pst-search-dialog">
+    
+<form class="bd-search d-flex align-items-center"
+      action="../../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         placeholder="Search..."
+         aria-label="Search..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form>
+  </dialog>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+      <dialog id="pst-primary-sidebar-modal"></dialog>
+      <div id="pst-primary-sidebar" class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="../../index.html">
+  
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="../../_static/logo.png" class="logo__image only-light" alt="CMSE 202 Course Website - Home"/>
+    <img src="../../_static/logo.png" class="logo__image only-dark pst-js-only" alt="CMSE 202 Course Website - Home"/>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item">
+
+<button class="btn search-button-field search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+ <i class="fa-solid fa-magnifying-glass"></i>
+ <span class="search-button__default-text">Search</span>
+ <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+</button></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">Course Materials</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../../course_materials/CMSE202_Syllabus.html">Syllabus</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../course_materials/CMSE202_Calendar.html">Schedule</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../course_materials/CMSE202_HelpRoomCalendar.html">Office Hours and Help Room</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../course_materials/SoftwareSetupGuide.html">Software Setup Guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../course_materials/CMSE202_GenerativeAI_Policy.html">Generative AI Policy</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://upload.wikimedia.org/wikipedia/commons/7/79/Unix_command_cheatsheet.pdf">CLI (Unix/Mac/Linux) commands cheat sheet</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../course_materials/BashVsPowershell_CheatSheet.html">Bash vs PowerShell</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://wac-cdn.atlassian.com/dam/jcr:e7e22f25-bba2-4ef1-a197-53f46b6df4a5/SWTM-2088_Atlassian-Git-Cheatsheet.pdf?cdnVersion=525">Git Cheat Sheet</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://raw.githubusercontent.com/msu-cmse-courses/cmse202-supplemental-data/main/documents/How-to-Access-Anaconda-Powershell-Prompt.pdf">How to Access “Anaconda Powershell Prompt” (for Windows users)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../course_materials/Pull_Request_Guide.html">Making and merging Pull Requests on GitHub</a></li>
+
+
+
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Semester Project</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../../course_materials/SemesterProjectDetails.html">Semester Project Details</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../course_materials/CMSE202_FinalProjectRequirementsAndGradingRubric.html">Semester Project Requirements and Grading Rubric</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Exams</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../../course_materials/MidtermStudyGuide.html">Midterm Study Guide</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Daily Content</span></p>
+<ul class="current nav bd-sidenav">
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../section_files/day_1.html">Day 1</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../Day-01/Day-01_In-Class_Overview-STUDENT.html">In-class Notebook: Welcome to CMSE202</a></li>
+
+
+
+
+
+
+
+
+
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../section_files/day_2.html">Day 2</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../Day-02/Day-02_Pre-Class_ReflectionAndCommandLineInterface-STUDENT.html">Pre-Class Assignment: Reflection and an introduction to the Command Line Interface (CLI)</a></li>
+
+
+
+<li class="toctree-l2"><a class="reference internal" href="../Day-02/Day-02_In-Class_CommandLineInterface-STUDENT.html">In-class Notebook: Command line interface</a></li>
+
+
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../section_files/day_3.html">Day 3</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../Day-03/Day-03_Pre-Class_PythonReview%2BGitIntro-STUDENT.html">Pre-Class Assignment: Python Review and Intro to Git</a></li>
+
+<li class="toctree-l2"><a class="reference internal" href="../Day-03/Day-03_In-Class_GitPractice-STUDENT.html">In-Class Assignment: Practice with Git and GitHub</a></li>
+
+
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../section_files/day_4.html">Day 4</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../Day-04/Day-04_Pre-Class_DownloadingFilesAndInstallingPackages-STUDENT.html">Pre-class Assignment: Python Packages</a></li>
+
+
+
+
+
+<li class="toctree-l2"><a class="reference internal" href="../Day-04/Day-04_In-Class_PythonPackagesAndMapPlotting-STUDENT.html">In-class Assignment: Installing Python Packages and Plotting with Maps in Python</a></li>
+
+
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../section_files/day_5.html">Day 5</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../Day-05/Day-05_Pre-Class_PandasReview-STUDENT.html">Pre-Class Assignment: Pandas Review</a></li>
+
+
+<li class="toctree-l2"><a class="reference internal" href="../Day-05/Day-05_In-Class_PandasReview-STUDENT.html">In-Class Assignment: Reviewing Pandas and exploring data</a></li>
+
+
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../section_files/day_6.html">Day 6</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../Day-06/Day-06_Pre-class_ObjectsClasses-STUDENT.html">Pre-class Assignment: Introduction to Object Oriented Programming (OOP)</a></li>
+
+
+<li class="toctree-l2"><a class="reference internal" href="../Day-06/Day-06_In-Class_ObjectsClasses-STUDENT.html">In-class Assignment: We have a Zoo!</a></li>
+
+
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../section_files/day_7.html">Day 7</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../Day-07/Day-07_Pre-class_ObjectInheritanceAndComposition-STUDENT.html">Pre-class Assignment: object inheritance and composition</a></li>
+
+
+<li class="toctree-l2"><a class="reference internal" href="../Day-07/Day-07_In-Class_ObjectInheritanceAndComposition-STUDENT.html">In-class Assignment: We have a Zoo! (part 2)</a></li>
+
+
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../section_files/day_8.html">Day 8</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../Day-08/Day-08_Pre-Class_SuperbugsABM-STUDENT.html">Pre-Class Assignment: Agent-based Modeling of Superbugs</a></li>
+
+
+
+
+
+<li class="toctree-l2"><a class="reference internal" href="../Day-08/Day-08_In-Class_ABMSuperbugs1-STUDENT.html">In-Class Assignment: Simulating Superbugs using agent-based modeling</a></li>
+
+
+
+
+
+
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../section_files/day_9.html">Day 9</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../Day-09/Day-09_Pre-Class_OOPAntForaging-STUDENT.html">Pre-Class Assignment: Reviewing another agent-based model built using Object Oriented Programming (OOP)</a></li>
+
+
+<li class="toctree-l2"><a class="reference internal" href="../Day-09/Day-09_In-Class_ABMSuperbugs2-STUDENT.html">In-Class Assignment: Agent Based Modeling of Superbugs (part 2)</a></li>
+
+
+</ul>
+</details></li>
+<li class="toctree-l1 current active has-children"><a class="reference internal" href="../../section_files/day_10.html">Day 10</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="Day-10_Pre-Class_GraphTheory-STUDENT.html">Pre-Class Assignment: Conflicts in Git and Graph Theory</a></li>
+
+
+<li class="toctree-l2 current active"><a class="current reference internal" href="#">In-Class Assignment: Graph Theory</a></li>
+
+
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../section_files/day_11.html">Day 11</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../Day-11/Day-11_Pre-Class_GraphTheoryCellTowers-STUDENT.html">Pre-class Assignment: Project Brainstorming &amp; Graph Theory and Cell Towers</a></li>
+
+
+
+
+
+<li class="toctree-l2"><a class="reference internal" href="../Day-11/Day-11_In-Class_GraphTheoryCellTowers-STUDENT.html">In-class Assignment: Graph Theory and Cell Towers</a></li>
+
+
+
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../section_files/day_12.html">Day 12</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../Day-12/Day-12_In-Class_ProjectProposals-STUDENT.html">In-Class Assignment: Reviewing Project Ideas</a></li>
+
+
+
+
+
+
+
+
+
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../section_files/day_13.html">Day 13</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../Day-13/Day-13_Pre-Class_Regression-STUDENT.html">Pre-Class Assignment: Regression</a></li>
+
+
+
+<li class="toctree-l2"><a class="reference internal" href="../Day-13/Day-13_In-Class-Regression-STUDENT.html">In-Class Assignment: Linear Regression</a></li>
+
+
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../section_files/day_14.html">Day 14</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../Day-14/Day-14_Pre-Class-PolynomialRegression-STUDENT.html">Pre-Class Assignment: Polynomial Regression</a></li>
+
+
+
+<li class="toctree-l2"><a class="reference internal" href="../Day-14/Day-14_In-Class_MultipleRegression-STUDENT.html">In-Class Assignment: Multiple Regression</a></li>
+
+
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../section_files/day_15.html">Day 15</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../Day-15/Day-15_Pre-Class_MachineLearningIntro-STUDENT.html">Pre-class Assignment: Intro to Machine Learning</a></li>
+
+
+<li class="toctree-l2"><a class="reference internal" href="../Day-15/Day-15_In-Class_ML-LogisticRegression-STUDENT.html">In-Class Assignment: Machine Learning; classification with logistic regression</a></li>
+
+
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../section_files/day_16.html">Day 16</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../Day-16/Day-16_Pre-Class_GitRevisited-STUDENT.html">Pre-Class Assignment: Git with it! (collaborating with Git)</a></li>
+
+
+
+<li class="toctree-l2"><a class="reference internal" href="../Day-16/Day-16_In-Class_CollaboratingWithGit-STUDENT.html">In-Class Assignment: Collaborating with Git</a></li>
+
+
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../section_files/day_17.html">Day 17</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../Day-17/Day-17_Pre-Class_AIPracticeAndProductiveGroupwork-STUDENT.html">Pre-Class Assignment: Revisiting generative AI and reflecting on group work experiences</a></li>
+
+
+
+<li class="toctree-l2"><a class="reference internal" href="../Day-17/Day-17_In-Class_RevisitingGenerativeAIAndProjectPlanning-STUDENT.html">In-Class Assignment: Revisiting Generative AI and Project Planning</a></li>
+
+
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../section_files/day_18.html">Day 18</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../Day-18/Day-18_Pre-Class_Perceptron-STUDENT.html">Pre-class Assignment: The Perceptron Classifier (a simple neural network)</a></li>
+
+
+<li class="toctree-l2"><a class="reference internal" href="../Day-18/Day-18_In-Class_Perceptron-STUDENT.html">In-Class Assignment: The Perceptron Classifier</a></li>
+
+
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../section_files/day_19.html">Day 19</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../Day-19/Day-19_In-Class_PerceptronExtension-STUDENT.html">In-Class Challenge Assignment: Experimenting with the Perceptron</a></li>
+
+
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../section_files/day_20.html">Day 20</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../Day-20/Day-20_Pre-Class_SVMs-STUDENT.html">Pre-Class Assignment: Support Vector Machines (SVMs)</a></li>
+
+
+
+<li class="toctree-l2"><a class="reference internal" href="../Day-20/Day-20_In-Class_SVMs-STUDENT.html">In-Class Assignment: Machine learning with an SVM Classifier</a></li>
+
+
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../section_files/day_21.html">Day 21</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../Day-21/Day-21_Pre-Class_SVMs2-STUDENT.html">Pre-Class Assignment: Further exploration of SVMs</a></li>
+
+
+
+<li class="toctree-l2"><a class="reference internal" href="../Day-21/Day-21_In-Class_SVMs2-STUDENT.html">In-Class Assignment: SVMs continued</a></li>
+
+
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../section_files/day_22.html">Day 22</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../Day-22/Day-22_Pre-Class_ProjectUpdateReminder-STUDENT.html">Pre-Class Assignment: Project updates!</a></li>
+
+
+
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../section_files/day_23.html">Day 23</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../Day-23/Day-23_Pre-Class_PCA-STUDENT.html">Pre-Class Assignment: Principal Component Analysis</a></li>
+
+
+
+</ul>
+</details></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Homework</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../../homework/SS25/HW01/HW-01_GitPracticeDebuggingPythonPackagesAndClasses-SS25-STUDENT.html">Homework 1</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../homework/SS25/HW02/HW02_Part1-Orbits-SS25-STUDENT.html">Homework 2 Part 1</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../homework/SS25/HW02/HW02_Part2-Risk-SS25-STUDENT.html">Homework 2 Part 2</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../homework/SS25/HW03/HW-03_Regression-S25-STUDENT.html">Homework Assignment 3</a></li>
+
+
+
+
+
+
+
+
+
+<li class="toctree-l1"><a class="reference internal" href="../../homework/SS25/HW04/HW-04_Perceptron_SVM_STUDENT.html">Homework 4</a></li>
+
+
+
+
+
+
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+      <div class="sidebar-primary-item">
+<div id="ethical-ad-placement"
+      class="flat"
+      data-ea-publisher="readthedocs"
+      data-ea-type="readthedocs-sidebar"
+      data-ea-manual="true">
+</div></div>
+  </div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><button class="sidebar-toggle primary-toggle btn btn-sm" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</button></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="../../_sources/daily/Day-10/Day-10_In-Class_GraphTheory-STUDENT.ipynb" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.ipynb</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button pst-js-only" aria-label="Color mode" data-bs-title="Color mode"  data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <i class="theme-switch fa-solid fa-sun                fa-lg" data-mode="light" title="Light"></i>
+  <i class="theme-switch fa-solid fa-moon               fa-lg" data-mode="dark"  title="Dark"></i>
+  <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"  title="System Settings"></i>
+</button>
+
+
+<button class="btn btn-sm pst-navbar-icon search-button search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+</button>
+<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</button>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>In-Class Assignment: Graph Theory</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">In-Class Assignment: Graph Theory</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#day-10">Day 10</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#cmse-202">CMSE 202</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#put-your-name-here"><p style="text-align: right;"> ✅ <strong>Put your name here</strong> </p></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#agenda-for-today-s-class">Agenda for today’s class</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#pre-class-assignment-review-and-discussion">1. Pre-class assignment review and discussion</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#getting-familiar-with-graphs">2. Getting familiar with graphs</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#seven-bridges-of-konigsberg">Seven Bridges of Königsberg</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#sprouts">Sprouts</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#working-with-networkx">3. Working with Networkx</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#using-the-networkx-documentation">Using the networkx documentation</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#quick-access-resources">Quick access resources</a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#part-1"><strong>Part 1:</strong></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#part-2"><strong>Part 2:</strong></a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#example-dodecahedral-graph">Example: Dodecahedral Graph</a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#part-3"><strong>Part 3:</strong></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#part-4"><strong>Part 4:</strong></a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#consider-the-following-scenario">Consider the following scenario:</a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#part-5"><strong>Part 5:</strong></a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#reflection">✅ Reflection:</a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#congratulations-we-re-done">Congratulations, we’re done!</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section class="tex2jax_ignore mathjax_ignore" id="in-class-assignment-graph-theory">
+<h1>In-Class Assignment: Graph Theory<a class="headerlink" href="#in-class-assignment-graph-theory" title="Link to this heading">#</a></h1>
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="day-10">
+<h1>Day 10<a class="headerlink" href="#day-10" title="Link to this heading">#</a></h1>
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="cmse-202">
+<h1>CMSE 202<a class="headerlink" href="#cmse-202" title="Link to this heading">#</a></h1>
+<p><a href="http://sixdegrees.hu/last.fm/"><img src="http://sixdegrees.hu/last.fm/images/lastfm_360_graph_white.png"><p style="text-align: right;">
+network of musicians</p>
+</p><section id="put-your-name-here">
+<h2><p style="text-align: right;"> ✅ <strong>Put your name here</strong> </p><a class="headerlink" href="#put-your-name-here" title="Link to this heading">#</a></h2>
+</section>
+<section id="agenda-for-today-s-class">
+<h2>Agenda for today’s class<a class="headerlink" href="#agenda-for-today-s-class" title="Link to this heading">#</a></h2>
+</p>
+<ol class="arabic simple">
+<li><p><a class="reference internal" href="#pca-review"><span class="xref myst">Review of pre-class assignment</span></a></p></li>
+<li><p><a class="reference internal" href="#graphs"><span class="xref myst">Getting familiar with graphs</span></a></p></li>
+<li><p><a class="reference internal" href="#networkx"><span class="xref myst">Working with networkx</span></a></p></li>
+</ol>
+<hr class="docutils" />
+<p><a id="pca-review"></a></p>
+</section>
+<section id="pre-class-assignment-review-and-discussion">
+<h2>1. Pre-class assignment review and discussion<a class="headerlink" href="#pre-class-assignment-review-and-discussion" title="Link to this heading">#</a></h2>
+<p>Did anyone have any specific issues with the pre-class assignment?</p>
+<p>Let’s take a moment to highlight some key concepts. <strong>Discuss with your group</strong> the following prompts and write down a some brief notes from your discussion.</p>
+<p>✅ <strong>Question 1:</strong> What are the main two components of a graph/network?</p>
+<p><font size=+3>✎</font> Do This -  Make note of anything that comes up in your discussion that you didn’t originally think or any ideas that you had based on your discussion.</p>
+<p>✅ <strong>Question 2:</strong> Can you think of some examples of systems or data that could be well-represented using a graph? What data or components of the system would be represented by different parts of the graph?</p>
+<p><font size=+3>✎</font> Do This -  Make note of anything that comes up in your discussion that you didn’t originally think or any ideas that you had based on your discussion.</p>
+<hr class="docutils" />
+<p><a id="graphs"></a></p>
+</section>
+<section id="getting-familiar-with-graphs">
+<h2>2. Getting familiar with graphs<a class="headerlink" href="#getting-familiar-with-graphs" title="Link to this heading">#</a></h2>
+<section id="seven-bridges-of-konigsberg">
+<h3>Seven Bridges of Königsberg<a class="headerlink" href="#seven-bridges-of-konigsberg" title="Link to this heading">#</a></h3>
+<p>The city of Königsberg in Prussia (now Kaliningrad, Russia) is set on both sides of the Pregel River, and includes two large islands which are connected to each other and the mainland by seven bridges. The problem to be solved is to devise a walk through the city that would cross each bridge once and only once, with the provisos that: the islands could only be reached by the bridges and every bridge once accessed must be crossed to its other end. The starting and ending points of the walk need not be the same.</p>
+<img src="https://upload.wikimedia.org/wikipedia/commons/5/5d/Konigsberg_bridges.png">
+<p>✅ <strong>Do This</strong> - Using a piece of paper or whiteboard, layout this problem as a graph with nodes (land masses) and edges (bridges). <strong>Talk with your group to see if you agree on how it should be represented.</strong></p>
+<p>✅ <strong>Do This</strong> - Then, using your paper or virtual whiteboard, write out a representation of your graph as both an adjacency list and an adjacency matrix. <strong>Talk with your group to see if you agree on how it should be represented.</strong></p>
+<p>✅ <strong>Do This</strong> - Draw your solution to the Seven Bridges of Königsberg on your graph using a different color dry erase marker. If you can’t seem to find a solution, be prepared to explain why. <strong>Discuss your solution, or lack of solution, with your group.</strong></p>
+<p>After all groups have a chance to think this through, <strong>we will have a classroom wide discussion about this problem</strong>.</p>
+</section>
+<hr class="docutils" />
+<section id="sprouts">
+<h3>Sprouts<a class="headerlink" href="#sprouts" title="Link to this heading">#</a></h3>
+<p>This activity introduces you to some aspects of graph theory via a game played by drawing graphs on a sheet of paper. The game is called “sprouts” and it is an invention of John Horton Conway and Michael S. Paterson at Cambridge University in the early 1960s.</p>
+<p>Sprouts is a game played by two players, using a sheet of paper and a pen or a pencil. The game begins with a choice by the players of a collection of n “spots” or “nodes” on the paper. For example, here is a game board with n=3 (images and instructions from <a class="reference external" href="https://blog.doublehelix.csiro.au/game-sprouts/">https://blog.doublehelix.csiro.au/game-sprouts/</a>):</p>
+<img src="https://i2.wp.com/blog.doublehelix.csiro.au/wp-content/uploads/2015/02/sprouts1.jpg?ssl=1">
+<ol class="arabic simple">
+<li><p>On your turn, draw a line from one spot to another spot.</p></li>
+<li><p>When you finish drawing your line, put a spot somewhere along its length, splitting the line in two. There are two rules you need to follow:</p>
+<ul class="simple">
+<li><p>A line can’t cross over itself or other lines.</p></li>
+<li><p>A spot can only have three lines coming out of it.</p></li>
+</ul>
+</li>
+<li><p>Once you finish your turn, it is your opponent’s turn. Keep alternating turns until it is impossible to draw a line. Whoever played the last move wins!</p></li>
+</ol>
+<p>Here is the same board after one move:
+<img src="https://i1.wp.com/blog.doublehelix.csiro.au/wp-content/uploads/2015/02/sprouts2.jpg?ssl=1"></p>
+<p>Here is an example, completed, game with no more possible moves:
+<img src="https://i2.wp.com/blog.doublehelix.csiro.au/wp-content/uploads/2015/02/sprouts4.jpg?ssl=1"></p>
+<p>✅ <strong>Do This</strong>: Within your group, find a partner and play the game. <strong>You should find some whiteboard space to use or a sheet of paper</strong>.</p>
+<p>Think about how you could represent the game in a program. Discuss your thoughts with other pairs in your group.</p>
+<p>Also, <strong>discuss anything learned about the game in terms of the maximum number of possible moves or the stategies for winning.</strong></p>
+<p><strong>Decide on one or two people in your group who will share your thoughts with the class.</strong></p>
+<hr class="docutils" />
+<p><a id="pca-networkx"></a></p>
+</section>
+</section>
+<section id="working-with-networkx">
+<h2>3. Working with Networkx<a class="headerlink" href="#working-with-networkx" title="Link to this heading">#</a></h2>
+<p>In this part of the activity, we will explore a package called <a class="reference external" href="https://networkx.org/"><strong><em>networkx</em></strong></a> which can be used to construct graphs in python.</p>
+<p><strong>ATTENTION</strong>: Depending on what there version of networkx and the various package dependencies are on either your machine or on JupyterHub, you may get an error when you try to draw the networkx graphs. If this happens you may need to update the <code class="docutils literal notranslate"><span class="pre">decorator</span></code> package in your Anaconda python distribution. Thankfully, because you already learned out to install packages, updating a package is easy!</p>
+<p><em>If you are getting a error</em>, make sure you run the following command wherever you have been installing packages in order to upgrade the <code class="docutils literal notranslate"><span class="pre">decorator</span></code> package:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>pip<span class="w"> </span>install<span class="w"> </span>--user<span class="w"> </span>--upgrade<span class="w"> </span>decorator
+</pre></div>
+</div>
+<section id="using-the-networkx-documentation">
+<h3>Using the networkx documentation<a class="headerlink" href="#using-the-networkx-documentation" title="Link to this heading">#</a></h3>
+<p>Navigating the networkx <a class="reference external" href="https://networkx.org/documentation/stable/">documentation</a> can be somewhat unintuitive at times, so we have tried to provide you with some direct links to documentation pages on some of the more useful functions. At the top of this list are the <code class="docutils literal notranslate"><span class="pre">Graph()</span></code> constructor and the <code class="docutils literal notranslate"><span class="pre">draw()</span></code> function, so we’ve provided a couple of direct links to these tools.</p>
+<section id="quick-access-resources">
+<h4>Quick access resources<a class="headerlink" href="#quick-access-resources" title="Link to this heading">#</a></h4>
+<hr class="docutils" />
+<p>The <code class="docutils literal notranslate"><span class="pre">Graph()</span></code> constructor automatically calls a variety of functions which will convert other data formats like a dictionary or a numpy matrix into a networkx graph. Information about supported formats can be found here <a class="reference external" href="https://networkx.github.io/documentation/stable/reference/convert.html">https://networkx.github.io/documentation/stable/reference/convert.html</a>. Hopefully this activity will give you a chance to practice building graphs in a variety of ways. After we build a graph object, the first thing we want to do is visualize it. The best way to do this is usually the <code class="docutils literal notranslate"><span class="pre">draw()</span></code> function. The different parameters we can use for the draw function are found here:</p>
+<p><a class="reference external" href="https://networkx.github.io/documentation/stable/reference/generated/networkx.drawing.nx_pylab.draw_networkx.html#networkx.drawing.nx_pylab.draw_networkx">https://networkx.github.io/documentation/stable/reference/generated/networkx.drawing.nx_pylab.draw_networkx.html#networkx.drawing.nx_pylab.draw_networkx</a></p>
+<p>Even though this page is for the <code class="docutils literal notranslate"><span class="pre">draw_networkx()</span></code> function, all of these parameters can be used inside the <code class="docutils literal notranslate"><span class="pre">draw()</span></code> function as well.</p>
+<hr class="docutils" />
+<p>To begin, we will consider an example from a special family of graphs called the <strong><em>complete graphs</em>.</strong> A complete graph has the property that each node is connected to every other node. The complete graph with <em>n</em> nodes is usually denoted by <span class="math notranslate nohighlight">\(K_n\)</span>. One nice property of the complete graphs is that they have a very simple adjacency matrix (what is it?). We can use a NumPy (adjacency) matrix to build a graph by passing it directly to the networkx <code class="docutils literal notranslate"><span class="pre">Graph()</span></code> constructor. The <code class="docutils literal notranslate"><span class="pre">Graph()</span></code> constructor is the prefered way of creating all graphs in networkx. As long as the input object is in a supported format, the <code class="docutils literal notranslate"><span class="pre">Graph()</span></code> constructor will automatically call the proper function to convert your object into a networkx graph. We can then draw a graph by passing our graph object to the networkx <code class="docutils literal notranslate"><span class="pre">draw()</span></code> function. Let’s test it out!</p>
+</section>
+</section>
+<section id="part-1">
+<h3><strong>Part 1:</strong><a class="headerlink" href="#part-1" title="Link to this heading">#</a></h3>
+<p>✅ <strong>In the cell below, create an adjacency matrix for the complete graph, <span class="math notranslate nohighlight">\(K_4\)</span> (4 nodes with each node connected to every other node), using a numpy array. Then create a networkx graph using the <code class="docutils literal notranslate"><span class="pre">Graph()</span></code> constructor and plot it out using the <code class="docutils literal notranslate"><span class="pre">draw()</span></code> function.</strong></p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Put your code here</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>✅ <strong>Read this:</strong> In the graph you made for <span class="math notranslate nohighlight">\(K_4\)</span> above, you may notice that if you run the cell repeatedly, the position of the nodes changes. Another thing to notice is that the graph <span class="math notranslate nohighlight">\(K_4\)</span> has been drawn so that two of its edges intersect in the center. Neither of these behaviors are especially desirable. To remedy this, the networkx draw function has a <code class="docutils literal notranslate"><span class="pre">pos</span></code> parameter which can be used to fix the positions of the nodes in place. To use it, we’ll need to create a dictionary containing the names of the nodes as the keys, and the desired (x,y)-coordinates as values. Since we haven’t given our nodes any names yet, they will be keyed by integer values by default.</p>
+</section>
+<section id="part-2">
+<h3><strong>Part 2:</strong><a class="headerlink" href="#part-2" title="Link to this heading">#</a></h3>
+<p>✅ <strong>With your group, find a way to reposition the nodes of the graph <span class="math notranslate nohighlight">\(K_4\)</span> so that the edges do not intersect. Create a dictionary, <code class="docutils literal notranslate"><span class="pre">positions</span></code>, representing your drawing. Pass your dictionary to the <code class="docutils literal notranslate"><span class="pre">pos</span></code> parameter in the networkx <code class="docutils literal notranslate"><span class="pre">draw()</span></code> function to reposition the nodes.</strong></p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Put your code here</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>✅ <strong>Read this</strong>: The <code class="docutils literal notranslate"><span class="pre">pos</span></code> parameter is a central tool for understanding graphs with networkx. You just proved that it could be used to draw <span class="math notranslate nohighlight">\(K_4\)</span> so that it does not intersect, and since <span class="math notranslate nohighlight">\(K_4\)</span> is small, it is fairly easy for us to see that the two drawings represent the same graph. However, as the number of nodes and edges grow large, it becomes increasingly difficult to decide whether or not two drawings represent the same graph. In technical languange, two graph drawings that have the same nodes with the same edge connections between them are called <strong><em>isomorphic</em></strong>. If a graph drawing is isomporphic to another graph drawing but does not have any intersecting edges, we call the graph <strong><em>planar</em></strong>. As you just worked out with your group, the complete graph <span class="math notranslate nohighlight">\(K_4\)</span> is a planar graph. Lets see a more complicated example of isomorphic graph drawings.</p>
+<section id="example-dodecahedral-graph">
+<h4>Example: Dodecahedral Graph<a class="headerlink" href="#example-dodecahedral-graph" title="Link to this heading">#</a></h4>
+<p>✅ Run the code below to see four different representations of the same dodecahedral graph.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">## Positions for a planar drawing called a Schlegel Diagram.</span>
+<span class="n">pos_dodecahedron</span> <span class="o">=</span> <span class="p">{</span><span class="mi">0</span><span class="p">:</span> <span class="p">(</span><span class="mf">1.1888206453689418</span><span class="p">,</span> <span class="mf">0.38627124296868426</span><span class="p">),</span> <span class="mi">1</span><span class="p">:</span> <span class="p">(</span><span class="mf">7.654042494670958e-17</span><span class="p">,</span> <span class="mf">1.25</span><span class="p">),</span> <span class="mi">2</span><span class="p">:</span> <span class="p">(</span><span class="o">-</span><span class="mf">1.1888206453689418</span><span class="p">,</span> <span class="mf">0.38627124296868437</span><span class="p">),</span> <span class="mi">3</span><span class="p">:</span> <span class="p">(</span><span class="o">-</span><span class="mf">0.7347315653655916</span><span class="p">,</span> <span class="o">-</span><span class="mf">1.011271242968684</span><span class="p">),</span> <span class="mi">4</span><span class="p">:</span> <span class="p">(</span><span class="mf">0.7347315653655911</span><span class="p">,</span> <span class="o">-</span><span class="mf">1.0112712429686845</span><span class="p">),</span> <span class="mi">5</span><span class="p">:</span> <span class="p">(</span><span class="mf">0.7132923872213651</span><span class="p">,</span> <span class="mf">0.23176274578121053</span><span class="p">),</span> <span class="mi">6</span><span class="p">:</span> <span class="p">(</span><span class="mf">4.592425496802574e-17</span><span class="p">,</span> <span class="mf">0.75</span><span class="p">),</span> <span class="mi">7</span><span class="p">:</span> <span class="p">(</span><span class="o">-</span><span class="mf">0.7132923872213651</span><span class="p">,</span> <span class="mf">0.23176274578121064</span><span class="p">),</span> <span class="mi">8</span><span class="p">:</span> <span class="p">(</span><span class="o">-</span><span class="mf">0.4408389392193549</span><span class="p">,</span> <span class="o">-</span><span class="mf">0.6067627457812105</span><span class="p">),</span> <span class="mi">9</span><span class="p">:</span> <span class="p">(</span><span class="mf">0.4408389392193547</span><span class="p">,</span> <span class="o">-</span><span class="mf">0.6067627457812107</span><span class="p">),</span> <span class="mi">10</span><span class="p">:</span> <span class="p">(</span><span class="o">-</span><span class="mf">0.4755282581475768</span><span class="p">,</span> <span class="o">-</span><span class="mf">0.15450849718747364</span><span class="p">),</span> <span class="mi">11</span><span class="p">:</span> <span class="p">(</span><span class="o">-</span><span class="mf">9.184850993605148e-17</span><span class="p">,</span> <span class="o">-</span><span class="mf">0.5</span><span class="p">),</span> <span class="mi">12</span><span class="p">:</span> <span class="p">(</span><span class="mf">0.47552825814757677</span><span class="p">,</span> <span class="o">-</span><span class="mf">0.1545084971874738</span><span class="p">),</span> <span class="mi">13</span><span class="p">:</span> <span class="p">(</span><span class="mf">0.2938926261462367</span><span class="p">,</span> <span class="mf">0.4045084971874736</span><span class="p">),</span> <span class="mi">14</span><span class="p">:</span> <span class="p">(</span><span class="o">-</span><span class="mf">0.29389262614623646</span><span class="p">,</span> <span class="mf">0.40450849718747384</span><span class="p">),</span> <span class="mi">15</span><span class="p">:</span> <span class="p">(</span><span class="o">-</span><span class="mf">0.2377641290737884</span><span class="p">,</span> <span class="o">-</span><span class="mf">0.07725424859373682</span><span class="p">),</span> <span class="mi">16</span><span class="p">:</span> <span class="p">(</span><span class="o">-</span><span class="mf">4.592425496802574e-17</span><span class="p">,</span> <span class="o">-</span><span class="mf">0.25</span><span class="p">),</span> <span class="mi">17</span><span class="p">:</span> <span class="p">(</span><span class="mf">0.23776412907378838</span><span class="p">,</span> <span class="o">-</span><span class="mf">0.0772542485937369</span><span class="p">),</span> <span class="mi">18</span><span class="p">:</span> <span class="p">(</span><span class="mf">0.14694631307311834</span><span class="p">,</span> <span class="mf">0.2022542485937368</span><span class="p">),</span> <span class="mi">19</span><span class="p">:</span> <span class="p">(</span><span class="o">-</span><span class="mf">0.14694631307311823</span><span class="p">,</span> <span class="mf">0.20225424859373692</span><span class="p">)}</span>
+
+<span class="n">nodes_dodecahedron</span> <span class="o">=</span> <span class="n">pos_dodecahedron</span><span class="o">.</span><span class="n">keys</span><span class="p">()</span>
+<span class="n">edges_dodecahedron</span> <span class="o">=</span> <span class="p">[(</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">),</span> <span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">),</span> <span class="p">(</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">),</span> <span class="p">(</span><span class="mi">3</span><span class="p">,</span><span class="mi">4</span><span class="p">),</span> <span class="p">(</span><span class="mi">4</span><span class="p">,</span><span class="mi">0</span><span class="p">),</span>
+                     <span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">5</span><span class="p">),</span> <span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">6</span><span class="p">),</span> <span class="p">(</span><span class="mi">2</span><span class="p">,</span><span class="mi">7</span><span class="p">),</span> <span class="p">(</span><span class="mi">3</span><span class="p">,</span><span class="mi">8</span><span class="p">),</span> <span class="p">(</span><span class="mi">4</span><span class="p">,</span><span class="mi">9</span><span class="p">),</span>
+                     <span class="p">(</span><span class="mi">6</span><span class="p">,</span><span class="mi">14</span><span class="p">),</span> <span class="p">(</span><span class="mi">14</span><span class="p">,</span><span class="mi">7</span><span class="p">),</span> <span class="p">(</span><span class="mi">7</span><span class="p">,</span><span class="mi">10</span><span class="p">),</span> <span class="p">(</span><span class="mi">10</span><span class="p">,</span><span class="mi">8</span><span class="p">),</span> <span class="p">(</span><span class="mi">8</span><span class="p">,</span><span class="mi">11</span><span class="p">),</span>
+                     <span class="p">(</span><span class="mi">11</span><span class="p">,</span><span class="mi">9</span><span class="p">),</span> <span class="p">(</span><span class="mi">9</span><span class="p">,</span><span class="mi">12</span><span class="p">),</span> <span class="p">(</span><span class="mi">12</span><span class="p">,</span><span class="mi">5</span><span class="p">),</span> <span class="p">(</span><span class="mi">5</span><span class="p">,</span><span class="mi">13</span><span class="p">),</span> <span class="p">(</span><span class="mi">13</span><span class="p">,</span><span class="mi">6</span><span class="p">),</span>
+                     <span class="p">(</span><span class="mi">10</span><span class="p">,</span><span class="mi">15</span><span class="p">),</span> <span class="p">(</span><span class="mi">11</span><span class="p">,</span><span class="mi">16</span><span class="p">),</span> <span class="p">(</span><span class="mi">12</span><span class="p">,</span><span class="mi">17</span><span class="p">),</span> <span class="p">(</span><span class="mi">13</span><span class="p">,</span><span class="mi">18</span><span class="p">),</span> <span class="p">(</span><span class="mi">14</span><span class="p">,</span><span class="mi">19</span><span class="p">),</span>
+                     <span class="p">(</span><span class="mi">15</span><span class="p">,</span><span class="mi">16</span><span class="p">),</span> <span class="p">(</span><span class="mi">16</span><span class="p">,</span><span class="mi">17</span><span class="p">),</span> <span class="p">(</span><span class="mi">17</span><span class="p">,</span><span class="mi">18</span><span class="p">),</span> <span class="p">(</span><span class="mi">18</span><span class="p">,</span><span class="mi">19</span><span class="p">),</span> <span class="p">(</span><span class="mi">19</span><span class="p">,</span><span class="mi">15</span><span class="p">)]</span>
+
+<span class="c1">## You can also leave the arguemnt of the Graph() constructor empty</span>
+<span class="n">dodecahedron</span> <span class="o">=</span> <span class="n">nx</span><span class="o">.</span><span class="n">Graph</span><span class="p">()</span>
+<span class="c1">## Then add nodes from a nodelist</span>
+<span class="n">dodecahedron</span><span class="o">.</span><span class="n">add_nodes_from</span><span class="p">(</span><span class="n">nodes_dodecahedron</span><span class="p">)</span>
+<span class="c1">## Then add edges from an edgelist</span>
+<span class="n">dodecahedron</span><span class="o">.</span><span class="n">add_edges_from</span><span class="p">(</span><span class="n">edges_dodecahedron</span><span class="p">)</span>
+
+<span class="c1">## Networkx offers different algorithms to decide how to draw a graph</span>
+<span class="c1">## The different options can be found under &#39;layout&#39;</span>
+<span class="n">pos1</span> <span class="o">=</span> <span class="n">nx</span><span class="o">.</span><span class="n">layout</span><span class="o">.</span><span class="n">circular_layout</span><span class="p">(</span><span class="n">dodecahedron</span><span class="p">)</span>
+<span class="n">pos2</span> <span class="o">=</span> <span class="n">nx</span><span class="o">.</span><span class="n">layout</span><span class="o">.</span><span class="n">spectral_layout</span><span class="p">(</span><span class="n">dodecahedron</span><span class="p">)</span>
+<span class="n">pos3</span> <span class="o">=</span> <span class="n">nx</span><span class="o">.</span><span class="n">layout</span><span class="o">.</span><span class="n">kamada_kawai_layout</span><span class="p">(</span><span class="n">dodecahedron</span><span class="p">)</span>
+
+<span class="n">fig</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="n">nrows</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span> <span class="n">ncols</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span> <span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span><span class="mi">10</span><span class="p">))</span>
+<span class="n">nx</span><span class="o">.</span><span class="n">draw</span><span class="p">(</span><span class="n">dodecahedron</span><span class="p">,</span> <span class="n">pos</span><span class="o">=</span><span class="n">pos1</span><span class="p">,</span> <span class="n">ax</span><span class="o">=</span><span class="n">ax</span><span class="p">[</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">])</span>
+<span class="n">nx</span><span class="o">.</span><span class="n">draw</span><span class="p">(</span><span class="n">dodecahedron</span><span class="p">,</span> <span class="n">pos</span><span class="o">=</span><span class="n">pos2</span><span class="p">,</span> <span class="n">ax</span><span class="o">=</span><span class="n">ax</span><span class="p">[</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">])</span>
+<span class="n">nx</span><span class="o">.</span><span class="n">draw</span><span class="p">(</span><span class="n">dodecahedron</span><span class="p">,</span> <span class="n">pos</span><span class="o">=</span><span class="n">pos3</span><span class="p">,</span> <span class="n">ax</span><span class="o">=</span><span class="n">ax</span><span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">0</span><span class="p">])</span>
+<span class="n">nx</span><span class="o">.</span><span class="n">draw</span><span class="p">(</span><span class="n">dodecahedron</span><span class="p">,</span> <span class="n">pos</span><span class="o">=</span><span class="n">pos_dodecahedron</span><span class="p">,</span> <span class="n">ax</span><span class="o">=</span><span class="n">ax</span><span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">])</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>✅ <strong>Read this:</strong> The four drawings of the dodecahedral graph shown above are just a small sample from the pool of possibilities. Additional drawings, some of which are quite striking, can be found here <a class="reference external" href="http://mathworld.wolfram.com/DodecahedralGraph.html">http://mathworld.wolfram.com/DodecahedralGraph.html</a>. The dodecahedral graph is a good demonstration that even a moderate increase in the number of nodes and edges can seriously complicate the task of determing whether or not two drawings are isomorphic. However if you are left with any doubt that these drawings really are the same graph, verify it!</p>
+<p>You can turn on node labels by setting the <strong><code class="docutils literal notranslate"><span class="pre">with_labels</span></code></strong> parameter to <code class="docutils literal notranslate"><span class="pre">True</span></code> inside the draw function. Choose any node you like, and take note of the “neighbor” nodes that connected to it. You will find that for any node you choose, its neighbors will be the same in all four graph drawings! You may also find it useful to color the nodes. Networkx has a function called <strong><code class="docutils literal notranslate"><span class="pre">greedy_color()</span></code></strong> which will automatically assign the nodes a <strong><em>proper coloring</em></strong> with the minimum number of colors necessary. A proper coloring gives colors to the nodes so that no two neighbors are the same color. To be specific, the <code class="docutils literal notranslate"><span class="pre">greedy_color()</span></code> function takes the desired networkx graph as its input, and outputs a dictionary. Note that the keys of that dictionary contain the names of the nodes and the value associated with each key is a single integer for each node. Therefore, <strong>the list of colors you need for coloring the nodes are the “values” in the dictionary that comes from <code class="docutils literal notranslate"><span class="pre">greedy_color</span></code>, which are accessible using the <code class="docutils literal notranslate"><span class="pre">.values()</span></code> method.</strong></p>
+<p>Here’s an example of how you could use the <code class="docutils literal notranslate"><span class="pre">greedy_color()</span></code> function for the graph <code class="docutils literal notranslate"><span class="pre">G</span></code>.</p>
+<blockquote>
+<div><div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">node_map</span> <span class="o">=</span> <span class="n">nx</span><span class="o">.</span><span class="n">greedy_color</span><span class="p">(</span><span class="n">G</span><span class="p">)</span>
+<span class="n">node_colors</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="n">node_map</span><span class="o">.</span><span class="n">values</span><span class="p">())</span>
+<span class="n">cmap</span> <span class="o">=</span> <span class="s1">&#39;viridis&#39;</span>
+<span class="n">nx</span><span class="o">.</span><span class="n">draw</span><span class="p">(</span><span class="n">G</span><span class="p">,</span><span class="n">node_color</span><span class="o">=</span><span class="n">node_colors</span><span class="p">,</span> <span class="n">cmap</span><span class="o">=</span><span class="n">cmap</span><span class="p">,</span> <span class="n">with_labels</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+</pre></div>
+</div>
+</div></blockquote>
+<p>Many different colormap options are available from matplotlib, some of which can be found here <a class="reference external" href="https://matplotlib.org/stable/gallery/color/colormap_reference.html">https://matplotlib.org/stable/gallery/color/colormap_reference.html</a>. If you don’t want to choose a colormap, that’s okay too. If you do not change the <code class="docutils literal notranslate"><span class="pre">cmap</span></code> parameter then the <code class="docutils literal notranslate"><span class="pre">draw()</span></code> function will simply use default colors. However, make sure you still pass the integer list into the <code class="docutils literal notranslate"><span class="pre">node_color</span></code> parameter.</p>
+</section>
+</section>
+<section id="part-3">
+<h3><strong>Part 3:</strong><a class="headerlink" href="#part-3" title="Link to this heading">#</a></h3>
+<p>✅ <strong>Try modifying the dodecahedron example so that the nodes are assigned a proper coloring. Also, turn on the node labels and change the font color if necessary so we can see them.</strong> Figuring out how to properly pass color information to the networkx graph can be a little tricky, so review the example code above and check in with your group to figure this out!</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">### Copy the above code and modify it here</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>✅ <strong>Read this:</strong> Labels are an extremely useful tool for understanding graphs, so we’ll want to know how to leverage the <code class="docutils literal notranslate"><span class="pre">Graph()</span></code> constructor to make use of them. The best way to construct a labeled graph is to pass a labeled object to the <code class="docutils literal notranslate"><span class="pre">Graph()</span></code> constructor.</p>
+<p>For example, <strong>one way to construct a labeled graph is to first create a labeled adjacency matrix using a Pandas dataframe</strong>. Your dataframe should contain the same data as the adjacency matrix, with both the columns and the index set to the list of node labels you want to use. You can create a labeled graph by passing in the dataframe the same way you pass in a regular adjacency matrix. However this is just one way to construct a graph using the <code class="docutils literal notranslate"><span class="pre">Graph()</span></code> constructor.</p>
+<p><strong>Another method which can be used to build the same labeled graph is to first build an adjacency list</strong>. We can implement an adjacency list in python using a dictionary object. Each key in the dictionary should be the name of a node and its value should be a list containing the names of the neighbors of that node.</p>
+<p>These are just two examples, but there are many more ways of building graphs in networkx. Feel free to explore the networkx documentation and make sure you find a method for constructing graphs which makes sense to you! Information about some of the different methods which can be called automatically by the <code class="docutils literal notranslate"><span class="pre">Graph()</span></code> constructor can be found on the following documentation page (the same one found in the resource section) <a class="reference external" href="https://networkx.github.io/documentation/stable/reference/convert.html">https://networkx.github.io/documentation/stable/reference/convert.html</a>.</p>
+</section>
+<section id="part-4">
+<h3><strong>Part 4:</strong><a class="headerlink" href="#part-4" title="Link to this heading">#</a></h3>
+<p>✅ <strong>In the cell below, create and draw the complete graph, <span class="math notranslate nohighlight">\(K_5\)</span>, with node labels ‘A’, ‘B’, ‘C’, ‘D’ and ‘E’. Make sure the node labels are turned on in the drawing. Feel free to test out any other features of networkx you are interested in.</strong></p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Put your code here</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>✅ <strong>Read this</strong>: The graph <span class="math notranslate nohighlight">\(K_5\)</span> is different from our first two examples. Your group has already shown that the graph <span class="math notranslate nohighlight">\(K_4\)</span> is planar. In addition, the graph drawn in the bottom right corner of the example given above demonstrates that the dodecahedral graph is also planar. In constrast, the graph <span class="math notranslate nohighlight">\(K_5\)</span> <strong><em>is not planar</em></strong>. This means that <strong><em>there does not exist</em></strong> a drawing of the graph <span class="math notranslate nohighlight">\(K_5\)</span> without at least one edge intersection. It may seem that worrying about whether or not a graph has edge intersections is trivial, however it does have real consequences.</p>
+<section id="consider-the-following-scenario">
+<h4>Consider the following scenario:<a class="headerlink" href="#consider-the-following-scenario" title="Link to this heading">#</a></h4>
+<blockquote>
+<div><p><em>There is a new city being built and you are its architect. The citizens funding the project are especially safety conscious so they have given you requirements as to how the major roads need to be laid out in order for the police station, fire department, and hospital to have the most direct routes possible in the event of an emergency. The city will have three predominant metropolitan areas: a park, a sports stadium, and a museum. Your job is to arrange the city so that each of the major metropolitan areas has a direct route along a major road to the hospital, police station, and fire department. In order to prevent any conflicts from arising between the three, the routes should not intersect. Can you meet the needs of the safety conscious citizens?</em></p>
+</div></blockquote>
+</section>
+</section>
+<section id="part-5">
+<h3><strong>Part 5:</strong><a class="headerlink" href="#part-5" title="Link to this heading">#</a></h3>
+<p>✅ <strong>In the cell below, create a graph representing this scenario. Explore different ways to represent elements of the problem using the available features of networkx Graphs and graph drawing. If you want some inspiration, check out the networkx examples page <a class="reference external" href="https://networkx.github.io/documentation/stable/auto_examples/index.html">https://networkx.github.io/documentation/stable/auto_examples/index.html</a></strong></p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Put your code here</span>
+</pre></div>
+</div>
+</div>
+</div>
+<section id="reflection">
+<h4>✅ Reflection:<a class="headerlink" href="#reflection" title="Link to this heading">#</a></h4>
+<p>Were you able to meet the demands of citizens? Explain why or why not in the cell below.</p>
+<p><font size=+3>✎</font> Do This - Erase the contents of this cell and replace it with your answer to the above question!  (double-click on this text to edit this cell, and hit shift+enter to save the text)</p>
+<hr class="docutils" />
+</section>
+</section>
+<hr class="docutils" />
+<section id="congratulations-we-re-done">
+<h3>Congratulations, we’re done!<a class="headerlink" href="#congratulations-we-re-done" title="Link to this heading">#</a></h3>
+<p>Now, you just need to submit this assignment by uploading it to the course <a href="https://d2l.msu.edu/">Desire2Learn</a> web page for today’s submission folder (Don’t forget to add your name in the first cell).</p>
+<p>© Copyright 2025,  Department of Computational Mathematics, Science and Engineering at Michigan State University</p>
+</section>
+</section>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "conda-base-py"
+        },
+        kernelOptions: {
+            name: "conda-base-py",
+            path: "./daily/Day-10"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'conda-base-py'</script>
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="Day-10_Pre-Class_GraphTheory-STUDENT.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">Pre-Class Assignment: Conflicts in Git and Graph Theory</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="../../section_files/day_11.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Day 11</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <dialog id="pst-secondary-sidebar-modal"></dialog>
+                <div id="pst-secondary-sidebar" class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">In-Class Assignment: Graph Theory</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#day-10">Day 10</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#cmse-202">CMSE 202</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#put-your-name-here"><p style="text-align: right;"> ✅ <strong>Put your name here</strong> </p></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#agenda-for-today-s-class">Agenda for today’s class</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#pre-class-assignment-review-and-discussion">1. Pre-class assignment review and discussion</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#getting-familiar-with-graphs">2. Getting familiar with graphs</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#seven-bridges-of-konigsberg">Seven Bridges of Königsberg</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#sprouts">Sprouts</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#working-with-networkx">3. Working with Networkx</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#using-the-networkx-documentation">Using the networkx documentation</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#quick-access-resources">Quick access resources</a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#part-1"><strong>Part 1:</strong></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#part-2"><strong>Part 2:</strong></a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#example-dodecahedral-graph">Example: Dodecahedral Graph</a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#part-3"><strong>Part 3:</strong></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#part-4"><strong>Part 4:</strong></a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#consider-the-following-scenario">Consider the following scenario:</a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#part-5"><strong>Part 5:</strong></a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#reflection">✅ Reflection:</a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#congratulations-we-re-done">Congratulations, we’re done!</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By MSU CMSE
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2025.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script defer src="../../_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf"></script>
+<script defer src="../../_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>
