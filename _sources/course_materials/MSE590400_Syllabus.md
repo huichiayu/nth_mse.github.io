@@ -1,37 +1,37 @@
-# CMSE 202
+# MSE 590400
 
-## Computational Modeling and Data Analysis II
+## Computational Materials Science and Materials Data Science
 
 ### Course Description
 
-A useful definition of computational science is “the use of computers to analyze and solve scientific problems.” Over the course of this semester, we will explore various aspects of computational science building off of lessons learned in your introductory programming class (CMSE 201). The continuation of the introduction to computational modeling and data analysis focuses on standard methods and tools used for modeling and data analysis. Topics may include statistical analysis, symbolic math, linear algebra, simulation techniques, and data mining.
+This course is designed as a gateway course for graduate students. It will showcase modeling and simulation methods for mesoscale and microscale morphology evolution in materials, covering topics such as diffusion, phase transformation, precipitation, solidification, grain growth, eutectic growth, crystal growth, sintering, electrodeposition, spinodal decomposition, and crack propagation. First, students will be exposed to atomic-scale simulation methods, such as density functional theory (DFT), molecular dynamics (MD), and Monte Carlo (MC) methods, and extend to microstructure evolutions. We will then focus on continuum-scale methods, specifically phase-field approaches, to simulate mass transport and phase transformation based on kinetic and thermodynamic descriptions. Finally, we will study emerging data science modeling methods for material phenomena. Students will learn these materials science modeling techniques via hands-on coding exercises.
 
-In addition, we will explore application-driven modeling of various systems, with applications to the physical, life, and social sciences, and also to engineering and mathematics. While we will learn some computer programming over this semester, the goal is utilitarian – this is a course in applied computing, rather than a course intended for beginning computer science majors!
+THIS COURSE WILL GIVE YOU...  
 
-By the end of this course, you will be able to:  
+1. Some background mathematics and relevant science
+2. Some overview of modeling and simulation methods in materials science
+3. Introduction to methods such as Phase Field Model, Finite Difference Method, Fourier Spectrum Method, Molecular Dynamics, Monte Carlo Method, (Finite Element Method if possible)
+4. Practice in using computational materials science tools and scientific computing through homework, projects, and lab sessions.
 
-1. Design and write programs to solve common problems in a variety of scientific disciplines.
-2. Identify and analyze appropriate pre-existing techniques, software packages and computing libraries to use in programs to solve scientific problems.
-3. Choose appropriate algorithms and data types to break down scientific problems into manageable components.
-4. Use modern software development methods and tools to construct reusable programs.
-5. Create computer automated workflows to manipulate, analyze and visualize datasets and use this data to evaluate scientific models.
-6. Demonstrate the ability to work in diverse groups to develop scientific software.
-7. Explain the results from a scientific computing problem and present it both verbally and in writing.
-
-We will work toward the goals expressed above throughout this course using a range of activities – primarily by writing software both individually and in small groups, but also through discussion, presentations, and other types of exercises.  
+We will work toward the goals expressed above throughout this course using a range of activities – primarily by lectures and by writing software, but also through discussion, presentations, and other types of exercises.  
 
 ### Topics covered
 
 The primary topics covered in this course include:    
 
-* Finding and using existing software and tools to solve scientific models.
-* Tools for collaborating with other programmers/scientists (Version Control)
-* More experience in programming in Python (i.e., variables and types, functions, simple data structures [strings, lists, dictionaries])
-* Moving beyond the Jupyter notebooks (Command Line Interfaces).
-* Tools to be better programmers and scientists
-* Plotting and data visualization
-* File and dataset manipulation
-* Introduction to scientific computing techniques, possibly including; signal processing, graph theory, machine learning, image analysis.
+* Intro to DFT and MD simulations with simple hands-on coding practices 
+* Intro to MC simulations with Random walk, Ising model, and Diffusion limited aggregation 
+* Basics of finite difference method
+* Time stepping methods (e.g., Euler and Runge-Kutta)
+* Thermodynamics free energy
+* Allen-Cahn (Ginzburg-Landau) phase field model for nucleation and growth
+* Cahn-Hilliard phase field model for spinodal decomposition
+* Solidifications, Eutectic transformation
+* Grain growth, Sintering, Solid-solid phase transformation
+* Crystal growth if time permits
+* Crack propagation if time permits
+* Emerging machine learning methods on materials science applications.
+
 
 Please note that **creating models to describe and understand systems** (whether they are in the physical, life, or social sciences, or in engineering) is the driving principle of this course – everything else we teach you is in service to this goal!    
 
