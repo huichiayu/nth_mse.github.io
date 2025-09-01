@@ -1,0 +1,84 @@
+Territory 1,Territory 2
+Alaska,Northwest Territory
+Alaska,Alberta
+Alberta,Northwest Territory
+Alberta,Ontario
+Alberta,Western US
+Central America,Eastern US
+Central America,Western US
+Eastern US,Ontario
+Eastern US,Quebec
+Eastern US,Western US
+Greenland,Northwest Territory
+Greenland,Ontario
+Greenland,Quebec
+Northwest Territory,Ontario
+Ontario,Quebec
+Ontario,Western US
+Argentina,Brazil
+Argentina,Peru
+Brazil,Venezuela
+Brazil,Peru
+Venezuela,Peru
+Congo,East Africa
+Congo,North Africa
+Congo,South Africa
+East Africa,Egypt
+East Africa,Madagascar
+East Africa,North Africa
+East Africa,South Africa
+Egypt,North Africa
+Madagascar,South Africa
+Eastern Australia,New Guinea
+Eastern Australia,Western Australia
+New Guinea,Indonesia
+New Guinea,Western Australia
+Indonesia,Western Australia
+Great Britain,Iceland
+Great Britain,Northern Europe
+Great Britain,Scandinavia
+Great Britain,Western Europe
+Iceland,Scandinavia
+Northern Europe,Scandinavia
+Northern Europe,Southern Europe
+Northern Europe,Ukraine
+Northern Europe,Western Europe
+Scandinavia,Ukraine
+Southern Europe,Ukraine
+Southern Europe,Western Europe
+Afghanistan,China
+Afghanistan,India
+Afghanistan,Middle East
+Afghanistan,Ural
+China,India
+China,Mongolia
+China,Siam
+China,Siberia
+China,Ural
+India,Middle East
+India,Siam
+Irkutsk,Kamchatka
+Irkutsk,Mongolia
+Irkutsk,Siberia
+Irkutsk,Yakursk
+Japan,Kamchatka
+Japan,Mongolia
+Kamchatka,Mongolia
+Kamchatka,Yakursk
+Mongolia,Siberia
+Siberia,Ural
+Siberia,Yakursk
+Alaska,Kamchatka
+Central America,Venezuela
+Greenland,Iceland
+Brazil,North Africa
+East Africa,Middle East
+Egypt,Middle East
+Egypt,Southern Europe
+North Africa,Southern Europe
+North Africa,Western Europe
+Southern Europe,Middle East
+Ukraine,Afghanistan
+Ukraine,Middle East
+Ukraine,Ural
+Siam,Indonesia

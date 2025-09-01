@@ -1,0 +1,1 @@
+Day 20 for S24 is the usual Day 23 (Project Update Presentations). This change was made because S24 is one week shorter than usual semesters.

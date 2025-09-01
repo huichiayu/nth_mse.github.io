@@ -1,0 +1,1 @@
+Day 19 for S24 is the usual Day 20 (SVM1). This change was made because S24 is one week shorter than usual semesters.

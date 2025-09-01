@@ -1,0 +1,85 @@
+﻿Order,Label,Name,Absolute Magnitude,Diameter (km),Mass (x10^15 kg),Semi-Major Axis (m),Orbital Period (s),Inclination,Eccentricity,Position,Discovery Year,Discoverer
+1,,S/2009 S 1,20,0.3,< 0.0001,1.17E+08,4.06E+04,0,0,outer B Ring,2009,Cassini[4]
+,,(moonlets),—,0.04 to 0.4,< 0.0001,1.30E+08,4.75E+04,0,0,Three 1000 km bands within A Ring,2006,Cassini
+2,XVIII,Pan,9.1,28.2,4.95,1.34E+08,4.97E+04,0,0,in Encke Division,1990,Showalter
+3,XXXV,Daphnis,12,7.6,0.084,1.37E+08,5.13E+04,0.004,0,in Keeler Gap,2005,Cassini
+4,XV,Atlas,10.7,30.2,6.6,1.38E+08,5.20E+04,0.003,0.0012,outer A Ring shepherd,1980,Voyager 1
+5,XVI,Prometheus,6.5,86.2,159.5,1.39E+08,5.30E+04,0.008,0.0022,inner F Ring shepherd,1980,Voyager 1
+6,XVII,Pandora,6.6,81.4,137.1,1.42E+08,5.43E+04,0.05,0.0042,outer F Ring shepherd,1980,Voyager 1
+7a,XI,Epimetheus,5.6,116.2,526.6,1.51E+08,6.00E+04,0.335,0.0098,co-orbital with Janus,1977,Fountain & Larson
+7b,X,Janus,4.7,179,1897.5,1.51E+08,6.00E+04,0.165,0.0068,co-orbital with Epimetheus,1966,Dollfus
+9,LIII,Aegaeon,18.7,0.66,0.0001,1.68E+08,6.98E+04,0.001,0.0004,G Ring moonlet,2008,Cassini
+10,I,†Mimas,2.7,396.4,37493,1.85E+08,8.14E+04,1.566,0.0202,,1789,Herschel
+11,XXXII,Methone,13.8,2.9,0.02,1.94E+08,8.73E+04,0.007,0.0001,Alkyonides,2004,Cassini
+12,XLIX,Anthe,14.8,1.8,0.0015,1.98E+08,9.07E+04,0.1,0.0011,Alkyonides,2007,Cassini
+13,XXXIII,Pallene,12.9,4.44,0.05,2.12E+08,9.94E+04,0.181,0.004,Alkyonides,2004,Cassini
+14,II,†Enceladus,1.8,504.2,108022,2.38E+08,1.18E+05,0.01,0.0047,Generates the E ring,1789,Herschel
+15,III,†Tethys,0.3,1062.2,617449,2.95E+08,1.63E+05,0.168,0.0001,,1684,Cassini
+15a,XIII,Telesto,8.7,24.8,9.41,2.95E+08,1.63E+05,1.158,0,leading Tethys trojan (L4),1980,Smith et al.
+15b,XIV,Calypso,8.7,21.4,6.3,2.95E+08,1.63E+05,1.473,0,trailing Tethys trojan (L5),1980,Pascu et al.
+18,IV,†Dione,0.4,1122.8,1095452,3.77E+08,2.37E+05,0.002,0.0022,,1684,Cassini
+18a,XII,Helene,7.3,35.2,24.5,3.77E+08,2.37E+05,0.199,0.0022,leading Dione trojan (L4),1980,Laques & Lecacheux
+18b,XXXIV,Polydeuces,13.5,2.6,0.03,3.77E+08,2.37E+05,0.177,0.0192,trailing Dione trojan (L5),2004,Cassini
+21,V,Rhea,0.2,1527.6,2306518,5.27E+08,3.91E+05,0.327,0.0013,,1672,Cassini
+22,VI,Titan,1.3,5149.46,134520000,1.22E+09,1.37E+06,0.349,0.0288,,1655,Huygens
+23,VII,Hyperion,4.8,270,5619.9,1.48E+09,1.84E+06,0.568,0.123,in 4:3 resonance with Titan,1848,Bond & Lassell
+24,VIII,Iapetus,1.7,1468.6,1805635,3.56E+09,6.85E+06,15.47,0.0286,,1671,Cassini
+25,,S/2019 S 1,15.3,6,0.15,1.12E+10,3.84E+07,44.379,0.6229,Inuit group,2021 (2019),Gladman et al.
+26,XXIV,Kiviuq,12.7,17,2.79,1.13E+10,3.88E+07,48.93,0.1521,Inuit group,2000,Gladman et al.
+27,XXII,Ijiraq,13.2,13,1.18,1.13E+10,3.90E+07,49.51,0.3758,Inuit group,2000,Gladman et al.
+28,IX,Phoebe,6.6,213,8292,1.29E+10,4.73E+07,172.998,0.1604,Norse group,1899,Pickering
+29,XX,Paaliaq,11.9,25,7.25,1.50E+10,5.94E+07,43.688,0.4826,Inuit group,2000,Gladman et al.
+30,XXVII,Skathi,14.3,8,0.35,1.56E+10,6.26E+07,149.749,0.2755,Norse (Skathi) Group,2000,Gladman et al.
+31,,S/2004 S 37,15.9,4,0.05,1.58E+10,6.42E+07,163.046,0.5265,Norse group,2019 (2004),Sheppard et al.
+32,,S/2007 S 2,15.7,6,0.15,1.60E+10,6.51E+07,176.676,0.2465,Norse group,2007,Sheppard et al.
+33,XXVI,Albiorix,11.1,28.6,22.3,1.62E+10,6.66E+07,34.559,0.5807,Gallic group,2000,Holman
+34,XXXVII,Bebhionn,15,6,0.15,1.69E+10,7.08E+07,40.124,0.3813,Gallic group,2004,Sheppard et al.
+35,LX,S/2004 S 29,15.8,4,0.05,1.72E+10,7.27E+07,46.2,0.4269,Inuit group,2019 (2004),Sheppard et al.
+36,XLVII,Skoll,15.4,5,0.15,1.74E+10,7.43E+07,157.143,0.4402,Norse group,2006,Sheppard et al.
+37,,S/2004 S 31,15.6,4,0.05,1.74E+10,7.44E+07,47.782,0.2525,Inuit group,2019 (2004),Sheppard et al.
+38,XXVIII,Erriapus,13.7,10,0.68,1.77E+10,7.60E+07,41.72,0.452,Gallic group,2000,Gladman et al.
+39,LII,Tarqeq,14.8,7,0.23,1.77E+10,7.61E+07,50.159,0.1373,Inuit group,2007,Sheppard et al.
+40,XXIX,Siarnaq,10.6,39.3,43.5,1.79E+10,7.64E+07,43.799,0.5293,Inuit group,2000,Gladman et al.
+41,XXI,Tarvos,12.8,15,2.3,1.82E+10,7.95E+07,37.818,0.4799,Gallic group,2000,Gladman et al.
+42,XLIV,Hyrrokkin,14.3,8,0.35,1.83E+10,8.02E+07,153.539,0.3582,Norse group,2004,Sheppard et al.
+43,LI,Greip,15.4,5,0.15,1.84E+10,8.04E+07,172.88,0.3331,Norse group,2006,Sheppard et al.
+44,XXV,Mundilfari,14.5,7,0.23,1.85E+10,8.10E+07,169.663,0.1787,Norse group,2000,Gladman et al.
+45,(lost),S/2004 S 13,15.6,6,0.15,1.86E+10,8.18E+07,167.041,0.29,Norse group,2004,Sheppard et al.
+46,,S/2006 S 1,15.6,5,0.15,1.88E+10,8.34E+07,154.904,0.0972,Norse group,2006,Sheppard et al.
+47,(lost),S/2007 S 3,15.7,5,0.09,1.91E+10,8.54E+07,177.065,0.1671,Norse group,2007,Sheppard et al.
+48,XXIII,Suttungr,14.5,7,0.23,1.92E+10,8.56E+07,174.091,0.1445,Norse group,2000,Gladman et al.
+49,LIV,S/2004 S 20,15.8,4,0.05,1.92E+10,8.57E+07,162.782,0.1976,Norse group,2019 (2004),Sheppard et al.
+50,L,Jarnsaxa,15.6,6,0.15,1.92E+10,8.58E+07,163.78,0.2148,Norse group,2006,Sheppard et al.
+51,XXXI,Narvi,14.4,7,0.23,1.92E+10,8.60E+07,136.803,0.299,Norse group,2003,Sheppard et al.
+52,XXXVIII,Bergelmir,15.2,5,0.15,1.93E+10,8.64E+07,156.919,0.1399,Norse group,2004,Sheppard et al.
+53,XLIII,Hati,15.3,5,0.15,1.94E+10,8.73E+07,164,0.3295,Norse group,2004,Sheppard et al.
+54,(lost),S/2004 S 17,16,4,0.05,1.96E+10,8.81E+07,167.936,0.1916,Norse group,2004,Sheppard et al.
+55,,S/2004 S 12,15.7,5,0.09,1.97E+10,8.99E+07,163.797,0.3929,Norse group,2004,Sheppard et al.
+56,LIX,S/2004 S 27,15.3,6,0.15,2.00E+10,9.07E+07,167.707,0.1364,Norse group,2019 (2004),Sheppard et al.
+57,XL,Farbauti,15.7,5,0.09,2.01E+10,9.16E+07,157.484,0.1756,Norse group,2004,Sheppard et al.
+58,XXX,Thrymr,14.3,8,0.23,2.02E+10,9.24E+07,174.177,0.4332,Norse group,2000,Gladman et al.
+59,XXXIX,Bestla,14.6,7,0.23,2.04E+10,9.42E+07,143.955,0.7072,Norse (Skathi) group,2004,Sheppard et al.
+60,(lost),S/2004 S 7,15.2,6,0.15,2.06E+10,9.42E+07,164.331,0.4998,Norse group,2004,Sheppard et al.
+61,XXXVI,Aegir,15.5,6,0.15,2.06E+10,9.50E+07,166.671,0.2379,Norse group,2004,Sheppard et al.
+62,LXI,S/2004 S 30,16.1,3,0.03,2.07E+10,9.59E+07,157.121,0.0859,Norse group,2019 (2004),Sheppard et al.
+63,LV,S/2004 S 22,16.1,3,0.03,2.07E+10,9.59E+07,177.285,0.2369,Norse group,2019 (2004),Sheppard et al.
+64,LVII,S/2004 S 25,15.9,4,0.05,2.08E+10,9.68E+07,172.938,0.4362,Norse group,2019 (2004),Sheppard et al.
+65,LXII,S/2004 S 32,15.6,4,0.05,2.10E+10,9.76E+07,159.261,0.2594,Norse group,2019 (2004),Sheppard et al.
+66,LVI,S/2004 S 23,15.6,4,0.05,2.14E+10,1.01E+08,176.854,0.4133,Norse group,2019 (2004),Sheppard et al.
+67,,S/2006 S 3,15.6,6,0.15,2.16E+10,1.03E+08,152.958,0.4533,Norse group,2006,Sheppard et al.
+68,LXV,S/2004 S 35,15.5,6,0.15,2.19E+10,1.05E+08,176.771,0.203,Norse group,2019 (2004),Sheppard et al.
+69,XLV,Kari,14.8,6,0.23,2.20E+10,1.05E+08,149.188,0.3745,Norse (Skathi) group,2006,Sheppard et al.
+70,,S/2004 S 28,15.8,4,0.05,2.21E+10,1.06E+08,170.617,0.1249,Norse group,2019 (2004),Sheppard et al.
+71,XLVI,Loge,15.3,5,0.15,2.26E+10,1.10E+08,166.811,0.1584,Norse group,2006,Sheppard et al.
+72,LXVI,S/2004 S 38,15.9,4,0.05,2.26E+10,1.10E+08,154.654,0.4084,Norse group,2019 (2004),Sheppard et al.
+73,XLI,Fenrir,15.9,4,0.05,2.28E+10,1.11E+08,162.874,0.0949,Norse group,2004,Sheppard et al.
+74,XIX,Ymir,12.3,19,3.97,2.28E+10,1.11E+08,172.157,0.3431,Norse group,2000,Gladman et al.
+75,XLVIII,Surtur,15.8,6,0.15,2.31E+10,1.13E+08,166.008,0.3591,Norse group,2006,Sheppard et al.
+76,LXIII,S/2004 S 33,15.9,4,0.05,2.31E+10,1.13E+08,159.866,0.4113,Norse group,2019 (2004),Sheppard et al.
+77,,S/2004 S 24,16,3,0.03,2.33E+10,1.15E+08,36.24,0.04,Gallic group?[k],2019 (2004),Sheppard et al.
+78,,S/2004 S 21,16.3,3,0.03,2.34E+10,1.15E+08,156.2,0.3156,Norse group,2019 (2004),Sheppard et al.
+79,,S/2004 S 39,16.3,3,0.03,2.35E+10,1.16E+08,166.578,0.0979,Norse group,2019 (2004),Sheppard et al.
+80,,S/2004 S 36,16.1,3,0.03,2.36E+10,1.17E+08,155.188,0.7139,Norse group[l],2019 (2004),Sheppard et al.
+81,XLII,Fornjot,14.9,6,0.15,2.45E+10,1.24E+08,167.847,0.1613,Norse group,2004,Sheppard et al.
+82,LXIV,S/2004 S 34,16.1,3,0.03,2.49E+10,1.26E+08,166.039,0.2015,Norse group,2019 (2004),Sheppard et al.
+83,LVIII,S/2004 S 26,15.8,4,0.05,2.67E+10,1.41E+08,171.575,0.1726,Norse group,2019 (2004),Sheppard et al.

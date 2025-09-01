@@ -1,0 +1,52 @@
+# Configuration
+
+# Book settings
+title                       : CMSE 202 Course Website
+author                      : MSU CMSE
+copyright                   : "2025"
+logo                        : logo.png
+only_build_toc_files        : true
+
+# Execution settings
+execute:
+  execute_notebooks         : 'off'
+  allow_errors              : true
+
+# HTML-specific settings
+html:
+  favicon                   : logo.png
+  use_edit_page_button      : false
+  use_repository_button     : false
+  use_issues_button         : false
+  use_multitoc_numbering    : true
+  home_page_in_navbar       : true
+  baseurl                   : ""
+
+# LaTeX-specific settings
+latex:
+  latex_engine              : pdflatex
+  use_jupyterbook_latex     : true
+
+# Launch button settings
+launch_buttons:
+  notebook_interface        : classic
+  binderhub_url             : ""
+  jupyterhub_url            : "" #https://jupyterhub.egr.msu.edu/
+  thebe                     : false
+  colab_url                 : "" #https://colab.research.google.com
+
+repository:
+  url                       : https://github.com/msu-cmse-courses/cmse202-S25-jb
+  path_to_book              : .
+  branch                    : main
+
+sphinx:
+  config:
+    html_theme_options:
+      launch_buttons: {}
+    # suppress_warnings:
+    # - myst.header
+
+exclude:
+  - references.bib    
+

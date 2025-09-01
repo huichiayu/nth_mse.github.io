@@ -1,0 +1,136 @@
+2024 Basic Monthly CPS for the month of September
+CPS: Current population survey provides information on the nation’s labor force. 
+ATTACHMENT 6
+
+CPS RECORD LAYOUT FOR BASIC LABOR FORCE ITEMS
+STANDARD PUBLIC USE FILES
+A1. HOUSEHOLD INFORMATION
+https://www2.census.gov/programs-surveys/cps/datasets/2024/basic/2024_Basic_CPS_Public_Use_Record_Layout_plus_IO_Code_list.txt
+c("","","month","year","residene_type","family_income","occupants_num","interview_type","region", "division", "state", "age","highest_education", "race","Hispanic","Hispanic_origin_group")
+
+# houseID: 
+# 1	HOUSE, APARTMENT, FLAT
+#2	HU IN NONTRANSIENT HOTEL, MOTEL, ETC.
+#3	HU PERMANENT IN TRANSIENT HOTEL, MOTEL
+#4	HU IN ROOMING HOUSE
+#5	MOBILE HOME OR TRAILER W/NO PERM. ROOM ADDED
+#6	MOBILE HOME OR TRAILER W/1 OR MORE PERM. ROOMS ADDED
+#7	HU NOT SPECIFIED ABOVE
+#8	QUARTERS NOT HU IN ROOMING OR BRDING HS
+#9	UNIT NOT PERM. IN TRANSIENT HOTL, MOTL
+#10	UNOCCUPIED TENT SITE OR TRLR SITE
+#11	STUDENT QUARTERS IN COLLEGE DORM
+#12	OTHER UNIT NOT SPECIFIED ABOVE
+
+# family_income
+
+# occupants_num
+# Total number of people living in the household min: 0, max:16
+
+# CATI_or_CAPI
+# Type of interview
+# 0 noninterview/indeterminate, 1 personal, 2 telephone
+
+# region
+# 1 northeast, 2 midwest, 3 south, 4 west
+
+# divsion
+# 1 NEW ENGLAND	
+# 2 MIDDLE ATLANTIC	
+# 3 EAST NORTH CENTRAL
+# 4 WEST NORTH CENTRAL
+# 5 SOUTH ATLANTIC
+# 6 EAST SOUTH CENTRAL
+# 7 WEST SOUTH CENTRAL
+# 8 MOUNTAIN
+# 9 PACIFIC
+
+# state
+# 01	AL		30	MT
+# 02	AK		31	NE
+# 04	AZ		32	NV
+# 05	AR		33	NH
+# 06	CA		34	NJ
+# 08	CO		35	NM
+# 09	CT		36	NY
+# 10	DE		37	NC
+# 11	DC		38	ND
+# 12	FL		39	OH
+# 13	GA		40	OK
+# 15	HI		41	OR
+# 16	ID		42	PA
+# 17	IL		44	RI
+# 18	IN		45	SC
+# 19	IA		46	SD
+# 20	KS		47	TN
+# 21	KY		48	TX
+# 22	LA		49	UT
+# 23	ME		50	VT
+# 24	MD		51	VA
+# 25	MA		53	WA
+# 26	MI		54	WV
+# 27	MN		55	WI
+# 28	MS		56	WY
+# 29	MO
+
+# age (float)
+
+# sex
+# Female
+# Male
+
+# highest_level_of_education
+# 31	LESS THAN 1ST GRADE
+# 32	1ST, 2ND, 3RD OR 4TH GRADE
+# 33	5TH OR 6TH GRADE
+# 34	7TH OR 8TH GRADE
+# 35	9TH GRADE
+# 36	10TH GRADE
+# 37	11TH GRADE
+# 38	12TH GRADE NO DIPLOMA
+# 39	HIGH SCHOOL GRAD-DIPLOMA OR EQUIV (GED)
+# 40	SOME COLLEGE BUT NO DEGREE
+# 41	ASSOCIATE DEGREE-OCCUPATIONAL/VOCATIONAL
+# 42	ASSOCIATE DEGREE-ACADEMIC PROGRAM
+# 43	BACHELOR'S DEGREE (EX: BA, AB, BS)
+# 44	MASTER'S DEGREE (EX: MA, MS, MEng, MEd, MSW)
+# 45	PROFESSIONAL SCHOOL DEG (EX: MD, DDS, DVM)
+# 46	DOCTORATE DEGREE (EX: PhD, EdD)
+
+# race
+# 01  	White Only					
+# 02 	Black Only					 
+# 03  	American Indian, Alaskan Native Only		   
+# 04  	Asian Only					 
+# 05  	Hawaiian/Pacific Islander Only			      
+# 06  	White-Black 					      
+# 07  	White-AI						   
+# 08  	White-Asian					      
+# 09  	White-HP					      
+# 10  	Black-AI						      
+# 11  	Black-Asian					      
+# 12  	Black-HP						        	
+# 13  	AI-Asian						        
+# 14  	AI-HP
+# 15	Asian-HP						      
+# 16 	W-B-AI
+# 17  	W-B-A
+# 18	W-B-
+
+# Hispanic
+# 1	HISPANIC
+# 2	NON-HISPANIC
+
+# Hispanic_origin_group
+# detailed Hispanic origin group
+# 1.  Mexican			
+# 2.  Puerto Rican
+# 3.  Cuban			
+# 4.  Dominican
+# 5.  Salvadoran
+# 6.  Central American, excluding Salvadoran
+# 7.  South American	
+# 8.  Other Spanish 		
+
+
+
