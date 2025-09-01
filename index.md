@@ -1,5 +1,5 @@
 
-# Computational Modeling and Data Analysis II
+# Computational Materials Science and Materials Data Science
 
 ## Course Details
 
@@ -44,7 +44,7 @@ There are also section specific channels in the format of **TBA**<!--`#cmse202-#
 ### Section Instructors
 
 
-* **Hui-Chia Yu** (Section 003), [hcy@msu.edu](mailto:hcy@msu.edu)  
+* **Hui-Chia Yu**, [hcy@msu.edu](mailto:hcy@msu.edu)  
 Associate Professor<br>
 Department of Computational Mathematics, Science and Engineering<br>
 Department of Chemical Engineering and Materials Sciences<br>
