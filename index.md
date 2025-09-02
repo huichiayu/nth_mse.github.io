@@ -9,7 +9,7 @@ Here are some quick links to important course content:
 
 * [Course Calendar](course_materials/MSE590400_Calendar)
 
-* [Software Setup Guide](course_materials/SoftwareSetupGuide)
+* [Software Setup Guide](course_materials/SoftwareSetupGuide_NTHU)
 
 
 
