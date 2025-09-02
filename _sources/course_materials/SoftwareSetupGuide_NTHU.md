@@ -10,7 +10,7 @@ As this is a course in computational modeling and data science, you will be comp
 ---
 ## Table of Contents
 
-### [Setting up important software 
+### Setting up important software 
 
 * [Installing Python](#python)
     * [Updating a previous installation](#update-anaconda)
