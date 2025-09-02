@@ -5,7 +5,7 @@
 | Day | Topic |
 |-----------------------------------|-------------------------------------------------------------------------------------------------------|
 | 01 (Sep 1)                        | Course Syllabus, overview, instructor's self intro, Schrodinger equation for H atom, solution of angular equation                   |
-| 20 (Sep 4)                        | Schrodinger equation (solution of radial equation)                                               |
+| 02 (Sep 4)                        | Schrodinger equation (solution of radial equation)                                               |
 <!-- 
 | 2 (Jan 15/16)                     | Command Line Interface                                                                                |
 | **Holiday**<br>(Jan 20/21)        | **Tuesday sections canceled to keep in sync with Monday sections**                                    |
