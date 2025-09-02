@@ -376,19 +376,6 @@
 </li>
 </ul>
 </li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#using-git-for-version-control">Using Git for version control</a><ul class="nav section-nav flex-column">
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#installing-git-if-you-have-a-windows-computer">Installing Git if you have a <strong>Windows</strong> computer:</a><ul class="nav section-nav flex-column">
-<li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#adding-anaconda-functionality-to-git-bash">Adding Anaconda functionality to Git-Bash</a></li>
-<li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#changing-startup-location-to-home-directory">Changing startup location to Home directory</a></li>
-</ul>
-</li>
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#install-git-if-you-have-a-mac-computer">Install Git if you have a <strong>Mac</strong> computer:</a><ul class="nav section-nav flex-column">
-<li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#download-and-install-the-newest-version-of-git-for-mac">Download and install the newest version of Git for Mac</a></li>
-</ul>
-</li>
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#install-git-if-you-have-a-linux-computer">Install Git if you have a <strong>Linux</strong> computer:</a></li>
-</ul>
-</li>
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#that-s-it-we-look-forward-to-seeing-you-in-class">That’s it! We look forward to seeing you in class!</a></li>
@@ -629,178 +616,7 @@
 </li>
 </ol>
 <p><em>If for any reason you still don’t have Anaconda functioning on your computer and you’d like to get it working, contact you instructor!</em></p>
-<p><a id="git"></a></p>
 </section>
-</section>
-</section>
-<section id="using-git-for-version-control">
-<h3>Using Git for version control<a class="headerlink" href="#using-git-for-version-control" title="Link to this heading">#</a></h3>
-<p>From time to time, we’ll be using Git in this course to keep track of changes to our code. Keeping track of the revision history of code called “version control”, we’ll be discussing this in more detail in class. You’ll need to make sure that you have Git installed on your computer. Follow the steps below based on the type of computer you’re using.</p>
-<p>When these situations arise, it will be possible to use the MSU JupyterHub interface, but if you would like to have a local installation of Git on your computer, following the directions below.</p>
-<p>Use <a class="reference internal" href="#git-windows"><span class="xref myst">these directions</span></a> if you have a Windows machine.</p>
-<p><a class="reference internal" href="#git-mac"><span class="xref myst">These directions</span></a> if you have a Mac.</p>
-<p>And <a class="reference internal" href="#git-linux"><span class="xref myst">these directions</span></a> if you have a Linux machine.</p>
-<p><a id="git-windows"></a></p>
-<section id="installing-git-if-you-have-a-windows-computer">
-<h4>Installing Git if you have a <strong>Windows</strong> computer:<a class="headerlink" href="#installing-git-if-you-have-a-windows-computer" title="Link to this heading">#</a></h4>
-<p>If you have Windows 10 and would like to experiment with using the Windows Subystem for Linux (WSL) during this course, contact your instructor for a more detailed guide on how you can try to set everything up using that functionality. However, this is not strictly necessary and you can simply follow the directions below to set up Git within the standard Windows operating system.</p>
-<ol class="arabic">
-<li><p>Go to the <a class="reference external" href="https://git-scm.com/downloads">Git Download webpage</a>, and download the Windows version.</p></li>
-<li><p>After downloading, run the Git exectuable file. Say <code class="docutils literal notranslate"><span class="pre">yes</span></code> to any warnings.</p>
-<a class="reference internal image-reference" href="../_images/g01.PNG"><img alt="license" src="../_images/g01.PNG" style="width: 500px;" /></a>
-<a class="reference internal image-reference" href="../_images/g02.PNG"><img alt="location" src="../_images/g02.PNG" style="width: 500px;" /></a>
-<p>It is suggested to leave this alone, however, if you do want to change the location, make sure it is in the same drive that Anaconda is installed in.</p>
-<a class="reference internal image-reference" href="../_images/g03.png"><img alt="desktop" src="../_images/g03.png" style="width: 500px;" /></a>
-<p>If you click this option, a shortcut linking to the terminal will be placed on your desktop. Alternatively, once the terminal is started you can pin the program to your taskbar, or search for it with <kbd> Windows-key </kbd></p>
-<a class="reference internal image-reference" href="../_images/g04.PNG"><img alt="start" src="../_images/g04.PNG" style="width: 500px;" /></a>
-<a class="reference internal image-reference" href="../_images/g05.PNG"><img alt="text" src="../_images/g05.PNG" style="width: 500px;" /></a>
-<p>Any text editor can be used here, however, if you have never used a command line text editor just leave it to Vim for now. We will cover text editors later.</p>
-<a class="reference internal image-reference" href="../_images/g06a.PNG"><img alt="PATH" src="../_images/g06a.PNG" style="width: 500px;" /></a>
-<p>Either option 2 or 3 is ok. It is recommend to use option 2, however, if you want unix-commands to be avalible in native command prompts (like MS-DOS or powershell) you can select option 3.</p>
-<a class="reference internal image-reference" href="../_images/g07.PNG"><img alt="SSL" src="../_images/g07.PNG" style="width: 500px;" /></a>
-<a class="reference internal image-reference" href="../_images/g08.PNG"><img alt="line" src="../_images/g08.PNG" style="width: 500px;" /></a>
-<a class="reference internal image-reference" href="../_images/g09.PNG"><img alt="mintty" src="../_images/g09.PNG" style="width: 500px;" /></a>
-<a class="reference internal image-reference" href="../_images/g10.PNG"><img alt="pull" src="../_images/g10.PNG" style="width: 500px;" /></a>
-<a class="reference internal image-reference" href="../_images/g11.PNG"><img alt="extra1" src="../_images/g11.PNG" style="width: 500px;" /></a>
-<a class="reference internal image-reference" href="../_images/g12.PNG"><img alt="extra2" src="../_images/g12.PNG" style="width: 500px;" /></a>
-<a class="reference internal image-reference" href="../_images/g13.png"><img alt="finished" src="../_images/g13.png" style="width: 500px;" /></a>
-<p>Make sure to check the box that says <code class="docutils literal notranslate"><span class="pre">Launch</span> <span class="pre">Git</span> <span class="pre">Bash</span></code>. This is helpful for the next step. If you accidently do not check the box, you can always press <kbd> Windows-key </kbd> and search for Git Bash</p>
-</li>
-</ol>
-<p><a id="conda_bash"></a></p>
-<section id="adding-anaconda-functionality-to-git-bash">
-<h5>Adding Anaconda functionality to Git-Bash<a class="headerlink" href="#adding-anaconda-functionality-to-git-bash" title="Link to this heading">#</a></h5>
-<p>Next we are going to add Anaconda’s python to our Git-bash terminal. This is crucial as this is what will allow us to run python from the terminal, and install new packages into our Anaconda’s python. We will first add Anaconda to our PATH, and then “create an alias” to run python from Git-bash.</p>
-<ol class="arabic">
-<li><p>Find your Anaconda prompt (If needed, see above for screenshots). To do this, on the keyboard press <kbd> Windows-key </kbd> or simply use the search bar on the taskbar if it is visible. Search <code class="docutils literal notranslate"><span class="pre">Anaconda</span> <span class="pre">Prompt</span></code> and click on the search result.</p></li>
-<li><p>Type <code class="docutils literal notranslate"><span class="pre">where</span> <span class="pre">python</span></code> and press enter.</p>
-<a class="reference internal image-reference" href="../_images/a01.PNG"><img alt="python_location" src="../_images/a01.PNG" style="width: 500px;" /></a>
-<p>Notice that there may be two locations. We are looking for the location that has <code class="docutils literal notranslate"><span class="pre">anaconda3</span></code> in the location. Keep this window open while we switch over to using the Git Bash terminal.</p>
-</li>
-<li><p>Using Git Bash (which should be open from our last step), navigate to what is known as your home directory by typing <code class="docutils literal notranslate"><span class="pre">cd</span> <span class="pre">~</span></code> in the terminal. (Notice how the symbols changed from <code class="docutils literal notranslate"><span class="pre">/</span></code> known as the “root” directory to <code class="docutils literal notranslate"><span class="pre">~</span></code> which is our “home” directory) (It is also possible you may load into your home directory automatically as well)</p>
-<a class="reference internal image-reference" href="../_images/a02.PNG"><img alt="home" src="../_images/a02.PNG" style="width: 500px;" /></a>
-</li>
-<li><p>Using a text editor, the <code class="docutils literal notranslate"><span class="pre">.bashrc</span></code> file will need to modified to include the path to Anconda’s python using the <code class="docutils literal notranslate"><span class="pre">alias</span></code> feature. It is most likely that you will not already have the <code class="docutils literal notranslate"><span class="pre">.bashrc</span></code> so the file will need to be created. (For reference the <code class="docutils literal notranslate"><span class="pre">.bashrc</span></code> file is a file that contains settings that is ran everytime the terminal is started)</p>
-<a class="reference internal image-reference" href="../_images/a03.PNG"><img alt="vi" src="../_images/a03.PNG" style="width: 500px;" /></a>
-<p>Type <code class="docutils literal notranslate"><span class="pre">vi</span> <span class="pre">.bashrc</span></code> into the Git Bash terminal. This will open up/create the <code class="docutils literal notranslate"><span class="pre">.bashrc</span></code> with a command line text editor called Vim.</p>
-<a class="reference internal image-reference" href="../_images/a04.png"><img alt="insert" src="../_images/a04.png" style="width: 500px;" /></a>
-<p>Press (lowercase)<code class="docutils literal notranslate"><span class="pre">i</span></code>. You will notice that this bottom left corner will go from <em>blank</em> to saying <code class="docutils literal notranslate"><span class="pre">--</span> <span class="pre">INSERT</span> <span class="pre">--</span></code>. This changed the mode from “Command Mode” to “Insert Mode”. Command Mode is where you can run commands such as save, exit, and the like. Insert mode is where you can type into the file and edit its contents.</p>
-<p><img alt="alias" src="../_images/a05.PNG" />  Now we will use the location found when using <code class="docutils literal notranslate"><span class="pre">where</span> <span class="pre">python</span></code> in Anaconda Prompt (there may be two locations, use the one with <code class="docutils literal notranslate"><span class="pre">Anaconda3</span></code> in the location path) to create an alias for running python from the terminal. The general format is <code class="docutils literal notranslate"><span class="pre">alias</span> <span class="pre">python='winpty</span> <span class="pre">[PATH</span> <span class="pre">FROM</span> <span class="pre">&quot;WHERE</span> <span class="pre">PYTHON&quot;]'</span></code>.</p>
-<p>To make this a little easier would be to copy and paste from the Anconda Prompt. First we need to type <code class="docutils literal notranslate"><span class="pre">alias</span> <span class="pre">python='winpty</span> </code> into the Git Bash terminal.</p>
-<p>Then, to copy the “Anaconda3” python path from Anaconda Prompt, use your mouse to <em>left-click</em> and drag over the text in Anaconda Prompt to highlight it, and then <em>right-click</em> on the highlighted text. This should make the highlighting of the text disappear. This now means you have copied the text you just highlighted.</p>
-<p>Go over to the Git Bash terminal and <em>right-click</em> into the terminal. Now there should be an option to <code class="docutils literal notranslate"><span class="pre">Paste</span></code>, click that. Then make sure to type <code class="docutils literal notranslate"><span class="pre">'</span></code> at the end of what you just copied.</p>
-<p>Next we are going to need to edit the location path from windows notation, to unix-like notation. To do this use the arrow-keys to move along the text, and change all back-slashes <code class="docutils literal notranslate"><span class="pre">\</span></code> to <code class="docutils literal notranslate"><span class="pre">/</span></code> forward-slashes. Then change <code class="docutils literal notranslate"><span class="pre">C:</span></code> to lowercase <code class="docutils literal notranslate"><span class="pre">/c</span></code>. Then you should have the correct alias.</p>
-<p><strong>(If you cannot get this method to work, simply type out the above alias by hand)</strong></p>
-<a class="reference internal image-reference" href="../_images/a06.PNG"><img alt="Save" src="../_images/a06.PNG" style="width: 500px;" /></a>
-<p>To save and close the file we will need to return back to the “Command Mode” to do this press the <code class="docutils literal notranslate"><span class="pre">Esc</span></code> on your keyboard. You will notice the bottom left-hand corner will go from <code class="docutils literal notranslate"><span class="pre">--</span> <span class="pre">INSERT</span> <span class="pre">--</span></code> to <em>blank</em>. Then type on your keyboard <code class="docutils literal notranslate"><span class="pre">:wq</span></code> and press enter. This is the command to save (or <em>write</em> to the disk <code class="docutils literal notranslate"><span class="pre">w</span></code>) and to quit the text editor (<code class="docutils literal notranslate"><span class="pre">q</span></code>).</p>
-<a class="reference internal image-reference" href="../_images/a07.PNG"><img alt="cat" src="../_images/a07.PNG" style="width: 500px;" /></a>
-<p>Then to check and make sure you entered the alias write, run the the command <code class="docutils literal notranslate"><span class="pre">cat</span> <span class="pre">.bashrc</span></code>. The <code class="docutils literal notranslate"><span class="pre">cat</span></code> command “prints” to your terminal all of the file contents. In our case this is contents of our <code class="docutils literal notranslate"><span class="pre">.bashrc</span></code> file. Keep Git Bash open for later steps.</p>
-</li>
-<li><p>The PATH varibles in windows may need to altered to include the PATH to our Anaconda Installation. This will make sure to link Anaconda commands with the Git Bash terminal.</p>
-<a class="reference internal image-reference" href="../_images/a08.PNG"><img alt="search" src="../_images/a08.PNG" style="width: 500px;" /></a>
-<p>On keyboard press <kbd> Windows-key </kbd> or simply use the search bar on the taskbar if it is visible. Type in <code class="docutils literal notranslate"><span class="pre">Edit</span> <span class="pre">environment</span> <span class="pre">varibles</span> <span class="pre">for</span> <span class="pre">your</span> <span class="pre">account</span></code>. Click on the search result.</p>
-<a class="reference internal image-reference" href="../_images/a09.PNG"><img alt="Path" src="../_images/a09.PNG" style="width: 500px;" /></a>
-<p>Under the first section “User variables for [YOUR USERNAME]” double click on the line that has <code class="docutils literal notranslate"><span class="pre">Path</span></code> under the <code class="docutils literal notranslate"><span class="pre">Varaible</span></code> column.</p>
-<a class="reference internal image-reference" href="../_images/a10.PNG"><img alt="environment" src="../_images/a10.PNG" style="width: 500px;" /></a>
-<p>Here we can check and see all of the PATH variables for our terminal. You may notice Paths to Anaconda3 already entered in (except instead of my username “bmcin” you will have your own username). <em>If you have all of the Anaconda3 paths in this picture</em> (minus the one that starts with <code class="docutils literal notranslate"><span class="pre">%USERPROFILE%</span></code>) you are fine and can close out of these windows and skip to step 6. <em>If you do not have any/only partial of the Anaconda3 paths</em> (Again, minus the one that starts with <code class="docutils literal notranslate"><span class="pre">%USERPROFILE%</span></code>) then you will need to add these paths. The paths may vary by system if you saved Anaconda3 not in the default spot the Anaconda Installer suggested. Fortunately, we can use the path from the <code class="docutils literal notranslate"><span class="pre">where</span> <span class="pre">python</span></code> command we ran on the anaconda prompt in step 2 to get the paths we need.</p>
-<a class="reference internal image-reference" href="../_images/a11.PNG"><img alt="Add" src="../_images/a11.PNG" style="width: 500px;" /></a>
-<p>You will notice that the path from <code class="docutils literal notranslate"><span class="pre">where</span> <span class="pre">python</span></code> returns a path that has “Anaconda3” in the path. <code class="docutils literal notranslate"><span class="pre">C:\Users\bmcin\anaconda3\python.exe</span></code>. What you will want to do is copy everything up to “anaconda3” (<code class="docutils literal notranslate"><span class="pre">C:\Users\bmcin\anaconda3</span></code>). Then press the <code class="docutils literal notranslate"><span class="pre">New</span></code> button and then paste the path in there. Then add on whatever else is necessary to complete the path. You will need each of the following paths.<em>Note: [ANACONDA PATH] is the path you copied.</em></p>
-<ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">[ANACONDA</span> <span class="pre">PATH]</span></code></p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">[ANACONDA</span> <span class="pre">PATH]\Scripts</span></code></p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">[ANACONDA</span> <span class="pre">PATH]\Library\bin</span></code></p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">[ANACONDA</span> <span class="pre">PATH]\Library\usr\bin</span></code></p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">[ANACONDA</span> <span class="pre">PATH]\Library\mingw-w64\bin</span></code></p></li>
-</ul>
-<p>Once finished adding the paths, press <code class="docutils literal notranslate"><span class="pre">OK</span></code> on the first window to close it, and press <code class="docutils literal notranslate"><span class="pre">OK</span></code> again to close the second window.</p>
-</li>
-<li><p>To finish this out we will need to “run” the <code class="docutils literal notranslate"><span class="pre">.bashrc</span></code> file to apply our changes, and then check to make sure we are all set.</p>
-<a class="reference internal image-reference" href="../_images/a12.PNG"><img alt="source" src="../_images/a12.PNG" style="width: 500px;" /></a>
-<p>In the Git Bash terminal, type and enter <code class="docutils literal notranslate"><span class="pre">source</span> <span class="pre">.bashrc</span></code>. This will apply the changes we made earlier to the file. If you encounter an error in this part or the next part, it is most likely you did not close your <code class="docutils literal notranslate"><span class="pre">'</span></code> in your alias, you did not put a <code class="docutils literal notranslate"><span class="pre">/</span></code> in front of the <code class="docutils literal notranslate"><span class="pre">c</span></code>, or you spelled something wrong. Follow step 4 again.</p>
-<a class="reference internal image-reference" href="../_images/a13.PNG"><img alt="python" src="../_images/a13.PNG" style="width: 500px;" /></a>
-<p>To test if everything was successful, in Git Bash type <code class="docutils literal notranslate"><span class="pre">python</span></code> and press enter, if all is well the terminal should appear as it does above. Currently you will be running the “python interpreter” which is a program that runs in your terminal.</p>
-<p><em>If successful, and the terminal looks like it does above</em> use the key combination <kbd> Ctrl </kbd> + <kbd> d </kbd> to quit out of the python interpreter. Then type in <code class="docutils literal notranslate"><span class="pre">exit</span></code> and hit enter, this will close the terminal.</p>
-<p><em>If unsucessful, and nothing appears or there is an error</em> you can simply just simply close the terminal with the <code class="docutils literal notranslate"><span class="pre">X</span></code> in the top right corner.</p>
-</li>
-</ol>
-<p><a id="startup"></a></p>
-</section>
-<section id="changing-startup-location-to-home-directory">
-<h5>Changing startup location to Home directory<a class="headerlink" href="#changing-startup-location-to-home-directory" title="Link to this heading">#</a></h5>
-<p>This next step is to ensure that when Git Bash starts up, you will load into the home directory (<code class="docutils literal notranslate"><span class="pre">~</span></code>) instead of the root directory (<code class="docutils literal notranslate"><span class="pre">/</span></code>). This will make it less likely for the file and folders in the root directory to be harmed, and proper file storage etiquette be followed.</p>
-<ol class="arabic">
-<li><p>Close down the Git Bash terminal if open, and restart. You may notice a Warning in the terminal saying <code class="docutils literal notranslate"><span class="pre">.bash_profile</span></code> and other files are missing, you can saftely ignore this.</p></li>
-<li><p>Navigate to the home directory and open <code class="docutils literal notranslate"><span class="pre">.bash_profile</span></code> in a text editor.</p>
-<a class="reference internal image-reference" href="../_images/profile.PNG"><img alt="profile" src="../_images/profile.PNG" style="width: 500px;" /></a>
-<p>In the terminal type <code class="docutils literal notranslate"><span class="pre">cd</span> <span class="pre">~</span></code> and press <code class="docutils literal notranslate"><span class="pre">Enter</span></code> to change your directory to the Home directory. Then type <code class="docutils literal notranslate"><span class="pre">vi</span> <span class="pre">.bash_profile</span></code> and press <code class="docutils literal notranslate"><span class="pre">Enter</span></code>. This will open the <code class="docutils literal notranslate"><span class="pre">.bash_profile</span></code> file that is used to run the <code class="docutils literal notranslate"><span class="pre">.bashrc</span></code> file that we edited earlier.</p>
-</li>
-<li><p>Add a line that changes the directory to home</p>
-<a class="reference internal image-reference" href="../_images/home_cd.PNG"><img alt="home_cd" src="../_images/home_cd.PNG" style="width: 500px;" /></a>
-<p>Press (lowercase)<code class="docutils literal notranslate"><span class="pre">i</span></code> on the keyboard. Then, using the down-arrow key <kbd> ↓ </kbd> on your keyboard move to the last possible line you can. You will notice the screen will flash if you are try pressing the down-arrow while on the last line. Then, using the right-arrow key <kbd> → </kbd> on your keyboard move to the end of the line. Again, you will notice the screen will flash if you are try pressing the right-arrow while at the end of the line. Then, on the keyboard press <code class="docutils literal notranslate"><span class="pre">Enter</span></code> and this should make a newline. Type <code class="docutils literal notranslate"><span class="pre">cd</span> <span class="pre">~</span></code>. If done successfully, the file should look like this. <em>Note: if any of the lines above the <code class="docutils literal notranslate"><span class="pre">cd</span> <span class="pre">~</span></code> were altered, this could break things. Make sure you did not alter any of those lines before continuing. If you did happen to mess them up, press <code class="docutils literal notranslate"><span class="pre">Esc</span></code> on the keyboard and then type <code class="docutils literal notranslate"><span class="pre">:q!</span></code> and press <code class="docutils literal notranslate"><span class="pre">Enter</span></code> this will not save any of the changes you made, and you can try editing it again.</em></p>
-<a class="reference internal image-reference" href="../_images/close_vim.PNG"><img alt="close_vim" src="../_images/close_vim.PNG" style="width: 500px;" /></a>
-<p>To save and close the file we will need to return back to the “Command Mode” to do this press the <code class="docutils literal notranslate"><span class="pre">Esc</span></code> on your keyboard. You will notice the bottom left-hand corner will go from <code class="docutils literal notranslate"><span class="pre">--</span> <span class="pre">INSERT</span> <span class="pre">--</span></code> to <em>blank</em>. Then type on your keyboard <code class="docutils literal notranslate"><span class="pre">:wq</span></code> and press <code class="docutils literal notranslate"><span class="pre">Enter</span></code>. This is the command to save (or <em>write</em> to the disk <code class="docutils literal notranslate"><span class="pre">w</span></code>) and to quit the text editor (<code class="docutils literal notranslate"><span class="pre">q</span></code>).</p>
-</li>
-<li><p>Test to make sure you start up in the home directory.</p>
-<a class="reference internal image-reference" href="../_images/test_home.PNG"><img alt="test_home" src="../_images/test_home.PNG" style="width: 500px;" /></a>
-<p>First close down the Terminal. Then open it back up. If all went well you should start up in the Home directory. You can tell by looking here. If it has <code class="docutils literal notranslate"><span class="pre">~</span></code> then we are all-set.</p>
-</li>
-</ol>
-<p><strong>Congrats you are done with setting up a terminal!</strong><br />
-<em>If at anypoint anything got too confusing or you were not successful, please let your instructor know during class or through email and they can work with you to resolve any issues.</em></p>
-<p><a id="git-mac"></a></p>
-</section>
-</section>
-<section id="install-git-if-you-have-a-mac-computer">
-<h4>Install Git if you have a <strong>Mac</strong> computer:<a class="headerlink" href="#install-git-if-you-have-a-mac-computer" title="Link to this heading">#</a></h4>
-<p>As a Mac user, you may already have Git install on your computer since Mac You may already have Git installed on your computer.</p>
-<p>You can check if this is the case by opening the “Terminal” application (search for it in Spotlight if you don’t know where it is by pressing <kbd> command </kbd> + <kbd> space-bar </kbd> or use the search bar in the top right corner search <code class="docutils literal notranslate"><span class="pre">terminal</span></code> and press <code class="docutils literal notranslate"><span class="pre">Enter</span></code>) and then type <code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">--version</span></code> and hit enter. Like so:</p>
-<a class="reference internal image-reference" href="../_images/git_version.png"><img alt="git_version" src="../_images/git_version.png" style="width: 500px;" /></a>
-<p>If you already have Git installed, it should tell you what version you have. If Git isn’t installed, it will either tell you that it can’t find Git, or it will ask if you want to install the “Command Line Tools” to install Git. You’re welcome to use the version on you machine, or the version that Command Line Tools installs, but if you want the newest version of Git you’ll have to install it yourself. Read on if you want to embark on this journey!</p>
-<p><a id="git-mac-install"></a></p>
-<section id="download-and-install-the-newest-version-of-git-for-mac">
-<h5>Download and install the newest version of Git for Mac<a class="headerlink" href="#download-and-install-the-newest-version-of-git-for-mac" title="Link to this heading">#</a></h5>
-<ol class="arabic">
-<li><p>First, you’ll want to onstall <code class="docutils literal notranslate"><span class="pre">Homebrew</span></code>. Visit the <a class="reference external" href="https://brew.sh/">Homebrew main page</a> for instructions on how to install <code class="docutils literal notranslate"><span class="pre">Homebrew</span></code></p>
-<a class="reference internal image-reference" href="../_images/hb.png"><img alt="homebrew" src="../_images/hb.png" style="width: 750px;" /></a>
-<p>Copy and paste the terminal command into the terminal and press <code class="docutils literal notranslate"><span class="pre">Enter</span></code>.</p>
-<a class="reference internal image-reference" href="../_images/hb_password.png"><img alt="hb_password" src="../_images/hb_password.png" style="width: 500px;" /></a>
-<p>Enter the password to your account and press <code class="docutils literal notranslate"><span class="pre">Enter</span></code>.</p>
-<a class="reference internal image-reference" href="../_images/hb_cont.png"><img alt="hb_cont" src="../_images/hb_cont.png" style="width: 500px;" /></a>
-<p>To continue press the <code class="docutils literal notranslate"><span class="pre">Enter</span></code> button. This will take a moment to install everything necessary.</p>
-<a class="reference internal image-reference" href="../_images/hb_cont_2.png"><img alt="hb_cont_2" src="../_images/hb_cont_2.png" style="width: 500px;" /></a>
-<p>To continue enter your password. Press the <code class="docutils literal notranslate"><span class="pre">Enter</span></code> button.</p>
-<a class="reference internal image-reference" href="../_images/hb_cont_3.png"><img alt="hb_cont_3" src="../_images/hb_cont_3.png" style="width: 500px;" /></a>
-<p>If sucessful you will now be done.</p>
-</li>
-<li><p>In the terminal install git via homebrew.</p>
-<a class="reference internal image-reference" href="../_images/git_brew.png"><img alt="git_brew" src="../_images/git_brew.png" style="width: 500px;" /></a>
-<p>Type in the terminal <code class="docutils literal notranslate"><span class="pre">brew</span> <span class="pre">install</span> <span class="pre">git</span></code>. Then press <code class="docutils literal notranslate"><span class="pre">Enter</span></code>.</p>
-<a class="reference internal image-reference" href="../_images/git_done.png"><img alt="git_done" src="../_images/git_done.png" style="width: 500px;" /></a>
-<p>If successful, there should be no errors, to test type <code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">--version</span></code> and press <code class="docutils literal notranslate"><span class="pre">Enter</span></code>. You should then see a version.</p>
-</li>
-</ol>
-<p><a id="git-linux"></a></p>
-</section>
-</section>
-<section id="install-git-if-you-have-a-linux-computer">
-<h4>Install Git if you have a <strong>Linux</strong> computer:<a class="headerlink" href="#install-git-if-you-have-a-linux-computer" title="Link to this heading">#</a></h4>
-<p>In the “Console” application, use the appropriate command from this page: <a class="reference external" href="https://git-scm.com/download/linux">https://git-scm.com/download/linux</a></p>
-<p>Once you finish the installation process, you should be able to open the Console and run <code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">--version</span></code> to see if Git has been successfully installed.</p>
-<!--
-<a id="atom"></a>
-### Installing the Atom text editor
-
-In this course you may be expected to work outside of Jupyter notebooks to write Python scripts from time to time, which you'll run from the Command Line Interface. In order to write these scripts, you'll need to be comfortable using a text editor. If you don't already have a good text editor that you prefer using you can use one of the system defaults, but if you'd like to try another options, Atom can be a good choice. To install Atom, go to [https://atom.io/](https://atom.io/) and download the version appropriate for your computer.
-
-You may wish to read through the installation information specific to your operating system:
-
-**Windows**: [http://flight-manual.atom.io/getting-started/sections/installing-atom/#platform-windows](http://flight-manual.atom.io/getting-started/sections/installing-atom/#platform-windows)
-
-**Mac**: [http://flight-manual.atom.io/getting-started/sections/installing-atom/#platform-mac](http://flight-manual.atom.io/getting-started/sections/installing-atom/#platform-mac)
-
-**Linux**: [http://flight-manual.atom.io/getting-started/sections/installing-atom/#platform-linux](http://flight-manual.atom.io/getting-started/sections/installing-atom/#platform-linux)
-
--->
 </section>
 </section>
 </section>
@@ -897,19 +713,6 @@ You may wish to read through the installation information specific to your opera
 <li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#installing-anaconda-for-mac">Installing Anaconda for Mac</a></li>
 </ul>
 </li>
-</ul>
-</li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#using-git-for-version-control">Using Git for version control</a><ul class="nav section-nav flex-column">
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#installing-git-if-you-have-a-windows-computer">Installing Git if you have a <strong>Windows</strong> computer:</a><ul class="nav section-nav flex-column">
-<li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#adding-anaconda-functionality-to-git-bash">Adding Anaconda functionality to Git-Bash</a></li>
-<li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#changing-startup-location-to-home-directory">Changing startup location to Home directory</a></li>
-</ul>
-</li>
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#install-git-if-you-have-a-mac-computer">Install Git if you have a <strong>Mac</strong> computer:</a><ul class="nav section-nav flex-column">
-<li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#download-and-install-the-newest-version-of-git-for-mac">Download and install the newest version of Git for Mac</a></li>
-</ul>
-</li>
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#install-git-if-you-have-a-linux-computer">Install Git if you have a <strong>Linux</strong> computer:</a></li>
 </ul>
 </li>
 </ul>
