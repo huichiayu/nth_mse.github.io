@@ -30,7 +30,31 @@
   <tr style="background-color: #f9f9f9;">
     <td style="border: 1px solid #ddd; padding: 8px;">04 (Sep 11)</td>
     <td style="border: 1px solid #ddd; padding: 8px;">TBA</td>
+  </tr>
+  <tr> <!-- week 3 -->
+    <td style="border: 1px solid #ddd; padding: 8px;">05 (Sep 15)</td>
+    <td style="border: 1px solid #ddd; padding: 8px;">TBA</td>
+  </tr>
+  <tr style="background-color: #f9f9f9;">
+    <td style="border: 1px solid #ddd; padding: 8px;">06 (Sep 18)</td>
+    <td style="border: 1px solid #ddd; padding: 8px;">TBA</td>
+  </tr> 
+   <tr> <!-- week 4 -->
+    <td style="border: 1px solid #ddd; padding: 8px;">07 (Sep 22)</td>
+    <td style="border: 1px solid #ddd; padding: 8px;"> TBA </td>
   </tr>  
+  <tr style="background-color: #f9f9f9;">
+    <td style="border: 1px solid #ddd; padding: 8px;">08 (Sep 25)</td>
+    <td style="border: 1px solid #ddd; padding: 8px;">TBA</td>
+  </tr>
+  <tr> <!-- week 5 -->
+    <td style="border: 1px solid #ddd; padding: 8px;">09 (Sep 29)</td>
+    <td style="border: 1px solid #ddd; padding: 8px;">TBA</td>
+  </tr>
+  <tr style="background-color: #f9f9f9;">
+    <td style="border: 1px solid #ddd; padding: 8px;">10 (Oct 2)</td>
+    <td style="border: 1px solid #ddd; padding: 8px;">TBA</td>
+  </tr>       
 </table>
 
 
