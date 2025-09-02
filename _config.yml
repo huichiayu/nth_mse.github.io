@@ -1,11 +1,23 @@
 # Configuration
 
+# Optional: set a URL if hosting as username.github.io
+# url: "https://USERNAME.github.io"
+# baseurl: "/REPO-NAME"  # for project sites (not needed for username.github.io)
+
+# Optional: add a GitHub repo link in the header
+aux_links:
+  "GitHub":
+    - "https://github.com/USERNAME/REPO-NAME"
+
+
 # Book settings
 title                       : MSE 590400 Course Website
 author                      : Hui-Chia Yu
 copyright                   : "2025"
 logo                        : Spartan_2.png
 only_build_toc_files        : true
+
+theme: just-the-docs
 
 # Execution settings
 execute:
@@ -47,12 +59,7 @@ sphinx:
     # suppress_warnings:
     # - myst.header
 
-sass:
-  style: compressed
 
-# Add this if you have a custom stylesheet
-include:
-  - assets/css/styles.css
 
 
 
