@@ -35,11 +35,11 @@ parts:
  #     - url: https://raw.githubusercontent.com/msu-cmse-courses/cmse202-supplemental-data/main/documents/Presentation_Evaluation_Rubric.pdf
  #       title: Presentation Evaluation Rubric
 
-  - caption: Exams
+  - caption: Quiz/Exam
     chapters:
-      - file: course_materials/MidtermStudyGuide.md
+      - file: course_materials/Quiz_NTHU.md
 #       - file: placeholder/placeholder.md
-        title: Midterm Study Guide
+        title: Quiz/Exam Details
 ##      - file: course_materials/CMSE202_PracticeMidterm.ipynb
 ##        title: Practice Midterm
 #      - file: course_materials/FinalExamStudyGuide.md
