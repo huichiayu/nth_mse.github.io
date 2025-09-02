@@ -28,10 +28,10 @@ parts:
 
   - caption: Semester Project
     chapters:
-      - file: course_materials/SemesterProjectDetails.md
+      - file: course_materials/SemesterProjectDetails_NTHU.md
         title: Semester Project Details
-      - file: course_materials/CMSE202_FinalProjectRequirementsAndGradingRubric.md
-        title: Semester Project Requirements and Grading Rubric
+#       - file: course_materials/CMSE202_FinalProjectRequirementsAndGradingRubric.md
+#         title: Semester Project Requirements and Grading Rubric
  #     - url: https://raw.githubusercontent.com/msu-cmse-courses/cmse202-supplemental-data/main/documents/Presentation_Evaluation_Rubric.pdf
  #       title: Presentation Evaluation Rubric
 
