@@ -7,7 +7,7 @@ parts:
     chapters:
       - file: course_materials/MSE590400_Syllabus.md
         title: Syllabus
-      - file: course_materials/CMSE202_Calendar.md
+      - file: course_materials/MSE590400_Calendar.md
         title: Schedule
 #       - file: course_materials/CMSE202_HelpRoomCalendar.md
 #         title: Office Hours and Help Room
