@@ -26,7 +26,4 @@
 </table>
 
 
-
-                                                                                          |
-
-$^*$ This is the tentative schedule prior to the start of the semester. The overall content shouldn’t change, but ordering or deadlines may shift somewhat. If deadlines change, substantial notice will be given!
+$^*$ This is the tentative schedule still under development. The overall content should be similar, but not guaranteed to be exact. If deadlines change, substantial notice will be given!
