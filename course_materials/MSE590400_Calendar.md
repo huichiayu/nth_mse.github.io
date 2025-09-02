@@ -4,9 +4,9 @@
 
 | Day | Topic |
 |-----------------------------------|-------------------------------------------------------------------------------------------------------|
-| 01                                | Course Syllabus, overview, instructor's self intro, Schrodinger equation for H atom                   |
+| 01 (Sep 1)                        | Course Syllabus, overview, instructor's self intro, Schrodinger equation for H atom, solution of angular equation                   |
+| 20 (Sep 4)                        | Schrodinger equation (solution of radial equation)                                               |
 <!-- 
-| 1 (Jan 13/24)                     | Introductions, course details, CMSE 201 concept mapping                                               |
 | 2 (Jan 15/16)                     | Command Line Interface                                                                                |
 | **Holiday**<br>(Jan 20/21)        | **Tuesday sections canceled to keep in sync with Monday sections**                                    |
 | 3 (Jan 22/23)                     | Version control with Git                                                                              |
