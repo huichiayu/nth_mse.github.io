@@ -61,6 +61,8 @@ sphinx:
 
 
 
+just_the_docs:
+  custom_css: styles.css
 
 
 
