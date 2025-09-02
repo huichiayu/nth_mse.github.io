@@ -9,9 +9,12 @@
     <col style="width:70%">
   </colgroup>
   <tr style="background-color: #f2f2f2;">
-    <th style="border: 1px solid #ddd; padding: 8px;">Column 1</th>
-    <th style="border: 1px solid #ddd; padding: 8px;">Column 2</th>
+    <th style="border: 1px solid #ddd; padding: 8px;">Day</th>
+    <th style="border: 1px solid #ddd; padding: 8px;">Topics</th>
   </tr>
+  <tr>
+    <td colspan="2" style="border-top: 2px solid #000;"></td> <!-- HLINE -->
+  </tr>  
   <tr>
     <td style="border: 1px solid #ddd; padding: 8px;">Short text</td>
     <td style="border: 1px solid #ddd; padding: 8px;">This column is wider and has more text.</td>
