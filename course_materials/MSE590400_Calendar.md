@@ -17,11 +17,11 @@
   </tr>  
   <tr> <!-- week 1 -->
     <td style="border: 1px solid #ddd; padding: 8px;">01 (Sep 1)</td>
-    <td style="border: 1px solid #ddd; padding: 8px;">Course Syllabus, overview, instructor's self intro, Schrodinger equation for H atom, solution of angular equation.</td>
+    <td style="border: 1px solid #ddd; padding: 8px;">Course syllabus, overview, instructor's self intro, Schrodinger equation for H atom, solution of angular equation.</td>
   </tr>
   <tr style="background-color: #f9f9f9;">
     <td style="border: 1px solid #ddd; padding: 8px;">02 (Sep 4)</td>
-    <td style="border: 1px solid #ddd; padding: 8px;">Schrodinger equation (solution of radial equation), Demonstration of Quantum Expresso.</td>
+    <td style="border: 1px solid #ddd; padding: 8px;">Schrodinger equation (solution of radial equation), demonstration of Quantum Expresso.</td>
   </tr>
   <tr> <!-- week 2 -->
     <td style="border: 1px solid #ddd; padding: 8px;">03 (Sep 8)</td>
