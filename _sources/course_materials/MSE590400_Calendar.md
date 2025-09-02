@@ -2,6 +2,23 @@
 
 ## Fall 2025 $^*$
 
+
+<table>
+  <colgroup>
+    <col style="width:30%">
+    <col style="width:70%">
+  </colgroup>
+  <tr>
+    <th>Column 1</th>
+    <th>Column 2</th>
+  </tr>
+  <tr>
+    <td>Short text</td>
+    <td>This column is wider and can hold longer text without wrapping too much.</td>
+  </tr>
+</table>
+
+
 | Day | Topic |
 |-----------------------------------|-------------------------------------------------------------------------------------------------------|
 | 01 (Sep 1)                        | Course Syllabus, overview, instructor's self intro, Schrodinger equation for H atom, solution of angular equation                   |
