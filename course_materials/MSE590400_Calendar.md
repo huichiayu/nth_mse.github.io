@@ -1,10 +1,11 @@
-# CMSE 202 Course Schedule
+# MSE 590400 Course Schedule
 
-## Spring 2025 $^*$
+## Fall 2025 $^*$
 
 | Day | Topic |
 |-----------------------------------|-------------------------------------------------------------------------------------------------------|
-| 0 (Pre-semester)                  | Course Syllabus, Software Setup Guide, Pre-semester Surveys, Python Review                            |
+| 01                                | Course Syllabus, overview, instructor's self intro, Schrodinger equation for H atom                   |
+<!-- 
 | 1 (Jan 13/24)                     | Introductions, course details, CMSE 201 concept mapping                                               |
 | 2 (Jan 15/16)                     | Command Line Interface                                                                                |
 | **Holiday**<br>(Jan 20/21)        | **Tuesday sections canceled to keep in sync with Monday sections**                                    |
@@ -38,6 +39,7 @@
 | **P** (Apr 21/22)                 | **Project Presentations** <br> **All Projects will be due on Apr 20 at 11:59 PM**                     |             
 | **P** (Apr 23/24)                 | **Project Presentations** <br> **All Projects will be due on Apr 20 at 11:59 PM**                     |
 | HW4 (Apr 25)                      | **HOMEWORK 4 DUE (by 11:59pm)**                                                                       |
-| **F** (Apr 28-May 1)              | **Exam 2**                                                                                            |
+| **F** (Apr 28-May 1)              | **Exam 2**
+ -->                                                                                            |
 
 $^*$ This is the tentative schedule prior to the start of the semester. The overall content shouldn’t change, but ordering or deadlines may shift somewhat. If deadlines change, substantial notice will be given!
