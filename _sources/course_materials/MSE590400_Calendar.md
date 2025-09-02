@@ -16,12 +16,12 @@
     <td colspan="2" style="border-top: 2px solid #000;"></td> <!-- HLINE -->
   </tr>  
   <tr>
-    <td style="border: 1px solid #ddd; padding: 8px;">Short text</td>
-    <td style="border: 1px solid #ddd; padding: 8px;">This column is wider and has more text.</td>
+    <td style="border: 1px solid #ddd; padding: 8px;">01 (Sep 1)</td>
+    <td style="border: 1px solid #ddd; padding: 8px;">Course Syllabus, overview, instructor's self intro, Schrodinger equation for H atom, solution of angular equation.</td>
   </tr>
   <tr style="background-color: #f9f9f9;">
-    <td style="border: 1px solid #ddd; padding: 8px;">Another row</td>
-    <td style="border: 1px solid #ddd; padding: 8px;">Shaded for readability.</td>
+    <td style="border: 1px solid #ddd; padding: 8px;">02 (Sep 4)</td>
+    <td style="border: 1px solid #ddd; padding: 8px;">Schrodinger equation (solution of radial equation).</td>
   </tr>
 </table>
 
