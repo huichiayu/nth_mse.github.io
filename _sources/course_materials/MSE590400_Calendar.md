@@ -21,7 +21,7 @@
   </tr>
   <tr style="background-color: #f9f9f9;">
     <td style="border: 1px solid #ddd; padding: 8px;">02 (Sep 4)</td>
-    <td style="border: 1px solid #ddd; padding: 8px;">Schrodinger equation (solution of radial equation).</td>
+    <td style="border: 1px solid #ddd; padding: 8px;">Schrodinger equation (solution of radial equation), Demonstration of Quantum Expresso.</td>
   </tr>
   <tr> <!-- week 2 -->
     <td style="border: 1px solid #ddd; padding: 8px;">03 (Sep 8)</td>
