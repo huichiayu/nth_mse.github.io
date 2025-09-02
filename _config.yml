@@ -17,7 +17,6 @@ copyright                   : "2025"
 logo                        : Spartan_2.png
 only_build_toc_files        : true
 
-theme: just-the-docs
 
 # Execution settings
 execute:
@@ -58,11 +57,6 @@ sphinx:
       launch_buttons: {}
     # suppress_warnings:
     # - myst.header
-
-
-
-just_the_docs:
-  custom_css: styles.css
 
 
 
