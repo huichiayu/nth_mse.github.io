@@ -11,7 +11,7 @@ parts:
         title: Schedule
 #       - file: course_materials/CMSE202_HelpRoomCalendar.md
 #         title: Office Hours and Help Room
-      - file: course_materials/SoftwareSetupGuide.md
+      - file: course_materials/SoftwareSetupGuide_NTHU.md
         title: Software Setup Guide
       - file: course_materials/MSE590400_AI_policy.md
         title: Generative AI Policy
