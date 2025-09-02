@@ -22,6 +22,7 @@
   <tr style="background-color: #f9f9f9;">
     <td style="border: 1px solid #ddd; padding: 8px;">02 (Sep 4)</td>
     <td style="border: 1px solid #ddd; padding: 8px;">Schrodinger equation (solution of radial equation).</td>
+  <td colspan="2" style="border-top: 2px dashed #800080;"></td> <!-- HLINE -->
   </tr>
   <tr> <!-- week 2 -->
     <td style="border: 1px solid #ddd; padding: 8px;">03 (Sep 8)</td>
@@ -58,4 +59,4 @@
 </table>
 
 
-$^*$ This is the tentative schedule still under development. The overall content should be similar, but not guaranteed to be exact. If deadlines change, substantial notice will be given!
+$^*$ This is a tentative schedule still under development. The overall content should be similar, but not guaranteed to be exactly the same. If deadlines change, substantial notice will be given!
