@@ -47,6 +47,13 @@ sphinx:
     # suppress_warnings:
     # - myst.header
 
+format:
+  html:
+    theme: default
+    css: styles.css
+
+
+
 exclude:
   - references.bib    
 
