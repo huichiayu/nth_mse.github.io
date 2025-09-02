@@ -3,20 +3,25 @@
 ## Fall 2025 $^*$
 
 
-<table>
+<table style="border-collapse: collapse; width: 100%;">
   <colgroup>
     <col style="width:30%">
     <col style="width:70%">
   </colgroup>
-  <tr>
-    <th>Column 1</th>
-    <th>Column 2</th>
+  <tr style="background-color: #f2f2f2;">
+    <th style="border: 1px solid #ddd; padding: 8px;">Column 1</th>
+    <th style="border: 1px solid #ddd; padding: 8px;">Column 2</th>
   </tr>
   <tr>
-    <td>Short text</td>
-    <td>This column is wider and can hold longer text without wrapping too much.</td>
+    <td style="border: 1px solid #ddd; padding: 8px;">Short text</td>
+    <td style="border: 1px solid #ddd; padding: 8px;">This column is wider and has more text.</td>
+  </tr>
+  <tr style="background-color: #f9f9f9;">
+    <td style="border: 1px solid #ddd; padding: 8px;">Another row</td>
+    <td style="border: 1px solid #ddd; padding: 8px;">Shaded for readability.</td>
   </tr>
 </table>
+
 
 
 | Day | Topic |
