@@ -48,8 +48,8 @@ parts:
   - caption: Daily Content
     chapters:
       - file: section_files/day_1
-        sections:
-        - url: https://raw.githubusercontent.com/huichiayu/cmse_202_802/main/MSE590/CourseOverview_example_application_v_upload.pdf
+#        sections:
+#        - url: https://raw.githubusercontent.com/huichiayu/cmse_202_802/main/MSE590/CourseOverview_example_application_v_upload.pdf
 
 
       - file: section_files/day_2
