@@ -9,41 +9,26 @@ parts:
         title: Syllabus
       - file: course_materials/MSE590400_Calendar.md
         title: Schedule
-#       - file: course_materials/CMSE202_HelpRoomCalendar.md
-#         title: Office Hours and Help Room
       - file: course_materials/SoftwareSetupGuide_NTHU.md
         title: Software Setup Guide
       - file: course_materials/MSE590400_AI_policy.md
         title: Generative AI Policy
 #       - url: https://upload.wikimedia.org/wikipedia/commons/7/79/Unix_command_cheatsheet.pdf
 #         title: CLI (Unix/Mac/Linux) commands cheat sheet
-#       - file: course_materials/BashVsPowershell_CheatSheet.md
-#         title: Bash vs PowerShell
-#       - url: https://wac-cdn.atlassian.com/dam/jcr:e7e22f25-bba2-4ef1-a197-53f46b6df4a5/SWTM-2088_Atlassian-Git-Cheatsheet.pdf?cdnVersion=525
-#         title: Git Cheat Sheet
-#       - url: https://raw.githubusercontent.com/msu-cmse-courses/cmse202-supplemental-data/main/documents/How-to-Access-Anaconda-Powershell-Prompt.pdf
-#         title: How to Access “Anaconda Powershell Prompt” (for Windows users)
-#       - file: course_materials/Pull_Request_Guide.ipynb
-#         title: Pull Request Guide
+
 
   - caption: Semester Project
     chapters:
       - file: course_materials/SemesterProjectDetails_NTHU.md
         title: Semester Project Details
-#       - file: course_materials/CMSE202_FinalProjectRequirementsAndGradingRubric.md
-#         title: Semester Project Requirements and Grading Rubric
- #     - url: https://raw.githubusercontent.com/msu-cmse-courses/cmse202-supplemental-data/main/documents/Presentation_Evaluation_Rubric.pdf
- #       title: Presentation Evaluation Rubric
+
 
   - caption: Quiz/Exam
     chapters:
       - file: course_materials/Quiz_NTHU.md
 #       - file: placeholder/placeholder.md
         title: Quiz/Exam Details
-##      - file: course_materials/CMSE202_PracticeMidterm.ipynb
-##        title: Practice Midterm
-#      - file: course_materials/FinalExamStudyGuide.md
-#        title: Exam II Study Guide
+
 
   - caption: Daily Content
     chapters:
@@ -54,148 +39,17 @@ parts:
 
       - file: section_files/day_2
 #         sections:
-#         - file: daily/Day-02/Day-02_Pre-Class_ReflectionAndCommandLineInterface-STUDENT.ipynb
-#         - file: daily/Day-02/Day-02_In-Class_CommandLineInterface-STUDENT.ipynb
 
-#       - file: section_files/day_3
-#         sections:
-#         - file: daily/Day-03/Day-03_Pre-Class_PythonReview+GitIntro-STUDENT.ipynb
-#         - file: daily/Day-03/Day-03_In-Class_GitPractice-STUDENT.ipynb
-# 
-#       - file: section_files/day_4
-#         sections:
-#         - file: daily/Day-04/Day-04_Pre-Class_DownloadingFilesAndInstallingPackages-STUDENT.ipynb
-#         - file: daily/Day-04/Day-04_In-Class_PythonPackagesAndMapPlotting-STUDENT.ipynb
-# 
-#       - file: section_files/day_5
-#         sections:
-#         - file: daily/Day-05/Day-05_Pre-Class_PandasReview-STUDENT.ipynb
-#         - file: daily/Day-05/Day-05_In-Class_PandasReview-STUDENT.ipynb
-# 
-#       - file: section_files/day_6
-#         sections:
-#         - file: daily/Day-06/Day-06_Pre-class_ObjectsClasses-STUDENT.ipynb
-#         - file: daily/Day-06/Day-06_In-Class_ObjectsClasses-STUDENT.ipynb
-# 
-#       - file: section_files/day_7
-#         sections:
-#         - file: daily/Day-07/Day-07_Pre-class_ObjectInheritanceAndComposition-STUDENT.ipynb
-#         - file: daily/Day-07/Day-07_In-Class_ObjectInheritanceAndComposition-STUDENT.ipynb
-# 
-#       - file: section_files/day_8
-#         sections:
-#         - file: daily/Day-08/Day-08_Pre-Class_SuperbugsABM-STUDENT.ipynb
-#         - file: daily/Day-08/Day-08_In-Class_ABMSuperbugs1-STUDENT.ipynb
-# 
-#       - file: section_files/day_9
-#         sections:
-#         - file: daily/Day-09/Day-09_Pre-Class_OOPAntForaging-STUDENT.ipynb
-#         - file: daily/Day-09/Day-09_In-Class_ABMSuperbugs2-STUDENT.ipynb
-# 
-#       - file: section_files/day_10
-#         sections:
-#         - file: daily/Day-10/Day-10_Pre-Class_GraphTheory-STUDENT.ipynb
-#         - file: daily/Day-10/Day-10_In-Class_GraphTheory-STUDENT.ipynb
-# 
-#       - file: section_files/day_11
-#         sections:
-#         - file: daily/Day-11/Day-11_Pre-Class_GraphTheoryCellTowers-STUDENT.ipynb
-#         - file: daily/Day-11/Day-11_In-Class_GraphTheoryCellTowers-STUDENT.ipynb
-#  
-#       - file: section_files/day_12
-#         sections:
-# # ##        - file: daily/Day-12/Day-12_Pre-Class_ProjectIdeas-STUDENT.ipynb
-#         - file: daily/Day-12/Day-12_In-Class_ProjectProposals-STUDENT.ipynb
-# 
-#       - file: section_files/day_13
-#         sections:
-#         - file: daily/Day-13/Day-13_Pre-Class_Regression-STUDENT.ipynb
-#         - file: daily/Day-13/Day-13_In-Class-Regression-STUDENT.ipynb
-# 
-#       - file: section_files/day_14
-#         sections:
-#         - file: daily/Day-14/Day-14_Pre-Class-PolynomialRegression-STUDENT.ipynb
-#         - file: daily/Day-14/Day-14_In-Class_MultipleRegression-STUDENT.ipynb
-# # 
-#       - file: section_files/day_15
-#         sections:
-#         - file: daily/Day-15/Day-15_Pre-Class_MachineLearningIntro-STUDENT.ipynb
-#         - file: daily/Day-15/Day-15_In-Class_ML-LogisticRegression-STUDENT.ipynb
-# 
-#       - file: section_files/day_16
-#         sections:
-#         - file: daily/Day-16/Day-16_Pre-Class_GitRevisited-STUDENT.ipynb
-#         - file: daily/Day-16/Day-16_In-Class_CollaboratingWithGit-STUDENT.ipynb
-# 
-#       - file: section_files/day_17
-#         sections:
-#         - file: daily/Day-17/Day-17_Pre-Class_AIPracticeAndProductiveGroupwork-STUDENT.ipynb
-#         - file: daily/Day-17/Day-17_In-Class_RevisitingGenerativeAIAndProjectPlanning-STUDENT.ipynb
-# 
-#       - file: section_files/day_18
-#         sections:
-#         - file: daily/Day-18/Day-18_Pre-Class_Perceptron-STUDENT.ipynb
-#         - file: daily/Day-18/Day-18_In-Class_Perceptron-STUDENT.ipynb
-# 
-#       - file: section_files/day_19
-#         sections:
-# #        ## - file: daily/Day-19/S24Version/Day-19_Pre-Class_SVMs-STUDENT.ipynb
-#         - file: daily/Day-19/Day-19_In-Class_PerceptronExtension-STUDENT.ipynb
-# # 
-#       - file: section_files/day_20
-#         sections:
-#         - file: daily/Day-20/Day-20_Pre-Class_SVMs-STUDENT.ipynb
-#         - file: daily/Day-20/Day-20_In-Class_SVMs-STUDENT.ipynb 
-# #         - file: daily/Day-20/S24Version/Day-20_Pre-Class_ProjectUpdateReminder-STUDENT.ipynb
-# # 
-#       - file: section_files/day_21
-#         sections:
-#          - file: daily/Day-21/Day-21_Pre-Class_SVMs2-STUDENT.ipynb
-#          - file: daily/Day-21/Day-21_In-Class_SVMs2-STUDENT.ipynb
-# #         - file: daily/Day-21/S24Version/Day-21_Pre-Class_SVMs2-STUDENT.ipynb
-# #         - file: daily/Day-21/S24Version/Day-21_In-Class_SVMs2-STUDENT.ipynb
-# # 
-#       - file: section_files/day_22
-#         sections:
-#          - file: daily/Day-22/Day-22_Pre-Class_ProjectUpdateReminder-STUDENT.ipynb
-# #         - file: daily/Day-22/S24Version/Day-22_Pre-Class_PCA-STUDENT.ipynb
-# #         - file: daily/Day-22/S24Version/Day-22_In-Class_MachineLearningPCA-STUDENT.ipynb
-# # 
-#       - file: section_files/day_23
-#         sections:
-#         - file: daily/Day-23/Day-23_Pre-Class_PCA-STUDENT.ipynb       
-#        - file: daily/Day-23/Day-23_Pre-Class_ProjectUpdateReminder-STUDENT.ipynb
-# 
-#      - file: section_files/day_24
-#        sections:
-#        - file: daily/Day-24/Day-24_Pre-Class_SemesterReview-STUDENT.ipynb
-#        - file: daily/Day-24/Day-24_In-Class_SemesterReview-STUDENT.ipynb
-
-
-
-  #   # Day Example
-  #   # - file: section_files/day_X
-  #   #   sections:
-  #   #   - file: daily/Day-XX/
-  #   #   - file: daily/Day-XX/
-  #
 
 ### DO NOT USE THE HOMEWORK ASSIGNMENTS FROM THE PREVIOUS SEMESTER
 ### CREATE NEW ONES THAT ASSESS SIMILAR SKILLS/CONTENT
   - caption: Homework
     chapters:
-        - file:  homework/SS25/HW01/HW-01_GitPracticeDebuggingPythonPackagesAndClasses-SS25-STUDENT.ipynb 
+        - url: https://raw.githubusercontent.com/huichiayu/cmse_202_802/main/MSE590/place_holder.pdf
           title: Homework 1  
           
         - title: "Upload HW01 assignment"
           url: https://www.dropbox.com/request/w4urBdsmgnrh09diBHlx
           nav_order: 99          
                 
-#         - file: homework/SS25/HW02/HW02_Part1-Orbits-SS25-STUDENT.ipynb
-#           title: Homework 2 Part 1
-#         - file: homework/SS25/HW02/HW02_Part2-Risk-SS25-STUDENT.ipynb
-#           title: Homework 2 Part 2          
-#         - file: homework/SS25/HW03/HW-03_Regression-S25-STUDENT.ipynb
-#           title: Homework 3
-#         - file: homework/SS25/HW04/HW-04_Perceptron_SVM_STUDENT.ipynb
-#           title: Homework 4
+
