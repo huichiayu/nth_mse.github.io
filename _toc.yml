@@ -49,7 +49,7 @@ parts:
     chapters:
       - file: section_files/day_1
         sections:
-        - file: _static/CourseOverview_example_application_v_upload.pdf
+        - file: section_files/_static/CourseOverview_example_application_v_upload.pdf
 
       - file: section_files/day_2
         sections:
