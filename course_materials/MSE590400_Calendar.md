@@ -21,15 +21,15 @@
   </tr>
   <tr style="background-color: #f9f9f9;">
     <td style="border: 1px solid #ddd; padding: 8px;">02 (Sep 4)</td>
-    <td style="border: 1px solid #ddd; padding: 8px;">Schrodinger equation (solution of radial equation), demonstration of Quantum Expresso.</td>
+    <td style="border: 1px solid #ddd; padding: 8px;">Schrodinger equation (solution of radial equation), basics of DFT.</td>
   </tr>
   <tr> <!-- week 2 -->
     <td style="border: 1px solid #ddd; padding: 8px;">03 (Sep 8)</td>
-    <td style="border: 1px solid #ddd; padding: 8px;"> TBA </td>
+    <td style="border: 1px solid #ddd; padding: 8px;"> DFT demonstration using Quantum Expresso, intro molecular dynamics, force field, Lennard-Jones potential. </td>
   </tr>  
   <tr style="background-color: #f9f9f9;">
     <td style="border: 1px solid #ddd; padding: 8px;">04 (Sep 11)</td>
-    <td style="border: 1px solid #ddd; padding: 8px;">TBA</td>
+    <td style="border: 1px solid #ddd; padding: 8px;">Molecular dynamics coding practices. </td>
   </tr>
   <tr> <!-- week 3 -->
     <td style="border: 1px solid #ddd; padding: 8px;">05 (Sep 15)</td>
