@@ -12,7 +12,7 @@ This section contains the course materials for day 1.
 # Day 1 Overview
 
 <iframe
-  src="_static/CourseOverview_example_application_v_upload.pdf"
+  src="https://huichiayu.github.io/nthu_mse.github.io/section_files/_static/CourseOverview_example_application_v_upload.pdf"
   width="100%"
   height="900"
   style="border:0;">
