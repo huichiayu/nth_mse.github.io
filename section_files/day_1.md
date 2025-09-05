@@ -7,7 +7,7 @@ This section contains the course materials for day 1.
 
 
 <iframe src="_static/CourseOverview_example_application_v_upload.pdf" width="100%" height="800" style="border:0;"></iframe>
--->
+
 
 # Day 1 Overview
 
@@ -19,3 +19,6 @@ This section contains the course materials for day 1.
 </iframe>
 
 <p>If the PDF doesn’t appear, <a href="_static/CourseOverview_example_application_v_upload.pdf" target="_blank">open it in a new tab</a>.</p>
+-->
+
+<a href="nthu_mse.github.io/section_files/CourseOverview_example_application_v_upload.pdf" target="_blank">PDF.</a>
