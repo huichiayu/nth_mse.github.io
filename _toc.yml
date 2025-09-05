@@ -49,8 +49,7 @@ parts:
     chapters:
       - file: section_files/day_1
         sections:
-#         - file: placeholder/placeholder.md
-        - file: daily/Day-01/Day-01_In-Class_Overview-STUDENT.ipynb
+        - file: daily/Day-01/CourseOverview_example_application_v_upload.pdf
 
       - file: section_files/day_2
         sections:
