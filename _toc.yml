@@ -46,6 +46,7 @@ parts:
   - caption: Homework
     chapters:
         - url: https://raw.githubusercontent.com/huichiayu/cmse_202_802/main/MSE590/place_holder.pdf
+          external: true
           title: Homework 1  
           
         - title: "Upload HW01 assignment"
