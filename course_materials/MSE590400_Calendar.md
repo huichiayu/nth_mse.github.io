@@ -25,12 +25,9 @@
   </tr>
   <tr> <!-- week 2 -->
     <td style="border: 1px solid #ddd; padding: 8px;">03 (Sep 8)</td>
-    <td style="border: 1px solid #ddd; padding: 8px;"> DFT demonstration using Quantum Expresso, intro molecular dynamics, force field, Lennard-Jones potential. </td>
+    <td style="border: 1px solid #ddd; padding: 8px;"> DFT demonstration using Quantum Expresso, 
+    intro molecular dynamics, force field, Lennard-Jones potential. <strong>Homework 1 release</strong> </td>
   </tr>  
-  <tr> 
-    <td style="border: 1px solid #E6E6FA; padding: 8px;">Sep 8</td>
-    <td style="border: 1px solid #E6E6FA; padding: 8px;">Homework 1 release.</td>
-  </tr> 
   <tr style="background-color: #f9f9f9;">
     <td style="border: 1px solid #ddd; padding: 8px;">04 (Sep 11)</td>
     <td style="border: 1px solid #ddd; padding: 8px;">Molecular dynamics coding practices. </td>
