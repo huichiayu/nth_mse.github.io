@@ -53,7 +53,7 @@ parts:
 
 
       - file: section_files/day_2
-        sections:
+#         sections:
 #         - file: daily/Day-02/Day-02_Pre-Class_ReflectionAndCommandLineInterface-STUDENT.ipynb
 #         - file: daily/Day-02/Day-02_In-Class_CommandLineInterface-STUDENT.ipynb
 
