@@ -21,4 +21,4 @@ This section contains the course materials for day 1.
 <p>If the PDF doesn’t appear, <a href="_static/CourseOverview_example_application_v_upload.pdf" target="_blank">open it in a new tab</a>.</p>
 -->
 
-<a href="_static/CourseOverview_example_application_v_upload.pdf" target="_blank">PDF.</a>
+<a href="section_files/_static/CourseOverview_example_application_v_upload.pdf" target="_blank">PDF.</a>
