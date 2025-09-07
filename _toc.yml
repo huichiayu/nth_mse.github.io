@@ -40,8 +40,11 @@ parts:
       - file: section_files/day_2
         sections:        
         - file: daily/Day-02/Demo_EnergyFunctional.ipynb
+        - file: daily/Day-02/LJ_potent.ipynb        
 
-
+      - file: section_files/day_3
+        sections: 
+        
 
 ### DO NOT USE THE HOMEWORK ASSIGNMENTS FROM THE PREVIOUS SEMESTER
 ### CREATE NEW ONES THAT ASSESS SIMILAR SKILLS/CONTENT
