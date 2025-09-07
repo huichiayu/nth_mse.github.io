@@ -47,7 +47,8 @@ parts:
 ### CREATE NEW ONES THAT ASSESS SIMILAR SKILLS/CONTENT
   - caption: Homework
     chapters:
-        - url: https://raw.githubusercontent.com/huichiayu/cmse_202_802/main/MSE590/place_holder.pdf
+        - url: https://raw.githubusercontent.com/huichiayu/cmse_202_802/main/MSE590/MSE590400_HW1_v1.pdf 
+#        - url: https://raw.githubusercontent.com/huichiayu/cmse_202_802/main/MSE590/place_holder.pdf
           external: true
           title: Homework 1  
           
