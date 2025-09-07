@@ -38,7 +38,9 @@ parts:
 
 
       - file: section_files/day_2
-#         sections:
+        sections:        
+        - file: daily/Day-01/Demo_EnergyFunctional.ipynb
+
 
 
 ### DO NOT USE THE HOMEWORK ASSIGNMENTS FROM THE PREVIOUS SEMESTER
