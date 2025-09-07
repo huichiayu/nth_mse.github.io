@@ -433,20 +433,18 @@
 <p>The force field decays rapidly. For example, at <span class="math notranslate nohighlight">\(r = 2.5 \cdot r_0\)</span>, the interatomic potential is only 0.0082 times the depth of the energy well. Futher away, say at <span class="math notranslate nohighlight">\(r=5 \cdot r_0\)</span>, the potential is only 0.00013 times the well value. It decays to roughly 1/10000 of the well value. Practically, the force field roughly affects a range over a couple of equilibrium atomic distances.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">r_cut</span> <span class="o">=</span> <span class="mf">2.5</span><span class="o">*</span><span class="n">r0</span> 
-<span class="n">U_cut</span> <span class="o">=</span> <span class="mi">4</span><span class="o">*</span><span class="n">eps</span><span class="o">*</span><span class="p">((</span><span class="mi">1</span><span class="o">/</span><span class="n">r_cut</span><span class="p">)</span><span class="o">**</span><span class="mi">12</span><span class="p">)</span> <span class="o">+</span> <span class="mi">4</span><span class="o">*</span><span class="n">eps</span><span class="o">*</span><span class="p">(</span><span class="o">-</span><span class="p">(</span><span class="mi">1</span><span class="o">/</span><span class="n">r_cut</span><span class="p">)</span><span class="o">**</span><span class="mi">6</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">factors</span> <span class="o">=</span> <span class="p">[</span><span class="mf">2.5</span><span class="p">,</span> <span class="mi">5</span><span class="p">]</span>
 
-<span class="nb">print</span><span class="p">(</span><span class="n">U_cut</span><span class="p">)</span>
-
-<span class="n">r_cut</span> <span class="o">=</span> <span class="mi">5</span><span class="o">*</span><span class="n">r0</span> 
-<span class="n">U_cut</span> <span class="o">=</span> <span class="mi">4</span><span class="o">*</span><span class="n">eps</span><span class="o">*</span><span class="p">((</span><span class="mi">1</span><span class="o">/</span><span class="n">r_cut</span><span class="p">)</span><span class="o">**</span><span class="mi">12</span><span class="p">)</span> <span class="o">+</span> <span class="mi">4</span><span class="o">*</span><span class="n">eps</span><span class="o">*</span><span class="p">(</span><span class="o">-</span><span class="p">(</span><span class="mi">1</span><span class="o">/</span><span class="n">r_cut</span><span class="p">)</span><span class="o">**</span><span class="mi">6</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">U_cut</span><span class="p">)</span>
+<span class="k">for</span> <span class="n">factor</span> <span class="ow">in</span> <span class="n">factors</span><span class="p">:</span>
+    <span class="n">r_cut</span> <span class="o">=</span> <span class="n">factor</span> <span class="o">*</span> <span class="n">r0</span> 
+    <span class="n">U_cut</span> <span class="o">=</span> <span class="mi">4</span><span class="o">*</span><span class="n">eps</span><span class="o">*</span><span class="p">((</span><span class="mf">1.0</span><span class="o">/</span><span class="n">r_cut</span><span class="p">)</span><span class="o">**</span><span class="mi">12</span> <span class="o">-</span> <span class="p">(</span><span class="mf">1.0</span><span class="o">/</span><span class="n">r_cut</span><span class="p">)</span><span class="o">**</span><span class="mi">6</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;U(r) at r = </span><span class="si">{</span><span class="n">factor</span><span class="si">}</span><span class="s2">*r0 (r = </span><span class="si">{</span><span class="n">r_cut</span><span class="si">:</span><span class="s2">.3g</span><span class="si">}</span><span class="s2">) ==&gt; </span><span class="si">{</span><span class="n">U_cut</span><span class="si">:</span><span class="s2">.6g</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>-0.008175224890776517
--0.00012799593705165588
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>U(r) at r = 2.5*r0 (r = 2.81) ==&gt; -0.00817522
+U(r) at r = 5*r0 (r = 5.61) ==&gt; -0.000127996
 </pre></div>
 </div>
 </div>
