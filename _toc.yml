@@ -39,7 +39,7 @@ parts:
 
       - file: section_files/day_2
         sections:        
-        - file: daily/Day-01/Demo_EnergyFunctional.ipynb
+        - file: daily/Day-02/Demo_EnergyFunctional.ipynb
 
 
 
