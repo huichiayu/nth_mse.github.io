@@ -43,8 +43,8 @@ parts:
         - file: daily/Day-02/LJ_potent.ipynb        
 
       - file: section_files/day_3
-        sections: 
-        - file: daily/Day-03/MolecularDynamics_singlePhase_student.ipynb
+#         sections: 
+#         - file: daily/Day-03/MolecularDynamics_singlePhase_student.ipynb
         
 
 ### DO NOT USE THE HOMEWORK ASSIGNMENTS FROM THE PREVIOUS SEMESTER
