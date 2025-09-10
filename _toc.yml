@@ -42,7 +42,7 @@ parts:
         - file: daily/Day-02/Demo_EnergyFunctional.ipynb
         - file: daily/Day-02/LJ_potent.ipynb        
 
-        - file: section_files/day_3
+      - file: section_files/day_3
         sections: 
         - file: daily/Day-03/MolecularDynamics_singlePhase_student.ipynb
         
