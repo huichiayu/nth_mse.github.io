@@ -49,9 +49,7 @@ parts:
       - file: section_files/day_4
         sections: 
         - file: daily/Day-04/MolecularDynamics_singlePhase_student.ipynb 
-        - title: "upload Lab 1 MD assignment"
-          url: https://www.dropbox.com/request/THSmmoQhSzJIg6xnEeSF
-          nav_order: 99         
+        
         
       - file: section_files/day_5
         sections: 
