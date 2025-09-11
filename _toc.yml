@@ -52,6 +52,7 @@ parts:
         
       - file: section_files/day_5
         sections: 
+        - file: placeholder/placeholder.md
         
 ### DO NOT USE THE HOMEWORK ASSIGNMENTS FROM THE PREVIOUS SEMESTER
 ### CREATE NEW ONES THAT ASSESS SIMILAR SKILLS/CONTENT
