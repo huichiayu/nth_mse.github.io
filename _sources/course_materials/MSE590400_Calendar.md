@@ -56,6 +56,22 @@
     <td style="border: 1px solid #ddd; padding: 8px;">10 (Oct 2)</td>
     <td style="border: 1px solid #ddd; padding: 8px;">TBA</td>
   </tr>       
+  <tr> <!-- week 6 -->
+    <td style="border: 1px solid #ddd; padding: 8px;">09 (Sep 29)</td>
+    <td style="border: 1px solid #ddd; padding: 8px;">TBA </td>
+  </tr>
+  <tr style="background-color: #f9f9f9;">
+    <td style="border: 1px solid #ddd; padding: 8px;">10 (Oct 2)</td>
+    <td style="border: 1px solid #ddd; padding: 8px;">TBA</td>
+  </tr>       
+  <tr> <!-- week 7 -->
+    <td style="border: 1px solid #ddd; padding: 8px;">09 (Sep 29)</td>
+    <td style="border: 1px solid #ddd; padding: 8px;">TBA</td>
+  </tr>
+  <tr style="background-color: #f9f9f9;">
+    <td style="border: 1px solid #ddd; padding: 8px;">10 (Oct 2)</td>
+    <td style="border: 1px solid #ddd; padding: 8px;">TBA</td>
+  </tr>       
 </table>
 
 
