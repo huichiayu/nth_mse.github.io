@@ -50,7 +50,9 @@ parts:
         sections: 
         - file: daily/Day-04/MolecularDynamics_singlePhase_student.ipynb 
         
-
+      - file: section_files/day_5
+        sections: 
+        
 ### DO NOT USE THE HOMEWORK ASSIGNMENTS FROM THE PREVIOUS SEMESTER
 ### CREATE NEW ONES THAT ASSESS SIMILAR SKILLS/CONTENT
   - caption: Homework
