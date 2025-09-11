@@ -5,7 +5,7 @@ This section contains the course materials for day 4.
 [MolecularDynamics_singlePhase_student.ipynb](../daily/Day-04/MolecularDynamics_singlePhase_student.ipynb)
 
 
-Download the ipynb file: {Download}`MD coding practices<../daily/Day-04/MolecularDynamics_singlePhase_student.ipynb>`
+Download MolecularDynamics_singlePhase_student.ipynb file: {Download}`MolecularDynamics_singlePhase_student.ipynb<../daily/Day-04/MolecularDynamics_singlePhase_student.ipynb>`
 <!--
 [MolecularDynamics_twoPhase_student.ipynb](../daily/Day-04/MolecularDynamics_twoPhase_student.ipynb)
 
