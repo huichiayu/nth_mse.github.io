@@ -6,3 +6,4 @@ This section contains the course materials for day 3.
 
 [LJ_potent.ipynb](../daily/Day-02/LJ_potent.ipynb)
 
+Download LJ_potent.ipynb file: {Download}`LJ_potent.ipynb<../daily/Day-03/LJ_potent.ipynb>`
