@@ -38,7 +38,7 @@
   </tr>
   <tr style="background-color: #f9f9f9;">
     <td style="border: 1px solid #ddd; padding: 8px;">06 (Sep 18)</td>
-    <td style="border: 1px solid #ddd; padding: 8px;">MC coding practice: random walk</td>
+    <td style="border: 1px solid #ddd; padding: 8px;">MC coding practice: random walk. <strong>Homework 2 release</strong></td>
   </tr> 
    <tr> <!-- week 4 -->
     <td style="border: 1px solid #ddd; padding: 8px;">07 (Sep 22)</td>
